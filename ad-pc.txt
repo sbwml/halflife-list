@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: X0DwlOH8jfturBURvbSEOA
+! Checksum: +R/9beVJKXTi+1CUrLmCOg
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202101031624
-! Last Modified: 2021年01月03日 16:24
+! Version: 202101032023
+! Last Modified: 2021年01月03日 20:23
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -1168,7 +1168,6 @@ tieba.baidu.com##.tuijian-wrap
 .net/adgallery
 .net/adj;
 .net/ads-
-.net/ads/
 .net/ads?
 .net/ads_
 .net/adt?
@@ -2854,7 +2853,6 @@ tieba.baidu.com##.tuijian-wrap
 /ads.gif
 /ads.htm
 /ads.jplayer.
-/ads.js/*
 /ads.json?
 /ads.jsp
 /ads.load.
@@ -5129,7 +5127,7 @@ tieba.baidu.com##.tuijian-wrap
 /exo_bck_
 /exoads/*
 /exobanner.
-/exoclick.$domain=~exoclick.bamboohr.co.uk|~exoclick.com|~exoclick.kayako.com
+/exoclick.$~script,domain=~exoclick.bamboohr.co.uk|~exoclick.com|~exoclick.kayako.com
 /exoclick/*$domain=~exoclick.com
 /exoclickright.
 /exoclickright1.
@@ -29090,6 +29088,7 @@ _popunder+$popup
 ##.sticky-bottom-ad
 ##.sticky-sidebar-ad
 ##.sticky-top-ad-wrap
+##.stickyAd
 ##.stickyAdLink
 ##.stickyAdsGroup
 ##.stickyContainerMpu
@@ -30257,7 +30256,9 @@ _popunder+$popup
 ##[href*="wap4dollar.com/"]
 ##[href^="http://advertisesimple.info/"]
 ##[href^="http://raboninco.com/"]
+##[href^="https://affect3dnetwork.com/track/"]
 ##[href^="https://go.affiliatexe.com/"]
+##[href^="https://secure.bmtmicro.com/servlets/"]
 ##[id^="adframe_wrap_"]
 ##[id^="bunyad_ads_"]
 ##[lazy-ad="leftbottom_banner"]
@@ -31279,6 +31280,7 @@ _popunder+$popup
 ##.taboola_blk
 ##.taboola_block1
 ##.taboola_lhs
+##.trb_taboola
 ##.trc_rbox .syndicatedItem
 ##.trc_rbox_border_elm .syndicatedItem
 ##.trc_rbox_div .syndicatedItem
@@ -52729,7 +52731,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||cdn13.com^$script,third-party
 ||chaturbate.com/affiliates/
 ||chaturbate.com/creative/
-||chaturbate.com/in/?track=$subdocument,third-party
+||chaturbate.com/in/
 ||cmix.org/teasers/
 ||creamgoodies.com/potd/
 ||creative.stripchat.com^
@@ -56752,6 +56754,7 @@ yopmail.com,yopmail.fr,yopmail.net##div[id^="pub"]
 howtogeek.com,sciencealert.com##div[id^="purch_"]
 reddit.com##div[id^="sidebar-atf-"]
 reddit.com##div[id^="sidebar-btf-"]
+sltrib.com##div[id^="sltrib-promo-"]
 amazon.ca,amazon.co.uk,amazon.com,amazon.com.au,amazon.fr##div[id^="sp_detail"]
 9gag.com##div[style*="width: 500px; height: 281px;"]
 fansshare.com,iconarchive.com,unexplained-mysteries.com,yuku.com##div[style*="width:300px"]
@@ -57028,7 +57031,7 @@ time.com#?#.article-small-sidebar > .sticky-container:-abp-has(div[id^="ad-"])
 tumblr.com#?#._1DxdS:-abp-has( > div > header[role="banner"])
 twitter.com#?#div[data-testid="UserCell"]:-abp-contains(/Promoted|Gesponsert|Promocionado|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Mainostettu|推廣|推广|プロモーション/)
 twitter.com#?#div[data-testid="eventHero"]:-abp-contains(/Promoted|Gesponsert|Promocionado|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|sponsorluğunda|Mainostettu|推廣|推广/)
-twitter.com#?#div[data-testid="placementTracking"]:-abp-has(svg + div[dir="auto"] > span:-abp-contains(/Promoted|Gesponsert|Promocionado|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Mainostettu|推廣|推广|推薦|推荐|プロモーション/))
+twitter.com#?#div[data-testid="placementTracking"]:-abp-has(svg + div[dir="auto"] > span:-abp-contains(/Promoted|Gesponsert|Promocionado|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Promotert|Promoveret|Sponsrad|Mainostettu|Sponzorováno|Promovat|Ajánlott|Προωθημένο|Dipromosikan|Được quảng bá|推廣|推广|推薦|推荐|プロモーション|프로모션 중|ประชาสัมพันธ์|प्रचारित|বিজ্ঞাপিত|تشہیر شدہ|مُروَّج|تبلیغی|מקודם/))
 twitter.com#?#div[data-testid="trend"]:-abp-contains(/Promoted|Gesponsert|Promocionado|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|sponsorluğunda|Mainostettu|推廣|推广/)
 twitter.com#?#h2[role="heading"]:-abp-contains(/Promoted Tweet|Gesponserter Tweet|推廣推文|推广推文/)
 windowsbulletin.com#?#.code-block:-abp-has(a[href^="http://www.reimageplus.com/"])
@@ -89562,6 +89565,7 @@ _mongo_stats/
 ||isitelab.io/ite_sitecomV1ANA.min.js
 ||itracking.fccinteractive.com^
 ||iyisayfa.net/inc.php?
+||jac.yahoosandbox.com^
 ||jailbaitchan.com/tp/
 ||jangomail.com^*?UID$third-party
 ||javascriptcounter.appspot.com^
@@ -90111,6 +90115,7 @@ _mongo_stats/
 ||scout.haymarketmedia.com^$third-party
 ||scout.salesloft.com/r?tid=
 ||scout.us2.salesloft.com^$image
+||scribd.com^*/events
 ||scribol.com/traffix/widget_tracker/
 ||scripts.psyma.com^
 ||sdrive.skoda-auto.com^
