@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JvcAEiHdczPLsnAZ0mKPKw
+! Checksum: oDPW9HbDx0jWLNQ7wf8QWw
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202101030033
-! Last Modified: 2021年01月03日 00:33
+! Version: 202101030853
+! Last Modified: 2021年01月03日 08:53
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -1152,6 +1152,7 @@ _xiuno_com_ad/
 ###body > #left-promotion
 ###body > #right-promotion
 ###bottomAD
+###bottomNavad
 ###bottombanner
 ###breadCrumb + .c + .t[style="margin-top:8px"]
 ###breadCrumb + .t[style="margin-top:8px"]
@@ -1279,6 +1280,7 @@ _xiuno_com_ad/
 ###tanx-fold-main
 ###textggs
 ###top-gg-container
+###topNavad
 ###top_ads0
 ###top_box > a[onclick^="javascript"]
 ###toperAd2
@@ -1698,16 +1700,12 @@ _xiuno_com_ad/
 ##img[src*=".sinaimg."][style="width:150px;height:300px"]
 ##script + #coupletBox
 ##script + #rbbox
-###topNavad
-###bottomNavad
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
-||cloudpsvn.com^
-||shukongshebei.net^
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/s.php?id=$script,third-party
@@ -2536,6 +2534,7 @@ ubmcmm.baidustatic.com
 ||claz.com.cn^
 ||climbcoder.com^
 ||cloudad.asia^$third-party
+||cloudpsvn.com^
 ||cmaxisolation.com^
 ||cmslayue.com^
 ||cnbole.net^
@@ -3718,6 +3717,7 @@ ubmcmm.baidustatic.com
 ||shuccn.com^
 ||shuihulu.com^$third-party
 ||shujuwu.com^$third-party
+||shukongshebei.net^
 ||shuwuzhan.com^
 ||shxinjie.cn^
 ||shypqc.com^
@@ -5438,6 +5438,7 @@ _yad_jsonp_
 ||ad.12306.cn/res/*.html
 ||ad.52av.one^
 ||ad.bobi.tw^
+||ad.ccement.com^
 ||ad.cdnjm.cn^
 ||ad.walkgame.com^
 ||ad.wurangxian.top^
@@ -5585,6 +5586,7 @@ _yad_jsonp_
 ||alicdn.com/kf/UTB8tVxYvbPJXKJkSafS5jaqUXXac.gif
 ||alicdn.com/openad/dsp-front-booth/
 ||alicdn.com/tfs/TB1fwaTDhD1gK0jSZFyXXciOVXa-800-450.jpg
+||alicdn.com/tfs/TB1TvJIloT1gK0jSZFhXXaAtVXa-440-180.jpg
 ||alicdn.com/tfscom/*.sina.
 ||alicdn.com/tps/*-950-90.
 ||alicdn.com/tps/i3/T19NaCFKFaXXckTCTS-300-100.jpg
@@ -6015,6 +6017,8 @@ _yad_jsonp_
 ||ccb.com.cn/V5/images5/right0.gif
 ||cccpan.me/googg.js
 ||ccdm*/Scripts/ccMedia.js
+||ccement.com/index/index/fetchAd
+||ccement.com/js/ccement_new/open.js
 ||cckke.com/fanhao/v/ad
 ||cctime.com/UpLoadFile/201*.gif
 ||cctime.com/UpLoadFile/201*.swf
@@ -6685,6 +6689,8 @@ _yad_jsonp_
 ||gaglxx.com/5_
 ||galacg.me/wp-content/uploads/*750x
 ||game.466.com^$third-party
+||game234.com/1/234.php
+||game234.com/wd/*ad.js
 ||game333.net/aainset/
 ||gamefy.cn/cookiead.php
 ||gamemale.com/static/js/valida.js
@@ -7742,6 +7748,7 @@ _yad_jsonp_
 ||miguyu.com/AD/
 ||mikanani.me/images/Masha/
 ||mikecrm.com^$domain=bjkd365.com
+||mikuclub.cn/down/pub/RQS.
 ||mil.news.sina.com.cn/iframe/109/2012/1024/photo.html
 ||mil.news.sina.com.cn/iframe/109/2013/1015/hotpic.html
 ||milimili.tv/js/loadjs/jquery
@@ -8618,7 +8625,6 @@ _yad_jsonp_
 ||taporn.com/d/
 ||tb58.net/plugin.php?id=tb58_
 ||tbcdn.cn/mm/tanxssp-custom/sina_
-||alicdn.com/tfs/TB1TvJIloT1gK0jSZFhXXaAtVXa-440-180.jpg
 ||tc.cn/ad123/
 ||tc.cn/g/dl.ashx?
 ||tc.cn/g/upload/
@@ -8899,6 +8905,7 @@ _yad_jsonp_
 ||vuetifyjs.com/supporters.json
 ||vupload.duowan.com^
 ||vvvkp.com/template/ttk/img/
+||vxotu.com/i/*.gif
 ||vzmz.com/template/paody/aaaa/*0
 ||vzmz.com/template/paody/aaaa/357.js
 ||w010w.com.cn^$subdocument
@@ -9496,18 +9503,8 @@ _yad_jsonp_
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
-||vxotu.com/i/*.gif
-||mikuclub.cn/down/pub/RQS.
-||ccement.com/index/index/fetchAd
-||ad.ccement.com^
-||ccement.com/js/ccement_new/open.js
-||game234.com/1/234.php
-||game234.com/wd/*ad.js
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
-nicotv.me###ff-slide
-dzbhdm.com##A[href*=".weixin.qq.com/"]
-dzbhdm.com##IMG[width="950"]
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -10065,6 +10062,7 @@ hao.360.cn###festival_baijian
 hao.360.cn,hao.360.com###festival_balloon
 hao.360.cn###festival_fly
 hao.360.cn###festival_fly + .couten
+nicotv.me###ff-slide
 6665.com###fgdiy01
 6665.com###fgdiy09
 elecfans.com###fix-tdkad
@@ -13854,6 +13852,7 @@ eastday.com##a[href*=".uugtv.com"]
 v.qq.com##a[href*=".vip.com"]
 zhibo8.cc##a[href*=".wanjiashe."]
 dm5.com,dm5.hk##a[href*=".wannaplay.cn"]
+dzbhdm.com##a[href*=".weixin.qq.com/"]
 tiexue.net##a[href*=".wx359.cn/"]
 toolfk.com##a[href*=".xiuxiandou.com/"]
 bde4.cc##a[href*=".yabo816."]
@@ -14578,6 +14577,7 @@ china.com.cn##img[width="665"]
 36dm.club,36dm.com,acgsou.com##img[width="700"][height="60"]
 itavcn.com##img[width="722"]
 gpshk.cc,yxzp.net##img[width="770"]
+dzbhdm.com##img[width="950"]
 chcj.com##img[width="960"]
 nasyun.com##img[width="970"]
 biz.zjol.com.cn,cgown.com,taohuayun.cn##img[width="980"]
