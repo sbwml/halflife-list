@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: vekahCYXLsJ+uUkOgwWV7w
+! Checksum: eUpmB2Jdlqtnq15GbZuu6A
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202101040854
-! Last Modified: 2021年01月04日 08:54
+! Version: 202101041232
+! Last Modified: 2021年01月04日 12:32
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -16150,6 +16150,7 @@ _popunder+$popup
 ###mpu_firstpost
 ###mpu_holder
 ###mpu_text_ad
+###mpu_top
 ###mpuad
 ###mpubox
 ###mpuholder
@@ -21520,6 +21521,7 @@ _popunder+$popup
 ##.ads-side
 ##.ads-sidebar
 ##.ads-sidebar-boxad
+##.ads-sign
 ##.ads-single
 ##.ads-site
 ##.ads-sky
@@ -26337,11 +26339,13 @@ _popunder+$popup
 ##.js-cardview_ad-320x50
 ##.js-dfp-ad
 ##.js-dfp-ad-bottom
+##.js-dfp-ad-top
 ##.js-dfpAdPosSR
 ##.js-googleAdSuperHeader-wrapper
 ##.js-gptAd
 ##.js-header-ad
 ##.js-header-ad-wrapper
+##.js-mpu
 ##.js-native-ad
 ##.js-no-sticky-ad
 ##.js-overlay_ad
@@ -27702,6 +27706,7 @@ _popunder+$popup
 ##.ppb_ads
 ##.ppp_interior_ad
 ##.ppr_priv_footer_banner_ad_billboard
+##.ppr_priv_horizon_ad
 ##.ppr_priv_sponsored_coupon_listing
 ##.pq-ad
 ##.pr-ad-tower
@@ -28585,6 +28590,7 @@ _popunder+$popup
 ##.single-ads
 ##.single-google-ad
 ##.single-item-page-ads
+##.single-mpu
 ##.single-post-ad
 ##.single-post-ads-750x90
 ##.single-top-ad
@@ -54304,7 +54310,7 @@ $popup,third-party,domain=loader.to|play.hydracdn.network|streamtape.com|vidclou
 ||zuzandra.info/b?
 /^https?:\/\/.*\.(club|news|live|online|store|tech|guru|cloud|bid|xyz|site|pro|info|online|icu|monster|buzz|fun|website|re|casa|top|today|space|network|live|work|systems|ml|world|life)\/.*/$domain=1vag.com|4tube.com|asianpornmovies.com|getsex.xxx|glam0ur.com|hclips.com|hdzog.com|homemadevids.org|hotmovs.com|milfzr.com|porn555.com|pornforrelax.com|pornj.com|pornl.com|puporn.com|see.xxx|shemalez.com|sss.xxx|thegay.com|thegay.porn|tits-guru.com|tubepornclassic.com|tuberel.com|txxx.com|txxx.tube|upornia.com|vjav.com|voyeurhit.com|xozilla.com
 /^https?:\/\/motherless\.com\/[a-z0-9A-Z]{3,}\.[a-z0-9A-Z]{2,}\_/$image,subdocument
-/^https?:\/\/.*\/.*sw[0-9._].*/$script,xmlhttprequest,domain=adult-channels.com|analdin.com|biguz.net|bogrodius.com|daftsex.com|extremetube.com|fantasti.cc|fux.com|heavy-r.com|incesto69.com|indianbfvideos.com|megapornx.com|mypornhere.com|niceporn.xxx|porn555.com|pornerbros.com|pornj.com|pornototale.com|porntube.com|sexu.com|spankwire.com|thisav.com|titkino.net|tubepornclassic.com|tuberel.com|tubev.sex|txxx.com|vidmo.org|vpornvideos.com|xozilla.com|youporn.lc|youpornhub.it|yourdailypornstars.com
+/^https?:\/\/.*\/.*sw[0-9._].*/$script,xmlhttprequest,domain=1vag.com|4tube.com|adult-channels.com|analdin.com|biguz.net|bogrodius.com|daftsex.com|extremetube.com|fantasti.cc|fux.com|hclips.com|heavy-r.com|incesto69.com|indianbfvideos.com|megapornx.com|milfzr.com|mypornhere.com|niceporn.xxx|porn555.com|pornerbros.com|pornj.com|pornl.com|pornototale.com|porntube.com|sexu.com|spankwire.com|sss.xxx|thisav.com|titkino.net|tubepornclassic.com|tuberel.com|tubev.sex|txxx.com|vidmo.org|vpornvideos.com|xozilla.com|youporn.lc|youpornhub.it|yourdailypornstars.com
 @@||netdna-storage.com^$xmlhttprequest,domain=gaybeeg.info
 @@||translate.google.com^$script,domain=gaybeeg.info
 @@||wp.com/wp-content/js/$script,domain=gaybeeg.info
@@ -54472,6 +54478,7 @@ cpuid.com###console_log
 scanboat.com###content > .margin-tb-25
 blastingnews.com###content-banner-dx1-p1
 amatuks.co.za###content-sponsors
+titantv.com###ctl00_Main_TVL_ctl00_sb
 leader.co.za###ctl00_cphBody_pnUsefulLinks
 leader.co.za###ctl00_ctl00_cphBody_cphColumnBody_cphBannerBodyHeader_userBannerBodyHeader_pnBanners
 leader.co.za###ctl00_ctl00_cphBody_cphColumnBody_cphColumnMiddleParent_cphNavigationRight_userNavigationRight_userBannerSponsor_pnBanners
@@ -58289,7 +58296,7 @@ youporn.com#?#aside:-abp-has(a.ad-remove)
 @@||googlesyndication.com/simgad/$image,domain=pccomponentes.com
 @@||googletagservices.com/tag/js/gpt.js$domain=farfeshplus.com|pccomponentes.com|vlive.tv
 @@||iejima.org/ad-banner/$image,~third-party
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=bloomberg.co.jp|farfeshplus.com|klix.ba|locipo.jp|nettavisen.no|niusdiario.es|rtlnieuws.nl|sportsport.ba|tbs.co.jp|tv.rakuten.co.jp|tver.jp|vlive.tv|wtk.pl
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=bloomberg.co.jp|farfeshplus.com|klix.ba|locipo.jp|nettavisen.no|niusdiario.es|rtlnieuws.nl|sportsport.ba|tbs.co.jp|tv.rakuten.co.jp|tver.jp|vlive.tv|webdunia.com|wtk.pl
 @@||ingrossoprofumitester.it/img/ad-profumeria-$image,~third-party
 @@||jmedj.co.jp/files/$image,~third-party
 @@||kanalfrederikshavn.dk^*/jquery.openx.js?
@@ -60420,6 +60427,7 @@ _xiuno_com_ad/
 ##img[src*=".sinaimg."][style="width:150px;height:300px"]
 ##script + #coupletBox
 ##script + #rbbox
+##.y.mtw[style="padding: 0px 10px;"]
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
@@ -74852,7 +74860,7 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + 
 ||dm.wenshenxiu.com^
 ||dm.zuowenku.net^
 ||dm1.ddwk8.cn^
-||dm1.dnpz123.com^
+||dnpz123.com^$third-party
 ||dm1.guanwawa.com^
 ||dm1.zjydt.com^
 ||dmm.aizhan.com^
@@ -87238,6 +87246,7 @@ _mongo_stats/
 ||cubchannel.com^$third-party
 ||culturedcrayon.com^$third-party
 ||curvycry.com^$third-party
+||cushionpig.com^$third-party
 ||damdoor.com^$third-party
 ||dampdock.com^$third-party
 ||dapperdiscussion.com^$third-party
@@ -89436,6 +89445,7 @@ _mongo_stats/
 ||inq.com^*/onEvent?_
 ||insight.mintel.com^$third-party
 ||insight.rapid7.com^$third-party
+||insights.algolia.io^
 ||insights.plista.com^$third-party
 ||insights.sitesearch360.com^
 ||insitez.blob.core.windows.net^
@@ -90661,6 +90671,7 @@ _mongo_stats/
 ||sgphctileh-a.akamaihd.net^
 ||uhytajrtpo-a.akamaihd.net^
 ||zvsuhljiha-a.akamaihd.net^
+||7q1z79gxsi.global.ssl.fastly.net^
 ||clarium.global.ssl.fastly.net^
 ||dfapvmql-q.global.ssl.fastly.net^
 ||fastly.net/collect?
@@ -92288,7 +92299,7 @@ _mongo_stats/
 ||glamourmagazine.co.uk^*/LogPageView
 ||glassmoni.researchgate.net^
 ||global.canon^*/analytics.js
-||global.ssl.fastly.net^$script,xmlhttprequest,domain=allmodern.com|argos.co.uk|birchlane.com|courier-journal.com|courierpress.com|desertsun.com|detroitnews.com|eddiebauer.com|freep.com|glassesusa.com|greenbaypressgazette.com|indystar.com|jsonline.com|kurtgeiger.com|legacy.com|lenovo.com|lohud.com|mentalfloss.com|naplesnews.com|news-journalonline.com|northjersey.com|perigold.com|quickship.com|quikshiptoner.com|radiotimes.com|sainsburys.co.uk|sanuk.com|sheboyganpress.com|theadvertiser.com|thisweek.com|ugg.com|usatoday.com|wayfair.co.uk|wayfair.com
+||global.ssl.fastly.net^$script,xmlhttprequest,domain=allmodern.com|argos.co.uk|birchlane.com|courier-journal.com|courierpress.com|desertsun.com|detroitnews.com|eddiebauer.com|freep.com|glassesusa.com|greenbaypressgazette.com|indystar.com|jsonline.com|kurtgeiger.com|legacy.com|lenovo.com|lohud.com|naplesnews.com|news-journalonline.com|northjersey.com|perigold.com|quickship.com|quikshiptoner.com|radiotimes.com|sainsburys.co.uk|sanuk.com|sheboyganpress.com|tallahassee.com|theadvertiser.com|thisweek.com|ugg.com|usatoday.com|wayfair.co.uk|wayfair.com
 ||globes.co.il/ga.asp
 ||globes.co.il/shared/s.ashx?
 ||globester.com^*/track.js
@@ -93704,8 +93715,7 @@ _mongo_stats/
 ||triadretail.com^*/roverTrack.js
 ||trialpay.com/mi/
 ||triond.com/cntimp?
-||tripadvisor.*/PageMoniker?
-||tripadvisor.com/uvpages/page_moniker.html
+||tripadvisor.com^*/rum
 ||trivago.com/check-session-state?
 ||trivago.com/tracking/
 ||trk.flazio.com^
