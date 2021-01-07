@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pECgTiNiXd9JHx2EDEMoYw
+! Checksum: FKkZo24GJozYEfbo945zmQ
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202101072025
-! Last Modified: 2021年01月07日 20:25
+! Version: 202101080039
+! Last Modified: 2021年01月08日 00:39
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -7852,7 +7852,6 @@ _yad_jsonp_
 ||rjsos.com/channel/laomo_dibu.png
 ||rjzxw.com/include/
 ||rkanr.com/data/cpcache/cp*.js
-||rm.sina.com.cn^$domain=~sea.sina.com.cn
 ||rm66.me/ri.js
 ||rm66.me/tpl/js/i.js
 ||rm66.me/tpl/js/t.js
@@ -9070,6 +9069,10 @@ _yad_jsonp_
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+ifeng.com##DIV[class^="topBox-"]
+ifeng.com##DIV[class^="d_box-"]
+ifeng.com##DIV[class^="dbox"]
+ifeng.com##DIV[class^="bottomDbox"]
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -29771,18 +29774,7 @@ _mongo_stats/
 ||zroitracker.com^$third-party
 ||ztsrv.com^$third-party
 ||zuzab.com^$third-party
-||5centscdn.com^$third-party,xmlhttprequest
-||azioncdn.net^$third-party,xmlhttprequest
-||azureedge.net^$third-party,xmlhttprequest
-||belugacdn.link^$third-party,xmlhttprequest
-||blazingcdn.net^$third-party,xmlhttprequest
-||cdn-tech.io^$third-party,xmlhttprequest
-||cf-china.info^$third-party,xmlhttprequest
-||doracdn.com^$third-party,xmlhttprequest
-||gocache.net^$third-party,xmlhttprequest
-||mncdn.com^$third-party,xmlhttprequest
-||psychz.net^$third-party,xmlhttprequest
-||worldssl.net^$third-party,xmlhttprequest
+$third-party,xmlhttprequest,domain=opensubtitles.org
 ||artfin.club^
 ||bemarts.club^
 ||bogglecool.club^
@@ -33001,7 +32993,7 @@ _mongo_stats/
 ||quora.com/_/ad/
 ||quora.com/qevents.js
 ||qzzr.com/_uid.gif
-||r.mail.ru^
+||r.mail.ru^$script
 ||r.msn.com^
 ||r.ypcdn.com^*/rtd?ptid$image
 ||rackcdn.com/easie.js
@@ -34395,6 +34387,7 @@ _mongo_stats/
 ||clck.yandex.ru^$~other
 ||climatecontrol.ru/counters/
 ||cnstats.cdev.eu^
+||cnt.krasland.ru^
 ||cnt.logoslovo.ru^
 ||cnt.nov.ru^
 ||cnt.rambler.ru^
