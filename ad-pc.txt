@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: f2fttbAPMF59QUIG445dpQ
+! Checksum: tMYh18sF2DLPHkZUjBEV9A
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202101082027
-! Last Modified: 2021年01月08日 20:27
+! Version: 202101090042
+! Last Modified: 2021年01月09日 00:42
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -7954,6 +7954,7 @@ _ad234x90-
 _ad3.
 _ad300.
 _ad300x250.
+_Ad300x250_
 _ad4.
 _ad5.
 _ad6.$domain=~facebook.com|~facebookcorewwwi.onion|~messenger.com
@@ -11025,6 +11026,7 @@ _popunder+$popup
 ###adLContain
 ###adLabel
 ###adLayer
+###adLayerTop
 ###adLayout
 ###adLeader
 ###adLeaderTop
@@ -22751,6 +22753,7 @@ _popunder+$popup
 ##.advertRight
 ##.advertSideBar
 ##.advertSign
+##.advertSlider
 ##.advertSlot
 ##.advertSuperBanner
 ##.advertText
@@ -27604,6 +27607,7 @@ _popunder+$popup
 ##.place-ads
 ##.placeholder-ad
 ##.placeholderAd
+##.plain-ad
 ##.plainAd
 ##.play-page-ads
 ##.playAds1
@@ -52097,6 +52101,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||sat-shop.co.uk/images/$third-party
 ||satshop.tv/images/banner/$third-party
 ||sbhc.portalhc.com^$third-party
+||schenkelklopfer.org/4fsidebar.php
 ||schenkelklopfer.org^*pop.js
 ||schurzdigital.com/deals/widget/
 ||sciencecareers.org/widget/$third-party
@@ -52939,7 +52944,6 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||saboom.com.pccdn.com^*/banner/
 ||sadtube.com/chat/$script
 ||sakuralive.com/dynamicbanner/
-||schenkelklopfer.org/4fsidebar.php
 ||scoreland.com/banner/
 ||screencapturewidget.aebn.net^$third-party
 ||sexei.net^$subdocument,xmlhttprequest
@@ -54009,7 +54013,6 @@ $popup,third-party,domain=loader.to|play.hydracdn.network|streamtape.com|vidclou
 /sendspace-pop.$popup,domain=sendspace.com
 :text^$popup,domain=zippyshare.com
 ^utm_source=$popup,domain=sex.com
-||4fuckr.com/api.php$popup
 ||adf.ly/*.php?$popup
 ||adf.ly/_$popup
 ||adf.ly^$popup,domain=urgrove.com
@@ -54046,7 +54049,6 @@ $popup,third-party,domain=loader.to|play.hydracdn.network|streamtape.com|vidclou
 ||imgcarry.com/includes/js/layer.js
 ||imgrock.net^$popup,~third-party
 ||intradayfun.com/news_intradayfun.com.html$popup
-||jokertraffic.com^$popup,domain=4fuckr.com
 ||kalemaro.com^$popup,domain=filatak.com
 ||kat.vc/*?$popup
 ||kat2.biz/*?$popup
@@ -54071,7 +54073,6 @@ $popup,third-party,domain=loader.to|play.hydracdn.network|streamtape.com|vidclou
 ||r.search.yahoo.com/_ylt=*;_ylu=*.r.msn.com$popup,domain=search.yahoo.com
 ||rediff.com/uim/ads/$popup
 ||reutersmedia.net/resources_$popup,domain=reuters.com
-||schenkelklopfer.org^$popup,domain=4fuckr.com
 ||shareasale.com^$popup,domain=9to5mac.com
 ||softexter.com^$popup,domain=2drive.net
 ||solarmoviefree.net/home.html$popup
@@ -56586,7 +56587,6 @@ steroid.com##[href*="https://www.anabolics.com"]
 audiobookbay.net##[href="/dl-14-days-trial"]
 1movies.is##[href="/user/premiummembership"]
 2pass.co.uk##[href="bicycle-insurance.htm"]
-4fuckr.com##[href="http://www.aische-pervers.tv"]
 daijiworld.com##[href="http://www.expertclasses.org/"]
 sqlfiddle.com##[href="https://entityframework-extensions.net/"]
 mhktricks.org##[href="https://www.deepbrid.com/"]
@@ -57739,7 +57739,7 @@ brit-babes.com##img[width="280"]
 pornhub.com,pornhubthbh7ap3u.onion##img[width="300"][height="250"]
 naughty.com##img[width="450"]
 adultwork.com,babepicture.co.uk,imagetwist.com,naughty.com,sexmummy.com,tophentai.biz,tvgirlsgallery.co.uk##img[width="468"]
-4fuckr.com,babeshows.co.uk,jessie-rogers.com##img[width="728"]
+babeshows.co.uk,jessie-rogers.com##img[width="728"]
 pornhub.com,pornhubthbh7ap3u.onion##sads
 motherless.com##table[style*="max-width:"]
 humoron.com##table[width="527"]
@@ -60494,6 +60494,7 @@ _xiuno_com_ad/
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
+||7cbwus.cn^
 ||baitugu.com^$third-party
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
@@ -75631,6 +75632,16 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 @@||libs.baidu.com^$domain=138txt.com|18xs.org|1biqu.com|1kanshu.cc|230book.com|23hh.com|23txt.com|23wxx.com|258zw.com|266ks.com|27xsw.com|2baob.com|30sy.com|33yq.com|365book.net|37zw.net|39shubao.com|3yt.com|52biquge.com|58xs.com|5ccc.tw|78zw.com|81zw.me|99mk.com|99shumeng.net|aikantxt.la|aixswx.com|aomolit.com|aoyuge.com|balingtxt.com|baoshuu.com|biduo.cc|biqiuge8.com|biqubao.com|biqudu.tv|biquga.com|biquge.com.cn|biquge.info|biquge.lu|biquge.tv|biquge11.com|biquge6.com|biquge98.com|biqugecd.com|biqugego.com|biqugemm.com|biqugesc.com|biquku.la|biqusan.com|biquyi.com|bixia.org|biyuwu.cc|bodekang.net|boluoxs.com|bookbao.org|booktxt.net|botaodz.com|bqkan.com|bshuku.com|bxwx.org|bxwx.tw|bxwx8.la|bxwxorg.com|clewx.com|damengzhu1.com|dashenxiaoshuo.com|day66.com|ddxs.cc|ddxsku.com|dushuge.net|farpop.com|gdbzkz.com|guaili.org|hatxt.com|hbfie.org|hehuamei.com|heikexs.com|heiyanwang.com|hongyeshuzhai.com|hybiquge.com|imiaobige.com|ishisetianxia.com|ixiatxt.com|ixs.la|ixuanquge.com|jianlaixiaoshuo.com|jinshulo.com|jx.la|kkbiqu2.com|liewen.la|lindiankanshu.cc|liudatxt.com|lwtxt.net|lwxstxt.com|mhtwx.la|mubige.com|paoshu8.com|pfwx.com|piaotianxs.com|ppskw.com|qbxs8.net|qianrenge.cc|qiqint.la|qq717.com|quledu.net|qushuba.com|rmxs8.com|shu008.com|shuhaiwu.com|shumil.co|shuquge.com|siluke.tv|skyzww.com|soxscc.com|tangsanshu.com|tpszw.com|ttzw.tv|txshuku.net|tycqxs.com|u33.me|uidzhx.com|v63xs.com|vipxs.la|wanwenhui.com|wenxuem.com|wrlwx.com|x23us.me|x81zw.com|xbiquge.la|xbiqugecc.com|xbiqugew.net|xbiquke.com|xbqge.net|xcmxsw.com|xdingdiann.com|xieyixs.com|xinshuhaige.com|xinxs.la|xs222.co|xs5200.com|xs98.com|xsbiqu.com|xsbiqugew.com|xsqishu.com|xsw55.com|xszww.com|xuanshu.com|xuehongxs.com|xyusk.com|yawenb.com|yikanxiaoshuo.com|yq-888.com|yruan.com|yssm.info|yunxs.com|zbzw.la|zhnxcw.com|zhuaji.org|zwdu.com|zzs5.com
 @@||zmtt.net^$script,domain=luoqiuzw.com
 !#Novels
+||yjxqy.com^
+||m06nev.com^
+||zhmyq.cn^
+||ql01t4.com^
+||jysbj.cn^
+||tzh019.cn^
+||aoyou4.top^
+||xiangyuym.cn^
+||wangjulm.com^
+||ahwczn.cn^
 ||dacedsfa.cn^
 bxwx555.org###addiv3
 bxwx555.org###bdstatic
@@ -77702,7 +77713,6 @@ piaotian5.com##script + div[style="padding:15px;"]
 ||xiandafood.cn^
 ||xiangchim0.com^
 ||xiangwangdesh.com^
-||xiangyuym.cn^
 ||xiansenmeng.cn^
 ||xiaobingmai.cn^
 ||xiaogouzhuanqian.cn^
