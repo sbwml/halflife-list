@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mMVvv9q6Q8e9404c2bwahQ
+! Checksum: b0nsgzlZEU4EB+vvYbOf9Q
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202101091629
-! Last Modified: 2021年01月09日 16:29
+! Version: 202101092027
+! Last Modified: 2021年01月09日 20:27
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1261,6 +1261,7 @@ _xiuno_com_ad/
 ##img[src*=".sinaimg."][style="width:150px;height:300px"]
 ##script + #coupletBox
 ##script + #rbbox
+##.top_ad_ban
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
@@ -9078,6 +9079,9 @@ _yad_jsonp_
 ||kxmusic.top/tc/js/script.js
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+22vd.com##.ad
+icourse163.org##.promotion-banner-wrapper
+22vd.com##.widget_custom_html:last-child
 kxmusic.top##A[href*="smsf8.com"]
 kxmusic.cn##A[href*="smsf8.com"]
 szxx.com.cn###A1
@@ -15090,7 +15094,7 @@ gohome.com.hk#@#div[id^="div-gpt-ad"]
 @@||ttrar.com/statics/pos_js/jquery.gotop.js
 @@||tui.click/js/ads.js
 @@||tui.click^$generichide
-@@||tvb.com/player/*/videojs.ads.
+@@||tvb.com^*/videojs.ads.
 @@||twpkinfo.com/js/ads.min.js
 @@||udndata.com/ndapp/ads/$~third-party
 @@||udnplay.com/js/momo/adsbygoogle.js
@@ -16411,6 +16415,7 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 !#Novels
 ||huosuniao.com^
 ||mohaijishu.cn^
+##.appguide-wrap[onclick*="bcebos.com"]
 ###chaptername + div > div[style="padding:10px;border-radius:10px;background-color:green;"]
 ###downdiv > .downcode
 ##.box_con[style="border-radius:10px;background-color:#ff0000;padding:15px;"]
@@ -19802,6 +19807,7 @@ _box_ad_
 ||ntalker.com^
 ||pop800.com^$third-party
 ||soperson.com^$third-party
+||tawk.to^$third-party
 ||tui.cnzz.net^$third-party
 ||wpa.b.qq.com/cgi/wpa.php?
 ||zoosnet.net^$third-party
@@ -20154,7 +20160,9 @@ _box_ad_
 ||yyetss.com/static/modal.js
 ||pcauto.com.cn/zt/*_dialog/cjx-pc-half_
 ||thepaper.cn/bottomBanner_
+||iiikefu.com/wp-content/plugins/halfdata-green-popups/js/lepopup.js
 !------------------------Specific element hiding rules------------------------!
+ke.qq.com##.bottom-bar
 699pic.com###landlord
 699pic.com##.springtime-floatLink
 699pic.com##.springtime-pop
@@ -21081,6 +21089,7 @@ m.babytree.com##script + a[class]
 /v.gif?logtype=
 /yesky/js/counter/*
 /zcool-analytics.js
+||pstatp.com/toutiao/push.js
 ||pv.cheshi.com^
 ||tracking.kdnet.net^
 ||lnd.com.cn/sys/real_calc.js
