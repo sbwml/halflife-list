@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: DkewfRElbDCJc7+ttO/nEA
+! Checksum: OwjBDXtZAw9uj5k4CEwrbA
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202101151642
-! Last Modified: 2021年01月15日 16:42
+! Version: 202101152039
+! Last Modified: 2021年01月15日 20:39
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -483,7 +483,7 @@ v.qq.com,sports.qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
 ||reachmax.cn/
 ||tencentmind.com/
 ||xtgreat.com/
-bilibili.com##.gg-floor-module,#slide_ad
+bilibili.com##.gg-floor-module,#slide_ad,#slide_ad+a[data-target-url]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
 ||hdslb.com/bfs/sycp/creative_img/$image
 acfun.cn##.pause-display-container,#ad-comment,#ad-player-view
@@ -541,11 +541,11 @@ huya.com###hy-ad,#hy-ab,#huya-ab
 ||www.dililitv.com/*.php?ad=$script
 dililitv.com,hmtv.me,imeiju.io,mkvdo.com,zxfun.net##+js(acis,Object.defineProperty,location.href)
 www.dyjihe.com##.tempWrap
-haitur.com,www.haicaoys.com,www.cdfdy.com,www.labays.com,www.meiyuktv.cn##.dplayer-web-fullscreen-fix .float-box
+haitur.com,haicaoys.com##.dplayer-web-fullscreen-fix .float-box
 haitur.com##.container:style(max-width:90%!important;width:90%!important)
 haitur.com##.left-content:style(width:77%!important)
 foxiys.com##+js(ra, target, a)
-imomoe.*,hehua.net,kakadm.com,milimili.tv,qiqidongman.com##+js(ra, target, a[href^="/"])
+imomoe.*,hehua.net,kakadm.com,milimili.tv,qiqidongman.com,vodxc.in##+js(ra, target, a[href^="/"])
 !imomoe.*###adl,#adr
 ||alicdn.com/$image,domain=api.xiaomingming.org
 yatu.tv###loadtop,[id^=myas],#myds1,#daohang
@@ -554,11 +554,10 @@ anquanzhuomian.com
 ch-hr12333.com
 g1c5.com
 ieeod0.com
-tracker.novage.com.ua
-tracker.openwebtorrent.com
 fourier.taobao.com
 v4dwkcv.com
 youle55.com
+||tracker.$domain=yatu.tv
 ||www.yatu.tv/image/*.gif^$image
 ||www.yatu.tv/m/images/$image
 ! EasyList China
@@ -1352,7 +1351,6 @@ _xiuno_com_ad/
 ##.ad_right_1
 ##.ad_right_2
 ##.ad_thread
-##.ad_top_close + .bd
 ##.adbox-bg.adscounter
 ##.add-gg
 ##.ads > a > img[src*=".sinaimg."]
@@ -9538,6 +9536,7 @@ _yad_jsonp_
 ||yjspw25.com/pc_
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+xsldh6.com##DIV[id^="slide"] > .pure-g:nth-child(3)
 jojf.cn##.banner
 szxx.com.cn###A1
 szxx.com.cn###A2
@@ -16885,6 +16884,8 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 ||buyuninfo.com^
 ||hnyoufan.com^
 ||g1mm3d.cn^
+||liulu888.com^
+||dnfkong.com^
 ||yanyanbiji.com^
 ||zln44.cn^
 bxwx555.org###addiv3
