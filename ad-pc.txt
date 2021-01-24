@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: eRmzFxwvEVshe3WdEMsdHg
+! Checksum: BErDRT3m5Pq3+SsZq3+PBw
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202101240051
-! Last Modified: 2021年01月24日 00:51
+! Version: 202101240915
+! Last Modified: 2021年01月24日 09:15
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -23292,6 +23292,7 @@ _popunder+$popup
 ##.amAdvert
 ##.am_ads
 ##.amazon_ad
+##.amp-ad
 ##.amp-ads
 ##.amsSparkleAdWrapper
 ##.anc_ads_show
@@ -24252,6 +24253,7 @@ _popunder+$popup
 ##.c-fallback-ad--house
 ##.c-fragment--container--ad
 ##.c-gallery-vertical__advert
+##.c-googleadslot
 ##.c-main-header__ad
 ##.c-news-feed-ads
 ##.c-res-ad
@@ -54738,6 +54740,7 @@ windows2universe.org###google_mockup
 mozillazine.org###gootop
 decider.com###gowatchit-inline
 sourceforge.jp###gpt-sf_dev_300
+indianexpress.com###gpt_ad_IE_ROS_BUDGET_BAND
 bbccanada.com###gradientbox
 proboards.com###gravity-stories-1
 binaries4all.com###gright
@@ -55542,6 +55545,7 @@ classicfm.com##.apple_music
 whatculture.com##.area-x__large
 outerplaces.com##.article-banner-link
 businesslive.co.za##.article-da
+sciencealert.com##.article-fulltext > div
 scoop.co.nz##.article-left-box
 nintendolife.com,purexbox.com##.article-recommendations
 audizine.com##.articleIMG
@@ -81913,6 +81917,8 @@ fqsousou.com,kengso.com#@#.user-share
 /omniture/uuid.
 /omniture/visitorapi.
 /omniture?
+/omniture_tracking.
+/OmnitureAkamai.
 /omnitureAMP.
 /OmnitureAnalytics.
 /OmnitureTracking_
@@ -83910,6 +83916,8 @@ fqsousou.com,kengso.com#@#.user-share
 /wtstats/*
 /wusage_screen_properties.gif?
 /wv326redirect_
+/ww-analytics-
+/ww-performance-
 /WWTracking_
 /wwwcount.cgi?
 /wysistat.js
@@ -86169,6 +86177,7 @@ _mongo_stats/
 ||optimizely.com^$third-party
 ||optimizelydata.com^$third-party
 ||optimost.com^$third-party
+||optimove.net^$third-party
 ||optin-machine.com^$third-party
 ||optorb.com^$third-party
 ||oracleinfinity.io^$third-party
@@ -86272,6 +86281,7 @@ _mongo_stats/
 ||pntrs.com^$third-party
 ||podfdch.com^$third-party
 ||pointillist.com^$third-party
+||pointmediatracker.com^$third-party
 ||pointomatic.com^$third-party
 ||polarbyte.com^$third-party
 ||polarcdn-pentos.com^$third-party
@@ -88963,6 +88973,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||afrigator.com/track/
 ||agendize.com^*/counts.jsp?
 ||aiya.com.cn/stat.js
+||akamaihd.net/p1lakjen.gif
 ||akanoo.com/tracker/
 ||akatracking.esearchvision.com^
 ||aklamio.com/ovlbtntrk?
@@ -90710,6 +90721,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||systemmonitoring.badgeville.com^
 ||t-staging.powerreviews.com^
 ||t.a3cloud.net^
+||t.auditedmedia.org.au^
 ||t.beop.io^
 ||t.beopinion.com^
 ||t.bimvid.com^
@@ -92283,6 +92295,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||betfair.com/1x1.gif
 ||betway.com/snowflake/?
 ||beyond.com/common/track/trackgeneral.asp
+||bfp.capitalone.com^
 ||bhg.com^*/tracking-data?
 ||bi.medscape.com^
 ||bidz.com/contentarea/BidzHomePixel
@@ -94661,10 +94674,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 /^https?:\/\/www\.halifax-online\.co\.uk\/publicwww\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=halifax-online.co.uk
 /^https?:\/\/www\.kohls\.com\/clientlibs\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=kohls.com
 /^https?:\/\/www\.kroger\.com\/content\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=kroger.com
+/^https?:\/\/www\.kroger\.com\/resources\/{20,}/$script,xmlhttprequest,domain=kroger.com
 /^https?:\/\/www\.macys\.com\/clientlibs\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=macys.com
 /^https?:\/\/www\.marshalls\.com\/staticweb\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=marshalls.com
 /^https?:\/\/www\.mouser\.com\/staticweb\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=mouser.com
 /^https?:\/\/www\.myservices\.equifax\.ca\/TSPD\/[0-9a-f]{30,}/$script,domain=equifax.ca
+/^https?:\/\/www\.pnc\.com\/clientlibs\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=pnc.com
 /^https?:\/\/www\.publix\.com\/webcontent\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=publix.com
 /^https?:\/\/www\.sierra\.com\/resource\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=sierra.com
 /^https?:\/\/www\.staples\.com\/publicwww\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=staples.com
