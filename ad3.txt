@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Ph7UoEHDoyZ7cUnKaTXsEg
+! Checksum: B/GXadJoliTsItyGpvP++Q
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202102030836
-! Last Modified: 2021年02月03日 08:36
+! Version: 202102031218
+! Last Modified: 2021年02月03日 12:18
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -25202,6 +25202,7 @@ weibo.com##.apps_PCD_reco_detail_right
 /RadioAnalytics.js
 /RadioAnalyticsIframe.js
 /radium-one.js
+/ravelin-*-track.min.js
 /rbi_us.js
 /rbipt.gif?
 /rbipt.js
@@ -29235,6 +29236,7 @@ _mongo_stats/
 ||rapidstats.net^$third-party
 ||rapidtrk.net^$third-party
 ||rating.in^$third-party
+||ravelin.click^$third-party
 ||rdcdn.com^$third-party
 ||reachforce.com^$third-party
 ||reachlocalservices.com^$third-party
@@ -37534,12 +37536,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 /^https?:\/\/nav\.sciencedirect\.com\/[a-zA-Z0-9]{14,}\.js/$script,domain=sciencedirect.com
 /^https?:\/\/pov\.spectrum\.net\/[a-zA-Z0-9]{14,}\.js/$script,domain=spectrum.net
 /^https?:\/\/src\.ebay-us\.com\/[_a-zA-Z0-9]{10,}\?/$script,domain=pages.ebay.com
-/^https?:\/\/tjmaxx\.tjx\.com\/libraries\/[a-z0-9]{20,}$script,xmlhttprequest,domain=tjx.com
+/^https?:\/\/tjmaxx\.tjx\.com\/libraries\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=tjx.com
 /^https?:\/\/tmx\.td\.com\/[a-z0-9]{14,18}\.js.*/$script,domain=mbna.ca|td.com
 /^https?:\/\/www\.academy\.com\/webcontent\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=academy.com
 /^https?:\/\/www\.backcountry\.com\/clientlibs\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=backcountry.com
 /^https?:\/\/www\.bestbuy\.com\/resource\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=bestbuy.com
-/^https?:\/\/www\.buybuybaby\.com\/content\/[a-z0-9]{20,}$script,xmlhttprequest,domain=buybuybaby.com
+/^https?:\/\/www\.buybuybaby\.com\/content\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=buybuybaby.com
 /^https?:\/\/www\.ebay-kleinanzeigen\.de\/[a-z0-9]{8}\-[0-9a-f]{4}\-/$script,domain=ebay-kleinanzeigen.de
 /^https?:\/\/www\.eddiebauer\.com\/resource\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=eddiebauer.com
 /^https?:\/\/www\.finishline\.com\/contents\/[a-z0-9]{20,}/$script,xmlhttprequest,domain=finishline.com
@@ -39874,15 +39876,12 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||scdn.cxense.com/cx.js$script,domain=ksml.fi|savonsanomat.fi
 !---------- Hebrew ----------
 @@||amazonaws.com/static.madlan.co.il/*/heatmap.json?$xmlhttprequest
-@@||cloudvideoplatform.com/scripts/WebAnalytics.js$script
 @@||googletagmanager.com/gtm.js?$domain=feex.co.il
 @@||haaretz.co.il/logger/p.gif?$image,xmlhttprequest
 @@||mixpanel.com/track/?data=$xmlhttprequest,domain=eloan.co.il
 @@||mxpnl.com/libs/mixpanel-*.min.js$domain=eloan.co.il
 @@||player.bizportal.co.il/scripts/GoogleAnalytics.js$domain=bizportal.co.il
-@@||player.flix.co.il/scripts/GoogleAnalytics.js
 @@||sport5.co.il/js/angulartics-google-analytics.js
-@@||tapuz.co.il/general/dotomi/statistics.js?$~third-party
 @@||themarker.com/logger/p.gif?$image,xmlhttprequest
 @@||track.atom-data.io/|$xmlhttprequest,domain=globes.co.il
 @@||trc.taboola.com/inncoil/log/3/available$subdocument,domain=inn.co.il
