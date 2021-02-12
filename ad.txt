@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 9Pg3zUqkMS0ZBffn/H7uRQ
+! Checksum: rzsr0lyhHNqtYmqgw9ZuFQ
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202102120834
-! Last Modified: 2021年02月12日 08:34
+! Version: 202102121217
+! Last Modified: 2021年02月12日 12:17
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -9614,8 +9614,13 @@ _yad_jsonp_
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||b168.net^*.*?$image
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+stock87.com##A[href^="http"]:not([href*="stock87."]) > IMG[src*="uploadfiles/image/"]
+stock87.com##DIV[id^="Javascript"]
+stock87.com##DIV[style^="position:relative;width:1000px;height:90px;"]
+stock87.com##IMG[width="960"]
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -15064,6 +15069,8 @@ brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk#@#div[id^="div-gpt-ad"]
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
+@@||dmhy.b168.net^$generichide
+@@.gif#$domain=b168.net
 @@.adserver.$domain=litv.tv
 @@.com/adv/$domain=my.ctrip.com
 @@.gif#$domain=cnprint.org|huhupan.com|tgfcer.com|wgun.net
