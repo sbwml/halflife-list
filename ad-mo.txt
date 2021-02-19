@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: S08VfLPoLqT4Eaj5NA6RJw
+! Checksum: DZyLgsU9hXm9dzHjzfh0dA
 ! Title: My AdFilters（for Mobile）
 ! Expires: 12 hours
-! Version: 202102190414
-! Last Modified: 2021年02月19日 04:14
+! Version: 202102190835
+! Last Modified: 2021年02月19日 08:35
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 感谢各位前辈的分享！
@@ -728,6 +728,7 @@ pan.baidu.com##.upload-bar.global-clearfix
 -image/Ads/
 -images/ad-
 -img/ads/
+-inject-ads.
 -inspire-ad.
 -intern-ads/
 -js-advertising-
@@ -17529,6 +17530,7 @@ _popunder+$popup
 ###topOpenXAdSlot
 ###topOverallAdArea
 ###topRightBlockAdSense
+###topSponsorBanner
 ###topSponsoredLinks
 ###top_AD
 ###top_ad
@@ -28167,6 +28169,7 @@ _popunder+$popup
 ##.ringtone-ad
 ##.risingstar-ad
 ##.risingstar-ad-inner
+##.river-item-sponsored
 ##.riverAdLoaded
 ##.riverAdsLoaded
 ##.riverSponsor
@@ -55570,6 +55573,7 @@ amazon.ca,amazon.co.uk,amazon.com,amazon.com.au,amazon.de,amazon.fr##.sbv-video-
 newindianexpress.com##.scc
 minecraftservers.org##.second-banner
 wbur.org##.section--breakout
+nzherald.co.nz##.section-iframe
 pipeflare.io##.section-promo-banner
 studyfinds.org##.sfspot
 shortorial.com##.sgpb-popup-dialog-main-div-wrapper
@@ -55966,6 +55970,7 @@ goodrx.com##div[class^="adWrapper-"]
 greatandhra.com##div[class^="add"]
 technical.city##div[class^="banner_"]
 keengamer.com##div[class^="gameon-mpu-"]
+pcgamer.com,tomsguide.com,tomshardware.com##div[class^="slot-"]
 kijiji.ca##div[class^="sponsored-"]
 whatsondisneyplus.com##div[class^="whats-"]
 amazon.com##div[data-ad-id]
@@ -59833,10 +59838,6 @@ _xiuno_com_ad/
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
-||acptkgp.com^
-||szxhybj.com^
-||abcdlm.com^
-||xuchuang.com^$third-party
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/s.php?id=$script,third-party
@@ -60403,10 +60404,12 @@ ubmcmm.baidustatic.com
 ||aafuck.xyz^$third-party
 ||aasyy.com^
 ||aazcio.cn^
+||abcdlm.com^
 ||abie14.top^
 ||acasys88.cn^
 ||acgbase.com^$third-party
 ||achicih.gitee.io^$third-party
+||acptkgp.com^
 ||acs86.com^$third-party
 ||ad-plus.cn^$third-party
 ||ad-survey.com^$third-party
@@ -61981,6 +61984,7 @@ ubmcmm.baidustatic.com
 ||szrk3.com^
 ||sztbjs.com^
 ||szvr.com^$third-party
+||szxhybj.com^
 ||szxiuchang.com^
 ||szxpsg.com^
 ||szxzytech.com^
@@ -62370,6 +62374,7 @@ ubmcmm.baidustatic.com
 ||xu7b.com^
 ||xuanmeiguoji.com^
 ||xuanmin.wang^
+||xuchuang.com^$third-party
 ||xuehelei.com^
 ||xueyongbao.com^
 ||xugsh.cn^
@@ -65874,6 +65879,7 @@ _yad_jsonp_
 ||lzk.hl.cn/lctp/
 ||lzyysw.com/upload/
 ||m.aty.sohu.com^
+||m.jsr9.com^*.js
 ||m.kankanwu.com/js/
 ||m.lelekan.com/sp/
 ||m.mianbao99.com/js/detail.js
@@ -67624,6 +67630,8 @@ _yad_jsonp_
 ||zhenjiang365.cn/bbsatt/day_120827/1208271004af7c25b6e3d4fa1d.gif
 ||zhev.com.cn/file/weixin/
 ||zhgmeitu.xyz/images/*.gif
+||zhibo.me/js/fd.js
+||zhibo.me/js/kh.js
 ||zhibo8.cc/js/adv-slide-toggle.js
 ||zhiboba.org/gg_js/
 ||zhibok8.com/images/*.gif
@@ -67736,15 +67744,8 @@ _yad_jsonp_
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
-||m.jsr9.com^*.js
-||zhibo.me/js/fd.js
-||zhibo.me/js/kh.js
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
-2fzd.com###diy_cmn1
-moe.best##.alert
-moe.best##.markdown-body + DIV[style="text-align:center;margin-top:40px"]
-moe.best###rcm_sidebar
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -68223,7 +68224,7 @@ chiphell.com###diy2 + div
 gpshk.cc,oneplusbbs.com,wstx.com,xiaot.com###diy4
 2fzb.com###diy5
 cbber.com,xiaot.com###diy_chart
-2fzdao.com###diy_cmn1
+2fzd.com,2fzdao.com###diy_cmn1
 chinafix.com###diy_col_1-3
 elecfans.com###diy_company
 5imx.com###diy_mxad02
@@ -68848,6 +68849,7 @@ atyun.com###r_banner > ul > li > a[href^="http"]:not([href*="atyun."])
 360.com###rainbow-cat-screen
 appinn.com###ranshownow
 game2.cn###rb
+moe.best###rcm_sidebar
 tiboo.cn###read_hd1
 chinaqking.com###readerServiceDIV
 pujia8.com,sdgundam.cn###recommend
@@ -69647,6 +69649,7 @@ baidu.com##.afd-item
 weiyun001.com##.agency-list
 13mv.com,xoiof.com##.aggd
 33lc.com##.ags
+moe.best##.alert
 wigcw.cn##.alert-block
 wdzj.com##.alert-box-pop
 siku11.com##.alert-danger
@@ -70956,6 +70959,7 @@ baidu.com##.manual-spread
 zhainanba.org##.marauto > p[style="text-align: left;"]
 fun48.com##.margin-big-bottom
 wa59.com##.marginrl
+moe.best##.markdown-body + div[style="text-align:center;margin-top:40px"]
 taobao.com##.mask.animated.swing
 qq.com##.masker_1111
 fx110.com##.matrix-banner
@@ -85217,6 +85221,7 @@ _mongo_stats/
 ||leadsius.com^$third-party
 ||leadsmonitor.io^$third-party
 ||leadsrx.com^$third-party
+||leafmedia.io^$third-party
 ||leanplum.com^$third-party
 ||legolas-media.com^$third-party
 ||leokross.com^$third-party
@@ -86573,6 +86578,7 @@ _mongo_stats/
 ||ygsm.com^$third-party
 ||yieldbot.com^$third-party
 ||yieldify.com^$third-party
+||yieldlift.com^$third-party
 ||yieldsoftware.com^$third-party
 ||yjtag.jp^$third-party
 ||yldr.io^$third-party
@@ -89062,6 +89068,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||dlvkf5067xruv.cloudfront.net^
 ||dmcdn.net/behavior/
 ||dmdentertainment.com^*/video_debug.gif?
+||dmdt.io/collect
 ||dn34cbtcv9mef.cloudfront.net^
 ||dnn506yrbagrg.cloudfront.net^
 ||domodomain.com^*/ddsense.aspx?
@@ -93930,6 +93937,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||whatcar.com/Client/Stats/
 ||whistleout.com.au/track
 ||whstatic.com^*/ga.js?
+||wikihow.com/ev/*?events=
 ||wikihow.com/visit_info
 ||wikihow.com/x/collect?
 ||wikihow.com/x/event?
@@ -96059,7 +96067,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||mozu.com^*/analytics.js$script,domain=acehardware.com
 @@||mpsnare.iesnare.com/snare.js$domain=citi.com|citibank.com|enmasse.com|login.skype.com|vitacost.com
 @@||mpsnare.iesnare.com/wu/snare.js$domain=westernunion.com
-@@||msecnd.net/scripts/jsll-$script,domain=office.com|sharepoint.com|teams.microsoft.com
+@@||msecnd.net/scripts/jsll-$script,domain=forms.microsoft.com|office.com|sharepoint.com|teams.microsoft.com
 @@||mxpnl.com/libs/mixpanel-*.min.js$domain=change.org|frigidaire.com|greentoe.com
 @@||mxpnl.com^$domain=mixpanel.com
 @@||myaccount.chicagotribune.com/assets/scripts/tag-manager/googleTag.js$~third-party
