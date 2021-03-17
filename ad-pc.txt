@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: t8RNW/DUnZNCEj4KGKVgjw
+! Checksum: +YKsK/LU/gEc6Udux6JjEA
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202103171218
-! Last Modified: 2021年03月17日 12:18
+! Version: 202103171619
+! Last Modified: 2021年03月17日 16:19
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -10769,8 +10769,6 @@ _popunder+$popup
 ###ad-west
 ###ad-wide-leaderboard
 ###ad-wrap
-###ad-wrap-2
-###ad-wrap-right
 ###ad-wrapper
 ###ad-wrapper-728x90
 ###ad-wrapper-left
@@ -30515,6 +30513,7 @@ _popunder+$popup
 ##[href^="https://go.affiliatexe.com/"]
 ##[href^="https://refpahrwzjlv.top/"]
 ##[href^="https://secure.bmtmicro.com/servlets/"]
+##[id^="ad-wrap-"]
 ##[id^="adframe_wrap_"]
 ##[id^="bunyad_ads_"]
 ##[lazy-ad="leftbottom_banner"]
@@ -85147,6 +85146,7 @@ _mongo_stats/
 ||sojern.com^$third-party
 ||soko.ai^$third-party
 ||sokrati.com^$third-party
+||sol-data.com^$third-party
 ||solosegment.com^$third-party
 ||solutionshindsight.net^$third-party
 ||sometrics.com^$third-party
@@ -91009,6 +91009,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||direct-events-collector.spot.im^
 ||discordapp.com^*/track
 ||discordbots.org/api/auctions/impression
+||discover-metrics.cloud.seek.com.au^
 ||discover.com/staticweb/
 ||displaymate.com/cgi-bin/stat/
 ||divxden.com^*/tracker.js
@@ -92697,6 +92698,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tracking.chacha.com^
 ||tracking.christianpost.com^
 ||tracking.conduit.com^
+||tracking.engineering.cloud.seek.com.au^
 ||tracking.epicgames.com^
 ||tracking.eurosport.com^
 ||tracking.gfycat.com/viewCount/
@@ -98651,6 +98653,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||bluecare.express/js/tracking/$script,~third-party
 @@||bobbibrowncosmetics.com^*/analytics.min.js$~third-party
 @@||bookmate.com^*/impressions?$xmlhttprequest
+@@||cleverpush.com/channel/$script,domain=bsdex.de
 @@||brsrvr.com/api/$xmlhttprequest,domain=dollargeneral.com
 @@||c.paypal.com/da/r/fb.js$script
 @@||cbsinteractive.com^*/lib/tracking/comscore/$script
@@ -98729,7 +98732,6 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||friendbuy.com^$domain=butcherbox.com
 @@||gatsbyjs.com/page-data/$~third-party,xmlhttprequest
 @@||gem.cbc.ca/public/vendor/comscore.js$script,~third-party
-@@||geni.us/snippet.min.js$script,domain=pcmonitors.info
 @@||geo-targetly.com/geolocation?id$script,third-party
 @@||geo.ngtv.io/locate/$domain=hbo.com
 @@||geoip-db.com/jsonp/$script,third-party
@@ -98948,54 +98950,26 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||sourcepointcmp.bloomberg.com/ccpa.js$script,domain=bloomberg.com
 @@||googletagservices.com/tag/js/gpt.js$domain=allestoringen.be|allestoringen.nl|allestörungen.at|allestörungen.ch|allestörungen.de|downdetector.ae|downdetector.ca|downdetector.cl|downdetector.co.nz|downdetector.co.uk|downdetector.co.za|downdetector.com|downdetector.com.ar|downdetector.com.au|downdetector.com.br|downdetector.com.co|downdetector.cz|downdetector.dk|downdetector.ec|downdetector.es|downdetector.fi|downdetector.fr|downdetector.gr|downdetector.hk|downdetector.hr|downdetector.hu|downdetector.id|downdetector.ie|downdetector.in|downdetector.it|downdetector.jp|downdetector.mx|downdetector.my|downdetector.no|downdetector.pe|downdetector.ph|downdetector.pk|downdetector.pl|downdetector.pt|downdetector.ro|downdetector.ru|downdetector.se|downdetector.sg|downdetector.sk|downdetector.web.tr
 @@/cdn-cgi/images/trace/captcha/js/h/transparent.gif$image,~third-party
+@@||mycleverpush.com/iframe?$domain=bsdex.de
 @@||n8s.jp^$script,domain=nikkei.com
 @@||takeda.com.dxcloud.episerver.net^$domain=takeda.com
-@@/comscore.min.js$script,domain=1007sandiego.com|10tv.com|11alive.com|12news.com|12newsnow.com|13wmaz.com|760kfmb.com|971thefan.com|9news.com|abc10.com|cbs19.tv|cbs8.com|firstcoastnews.com|fox15abilene.com|kagstv.com|kare11.com|kcentv.com|kens5.com|kgw.com|khou.com|kiiitv.com|king5.com|kold.com|krem.com|ksdk.com|ktvb.com|kvue.com|myatltv.com|myfoxzone.com|newscentermaine.com|newswest9.com|thv11.com|wbir.com|wcnc.com|wfaa.com|wfmynews2.com|wgrz.com|whas11.com|wkyc.com|wltx.com|wthr.com|wtol.com|wtsp.com|wusa9.com|wvec.com|wwltv.com|wzzm13.com
-@@||travel-assets.com/platform-analytics-prime/$script
 @@||api.nyda.pro^$websocket
 @@||szukajka.tv/jsverify.php$~third-party,xmlhttprequest
 @@||szukajka.tv/szukaj|$~third-party,xmlhttprequest
 @@||ws.webcaster.pro^$websocket
-@@||112.2o7.net/b/ss/$image,domain=espn.com.br|mtv.co.uk|nissan-global.com
-@@||122.2o7.net/b/ss/$image,domain=billetnet.dk|billettservice.no|citibank.co.in|goal.com|lippupalvelu.fi|nbcsports.com|pcworld.com|riverisland.com|techhive.com|ticketmaster.ae|ticketmaster.co.uk|ticketmaster.de|ticketmaster.ie|ticketmaster.nl|ticnet.se
 @@||abc.com/b/ss/$image
-@@||amazoncustomerservice.d2.sc.omtrdc.net/b/ss/*/H.25.1/$image
-@@||castorama.fr/b/ss/$image
-@@||fandango.com/b/ss/$image
-@@||globalnews.ca/b/ss/$image
 @@||go.com/b/ss/$image
-@@||guidestar.org/ga.$~third-party,xmlhttprequest
-@@||info.seek.com/b/ss/$image,domain=seek.com.au
-@@||kaspersky.co.uk/b/ss/$image
 @@||kohls.com/b/ss/$image
 @@||metrics.ancestry.com/b/ss/$image
-@@||metrics.brooksbrothers.com/b/ss/$image
-@@||metrics.consumerreports.org/b/ss/$image
-@@||metrics.howstuffworks.com/b/ss/$image
-@@||metrics.nationwide.co.uk/b/ss/$image
-@@||metrics.nissanusa.com/b/ss/$image
-@@||metrics.target.com/b/ss/$image
-@@||metrics.thetrainline.com/b/ss/$image
-@@||metrics.ticketmaster.com/b/ss/$image
 @@||mlb.com/b/ss/$image
-@@||nokia.com/b/ss/$image,domain=here.com
 @@||omns.americanexpress.com/b/ss/
 @@||oms.dowjoneson.com/b/ss/$image,domain=wsj.com
 @@||omtrdc.net/b/ss/$image,domain=britishairways.com|costco.com|halifax-online.co.uk|logmein.com|macworld.com|msnbc.com|nbc.com|pcworld.com|techhive.com|usanetwork.com
 @@||omtrdc.net/rest/$xmlhttprequest
-@@||royalmail.com/b/ss/$image
-@@||scorecardresearch.com/r2?$image,domain=ancestry.com|billetnet.dk|billettservice.no|lippupalvelu.fi|pcworld.com|techhive.com|ticketmaster.ae|ticketmaster.co.uk|ticketmaster.de|ticketmaster.ie|ticketmaster.nl|ticnet.se|wsj.com
-@@||scorecardresearch.com/r?$image,domain=ancestry.com|billetnet.dk|billettservice.no|lippupalvelu.fi|macworld.com|pcworld.com|techhive.com|ticketmaster.ae|ticketmaster.co.uk|ticketmaster.de|ticketmaster.ie|ticketmaster.nl|ticnet.se|wsj.com
 @@||securemetrics.apple.com/b/ss/$image
-@@||simyo.de/b/ss/$image
 @@||smetrics.aem.playstation.com/b/ss/$image
 @@||smetrics.farnell.com/b/ss/$image
 @@||smetrics.rtl.nl/b/ss/$image
-@@||smetrics.target.com/b/ss/$image
-@@||smetrics.ticketmaster.com/b/ss/$image
-@@||stat.safeway.com/b/ss/$image
-@@||sw88.disney.co.jp^$image
-@@||walmart.com/b/ss/$image
 @@||heatmap.it^$domain=heatmap.com|heatmap.it|heatmap.me|heatmap.org
 @@||google.com/analytics/$domain=analytics.google.com
 !----------------Allowlists to fix broken international sites-----------------!
