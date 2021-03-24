@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ECiN5A/PByH5RB+OMwf0iQ
+! Checksum: BK+OuUJeDs/oX5seL3LZng
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202103240838
-! Last Modified: 2021年03月24日 08:38
+! Version: 202103241208
+! Last Modified: 2021年03月24日 12:08
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -1446,6 +1446,7 @@ _xiuno_com_ad/
 ##.float_bot_right
 ##.fnwehjnc12
 ##.frAd
+##.frontpageAdvM
 ##.full-ads
 ##.full.banners12
 ##.getads
@@ -1749,7 +1750,6 @@ _xiuno_com_ad/
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
-||zhengyahong.cn^
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/d/*-*-*.ap|$script,third-party
@@ -4164,6 +4164,7 @@ ubmcmm.baidustatic.com
 ||zhandi.cc^$third-party
 ||zhangkc.com^
 ||zhangranfilm.com^
+||zhengyahong.cn^
 ||zhengyejixie.com^
 ||zhichi08.com^
 ||zhihei.com^
@@ -9284,8 +9285,6 @@ _yad_jsonp_
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
-vpsmm.com##DIV[id^="saxidexbar"]
-159i.com#?#:-abp-has(> img+a)
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -13592,6 +13591,7 @@ zuanke8.com##.zuanpw
 iqiyi.com##.zzVideo
 12580sky.com#?#li[class]:-abp-has(> .mark > h3 > a:-abp-contains(/广告|推荐/))
 159i.com#?#.style15:-abp-has(> img[src="//159i.com/images/arrow3.gif"])
+159i.com#?#:-abp-has(> img+a)
 159i.com#?#:-abp-has(> img[src*="gif"])
 2345.com#?#.pic:-abp-has(a[href^="http://g.wan."])
 3g.baidu.com,m.baidu.com,m5.baidu.com,www.baidu.com#?#div:-abp-has(>.openBox-container)
@@ -14253,6 +14253,7 @@ kshot.com##div[id^="read_m_yytf"]
 image.baidu.com##div[id^="relecom"]
 www.rkanr.com##div[id^="rkrCp"]
 eol.cn##div[id^="s1_"]
+vpsmm.com##div[id^="saxidexbar"]
 secretmine.net##div[id^="secre-"]
 vpsmm.com##div[id^="side"]
 159i.com##div[id^="sidebar"] > :not(form)
@@ -20074,7 +20075,11 @@ _box_ad_
 ||tiexue.net/pic/tx_1220.jpg
 ||gushiwen.org/getTicket.aspx
 ||51cto.com/edu/center/js/interaction_iframe.js
+||360doc.com/js/showarticle.js
 !------------------------Specific element hiding rules------------------------!
+huaban.com##.hb-ad
+ifsp.tv##.video-page-right
+meijumi.me###app_left
 baidu.com##.opening-season-dialog
 iqihang.com##.xf_right
 qianlima.com###bg
