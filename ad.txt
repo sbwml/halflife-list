@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: hOBd1OjKWvfKhMeaow+ohA
+! Checksum: TponSF3NJiuUXX28i5HwZg
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202103250015
-! Last Modified: 2021年03月25日 00:15
+! Version: 202103251210
+! Last Modified: 2021年03月25日 12:10
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -1738,23 +1738,20 @@ _xiuno_com_ad/
 ##img[data-link][data-src*="/u/"]:not([data-link*="/i/"])
 ##img[data-src*=".alicdn.com/img/ibank/"][src="/static/images/loadingerror.gif"]
 ##img[onclick*="/ayx600.com/"]
+##img[onclick*="/ayx700.com/"]
 ##img[src$="/img/tianbo.gif"]
 ##img[src*=".qpic.cn"][width="980"][height="80"]
 ##img[src*=".sinaimg."][style="width:1025px;height:80px"]
 ##img[src*=".sinaimg."][style="width:150px;height:300px"]
 ##script + #coupletBox
 ##script + #rbbox
-##style + .vdgdo
-##img[onclick*="/ayx700.com/"]
 ##script[src="/js/sy2.js"] + div[align="center"]
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
+##style + .vdgdo
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
-||lixiaodie.com^
-||cdhhbyy.cn^
-||55kk.tv^
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/d/*-*-*.ap|$script,third-party
@@ -2138,6 +2135,7 @@ ubmcmm.baidustatic.com
 ||5551825.com^
 ||5551933.com^
 ||55803.net^$third-party
+||55kk.tv^
 ||565882.com^$third-party
 ||56yk.com^$third-party
 ||5783.org^
@@ -2505,6 +2503,7 @@ ubmcmm.baidustatic.com
 ||cctole.com^
 ||cctyly.com^
 ||cczuxie.com^
+||cdhhbyy.cn^
 ||cdlinli.com^
 ||cdn-t.xyz^
 ||cdnjsp.wang^
@@ -3214,6 +3213,7 @@ ubmcmm.baidustatic.com
 ||lisaiservice.top^
 ||lishuanghao.com^
 ||livehapp.com^
+||lixiaodie.com^
 ||lixuanbaojie.com^
 ||llguandongyan.com^
 ||llqss.top^
@@ -6248,6 +6248,7 @@ _yad_jsonp_
 ||dy2018.com/js/tj.js
 ||dy2018.com/js17/
 ||dy2018.com/jsdd/
+||dy6d.com/js/hf
 ||dy8c.com/JieShaoBu-secret/uploads/hongbao
 ||dybee.tv^*.php
 ||dydab.com^
@@ -6522,6 +6523,7 @@ _yad_jsonp_
 ||gdmm.com/api.php?mod=js&bid=2111
 ||gdmm.com/images/leftbottom.png
 ||gdt.qq.com^
+||gdzidong.com/static/js/plugin.js
 ||geekbang.org/public/serving/
 ||geekpark.net/api/v1/ads
 ||gegeyingshi.com/template/*/images/g_js/
@@ -9288,14 +9290,8 @@ _yad_jsonp_
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
-||gdzidong.com/static/js/plugin.js
-||dy6d.com/js/hf
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
-sou-yun.cn###ads_index_2
-vpsmm.com##.col-lg-8 + STYLE + DIV
-vpsmm.com##BODY > STYLE + DIV + DIV + DIV
-bjcxqd.com##.box-vdgd
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -9501,6 +9497,7 @@ eol.cn###adfloat_r
 172cat.com###adload
 ahtv.cn,frdic.com,huasing.net,it168.com,qinbing.cn###ads
 nownews.com###ads-footer-bar
+sou-yun.cn###ads_index_2
 disp.cc###ads_page_b
 disp.cc###ads_page_r
 yes-news.com###adsc3
@@ -11448,6 +11445,7 @@ enread.com##.box > ul[style="width:100%;overflow:hidden;"]
 114la.com,ylmf.com##.box-hot
 pconline.com.cn##.box-jcz
 dl.pconline.com.cn##.box-push
+bjcxqd.com##.box-vdgd
 sportsv.net##.box.ad
 csdn.net##.box.hot
 0772fang.com##.box0
@@ -11569,6 +11567,7 @@ zhangxinxu.com##.col-aside
 zhangxinxu.com##.col-google
 yhgou.cc##.col-lg-12 + .row
 yhgou.cc##.col-lg-12 > a
+vpsmm.com##.col-lg-8 + style + div
 1090ys2.com##.col-lg-wide-8 > p[style="text-align:center;"]
 big-cup.tv,g-cup.tv##.col-md-12.text-center[style="margin-top: 3px;"]
 ezprice.com.tw##.col-md-3
@@ -13987,6 +13986,7 @@ tiexue.net##body > div[onclick]
 hdwan.net##body > div[style]
 wendu.cn##body > div[style^="width:1000px;"]
 18h.avmimi.com##body > p[align="center"]:first-child
+vpsmm.com##body > style + div + div + div
 zjst.net##body > style ~ *,.vod-gd
 ahtv.cn##body > table[style^="text-align:center; width:960px;"]
 18h.avmimi.com##body > table[width="100%"]:nth-child(2)
@@ -16732,8 +16732,6 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 @@||libs.baidu.com^$domain=138txt.com|18xs.org|1biqu.com|1kanshu.cc|230book.com|23hh.com|23txt.com|23wxx.com|258zw.com|266ks.com|27xsw.com|2baob.com|30sy.com|33yq.com|37zw.la|39shubao.com|3yt.com|477zw.com|52biquge.com|5ccc.tw|81zw.me|877zw.com|99mk.com|99shumeng.net|aixswx.com|aomolit.com|aoyuge.com|balingtxt.com|baoshuu.com|biqiuge8.com|biqubao.com|biqudu.tv|biquduo.com|biquga.com|biquge.com.cn|biquge.lu|biquge.tv|biquge11.com|biquge98.net|biqugecd.com|biqugego.com|biqugemm.com|biqugesc.com|biqusan.com|biquyi.com|bixia.org|bodekang.net|boluoxs.com|bookbao.org|botaodz.com|bqkan.com|bshuku.com|bswtan.com|bxwx.org|bxwx.tw|bxwx8.la|bxwxorg.com|clewx.com|damengzhu1.com|dashenxiaoshuo.com|day66.com|ddxs0.com|ddxsku.com|dushuge.net|farpop.com|fbxsw.com|gdbzkz.com|guaili.org|hatxt.com|hbfie.org|hehuamei.com|heikexs.com|heiyanwang.com|hongyeshuzhai.com|hybiquge.com|iddwx.com|imiaobige.com|ishisetianxia.com|ixiatxt.com|ixs.la|jianlaixiaoshuo.com|jinshulo.com|jx.la|kkbiqu2.com|liewen.la|lindiankanshu.cc|liudatxt.com|loubiqu.com|lwtxt.net|lwxstxt.com|mhtwx.la|mubige.com|paoshu8.com|paoshuzw.com|pfwx.com|piaotianxs.com|ppskw.com|qbxs8.net|qianrenge.cc|qishusk.com|quge6.com|quledu.net|qushuba.com|rmxsba.com|shu008.com|shuhaiwu.com|shumil.co|siluke.tv|siluwx.org|sizhicn.com|skyzww.com|soxscc.com|tangsanshu.com|thxsw.com|ttzw.tv|tutengzw.com|txshuku.la|u33.me|uidzhx.com|v63xs.com|vipsk.org|wanwenhui.com|wenxuem.com|wrlwx.com|x23us.me|x81zw.com|xbiqugecc.com|xbiqugew.net|xbiquke.com|xbqge.net|xcmxsw.com|xdingdiann.com|xieyixs.com|xinshuhaige.com|xinxs.la|xs5200.com|xs98.com|xsbiqu.com|xsbiqugew.com|xsqishu.com|xsw55.net|xszww.com|xuanshu.com|xuehongxs.com|xyusk.com|yawenb.com|yikanxiaoshuoa.com|yq-888.com|yruan.com|yssm.info|yunxs.com|zbzw.la|zhnxcw.com|zhuaji.org|zmccx.com|zwdu.com|zzs5.com
 @@||zmtt.net^$script,domain=luoqiuzw.com
 !#Novels
-||dalianruosen.com^
-||u98ql6o.top^
 bxwx3.org###addiv3
 bxwx3.org###bdstatic
 55shuba.com###botDiv
@@ -17265,6 +17263,7 @@ piaotian5.com##script + div[style="padding:15px;"]
 ||daima.dsxdn.com^
 ||dajean.com^
 ||dake.net.cn^
+||dalianruosen.com^
 ||damiren.com^
 ||danlidanli.net^
 ||daokejs.com^
@@ -18321,6 +18320,7 @@ piaotian5.com##script + div[style="padding:15px;"]
 ||u05m.cn^
 ||u0r9.cn^
 ||u2c8.cn^
+||u98ql6o.top^
 ||ubt573.org^
 ||ububyiw6655.xyz^
 ||uc4a.cn^
