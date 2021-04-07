@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: v0odxKkEKv4UeJlpT4xZsQ
+! Checksum: kawREKbAsnpoMjxdgUGKKw
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202104072027
-! Last Modified: 2021年04月07日 20:27
+! Version: 202104080419
+! Last Modified: 2021年04月08日 04:19
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1751,6 +1751,7 @@ yastatic.net#$#abort-on-property-read Object.prototype.vast
 ! #CV-547
 auto.mail.ru,hi-tech.mail.ru,cloud.mail.ru,horo.mail.ru,pogoda.mail.ru,tv.mail.ru#$#abort-on-property-write _mimic
 horo.mail.ru,pogoda.mail.ru,tv.mail.ru#$#abort-on-property-read MrgContext
+e.mail.ru#$#override-property-read Object.prototype.direct.ads noopFunc
 ! #CV-713
 ucoz.club,yaminecraft.ru,dva-kolesa.my1.ru,nintendo.moy.su,kino-v-dome.net,psxworld.ru,others.name,pidru4nik.com,sobhd.ru,krolmen.ru,tes-game.ru,usite.pro,gamesdendy.ru,torm-egan.ru,gals.md,kinovego.ru,project-ss.ru,stranded-deep.ru,chernobyl-soul.com,3dn.ru,addfiles.ru,asia-tv.su,at.ua,autosimgames.ru,clan.su,cliphq.ru,crashkino.net,db-energo.ru,devdrivers.ru,do.am,elegos.ru,elektrosat.ru,fireiser.org,fon-ki.com,for-gsm.ru,free-dream.ru,ftechedu.ru,fukushima-news.ru,giginfo.ru,gloria-cedric.ru,goldformat.ru,hack-port.ru,hero-empire.com,igrul-ka.ru,kp-pmr.ru,krasnickij.ru,megaclips.net,men-stalker.com,mod-rus.ru,moy.su,mp3songs.ru,mp4android.ru,mult-online.net,my1.ru,narod.ru,newgames.com.ua,novospasskoe-city.ru,omsimclub.ru,online-supernatural.ru,onlinestargate.ru,pkrc.ru,radiodom.org,rocketdockfree.ru,sdr-deluxe.com,skidrowcrack.ru,soft-game.net,stalker-zone.info,stalkermods.ru,svadbatomsk.ru,torrent-file.top,ucoz.com,ucoz.net,ucoz.org,ucoz.ru,ucoz.ua,vodopads.ru,vorozheja.ru,warcraftda.ru,x-proshivki.ru,xakevsoft.ru,zona-stalkera.ru,a-point.info,xn--80aeshkkbdj.xn--p1ai#$#abort-on-property-read u_global_data; abort-on-property-read u_global_data.basic_functions; abort-on-property-read u_global_data.basic_params; abort-on-property-read u_global_data.clundused; abort-on-property-read ClicksCloudAsyncCallbacks; abort-on-property-write ucoz_rndid; abort-on-property-read u_vastplayer; abort-current-inline-script setTimeout /utarget/; abort-on-property-read Object.prototype.clunduse; abort-on-property-read rbConfig; abort-on-property-read tsr_iframe
 kinogo.eu,gidonline.eu#$#abort-on-property-read target_script
@@ -1842,6 +1843,8 @@ faz.net#@#.js-sharebuttons
 ! FDA-2068
 boerse-online.de#@#.social_icons
 boerse-online.de#@#.social_wrapper
+! FDA-2102
+@@||de.lzstatic.com/js/*/gdpr/$script,domain=ladenzeile.de
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
 ! ----- Generic ----- !
