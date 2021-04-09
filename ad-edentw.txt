@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: IdUctlyt3Oy0ag8xvufH8w
+! Checksum: 1uryUniBh87bPmrF+SY8eg
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202104082027
-! Last Modified: 2021年04月08日 20:27
+! Version: 202104100026
+! Last Modified: 2021年04月10日 00:26
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1192,7 +1192,7 @@ youporn.com#$#abort-on-property-read zone_underplayer; abort-on-property-read zo
 pornhub.com#$#abort-on-property-read HTMLElement.prototype.attachShadow
 theyarehuge.com#$#abort-on-property-read Element.prototype.attachShadow
 ! #CV-663
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath './/article/span[not(preceding-sibling::*)][count(child::div[not(*) and not(normalize-space())]) >=1 ]/following-sibling::div[(count(preceding-sibling::*)+1) = 2]/ancestor::article[1]'
+newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath './/*[@class]/span[not(preceding-sibling::*)][count(child::div[not(*) and not(normalize-space())]) >=1 ]/following-sibling::div[(count(preceding-sibling::*)+1) = 2]/ancestor::*[@class][1]'
 newser.com#$#freeze-element #divVote; freeze-element #divRightRail '' #divRightRailContent
 foreverymom.com#$#freeze-element .post abort .facebook_comment_post #fb-root
 grammarist.com#$#freeze-element #content-sidebar-wrap abort
@@ -1658,7 +1658,7 @@ yandex.az,yandex.md,yandex.fr,yandex.kg##.feed__item._size_small[id^=ad]
 ~market.yandex.ru,~market.yandex.kz,~market.yandex.by,~market.yandex.ua,yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr#$#abort-on-property-read window.yaads.renderBlock
 yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr##div[class="feed__item _size_big"]>[class^="card-wrapper_smthing"]
 avtovzglyad.ru,dni.ru,baby.ru#$#abort-on-property-read Ya
-kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy
+kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy; abort-on-property-write Object.defineProperty
 liveinternet.ru#$#json-prune data; abort-on-property-read Object.prototype.AdReload; abort-on-property-read Object.prototype.initAutoRefreshment
 echo.msk.ru#$#abort-on-property-read Object.prototype.renderTo
 otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
