@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2rYv9iEa5ZXBMZoqUgeRYw
+! Checksum: +vmssmoUesFMshjqQu/xsQ
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202104170853
-! Last Modified: 2021年04月17日 08:53
+! Version: 202104171222
+! Last Modified: 2021年04月17日 12:22
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -23603,10 +23603,12 @@ weibo.com##.apps_PCD_reco_detail_right
 /metrics/init?
 /metrics/metrics$domain=~spatineo.com
 /metrics/onload
+/metrics/ping?
 /metrics/rum
 /metrics/stat.
 /metrics/statsd/*
 /metrics/survey/*
+/metrics/tpi?
 /metrics/track/*
 /metrics/v1/frontend/*
 /metrics/vanity/?
@@ -33635,6 +33637,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||hottraffic.nl^$third-party
 ||marktplaats.net/cnt/
 ||npo.nl/divolte/tt/web-event?$domain=zapp.nl
+||sp.dpgmedia.net^
 ||statistics.rbi-nl.com^
 ||ugent.be/js/log.js
 ||counter.zone.ee^$third-party
@@ -34115,6 +34118,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||amazon.com/gp/yourstore/recs/
 ||amazon.com^*/amazon-clicks/
 ||amazon.com^*/events/$domain=~aws.amazon.com
+||amazon.com^*/impress.html
 ||amazon.com^*/token/
 ||amazon.com^*/vap-metrics/
 ||amazonaws.com/beacon/vtpixpc.gif?
@@ -34536,6 +34540,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||dailymail.co.uk/geo/
 ||dailymail.co.uk/rta2/
 ||dailymail.co.uk/tracking/
+||dailymotion.com/history/log/
 ||dailymotion.com/logger/
 ||dailymotion.com/track-
 ||dailymotion.com/track/
@@ -34546,6 +34551,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||data.ninemsn.com.au/*GetAdCalls
 ||data.webullfintech.com/event/
 ||data.younow.com^
+||datagroup-reporting.shopeemobile.com^
 ||datehookup.com/strk/dateadvertreg?
 ||daum.net^*/dwi.js
 ||db.com^*/stats.js?
@@ -41196,6 +41202,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=extratorrent.cd|sky
 ||feed-reader.net/tracking.php
 ||fireball.de/statistikframe.asp?
 ||fr-online.de/analytics/
+||froglytics.eventfrog.ch^
 ||ftd.de^*/track.php?
 ||g.silicon.de^
 ||gala.de/js/tracking-
@@ -41343,6 +41350,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=extratorrent.cd|sky
 ||track.derbund.ch^
 ||track.express.de^
 ||track.mopo.de^
+||track.rundschau-online.de^
 ||trackerstatistik.init-ag.de^
 ||tracking.finanzen.net^
 ||tracking.hrs.de^
@@ -41570,6 +41578,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=extratorrent.cd|sky
 ||eclick.baidu.com^
 ||fang.com/stats/
 ||firefoxchina.cn/*/trac.js
+||forum.zuvio.com.tw/api/article/finish
 ||ftchinese.com/js/log.js
 ||funshion.com/interface/
 ||gia.jd.com^
@@ -41729,6 +41738,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=extratorrent.cd|sky
 ||sanoma.nl/pixel/
 ||sat.sanoma.fi^
 ||stats.fd.nl^
+||temptation.ad.nl^
 ||tijd.be/fb/?
 ||tweakers.net/x/scripts/min/TyYQlL.js
 ||tweakers.net^*&p=$image
@@ -42781,6 +42791,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=extratorrent.cd|sky
 @@||wcs.naver.com/m$image,domain=sooldamhwa.com
 !---------- Latvian ----------
 @@/webtracking/*$domain=pasts.lv
+@@||delet.jhi.pl/bower_components/angular-google-analytics/$script,~third-party
 @@||eveselibaspunkts.lv/js/global/fingerprint2.min.js?
 @@||gemius.pl/gplayer.js$script,third-party
 @@||gjensidige.lv/Content/dev/scripts/analytics.js
