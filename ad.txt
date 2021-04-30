@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Xl1BPC/+7Tnz88c0snXDAw
+! Checksum: bPQTdf4enbMC9dNHyNh+hQ
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202104300849
-! Last Modified: 2021年04月30日 08:49
+! Version: 202104301220
+! Last Modified: 2021年04月30日 12:20
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -1784,6 +1784,7 @@ _xiuno_com_ad/
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
 ##style + .vdgdo
+###rip[href*=".taobao.com"]
 ##A[href*="/hth107.com/"]
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
@@ -9211,8 +9212,12 @@ _yad_jsonp_
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||outbrain.com^$domain=wenxuecity.com
+||tlanyan.pp.ua/wp-content/uploads/meomiao.png
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+pp.ua###id_ad_image
+2345.com###rightXieCheng
 ahuys.cc##.vddb + a
 szxx.com.cn###A1
 szxx.com.cn###A2
@@ -18845,7 +18850,7 @@ zhujib.com#@#.social-top:not(html):not(body)
 cowtransfer.com#@#.socialButton
 storm.mg#@#.social_btn
 ali213.net#@#.subscribe-container
-5dm.tv#@#.tm-share-this
+5dm.app,5dm.tv#@#.tm-share-this
 laohu8.com#@#.tweet-article
 fqsousou.com,kengso.com#@#.user-share
 @@-social-bar.$domain=mobi.yahoo.com
