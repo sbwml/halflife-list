@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: V6z6TmGcOm8nFN4OOg5KkA
+! Checksum: 4h9yqbMY4bS8ebr3uwyTxQ
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202105072021
-! Last Modified: 2021年05月07日 20:21
+! Version: 202105080416
+! Last Modified: 2021年05月08日 04:16
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1635,7 +1635,8 @@ dom.wp.pl,wiadomosci.wp.pl,wawalove.wp.pl,turystyka.wp.pl,teleshow.wp.pl,opinie.
 parenting.pl,echirurgia.pl,dobreprogramy.pl,abczdrowie.pl,wp.pl#$#override-property-read rekid 0
 wp.pl#$#abort-on-property-write gafReady
 o2.pl,wp.pl#?#div:-abp-has(> script:-abp-contains(=== 'function'))
-wp.pl,pudelek.pl,dobreprogramy.pl,abczdrowie.pl,parenting.pl,nerwica.com,autokult.pl,fotoblogia.pl,kafeteria.pl,komorkomania.pl,medycyna24.pl,smaczneblogi.pl,gadzetomania.pl#$#hide-if-contains-image-hash 01fbaba1e1e124f6,0f0f0f0f0f0f8f0e,01df646e662e74f0,06cf03f57c0ecf0c,c4d65c1edc1342e7,7a58585e5e1c465e,80dfccccc0becee0,676866473734f464,0bf170f404efc539,f870303c3c3000ff,0f0f8f070f0fcf06,5a5a7a5878783a3a,10f7e703385e2f23,1f38f838f0f0e8f0,e343e3a223e3cb07,ff001a1f1d36fc03,0f1b1f191f38381f,f8e003e77f80073b,3c3c7e180c7e3c3c,781e8f83e10f8f83,f98180fb8fc18f85,08dfdc1c1e5cfe10,3f090f87870f0c9f,c783eec00cee8357,60bd7e18107f3c3c,f8f8c1d3c3c3d385,7f0183677781db81,7e7e0f0f1cf4ff00,1cbc81f3c3c3db81,713c1f074f073707,01df646e662e74f0
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath './/div[@class]//a[string-length(@href)>500]/div[@class]/div[@class]//img[@class][string-length(@src)>70]/ancestor::div[@class and not(@id)][5]'
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath `.//iframe[not(@id)][string-length(@src)>100][substring(@src,string-length(@src)-string-length('.html')+1)='.html']//ancestor::div[5]`
 ! MISC
 www.elektroda.pl#$#abort-on-property-read popupStatus; abort-on-property-write welcomeAdContainer
 naekranie.pl#$#abort-on-property-read adQueue
@@ -1742,6 +1743,7 @@ mp3spy.cc#$#abort-current-inline-script JSON.parse atob
 tagaev.com#$#abort-on-property-read PUM
 l2top.ru#$#abort-current-inline-script $ cleanAndEval
 rsload.net#$#abort-current-inline-script window.addEventListener load
+web-shpargalka.ru#$#abort-on-property-read Date.prototype.toUTCString
 ! Popup/popunder/clickunder
 serialfilm.ru,freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,zloekino.su,zloekino.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,zloekino.com#$#abort-on-property-read open
 piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
