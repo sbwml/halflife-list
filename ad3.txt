@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: k7N2ieSBGfddRMTqv+vYUQ
+! Checksum: m9PKPfNHJiN3mL6YZJaIWA
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202105092021
-! Last Modified: 2021年05月09日 20:21
+! Version: 202105100027
+! Last Modified: 2021年05月10日 00:27
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1343,6 +1343,7 @@ _xiuno_com_ad/
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
+||abc88866.com^
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/d/*-*-*.ap|$script,third-party
@@ -8789,6 +8790,7 @@ _yad_jsonp_
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+zhideqiang.com##A[href*=".taobao.com"]
 szxx.com.cn###A1
 szxx.com.cn###A2
 gpcxw.com###AA2
@@ -18234,10 +18236,6 @@ qq.com#@#.side_ad
 ||*^sdtfrom=^$media,rewrite=abp-resource:blank-mp3,domain=qq.com
 ||lts*.qq.com^*.ts?index=$media,rewrite=abp-resource:blank-mp3,domain=qq.com
 !#Rewrite filters
-!#Rijutv.com
-$script,third-party,domain=rijutv.com
-@@||cdn.bootcss.com^$script,domain=rijutv.com
-@@||cdn.staticfile.org^$script,domain=rijutv.com
 !#Rjno1.com
 rjno1.com##div[style="display:none"]
 ||rjno1.com^$csp=script-src 'self' *;style-src
@@ -32436,7 +32434,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||neulion.vo.llnwd.net^*/track.js
 ||news.banggood.com/mo/$image,third-party
 ||news.co.uk^*/propensities?
-||news.google.com/swg/$third-party
 ||newsanalytics.com.au^$third-party
 ||newsletters.nationalgeographic.com^$image,third-party
 ||newton.pm/events/track_bulk
