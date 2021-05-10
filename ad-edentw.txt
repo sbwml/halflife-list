@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: TEbGp6GGjoKI7dK5NUwKFA
+! Checksum: kzW/62RMivMvPTWRAKEuZA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202105102022
-! Last Modified: 2021年05月10日 20:22
+! Version: 202105110027
+! Last Modified: 2021年05月11日 00:27
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -636,12 +636,14 @@ iprima.cz##[class*="sas"]
 iprima.cz##a[href*="/area=branding"]
 iprima.cz##[id*="-ad-"], .ifr-claassflak, a[href*="/posid=sas_"]
 iprima.cz##.meht_burbuzela
+iprima.cz##.dekes_reblika
 /area=*/posid=*$subdocument,xmlhttprequest,script,domain=iprima.cz
 /keyword*/area=$xmlhttprequest,domain=iprima.cz
 /section=adblock_desktop^$domain=iprima.cz
 ?format=js|$script,domain=iprima.cz
 ?guci=$subdocument,domain=iprima.cz
 ?v127|$script,domain=iprima.cz
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mobilmania.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.inserted_rtb
 auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mobilmania.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[class^="stylu-"]
 auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mobilmania.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[id^="etarget"]
 auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mobilmania.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##:not(div)[id][class][style^="top: "]
@@ -1146,6 +1148,9 @@ expres.cz,idnes.cz##videoplayer>video[data-io-video-title*="_idnestv_"]
 expres.cz,idnes.cz##a[href*="preroll"]
 idnes.cz,expres.cz##a[href*=";cdata="]
 idnes.cz,expres.cz##a[href*="/supertag=InstreamVideo/"]
+/area=preroll-$xmlhttprequest,domain=iprima.cz
+/area=midroll-$xmlhttprequest,domain=iprima.cz
+/area=postroll-$xmlhttprequest,domain=iprima.cz
 ! #CV-764
 clanky.seznam.cz,search.seznam.cz##.Result.Result--organic > :not(.Result-contentContainer):not(.Result-ico):not(.Result-title)
 clanky.seznam.cz,search.seznam.cz##.Result-ico:not([class="Result-ico"])
