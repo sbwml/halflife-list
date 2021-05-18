@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: HO2Qresb9B+bJ4O8vU/ZQA
+! Checksum: kPcy9CkU4IQv4TlC5fo4nQ
 ! Title: My AdFilters（for Mobile）
 ! Expires: 12 hours
-! Version: 202105180857
-! Last Modified: 2021年05月18日 08:57
+! Version: 202105181228
+! Last Modified: 2021年05月18日 12:28
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 感谢各位前辈的分享！
@@ -10422,6 +10422,7 @@ _popunder+$popup
 ###ad-leader
 ###ad-leader-atf
 ###ad-leader-container
+###ad-leader-wrapper
 ###ad-leaderboard
 ###ad-leaderboard-1
 ###ad-leaderboard-1-container
@@ -22077,6 +22078,7 @@ _popunder+$popup
 ##.adsanity-group
 ##.adsanity-single
 ##.adsarea
+##.adsartical
 ##.adsbantop
 ##.adsbar
 ##.adsbg300
@@ -24952,6 +24954,7 @@ _popunder+$popup
 ##.dfp-ad-container
 ##.dfp-ad-full
 ##.dfp-ad-hideempty
+##.dfp-ad-placeholder
 ##.dfp-ad-rect
 ##.dfp-ad-tags
 ##.dfp-ad-unit
@@ -25068,6 +25071,7 @@ _popunder+$popup
 ##.double-ad
 ##.double-ads
 ##.double-click-ad
+##.double-mpu-unit
 ##.double-square-ad
 ##.doubleClickAd
 ##.doubleGoogleTextAd
@@ -27719,6 +27723,7 @@ _popunder+$popup
 ##.pa_ads_label
 ##.padAdvx
 ##.padd-adv
+##.padded-ad
 ##.paddingBotAd
 ##.pads2
 ##.pads_bulk_widget
@@ -28585,6 +28590,7 @@ _popunder+$popup
 ##.sc_ad
 ##.sc_iframe_ad
 ##.scad
+##.scads-ad-placed
 ##.scanAd
 ##.scb-ad
 ##.scc_adbar
@@ -51484,7 +51490,6 @@ $csp=script-src 'self' '*' 'unsafe-inline',domain=pirateproxy.live|thehiddenbay.
 $csp=worker-src 'none',domain=torlock.com|123movie.cc|1movies.best|alltube.pl|alltube.tv|annuaire-bleu.net|centrum-dramy.pl|cmovies.ac|coinfaucet.eu|crictime.com|crictime.is|deltabit.co|doodcdn.com|estream.to|extreme-down.tv|flashx.co|flashx.to|flashx.tv|gomo.to|hdvid.fun|hdvid.tv|hentai-online.pl|hitomi.la|kinox.to|lewd.ninja|assia1.tv|assia2.tv|nflbite.com|nyafilmer.app|pirateproxy.live|plytv.me|potomy.ru|powvideo.cc|powvideo.net|putlocker.to|reactor.cc|rojadirecta.watch|sickrage.ca|stream2watch.one|streamtape.com|thehiddenbay.com|thepiratebay.org|thepiratebay10.org|tomadivx.tv|tpb.party|unblockit.buzz|uptomega.me|ustream.to|vidcloud9.com|vidnext.net|vidoza.co|vidoza.net|vidtodo.pro|vipbox.lc|vumoo.to|wallpoper.com|wearesaudis.net|yazilir.com
 ||allthetests.com^$csp=script-src 'self' '*' blob: data:
 ||bittorrent.am^$csp=script-src 'self' 'unsafe-inline'
-||britannica.com^$csp=script-src 'self' '*' 'unsafe-inline'
 ||convertcase.net^$csp=script-src 'self' '*' blob: data:
 ||convertfiles.com^$csp=script-src 'self' '*' 'unsafe-inline'
 ||eztv.io^$csp=script-src 'self' 'unsafe-inline' *.cloudflare.com *.googleapis.com *.facebook.net
@@ -52006,7 +52011,7 @@ convertinmp4.com###b728l
 gayvegas.com###background
 wallpapersmania.com###backgroundPopup
 soccerbase.com###ball_splash_holder
-allmyfaves.com,allthetests.com,dailynews.lk,dealsonwheels.co.nz,dosgamesarchive.com,farmtrader.co.nz,moviesfoundonline.com,openstreetmap.org###banner
+allmyfaves.com,allthetests.com,dailynews.lk,dealsonwheels.co.nz,dosgamesarchive.com,farmtrader.co.nz,greatbritishchefs.com,moviesfoundonline.com,openstreetmap.org###banner
 thecarconnection.com###banner-container
 ncaa.com###banner-purse
 gocdkeys.com###banner-sidebar
@@ -53169,6 +53174,7 @@ adfoc.us##.content > iframe
 techrepublic.com,zdnet.com##.content-MPU-bottom
 techrepublic.com,zdnet.com##.content-MPU-middle
 techrepublic.com,zdnet.com##.content-MPU-top
+floridasportsman.com##.content-banner-section
 crmbuyer.com,ectnews.com,macnewsworld.com,technewsworld.com##.content-block-slinks
 computerweekly.com##.content-continues
 techrepublic.com,zdnet.com##.content-leader-bottom
@@ -54238,6 +54244,7 @@ python-graph-gallery.com##div > [href^="https://www.datacamp.com"]
 python-graph-gallery.com##div > [href^="https://www.dataquest.io/course/"]
 healthline.com##div.css-0 > div[class]:not([id])
 guru99.com##div.custom > .hidden-phone
+cdromance.com##div.game-container[style="grid-column: span 2;"]
 designtaxi.com##div.masonry-brick.nt
 website.informer.com##div[align="center"]
 nexusradio.com##div[align=center]
@@ -55644,6 +55651,8 @@ youporn.com#?#aside:-abp-has(a.ad-remove)
 @@||s.w.org/wp-content/$stylesheet,domain=wordpress.org
 @@||wordpress.org/plugins/$domain=wordpress.org
 @@||wordpress.org/stats/plugin/$domain=wordpress.org
+@@||fingerprintjs.com^$generichide
+@@||schemeflood.com^$generichide
 @@||hwcdn.net^$script,domain=mp4upload.com
 @@||www-cultofmac-com.ezoic.net^$domain=cultofmac.com
 @@||ezsoftwarestorage.com^$image,media,domain=ezfunnels.com
@@ -57856,6 +57865,7 @@ _xiuno_com_ad/
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn
+||shunlidl.online^
 .cc/s.php?id=$script,third-party
 .cn/?ss=$script,third-party
 .cn/d/*-*-*.ap|$script,third-party
@@ -76751,6 +76761,7 @@ fqsousou.com,kengso.com#@#.user-share
 /countstat.php?
 /countubn.
 /countus.php
+/CoveoForSitecore.
 /cpeEvent.
 /cpeEventTracking.
 /cqcounter.
@@ -79521,6 +79532,7 @@ fqsousou.com,kengso.com#@#.user-share
 /thirdPartyTags.js
 /thirdPartyTagscachebuster.js
 /ThirdPartyTracking.
+/thixel.js
 /thuzianayltics.
 /ti.gif?slotid=
 /tiara/tracker/*
@@ -83422,6 +83434,7 @@ _mongo_stats/
 ||track-server-100.com^$third-party
 ||track-web.net^$third-party
 ||track2.me^$third-party
+||trackadm.com^$third-party
 ||trackalyzer.com^$third-party
 ||trackcb.com^$third-party
 ||trackcdn.com^$third-party
@@ -85547,6 +85560,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||amplifypixel.outbrain.com^
 ||an.yandex.ru^
 ||analyse.bcovery.com^
+||analytic.rollout.io^
 ||analytic.xingcloud.com^$third-party
 ||analyticcdn.globalmailer.com^
 ||analytics-beacon-*.amazonaws.com^
@@ -86957,6 +86971,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||prism.app-us1.com^$script,third-party
 ||prismaconnect.fr/prd/ping
 ||privacy-center.org^*/events
+||privacy.outdoorsg.com^
 ||privacytool.org/AnonymityChecker/js/fontdetect.js$third-party
 ||processor.asccommunications.com^
 ||production-mcs.lvp.llnw.net^
@@ -86983,6 +86998,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pv.pjtsu.com^
 ||px-cdn.net/*main.min.js
 ||px-cdn.net/b/s
+||px-cdn.net^*/collector
 ||px.excitedigitalmedia.com^
 ||px.marchex.io^
 ||px.owneriq.net^
@@ -89311,6 +89327,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ez.no/statjs/
 ||ezinearticles.com/blank/
 ||f-secure.com^*/wtsdc.js
+||f.schemeflood.com^
 ||f.staticlp.com^
 ||facebook.com/a/bz?
 ||facebook.com/ajax/*/log.php
