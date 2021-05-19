@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: /SJotUdNjAE6BDN0Ks54eA
+! Checksum: g2AwiBEhrIEQJMbnvsLniA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202105192025
-! Last Modified: 2021年05月19日 20:25
+! Version: 202105200418
+! Last Modified: 2021年05月20日 04:18
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -348,6 +348,7 @@ piratia.su###block-warning
 ma.by###bodysubcont > div[style^="padding"]:not([id]):not([class])
 ucoin.net###bottom-notice
 pln-pskov.ru###check_ad_block
+chipinfo.pro###content-container > div[style^="position: fixed;"]
 delfi.ee###delfiTopBar
 rusnext.ru###detectAdblock
 sd-company.su###dom_adblock
@@ -384,7 +385,6 @@ kaermorhen.ru###top-line-container
 numberempire.com###toplink > h3[style="color: red"]
 ganoderma-mushrooms.com,korrektor.name,varicream.org###turn_advert.adblock
 czx.to###vdl_ctnr
-chipinfo.pro###warning
 vsaduidoma.com##.ABD_display_wrapper
 eurabota.com##.abtop
 sprashivalka.com##.ad
@@ -1495,6 +1495,7 @@ youtube.com,youtube-nocookie.com#$#override-property-read playerResponse.adPlace
 ||googlevideo.com/videoplayback?*&ctier=*$xmlhttprequest,domain=youtube.com
 @@||googlevideo.com/videoplayback?*&pfa=*$xmlhttprequest,domain=youtube.com
 @@||googlevideo.com/videoplayback?*yt_live_broadcast&$xmlhttprequest,domain=youtube.com
+@@||googlevideo.com/videoplayback?*yt_premiere_broadcast&$xmlhttprequest,domain=youtube.com
 ! #CV-897
 agronews.ua,aegeanews.gr,batterypoweronline.com,brezovycukr.cz,centrocommercialevulcano.com,cieonline.co.uk,commsbusiness.co.uk,dailygrindonline.net,davincidiamondsslot.net,delo.bg,dynastyseries.com,fabmx1.com,fat-bike.com,fmj.co.uk,localemagazine.com,loveourweddingmag.com,metaforespress.gr,myvalley.it,niestatystyczny.pl,primapaginamarsala.it,ringelnatz.net,schoolsweek.co.uk,sikkenscolore.it,sportbet.gr,stadtstudenten.de,stagemilk.com,tautasdziesmas.lv,thetoneking.com,toplickevesti.com,zeroradio.co.uk#$#abort-on-property-read wpsite_clickable_data
 /wpsite-background-takeover*/js/wpsite_clickable.js$script,domain=agronews.ua|aegeanews.gr|batterypoweronline.com|brezovycukr.cz|centrocommercialevulcano.com|cieonline.co.uk|commsbusiness.co.uk|dailygrindonline.net|davincidiamondsslot.net|delo.bg|dynastyseries.com|fabmx1.com|fat-bike.com|fmj.co.uk|localemagazine.com|loveourweddingmag.com|metaforespress.gr|myvalley.it|niestatystyczny.pl|primapaginamarsala.it|ringelnatz.net|schoolsweek.co.uk|sikkenscolore.it|sportbet.gr|stadtstudenten.de|stagemilk.com|tautasdziesmas.lv|thetoneking.com|toplickevesti.com|zeroradio.co.uk
@@ -1682,7 +1683,7 @@ yandex.az,yandex.md,yandex.fr,yandex.kg##.feed__item._size_small[id^=ad]
 yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr##div[class="feed__item _size_big"]>[class^="card-wrapper_smthing"]
 avtovzglyad.ru,dni.ru,baby.ru#$#abort-on-property-read Ya
 kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy; abort-on-property-write Object.defineProperty
-liveinternet.ru#$#abort-on-property-read Object.prototype.allowLowerLevelDomains; abort-on-property-read Object.prototype.getRenderTo; abort-on-property-write Object.defineProperty; abort-on-property-read window.parse; abort-on-property-read Object.prototype._bid
+liveinternet.ru#$#abort-on-property-read Object.prototype.requestParsed; abort-on-property-read Object.prototype.allowLowerLevelDomains; abort-on-property-read Object.prototype.getRenderTo; abort-on-property-write Object.defineProperty; abort-on-property-read window.parse; abort-on-property-read Object.prototype._bid
 echo.msk.ru#$#abort-on-property-read Object.prototype.onRender; abort-on-property-read Object.prototype.loadData
 otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
 sdamgia.ru#$#abort-on-property-read Object.prototype.adSessionId
