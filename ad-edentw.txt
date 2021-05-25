@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: xGdlmx3CoEgbWSQKKnEqYA
+! Checksum: bUs8zg7t/VPpUiUxhc8Apg
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202105260043
-! Last Modified: 2021年05月26日 00:43
+! Version: 202105260420
+! Last Modified: 2021年05月26日 04:20
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1133,7 +1133,6 @@ hlouhopAes=no5$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|a
 adblock$xmlhttprequest,domain=televizeseznam.cz
 ?pvId=$xmlhttprequest,domain=televizeseznam.cz
 =sznp_pv$xmlhttprequest,domain=televizeseznam.cz
-preroll$xmlhttprequest,domain=televizeseznam.cz
 &collocation-$xmlhttprequest,domain=televizeseznam.cz
 &schmollocation-$xmlhttprequest,domain=televizeseznam.cz
 ?kruchkehl=undefined&$xmlhttprequest,domain=televizeseznam.cz
@@ -1154,9 +1153,9 @@ expres.cz,idnes.cz##videoplayer>video[data-io-video-title*="_idnestv_"]
 expres.cz,idnes.cz##a[href*="preroll"]
 idnes.cz,expres.cz##a[href*=";cdata="]
 idnes.cz,expres.cz##a[href*="/supertag=InstreamVideo/"]
-/area=preroll-$xmlhttprequest,domain=iprima.cz
-/area=midroll-$xmlhttprequest,domain=iprima.cz
-/area=postroll-$xmlhttprequest,domain=iprima.cz
+preroll$xmlhttprequest,domain=iprima.cz|televizeseznam.cz
+midroll$xmlhttprequest,domain=iprima.cz
+postroll$xmlhttprequest,domain=iprima.cz
 ! #CV-764
 clanky.seznam.cz,search.seznam.cz##.Result.Result--organic > :not(.Result-contentContainer):not(.Result-ico):not(.Result-title)
 clanky.seznam.cz,search.seznam.cz##.Result-ico:not([class="Result-ico"])
@@ -1685,7 +1684,7 @@ yandex.az,yandex.md,yandex.fr,yandex.kg##.feed__item._size_small[id^=ad]
 yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr##div[class="feed__item _size_big"]>[class^="card-wrapper_smthing"]
 avtovzglyad.ru,dni.ru,baby.ru#$#abort-on-property-read Ya
 kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy; abort-on-property-write Object.defineProperty
-liveinternet.ru#$#abort-on-property-read Object.prototype.cbManagers
+liveinternet.ru#$#abort-on-property-read Object.prototype.parseResponseData
 echo.msk.ru#$#abort-on-property-read Object.prototype.onRender; abort-on-property-read Object.prototype.loadData
 otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
 sdamgia.ru#$#abort-on-property-read Object.prototype.adSessionId
