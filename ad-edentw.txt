@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Pq9r1KuN80sszP8Beu7fKQ
+! Checksum: MWG8Nw56RnKf9Ih0BoPe4g
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202105280102
-! Last Modified: 2021年05月28日 01:02
+! Version: 202105282046
+! Last Modified: 2021年05月28日 20:46
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1156,7 +1156,7 @@ idnes.cz,expres.cz##a[href*="/supertag=InstreamVideo/"]
 preroll$xmlhttprequest,domain=iprima.cz|televizeseznam.cz
 midroll$xmlhttprequest,domain=iprima.cz
 postroll$xmlhttprequest,domain=iprima.cz
-iprima.cz##.vjs-ad-link
+iprima.cz##.vjs-ad-link, .vjs-ad-clickthru
 ! #CV-764
 clanky.seznam.cz,search.seznam.cz##.Result.Result--organic > :not(.Result-contentContainer):not(.Result-ico):not(.Result-title)
 clanky.seznam.cz,search.seznam.cz##.Result-ico:not([class="Result-ico"])
@@ -1654,7 +1654,6 @@ parenting.pl,echirurgia.pl,dobreprogramy.pl,abczdrowie.pl,wp.pl#$#override-prope
 wp.pl#$#abort-on-property-write gafReady
 o2.pl,wp.pl#?#div:-abp-has(> script:-abp-contains(=== 'function'))
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath './/div[@class]//a[string-length(@href)>500]/div[@class]/div[@class]//img[@class][string-length(@src)>70]/ancestor::div[@class and not(@id)][5]'
-echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath `.//iframe[not(@id)][string-length(@src)>100][substring(@src,string-length(@src)-string-length('.html')+1)='.html']//ancestor::div[5]`
 ! MISC
 www.elektroda.pl#$#abort-on-property-read popupStatus; abort-on-property-write welcomeAdContainer
 naekranie.pl#$#abort-on-property-read adQueue
@@ -1686,7 +1685,7 @@ yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr##div[class="feed__it
 avtovzglyad.ru,dni.ru,baby.ru#$#abort-on-property-read Ya
 kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy; abort-on-property-write Object.defineProperty
 liveinternet.ru#$#abort-on-property-read Object.prototype.parseResponseData
-echo.msk.ru#$#abort-on-property-read Object.prototype.onRender; abort-on-property-read Object.prototype.loadData
+echo.msk.ru#$#abort-on-property-read Object.prototype.onRender; abort-on-property-read Object.prototype.banner
 otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
 sdamgia.ru#$#abort-on-property-read Object.prototype.adSessionId
 gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru#$#abort-on-property-read Object.prototype.showRTB
