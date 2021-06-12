@@ -125,7 +125,7 @@ jobs:
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
           #git config --add core.compression -1
-          git add .
+          git add --all
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.GITEE_ACCOUNT }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/${{ secrets.GITEE_NAME }}/list.git"
@@ -141,7 +141,7 @@ jobs:
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
           git checkout -b master
-          git add .
+          git add --all
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ secrets.GITEE_ACCOUNT }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/${{ secrets.GITEE_NAME }}/list.git"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/list.git"
