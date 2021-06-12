@@ -1,0 +1,93 @@
+name: Build YueDu Sources files
+on:
+  schedule:
+    - cron: 30 21 * * *
+#  push:
+#    branch:
+#      - "test"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: "^1.14"
+
+      - name: Set $GOPATH and more variables
+        run: |
+          echo "RELEASE_NAME=Released on $(date -d "8 hour" -u +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date -d "8 hour" -u +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "SHUYUAN_INDEX_URL=http://yck.mumuceo.com/yuedu/shuyuan/index.html" >> $GITHUB_ENV
+          echo "SHUYUAN_JSON_URL=http://yck.mumuceo.com/yuedu/shuyuan/jsons" >> $GITHUB_ENV
+          echo "RSSYUAN_INDEX_URL=http://yck.mumuceo.com/yuedu/rssyuan/index.html" >> $GITHUB_ENV
+          echo "RSSYUAN_JSON_URL=http://yck.mumuceo.com/yuedu/rssyuan/jsons" >> $GITHUB_ENV
+          echo "HOMEPAGE='Origin: http://yck.mumuceo.com'" >> $GITHUB_ENV
+          echo "REFERER='Referer: http://yck.mumuceo.com/yuedu/index/index.html'" >> $GITHUB_ENV
+          echo "USERAGENT='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0'" >> $GITHUB_ENV
+          echo "ACCEPTLANGUAGE='Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'" >> $GITHUB_ENV
+          echo "GOPATH=$(dirname $GITHUB_WORKSPACE)" >> $GITHUB_ENV
+          echo "$(dirname $GITHUB_WORKSPACE)/bin" >> $GITHUB_PATH
+        shell: bash
+
+      - name: Checkout the "master" branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Get ShuYuan files
+        run: |
+          mkdir -p ./download/
+          mkdir -p ./new/
+          cd ./download
+          #检索最新有搜索无声的书源id
+          curl -sSL "$SHUYUAN_INDEX_URL" -H "$USERAGENT" -H "Accept: application/json, text/javascript, */*; q=0.01" -H "$ACCEPTLANGUAGE" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "X-Requested-With: XMLHttpRequest" -H "$HOMEPAGE" -H "Connection: keep-alive" -H "$REFERER" --data "page=1&limit=5000&keys=&ver=3&sousuo=&faxian=&audio=&tupian=" |grep -o '\"id\":[0-9]\+' |sed 's#\"id\":##' >yuedu-all.txt
+          #把书源id文件分割成每400行一个
+          split -l 400 yuedu-all.txt yueduid
+          #获取书源文件
+          for i in $(ls yueduid*);do
+            curl -s -o $i.txt "$SHUYUAN_JSON_URL?id=$(sed ':a;N;s/\n/-/g;ta' $i)" -H "$USERAGENT" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "$ACCEPTLANGUAGE" -H "Connection: keep-alive" -H "Upgrade-Insecure-Requests: 1"
+            sed -i -e 's#^\[#,#' -e 's#\]$##' $i.txt
+          done
+          #合并书源文件
+          cat yueduid*.txt |sed -e 's#^,#\[#' -e 's#$#\]#' > ../new/yuedu.txt
+          rm -rf ../download
+
+      - name: Get RSSYuan files
+        run: |
+          mkdir -p ./download/
+          cd ./download
+          #检索订阅源id
+          curl -s "$RSSYUAN_INDEX_URL" -H "$USERAGENT" -H "Accept: application/json, text/javascript, */*; q=0.01" -H "$ACCEPTLANGUAGE" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "X-Requested-With: XMLHttpRequest" -H "$HOMEPAGE" -H "Connection: keep-alive" -H "$REFERER" --data "page=1&limit=5000&keys=" |grep -o '\"id\":[0-9]\+' |sed 's#\"id\":##' >yuedu-all.txt
+          #把订阅源id文件分割成每400行一个
+          split -l 400 yuedu-all.txt yueduid
+          #获取订阅源文件
+          for i in $(ls yueduid*);do
+            curl -s -o $i.txt "$RSSYUAN_JSON_URL?id=$(sed ':a;N;s/\n/-/g;ta' $i)" -H "$USERAGENT" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "$ACCEPTLANGUAGE" -H "Connection: keep-alive" -H "Upgrade-Insecure-Requests: 1"
+            sed -i -e 's#^\[#,#' -e 's#\]$##' $i.txt
+          done
+          #合并订阅源文件
+          cat yueduid*.txt |sed -e 's#^,#\[#' -e 's#$#\]#' > ../new/yuedu-rss.txt
+          rm -rf ../download
+
+      - name: Check files
+        run: |
+          cd ./new
+          for i in $(ls *.txt); do
+            if [ -s $i ]; then
+              cp -f $i ../$i
+            fi
+          done
+
+      - name: Git push assets to "master" branch
+        run: |
+          rm -rf download new
+          sed -i '/url =/d' ./.git/config
+          git config --local user.name "actions"
+          git config --local user.email "action@github.com"
+          git add .
+          git commit -m "${{ env.RELEASE_NAME }}"
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -u origin master

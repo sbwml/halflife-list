@@ -1,0 +1,149 @@
+name: Build adblock rules files
+on:
+  schedule:
+    - cron: 0 */4 * * *
+#  push:
+#    branch:
+#      - "test"
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: "^1.14"
+
+      - name: Set $GOPATH and more variables
+        run: |
+          echo "RELEASE_NAME=Released on $(date -d "8 hour" -u +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date -d "8 hour" -u +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "MODIFIED_TIME=$(date -d "8 hour" -u "+%Y年%m月%d日 %H:%M")" >> $GITHUB_ENV
+          echo "EASYLIST_URL=https://easylist-downloads.adblockplus.org/easylist.txt" >> $GITHUB_ENV
+          echo "EASYLISTCHINA_URL=https://easylist-downloads.adblockplus.org/easylistchina.txt" >> $GITHUB_ENV
+          echo "EASYPRIVACY_URL=https://easylist-downloads.adblockplus.org/easyprivacy.txt" >> $GITHUB_ENV
+          echo "CJXLIST_URL=https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjxlist.txt" >> $GITHUB_ENV
+          echo "CJX_ANNOYANCE_URL=https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt" >> $GITHUB_ENV
+          echo "ANTI_ADBLOCK_KILLER_FILTERS_URL=https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt" >> $GITHUB_ENV
+          echo "ANTIADBLOCKFILTERS_URL=https://easylist-downloads.adblockplus.org/antiadblockfilters.txt" >> $GITHUB_ENV
+          echo "ABP_FILTERS_ANTI_CV_URL=https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt" >> $GITHUB_ENV
+          echo "XINGGSF_MV_URL=https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt" >> $GITHUB_ENV
+          echo "GOPATH=$(dirname $GITHUB_WORKSPACE)" >> $GITHUB_ENV
+          echo "$(dirname $GITHUB_WORKSPACE)/bin" >> $GITHUB_PATH
+        shell: bash
+
+      - name: Checkout the "master" branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Get every files
+        id: download
+        run: |
+          mkdir -p ./download/
+          cd ./download
+          curl -sSL $EASYLIST_URL | sed -e '/^! /d' -e '1c ! EasyList' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./easylist.txt
+          curl -sSL $EASYLISTCHINA_URL | sed -e '/^! /d' -e '1c ! EasyList China' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./easylistchina.txt
+          curl -sSL $EASYPRIVACY_URL | sed -e '/^! /d' -e '1c ! EasyPrivacy' -e '/^!$/d' > ./easyprivacy.txt
+          curl -sSL $CJXLIST_URL | sed -e '/^! /d' -e '1c ! EasyList Lite' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./cjxlist.txt
+          curl -sSL $CJX_ANNOYANCE_URL | sed -e '/^! /d' -e "1c ! CJX's Annoyance List" -e '/^!$/d' -e '/The End/d'  -e '/^$/d' | sed '/热门话题/,+1d' > ./cjx-annoyance.txt
+          sed -i '/!#include cjx-ublock.txt/c !#include https://gitee.com/cjx82630/cjxlist/raw/master/cjx-ublock.txt' ./cjx-annoyance.txt
+          curl -sSL $XINGGSF_MV_URL | sed -e '/^! /d' -e '1c ! 乘风 视频广告过滤规则' -e '/^!$/d' -e '/^$/d' > ./xinggsf-mv.txt
+          curl -sSL $ANTIADBLOCKFILTERS_URL | sed -e '1c ! Adblock Warning Removal List' -e '/^! Checksum/,/! Please check our guidelines/d' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./antiadblockfilters.txt
+          curl -sSL $ABP_FILTERS_ANTI_CV_URL | sed -e '1c ! abp-filters-anti-cv' -e '/^! Checksum/,/adblockplus.org/d' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./abp-filters-anti-cv.txt
+          curl -sSL $ANTI_ADBLOCK_KILLER_FILTERS_URL | sed -e '1c ! AakList (Anti-Adblock Killer)' -e '/^! Title/,/^! RegExpVisualizer/d' -e '/^!$/d' -e '/The End/d'  -e '/^$/d' > ./anti-adblock-killer-filters.txt
+          for i in $(ls *.txt); do
+            if [[ `cat $i |wc -l` -eq 0 ]]; then
+              echo "::set-output name=status::failed"
+              break
+            else
+              echo "::set-output name=status::success"
+              echo "" >> $i
+            fi
+          done
+
+      - name: Generate adblock files
+        if: steps.download.outputs.status == 'success'
+        run: |
+          mkdir -p ./new/
+          cd ./download
+          cat ../mod/GeneralBlock.txt ../mod/TiebaBlock.txt easylist.txt easylistchina.txt easyprivacy.txt cjx-annoyance.txt xinggsf-mv.txt > ../new/ad-pc.txt
+          cat ../mod/GeneralBlock.txt easylist.txt easylistchina.txt easyprivacy.txt cjx-annoyance.txt > ../new/ad-mo.txt
+          cat ../mod/GeneralBlock.txt ../mod/TiebaBlock.txt xinggsf-mv.txt easylistchina.txt cjxlist.txt cjx-annoyance.txt > ../new/ad.txt
+          cat xinggsf-mv.txt easylistchina.txt cjxlist.txt cjx-annoyance.txt > ../new/ad2.txt
+          cat xinggsf-mv.txt easylistchina.txt cjxlist.txt cjx-annoyance.txt easyprivacy.txt > ../new/ad3.txt
+          cat antiadblockfilters.txt abp-filters-anti-cv.txt anti-adblock-killer-filters.txt > ../new/ad-edentw.txt
+          for i in $(ls ../new/*.txt); do
+            sed -i '/^$/d' $i
+          done
+
+      - name: Diff and addChecksum
+        id: diffResult
+        if: steps.download.outputs.status == 'success'
+        run: |
+          mkdir -p ./old_no_title/
+          chmod +x ./mod/addChecksum.pl
+          for i in $(ls ad*.txt); do
+            sed '1,/^!$/d' $i > ./old_no_title/$i
+          done
+          diffFile="$(diff -q new/ old_no_title/ |grep -o '[a-zA-Z0-9-]\+.txt' |sort -u)"
+          if [ -n "$diffFile" ]; then
+            for i in $diffFile ; do
+              titleName=$(echo "$i" |sed 's#.txt#-title.txt#')
+              cat ./mod/$titleName ./new/$i > ./$i
+              sed -i -e "s#201412030951#$TAG_NAME#" -e "s#201412030952#$MODIFIED_TIME#" ./$i
+              perl ./mod/addChecksum.pl ./$i
+              echo "::set-output name=status::success"
+            done
+          else
+            echo "::set-output name=status::failed"
+          fi
+
+      - name: Deliver download Dir
+        uses: actions/upload-artifact@v2
+        if: steps.download.outputs.status == 'failed'
+        with:
+          name: AllFiles
+          path: |
+            ./download/
+
+      - name: Deliver new and old_no_title Di
+        uses: actions/upload-artifact@v2
+        if: steps.diffResult.outputs.status == 'failed'
+        with:
+          name: AllFiles
+          path: |
+            *
+            !./.git/
+
+      - name: Git push assets to "master" branch
+        if: steps.diffResult.outputs.status == 'success'
+        run: |
+          rm -rf download new old_no_title
+          sed -i '/url =/d' ./.git/config
+          git config --local user.name "actions"
+          git config --local user.email "action@github.com"
+          #git config --add core.compression -1
+          git add .
+          git commit -m "${{ env.RELEASE_NAME }}"
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          #git remote set-url --add origin "https://${{ secrets.GITEE_ACCOUNT }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/${{ secrets.GITEE_NAME }}/list.git"
+          #git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/list.git"
+          git fetch --unshallow origin
+          git push -u origin master
+
+      - name: Git push assets to gitee & coding
+        if: steps.diffResult.outputs.status == 'success' && steps.diffResult.outputs.status == 'false'
+        run: |
+          rm -rf .git/
+          git init
+          git config --local user.name "actions"
+          git config --local user.email "action@github.com"
+          git checkout -b master
+          git add .
+          git commit -m "${{ env.RELEASE_NAME }}"
+          git remote add origin "https://${{ secrets.GITEE_ACCOUNT }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/${{ secrets.GITEE_NAME }}/list.git"
+          git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/list.git"
+          git fetch --unshallow origin
+          git push -u -f origin master
