@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2KsdFXLcFrevFR5TMhxcfg
+! Checksum: 8dsn82luei2ampEFjkYjwg
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202106260404
-! Last Modified: 2021年06月26日 04:04
+! Version: 202106260815
+! Last Modified: 2021年06月26日 08:15
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -630,6 +630,7 @@ hdzone.org#$#abort-current-inline-script Math zfgloaded
 ! #CV-655
 idnes.cz#$#hide-if-matches-xpath '//div/a[string-length(@href) > 500]//img[string-length(@src) > 80]/ancestor::div[@class][2]'
 idnes.cz#$#hide-if-matches-xpath '//div[@id="main"]/*[string-length(@id) > 30][string-length(@class) > 90]'
+idnes.cz,expres.cz#$#hide-if-matches-xpath './/div[string-length(@class) >30]/span[not(@id)][not(*) and not(normalize-space())][not(preceding-sibling::*)]/ancestor::*[string-length(@id) > 10][string-length(@class) >30]'
 novinky.cz,kupi.cz,sport.cz,super.cz,horoskopy.cz##iframe[ramefamorderx], iframe[mfookasinyx]
 /vCAv.IAAAAAoAA$script,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|fights.cz|horoskopy.cz|idnes.cz|iprima.cz|karaoketexty.cz|kinobox.cz|kupi.cz|maminka.cz|mobilmania.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|onetv.cz|osobnosti.cz|reflex.cz|spisovatele.cz|sport.cz|super.cz|televizeseznam.cz|tiscali.cz|zeny.cz|zive.cz
 /r:*$script,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|fights.cz|horoskopy.cz|idnes.cz|iprima.cz|karaoketexty.cz|kinobox.cz|kupi.cz|maminka.cz|mobilmania.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|onetv.cz|osobnosti.cz|reflex.cz|spisovatele.cz|sport.cz|super.cz|televizeseznam.cz|tiscali.cz|zeny.cz|zive.cz
@@ -1676,6 +1677,7 @@ parenting.pl,echirurgia.pl,dobreprogramy.pl,abczdrowie.pl,wp.pl#$#override-prope
 wp.pl#$#abort-on-property-write gafReady
 o2.pl,wp.pl#?#div:-abp-has(> script:-abp-contains(=== 'function'))
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath './/div[@class]//a[string-length(@href)>500]/div[@class]/div[@class]//img[@class][string-length(@src)>70]/ancestor::div[@class and not(@id)][5]'
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl#$#hide-if-matches-xpath '//div/a[string-length(@href) > 1510]/div[@class]/img[@class][string-length(@src) > 100]/ancestor::div[@class and not(@id)][2]'
 ! MISC
 www.elektroda.pl#$#abort-on-property-read popupStatus; abort-on-property-write welcomeAdContainer
 naekranie.pl#$#abort-on-property-read adQueue
@@ -1814,10 +1816,10 @@ marieclaire.ua#$#abort-current-inline-script redram /загрузка.../
 ! #CV-667
 empireg.ru#$#abort-current-inline-script Math zfgloaded
 ! #CV-747
-rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div/div[not(*) and not(normalize-space())][@class][text()[contains(.," ")]][not(preceding-sibling::*) and not(following-sibling::*)][contains(@class,"_")][not(@id)]/ancestor::div[@class][3]'
-rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[count(div[@class])=1]/following-sibling::div[@class][count(div[@class])=3][child::div[1][string-length(text())=7]/div][child::div[2]/div][child::div[3]/div]/ancestor::div[@class][2]'
-rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[count(div[@class])<=2]/following-sibling::div[@class][count(div[@class])=4][child::div[1][string-length(text())=7]/div][child::div[2]/div][child::div[3][string-length(text())=7]/div][child::div[4][string-length(text())=7]/div]/ancestor::div[@class][2]'
-rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[not(@class)][not(@id)][not(@style)][string-length(text())=7]/ancestor::div[@class][4]'
+rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div/div[not(*) and not(normalize-space())][@class][text()[contains(.," ")]][not(preceding-sibling::*) and not(following-sibling::*)][contains(@class,"_")][not(@id)]/ancestor::div[@class][3]'
+rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[count(div[@class])=1]/following-sibling::div[@class][count(div[@class])=3][child::div[1][string-length(text())=7]/div][child::div[2]/div][child::div[3]/div]/ancestor::div[@class][2]'
+rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,championat.com,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[count(div[@class])<=2]/following-sibling::div[@class][count(div[@class])=4][child::div[1][string-length(text())=7]/div][child::div[2]/div][child::div[3][string-length(text())=7]/div][child::div[4][string-length(text())=7]/div]/ancestor::div[@class][2]'
+rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,motor.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru#$#hide-if-matches-xpath './/div[not(@class)][not(@id)][not(@style)][string-length(text())=7]/ancestor::div[@class][4]'
 ! #CV-694
 www.ukr.net#$#override-property-read Math.random trueFunc; hide-if-shadow-contains /./
 112ua.tv,24boxing.com.ua,4mama.ua,avtovod.com.ua,avtovod.org.ua,besplatka.ua,bilshe.com,buhgalter.com.ua,buhgalter911.com,businessua.com,censor.net,dengi.ua,enovosty.com,epravda.com.ua,eurointegration.com.ua,f1analytic.com,facenews.ua,football-ukraine.com,football24.ua,footballtransfer.com.ua,gismeteo.ua,gorod.dp.ua,hvylya.net,inforesist.org,internetua.com,kolobok.ua,kp.ua,kriminal.tv,lifedon.com.ua,mport.ua,nashamama.com,newsyou.info,nnovosti.info,okino.ua,ostro.org,perevod.i.ua,real-vin.com,segodnya.ua,sinoptik.ua,smak.ua,sportanalytic.com,toneto.net,tv.ua,tvgid.ua,u-news.com.ua,udoktora.net,vsetv.com,zdorovia.com.ua#$#override-property-read String.prototype.charCodeAt trueFunc
