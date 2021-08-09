@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JGwx19HXbdyBK3oRP6VnvQ
+! Checksum: pxt7VT41F+zWdAegmaYSvA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202108020817
-! Last Modified: 2021年08月02日 08:17
+! Version: 202108090818
+! Last Modified: 2021年08月09日 08:18
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -129,6 +129,7 @@ shadbase.com##img[alt="adblock"]
 /wp-content/plugins/ad-block-defender/*
 /wp-content/plugins/deadblocker/*
 /wp-content/uploads/an-temp/*$script,stylesheet
+/wutime_adblock/*
 /SvgAdblockDetected/*
 _adblocker_detected
 _adblock_killer.
@@ -194,6 +195,7 @@ _adblock_killer.
 ###adbcontainer-popup
 ###adblock-alert
 ###adblock-box
+###adblock-honeypot
 ###adblock-modal
 ###adblock-msg
 ###adblock-notice
@@ -629,6 +631,7 @@ iyingshi9.tv#$#override-property-read YZM.ads.state false
 ! hdzone.org#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/czech.txt ***
 ! #CV-655
+idnes.cz,expres.cz#$#hide-if-matches-xpath './/img[string-length(@src) > 140]/preceding::a[@target="_top"]/ancestor::div[string-length(@class) > 30]'
 idnes.cz#$#hide-if-matches-xpath '//div/a[string-length(@href) > 500]//img[string-length(@src) > 80]/ancestor::div[@class][2]'
 idnes.cz#$#hide-if-matches-xpath '//div[@id="main"]/*[string-length(@id) > 30][string-length(@class) > 90]'
 idnes.cz,expres.cz#$#hide-if-matches-xpath './/div[string-length(@class) >30]/span[not(@id)][not(*) and not(normalize-space())][not(preceding-sibling::*)]/ancestor::*[string-length(@id) > 10][string-length(@class) >30]'
@@ -1217,8 +1220,10 @@ youporn.com#$#abort-on-property-read zone_underplayer; abort-on-property-read zo
 pornhub.com#$#abort-on-property-read HTMLElement.prototype.attachShadow
 theyarehuge.com#$#abort-on-property-read Element.prototype.attachShadow
 ! #CV-663
-/image/*/*-bob*.png^$domain=newser.com
-/image/*/*-bob*.jpg^$domain=newser.com
+/*image/*/*.png^$domain=newser.com
+/*image/*/*.jpg^$domain=newser.com
+newser.com#$#hide-if-matches-xpath './/*[@*]/*[@cid]/ancestor::*[1]|//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][string-length( text() ) <= 10][contains(normalize-space(),"")][string-length(@*) < 15]'
+grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath './/*[@* and @aid]/*[string-length( text() ) < 39][contains(normalize-space(),"")][string-length(@*) >= 27]/preceding-sibling::*[1]/ancestor::*[2]|.//*[@* and @aid]/*[string-length( text() ) < 39][contains(normalize-space(),"")]'
 newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(@class="FooterContent")][not(contains(@*,"content"))][not(contains(@*,"Grid"))]'
 grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath '//*[@*][string-length( text() ) > 47][contains(normalize-space(),"")][string-length(@class) >= 27]/preceding-sibling::*[1]/ancestor::*[3][@*]'
 newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(@class="FooterContent")][not(@id="contentBounds")][not(contains(@id,"Grid"))][not(@style)]'
@@ -1295,8 +1300,6 @@ filmxy.one##.promo-contents
 y2mate.com#$#abort-on-property-read dispatchEvent
 ! #CV-761
 facebook.com#?#.ego_section:-abp-has(a:-abp-contains(/贊助|赞助内容|Sponsorlu|Sponsored|Gesponsert|Publicidad|Patrocinado|Sponsorisé|Sponsorizzato|Gesponsord|Sponsorowane|Реклама|Sponsa|Sponset|ממומן|Bersponsor|Ditaja|ได้รับการสนับสนุน|प्रायोजित|সৌজন্যে/))
-! #CV-240
-seekingalpha.com#$#abort-on-property-read atob
 ! #CV-241
 swatchseries.to#$#abort-on-property-read zfgloadednative
 ! #CV-661
@@ -1400,6 +1403,7 @@ foreverconscious.com,blwideas.com,ultimateninjablazingx.com,utahsweetsavings.com
 ||1r7efqo.tjfmd.com^$script,xmlhttprequest,domain=pch.com
 ||1qboss9.ejuslehq.com^$script,xmlhttprequest,domain=pch.com
 ||1ov2pp0.$script,xmlhttprequest,domain=ign.com|ignboards.com
+||1htpkw6.$script,xmlhttprequest,domain=ign.com|ignboards.com
 ||zk8n5o.oaqjwapqdho.com^$script,xmlhttprequest
 ||volstqkwmth.com^$script,xmlhttprequest
 ||dgnepemukk.com^$script,xmlhttprequest
@@ -1460,15 +1464,15 @@ adpop.me,amyscans.com,apurogol.net,aquipelis.net,arenavision.in,arenavision.us,a
 ! #CV-368
 kimcartoon.to#$#abort-on-property-read NativeAd
 ! Popup/Popunder/Clickunder
-strcloud.club,strcloud.link,streamtape.to,streamtape.cc,streamtape.net,streamtape.xyz,streamtape.com,strtape.cloud,strtape.site,strtape.tech,rlslog.net,hclips.com,pornhat.com,dood.so,dood.to,dood.video,dood.watch,doodstream.com,vidstreaming.io,mstream.fun,xnxxvideo.pro,xvideosxporn.com,porndollz.com,hd-analporn.com,bigtitsxxxfree.com,perfectgirls.net,realgfporn.com,porn.com,hotmovs.com,rule34hentai.net,govid.me,mstream.best,mstream.fun,mstream.icu,mstream.press,mstream.space,mstream.tech,mstream.website,mstream.xyz,mystream.io,mystream.to,iframe-secured.com,pandamovies.pw,configspc.com,onetouchtv.me#$#abort-on-property-read open
-baytorrent.eu.org,dood.so,dood.to,dood.video,dood.watch,doodstream.com,europixhd.com,europixhd.net,fileflares.com,gledajonline.net,govid.me,hdeuropix.io,hxfile.co,isohunt.lol,isohuntz.net,javjunkies.com,limetorrents.info,loadsubs.net,mypiratebay.best,mypiratebay.club,mypiratebay.co,mypiratebay.life,mypiratebay.live,mypiratebay.me,mypiratebay.surf,mypiratebay.win,mypiratebay.work,mypiratebay.wtf,mypiratebay.xyz,myyouporn.com,openpirate.org,piratebay.cloud,piratebay.live,piratebay.party,piratebay.world,piratebayproxy.live,piratebays.wtf,pirateproxy.earth,pirateproxy.live,pirateproxy.surf,pirateproxy.us,strcloud.club,strcloud.link,streamtape.cc,streamtape.com,streamtape.net,streamtape.to,streamtape.xyz,strtape.cloud,strtape.site,strtape.tech,thehiddenbay.com,thepiratebay.org,thepiratebay.vip,thepiratebay.zone,thepiratebay0.org,thepiratebay10.org,topeuropix.net,tpb.party,tpb.red,vidshare.tv,youdbox.com#$#abort-on-property-write _pop
-strcloud.club,strcloud.link,streamtape.to,streamtape.cc,streamtape.net,streamtape.xyz,streamtape.com,strtape.cloud,strtape.site,strtape.tech#$#abort-on-property-write _pao
+strcloud.club,strcloud.link,streamtape.to,streamtape.cc,streamtape.net,streamtape.xyz,streamtape.com,strtapeadblock.me,strtape.cloud,strtape.site,strtape.tech,rlslog.net,hclips.com,pornhat.com,dood.so,dood.to,dood.video,dood.watch,doodstream.com,vidstreaming.io,mstream.fun,xnxxvideo.pro,xvideosxporn.com,porndollz.com,hd-analporn.com,bigtitsxxxfree.com,perfectgirls.net,realgfporn.com,porn.com,hotmovs.com,rule34hentai.net,govid.me,mstream.best,mstream.fun,mstream.icu,mstream.press,mstream.space,mstream.tech,mstream.website,mstream.xyz,mystream.io,mystream.to,iframe-secured.com,pandamovies.pw,configspc.com,onetouchtv.me,hxfile.co#$#abort-on-property-read open
+baytorrent.eu.org,dood.so,dood.to,dood.video,dood.watch,doodstream.com,europixhd.com,europixhd.net,fileflares.com,gledajonline.net,govid.me,hdeuropix.io,hxfile.co,isohunt.lol,isohuntz.net,javjunkies.com,limetorrents.info,loadsubs.net,mypiratebay.best,mypiratebay.club,mypiratebay.co,mypiratebay.life,mypiratebay.live,mypiratebay.me,mypiratebay.surf,mypiratebay.win,mypiratebay.work,mypiratebay.wtf,mypiratebay.xyz,myyouporn.com,openpirate.org,piratebay.cloud,piratebay.live,piratebay.party,piratebay.world,piratebayproxy.live,piratebays.wtf,pirateproxy.earth,pirateproxy.live,pirateproxy.surf,pirateproxy.us,strcloud.club,strcloud.link,streamtape.cc,streamtape.com,strtapeadblock.me,streamtape.net,streamtape.to,streamtape.xyz,strtape.cloud,strtape.site,strtape.tech,thehiddenbay.com,thepiratebay.org,thepiratebay.vip,thepiratebay.zone,thepiratebay0.org,thepiratebay10.org,topeuropix.net,tpb.party,tpb.red,vidshare.tv,youdbox.com#$#abort-on-property-write _pop
+strcloud.club,strcloud.link,streamtape.to,streamtape.cc,streamtape.net,streamtape.xyz,streamtape.com,strtapeadblock.me,strtape.cloud,strtape.site,strtape.tech#$#abort-on-property-write _pao
 xxxhdporno.net,indianpornvideo.org,hindixxxvideos.net,biter.tv#$#abort-on-property-read decodeURI
 xhamster.com#$#abort-on-property-read wig-popunder; abort-on-property-write wit-popunder
 xhamster.one#$#abort-on-property-read wih-popunder; abort-on-property-write dataPopUnder
 marketrealist.com#$#abort-on-property-read adHandler.cmd.push
 ling.online,pornj.com,upornia.com,realgfporn.com#$#abort-on-property-read encodeURI
-vidlo.us,abcvideo.cc,extramovies.casa,hdvid.online,pstream.net,dlapk4all.com,pandamovies.pw,gounlimited.to,rexdlfile.com,file-up.org,gledajonline.net,loadsubs.net,topeuropix.net,zippyshare.com,europixhd.net,europixhd.com,hdeuropix.io#$#abort-on-property-read decodeURIComponent
+vidlo.us,abcvideo.cc,extramovies.casa,hdvid.online,pstream.net,dlapk4all.com,pandamovies.pw,gounlimited.to,rexdlfile.com,file-up.org,gledajonline.net,loadsubs.net,topeuropix.net,zippyshare.com,europixhd.net,europixhd.com,hdeuropix.io,hxfile.co#$#abort-on-property-read decodeURIComponent
 hdvid.online#$#abort-on-property-read Fingerprint2; abort-on-property-read atob
 vidbem.com,upload4earn.org,uploadbyte.com#$#abort-on-property-read localStorage
 dood.so,dood.to,dood.video,dood.watch,doodstream.com#$#abort-on-property-read DoodPop; abort-on-property-write adb; abort-on-property-write cRAds; abort-on-property-write xRds; abort-on-property-write xPoPAdS
@@ -1477,7 +1481,7 @@ hclips.com#$#abort-on-property-read adver
 txxx.com#$#override-property-read skpPop true; abort-on-property-read ExoLoader; abort-on-property-read open
 protonvideo.to#$#abort-on-property-read PlayerjsEvents
 *$popup,third-party,domain=streamega.com|123putlocker.club|openloadmovies.bz
-about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.com
+about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.com|strtapeadblock.me
 /favicon.ico$popup,domain=vidshare.tv|vudeo.net
 ||35.194.16.41^$popup
 ||gadsims.com^$popup
@@ -1769,11 +1773,6 @@ informator.ua,kriminal.tv,4studio.com.ua,112ua.tv,newsoneua.tv,zikua.tv,gorodkie
 ! marieclaire.ua#$#abort-current-inline-script redram /загрузка.../
 ! #CV-667
 ! #CV-747
-rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru,championat.com#$#hide-if-matches-xpath './/div[not(@id) and contains(@class," ") and string-length(@class)<17]/div[not(@id) and not(@style) and @class and @*[not(name() = 'class')]="" and string-length(@class)<10]'
-rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru,championat.com#$#hide-if-matches-xpath './/div[@class][count(div[@class])>6]/div[(@class)][string-length(text())>60]/ancestor::div[@class][1]/preceding-sibling::div/div[(@class)][string-length(text())>10]/ancestor::div[@class][2]/preceding-sibling::div[contains(@class," ")]/ancestor::div[@class][2][contains(@class," ")]'
-rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru,championat.com#$#hide-if-matches-xpath '//div[not(*) and not(normalize-space())]/following-sibling::div[(@class)][string-length(text())>60]/ancestor::div[(@class)][1]/preceding-sibling::div//div[not(*) and not(normalize-space())]/following-sibling::div[(@class)][string-length(text())>10]/ancestor::div[(@class)][4][contains(@class," ")]'
-rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru,championat.com#$#hide-if-matches-xpath '//div[not(*) and not(normalize-space())]/following-sibling::div[(@class)][last()][string-length(text())>60]/ancestor::div[(@class)][1]/preceding-sibling::div//div[not(*) and not(normalize-space())]/following-sibling::div[(@class)][last()][string-length(text())>10]/ancestor::div[(@class)][4][contains(@class," ")]'
-rambler.ru,~mail.rambler.ru,~vp.rambler.ru,~kassa.rambler.ru,~top100.rambler.ru,~class.rambler.ru,~dating.rambler.ru,~images.rambler.ru,~rabota.rambler.ru,~help.rambler.ru,~org.rambler.ru,~developers.rambler.ru,~soft.rambler.ru,~nova.rambler.ru,motor.ru,rns.online,lenta.ru,gazeta.ru,passion.ru,quto.ru,eda.ru,letidor.ru,wmj.ru,championat.com#$#hide-if-matches-xpath '//div[text()[contains(.," ")]][not(@id)]/div[not(@id)][not(contains(@class,"-"))][not(@style)][not(*) and not(normalize-space())]/following-sibling::div[not(contains(@class,"-"))][not(@style)][not(@id)][not(*) and not(normalize-space())][not(following-sibling::*)]/ancestor::div[4][@class and @* and not (@id)][text()[contains(.," ")]]'
 ! #CV-694
 www.ukr.net#$#override-property-read Math.random trueFunc; hide-if-shadow-contains /./
 112ua.tv,24boxing.com.ua,4mama.ua,avtovod.com.ua,avtovod.org.ua,besplatka.ua,bilshe.com,buhgalter.com.ua,buhgalter911.com,businessua.com,censor.net,dengi.ua,enovosty.com,epravda.com.ua,eurointegration.com.ua,f1analytic.com,facenews.ua,football-ukraine.com,football24.ua,footballtransfer.com.ua,gismeteo.ua,gorod.dp.ua,hvylya.net,inforesist.org,internetua.com,kolobok.ua,kp.ua,kriminal.tv,lifedon.com.ua,mport.ua,nashamama.com,newsyou.info,nnovosti.info,okino.ua,ostro.org,perevod.i.ua,real-vin.com,segodnya.ua,sinoptik.ua,smak.ua,sportanalytic.com,toneto.net,tv.ua,tvgid.ua,u-news.com.ua,udoktora.net,vsetv.com,zdorovia.com.ua#$#override-property-read String.prototype.charCodeAt trueFunc
@@ -1852,11 +1851,6 @@ boerse-online.de#@#.social_wrapper
 ! FDA-2302
 @@||aswpsdkus.com/notify/*/ua-html-prompt.min.js$domain=ran.de
 @@||aswpsdkus.com/notify/*/ua-sdk.min.js$domain=ran.de
-! FDA-2375
-@@||cdn.api.getjad.io/prebid/$script,domain=gamestar.de
-@@||g.doubleclick.net/gpt/pubads_impl_$script,domain=gamestar.de
-@@||g.doubleclick.net/gampad/ads$xmlhttprequest,domain=gamestar.de
-@@||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=gamestar.de
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
 ! ----- Generic ----- !
