@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pxt7VT41F+zWdAegmaYSvA
+! Checksum: NFM+pNVGNSvUn4xg9LiDug
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202108090818
-! Last Modified: 2021年08月09日 08:18
+! Version: 202108160817
+! Last Modified: 2021年08月16日 08:17
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -631,7 +631,7 @@ iyingshi9.tv#$#override-property-read YZM.ads.state false
 ! hdzone.org#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/czech.txt ***
 ! #CV-655
-idnes.cz,expres.cz#$#hide-if-matches-xpath './/img[string-length(@src) > 140]/preceding::a[@target="_top"]/ancestor::div[string-length(@class) > 30]'
+idnes.cz,expres.cz#$#hide-if-matches-xpath './/*[string-length(@class) < 50]/following-sibling::div[@class]/div[string-length(@id) > 30]/ancestor::div[string-length(@class) > 43]|.//*[string-length(@class) < 50][@style="margin: auto;"]/div[2]/ancestor::*[1]'
 idnes.cz#$#hide-if-matches-xpath '//div/a[string-length(@href) > 500]//img[string-length(@src) > 80]/ancestor::div[@class][2]'
 idnes.cz#$#hide-if-matches-xpath '//div[@id="main"]/*[string-length(@id) > 30][string-length(@class) > 90]'
 idnes.cz,expres.cz#$#hide-if-matches-xpath './/div[string-length(@class) >30]/span[not(@id)][not(*) and not(normalize-space())][not(preceding-sibling::*)]/ancestor::*[string-length(@id) > 10][string-length(@class) >30]'
@@ -786,6 +786,7 @@ auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,i
 auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mobilmania.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,www.idnes.cz,expres.cz#?#div:-abp-has(>a[href$="/personalizovana-reklama/"])
 blesk.cz##[class$="-kukakomeha"]
 blesk.cz##.gam-wrapper
+idnes.cz###foto-reklama
 /XO00\d$/$script,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|maminka.cz|mobilmania.cz|mojezdravi.cz|onetv.cz|reflex.cz|zeny.cz|zive.cz
 ?deb=$script,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|maminka.cz|mobilmania.cz|mojezdravi.cz|onetv.cz|reflex.cz|zeny.cz|zive.cz
 ?v=1.006|$script,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|maminka.cz|mobilmania.cz|mojezdravi.cz|onetv.cz|reflex.cz|zeny.cz|zive.cz
@@ -1185,8 +1186,11 @@ clanky.seznam.cz,search.seznam.cz#?#.Result.Result--organic:-abp-has(.Result-tit
 ! onlajny.com#$#abort-current-inline-script $ PartnerRedirectAction
 ! titulky.com#$#abort-current-inline-script adblfetected
 ! csfd.cz#$#abort-current-inline-script $ completeAdsObject
+zoznam.sk#$#hide-if-matches-xpath './/a[string-length(@href) < 36][@target="_blank"]/img[1]/preceding::button[@class]/preceding::div[@class]/ancestor::*[3]|//iframe[string-length(@src) < 50]'
+zoznam.sk#$#hide-if-matches-xpath './/div[contains(text(),"Reklama")]/preceding-sibling::div[@class][2]/ancestor::*[3]'
 ! Popup/Popunder
 dlouha-videa.cz#$#abort-on-property-read _0x4c29
+*$popup,third-party,domain=expres.cz,idnes.cz
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/dutch.txt ***
 ! #CV-660
 ajaxshowtime.com#?#div:-abp-properties(content: "Advertentie";)
@@ -1447,6 +1451,8 @@ clicknupload.co#$#abort-on-property-read _qwprvw;
 revivelink.com#$#abort-on-property-read btoa;
 youdbox.com#$#abort-on-property-read encodeURIComponent
 nosteam.ro#$#abort-on-property-write jsPop21
+manganelo.tv#$#abort-on-property-read document.createElement
+1piecemanga.com#$#abort-on-property-read document.createElement
 ! #CV-667
 gomovies.film,gomovies.sc,gomovies.es,gomovieshub.io,openloadmovies.net,openloadmovies.review,vidsrc.me,movies123.xyz,bonstreams.net,yts.am,keeplinks.co,flashx.pw,flashx.tv,cloudvideo.tv,gogoanime.cloud,revivelink.com#$#abort-on-property-read atob
 getsurl.com,gslink.co,gsurl.in,gsurl.me,g5u.pw#$#abort-on-property-write Fingerprint2
@@ -1648,6 +1654,7 @@ dom.wp.pl,wiadomosci.wp.pl,wawalove.wp.pl,turystyka.wp.pl,teleshow.wp.pl,opinie.
 parenting.pl,echirurgia.pl,dobreprogramy.pl,abczdrowie.pl,wp.pl#$#override-property-read rekid 0
 wp.pl#$#abort-on-property-write gafReady
 o2.pl,wp.pl#?#div:-abp-has(> script:-abp-contains(=== 'function'))
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//div[@class and @*[not(@class)]=""]/div[not(*) and not(normalize-space())][@class and @*[not(@class)]=""]/ancestor::div[@class and @*[not(@class)]=""][contains(@class," ")][contains(@*[not(@class)]," ")][string-length(@*[not(@class)]) > 25]'
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath './/div[@class]//a[string-length(@href)>500]/div[@class]/div[@class]//img[@class][string-length(@src)>70]/ancestor::div[@class and not(@id)][5]'
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//div/a[string-length(@href) > 1510]/div[@class]/img[@class][string-length(@src) > 100]/ancestor::div[@class and not(@id)][2]'
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//a[@class and @* and not (@id)][string-length(@href) > 1000]/img[@class and @* and not (@id)][string-length(@src) > 100]/ancestor::div[@class and @* and not(@id)][5]'
@@ -1775,7 +1782,7 @@ informator.ua,kriminal.tv,4studio.com.ua,112ua.tv,newsoneua.tv,zikua.tv,gorodkie
 ! #CV-747
 ! #CV-694
 www.ukr.net#$#override-property-read Math.random trueFunc; hide-if-shadow-contains /./
-112ua.tv,24boxing.com.ua,4mama.ua,avtovod.com.ua,avtovod.org.ua,besplatka.ua,bilshe.com,buhgalter.com.ua,buhgalter911.com,businessua.com,censor.net,dengi.ua,enovosty.com,epravda.com.ua,eurointegration.com.ua,f1analytic.com,facenews.ua,football-ukraine.com,football24.ua,footballtransfer.com.ua,gismeteo.ua,gorod.dp.ua,hvylya.net,inforesist.org,internetua.com,kolobok.ua,kp.ua,kriminal.tv,lifedon.com.ua,mport.ua,nashamama.com,newsyou.info,nnovosti.info,okino.ua,ostro.org,perevod.i.ua,real-vin.com,segodnya.ua,sinoptik.ua,smak.ua,sportanalytic.com,toneto.net,tv.ua,tvgid.ua,u-news.com.ua,udoktora.net,vsetv.com,zdorovia.com.ua#$#override-property-read String.prototype.charCodeAt trueFunc
+112ua.tv,24boxing.com.ua,4mama.ua,avtovod.com.ua,avtovod.org.ua,besplatka.ua,bilshe.com,buhgalter.com.ua,buhgalter911.com,businessua.com,censor.net,dengi.ua,enovosty.com,epravda.com.ua,eurointegration.com.ua,f1analytic.com,facenews.ua,football-ukraine.com,football24.ua,footballtransfer.com.ua,gismeteo.ua,gorod.dp.ua,hvylya.net,inforesist.org,internetua.com,kolobok.ua,kp.ua,kriminal.tv,lifedon.com.ua,mport.ua,nashamama.com,newsyou.info,nnovosti.info,okino.ua,ostro.org,perevod.i.ua,real-vin.com,sinoptik.ua,smak.ua,sportanalytic.com,toneto.net,tv.ua,tvgid.ua,u-news.com.ua,udoktora.net,vsetv.com,zdorovia.com.ua#$#override-property-read String.prototype.charCodeAt trueFunc
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/spanish.txt ***
 ! #CV-667
 !envivotv.net,lucenpop.com.es,pokefanleoretrogames.com,topflix.tv#$#abort-current-inline-script Math zfgloaded
