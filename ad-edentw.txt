@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: NFM+pNVGNSvUn4xg9LiDug
+! Checksum: L9esjj8JqY8dc+3PLre9Cg
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202108160817
-! Last Modified: 2021年08月16日 08:17
+! Version: 202108230816
+! Last Modified: 2021年08月23日 08:16
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1186,8 +1186,9 @@ clanky.seznam.cz,search.seznam.cz#?#.Result.Result--organic:-abp-has(.Result-tit
 ! onlajny.com#$#abort-current-inline-script $ PartnerRedirectAction
 ! titulky.com#$#abort-current-inline-script adblfetected
 ! csfd.cz#$#abort-current-inline-script $ completeAdsObject
-zoznam.sk#$#hide-if-matches-xpath './/a[string-length(@href) < 36][@target="_blank"]/img[1]/preceding::button[@class]/preceding::div[@class]/ancestor::*[3]|//iframe[string-length(@src) < 50]'
+zoznam.sk#$#hide-if-matches-xpath './/body[not]/a[string-length(@href) < 36][@target="_blank"]/img[1]/preceding::button[@class]/preceding::div[@class]/ancestor::*[3]|//iframe[string-length(@src) < 50]'
 zoznam.sk#$#hide-if-matches-xpath './/div[contains(text(),"Reklama")]/preceding-sibling::div[@class][2]/ancestor::*[3]'
+zoznam.sk#$#hide-if-matches-xpath './/div[@class]/iframe[@id][@title][string-length(@src) > 90]/ancestor::div[1]'
 ! Popup/Popunder
 dlouha-videa.cz#$#abort-on-property-read _0x4c29
 *$popup,third-party,domain=expres.cz,idnes.cz
@@ -1224,58 +1225,11 @@ youporn.com#$#abort-on-property-read zone_underplayer; abort-on-property-read zo
 pornhub.com#$#abort-on-property-read HTMLElement.prototype.attachShadow
 theyarehuge.com#$#abort-on-property-read Element.prototype.attachShadow
 ! #CV-663
-/*image/*/*.png^$domain=newser.com
-/*image/*/*.jpg^$domain=newser.com
-newser.com#$#hide-if-matches-xpath './/*[@*]/*[@cid]/ancestor::*[1]|//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][string-length( text() ) <= 10][contains(normalize-space(),"")][string-length(@*) < 15]'
-grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath './/*[@* and @aid]/*[string-length( text() ) < 39][contains(normalize-space(),"")][string-length(@*) >= 27]/preceding-sibling::*[1]/ancestor::*[2]|.//*[@* and @aid]/*[string-length( text() ) < 39][contains(normalize-space(),"")]'
-newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(@class="FooterContent")][not(contains(@*,"content"))][not(contains(@*,"Grid"))]'
-grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath '//*[@*][string-length( text() ) > 47][contains(normalize-space(),"")][string-length(@class) >= 27]/preceding-sibling::*[1]/ancestor::*[3][@*]'
-newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(@class="FooterContent")][not(@id="contentBounds")][not(contains(@id,"Grid"))][not(@style)]'
-newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(@class="FooterContent")][not(@id )]'
-grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath '//*[@*][string-length(text())>47][contains(normalize-space(),"")][string-length(@class)>=27]/preceding-sibling::*/ancestor::*[3][@*]/*[not(@role)][not(contains(@*,"side"))][not(contains(@*,"ory_"))][not(contains(@*,"tainer"))][not(contains(@*,"lated-"))][not(contains(@*,"dsq-"))][not(contains(@*,"mh_"))][not(contains(@*,"wpd"))][not(contains(@*,"td_"))][not(contains(@*,"vere"))][not(contains(@*,"_html"))][not(contains(@*,"nal"))][not(contains(@*,"tent"))][not(contains(@*,"box"))][not(contains(@*,"mary"))][not(contains(@*,"main"))][not(@itemtype)][not(@role)][not(contains(@*,"ent"))][not(contains(@*,"uter"))]'
-newser.com#$#hide-if-matches-xpath '//*/following-sibling::*[contains(@*, " ")][contains(normalize-space(),"")][not(parent::li)][not(@style)]/ancestor::div[2][not(contains(@class,"tent"))][not(contains(@class,"div"))][not(contains(@class,"bkit"))][not(contains(@id,"div"))][not(contains(@id,"rid"))][not(contains(@id,"con"))][not(contains(@class,"sub"))]'
-foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//*[@*][string-length( text() ) > 45][contains(normalize-space(),"")][string-length(@class)<=28]/ancestor::div[3][not(@role)][not(contains(@*,"side"))][not(contains(@*,"ory_"))][not(contains(@*,"tainer"))][not(contains(@*,"lated-"))][not(contains(@*,"dsq-"))][not(contains(@*,"mh_"))][not(contains(@*,"wpd"))][not(@style)][not(contains(@*,"td_"))][not(contains(@*,"vere"))][not(contains(@*,"_html"))][not(contains(@*,"nal"))][not(contains(@*, "tent"))][not(contains(@*, "box"))][not(contains(@*, "mary"))][not(contains(@*, "main"))][not(@itemtype)][@class and @id][not(@role)][not(contains(@*,"ent"))][not(contains(@*,"uter"))]'
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div[@*="_blank"]/ancestor::div[2][@class and @id]'
-newser.com#$#hide-if-matches-xpath '//span[@class][string-length(text())>40][string-length(@class)>=28]/ancestor::div[3][@class or @id]'
-foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div[@class][string-length( text() ) > 40][string-length(@class)>=28]/ancestor::div[3][@class or @id]'
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div[@id][string-length( text() ) > 45][string-length(@class)>=28]/ancestor::div[4][@class or @id]'
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div[not(@id)][string-length( text() ) > 55][string-length(@class)>25]/ancestor::div[not(@class)][not(@id)][not(@style)][1]/ancestor::div[3]'
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div[not(@class)][not(@id)][not(@style)][string-length(@div)=15]/ancestor::div[1]'
-newser.com,foreverymom.com,grammarist.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com#$#hide-if-matches-xpath '//div/span/span[contains(normalize-space(),"Paid Content") or contains(normalize-space(),"You May Like") or contains(normalize-space(),"You May like") or contains(normalize-space(),"TRENDING")]/ancestor::div[@class][1]'
+canadafreepress.com,grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#abort-on-property-read document.body.style.setProperty
+canadafreepress.com,grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#override-property-read document.body.style.setProperty noopFunc
+canadafreepress.com,grammarist.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,rightwingtribune.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,survivalnation.com,vitamiiin.com,steadfastherald.com#$#hide-if-matches-xpath '//div[@*=*]/following-sibling::div//div[not (@*)][string-length(text())>42]/ancestor::div[3][@class and @id]'
 newser.com,foreverymom.com,canadafreepress.com,independentminute.com,conservativefiringline.com,dcdirtylaundry.com,designbump.com,ipatriot.com,breakingfirst.com,deneenborelli.com,naturalblaze.com,beforeitsnews.com,videogamesblogger.com,gamersheroes.com,rightwingtribune.com,dcclothesline.com,madworldnews.com,clashdaily.com,tosavealife.com,allthingsvegas.com,bestfunnyjokes4u.com,dailylol.com,patriotnationpress.com,thedesigninspiration.com,wakingtimes.com,threepercenternation.com,survivalnation.com,greatamericanpolitics.com,vitamiiin.com,americasfreedomfighters.com,steadfastherald.com##*:not(base):not(feOffset):not(ym-measure):not(defs):not(head):not(circle):not(clippath):not(g):not(svg):not(path):not(noscript):not(link):not(title):not(script):not(meta):not(style):not(a):not(abbr):not(address):not(area):not(article):not(aside):not(audio):not(b):not(bdi):not(bdo):not(blockquote):not(body):not(br):not(button):not(canvas):not(caption):not(cite):not(code):not(col):not(colgroup):not(command):not(datalist):not(dd):not(del):not(details):not(dfn):not(div):not(dl):not(dt):not(em):not(embed):not(fieldset):not(figcaption):not(figure):not(footer):not(form):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(header):not(hr):not(html):not(i):not(iframe):not(img):not(input):not(ins):not(kbd):not(keygen):not(label):not(legend):not(li):not(main):not(map):not(mark):not(menu):not(meter):not(nav):not(object):not(ol):not(optgroup):not(option):not(output):not(p):not(param):not(pre):not(progress):not(q):not(rp):not(rt):not(ruby):not(s):not(samp):not(section):not(select):not(small):not(source):not(span):not(strong):not(sub):not(summary):not(sup):not(table):not(tbody):not(td):not(textarea):not(tfoot):not(th):not(thead):not(time):not(tr):not(track):not(u):not(ul):not(var):not(video):not(wbr):not(font):not(line):not(text):not(filter):not(image):not(noindex):not(center):not(picture):not(mai)
 grammarist.com##div>*:not(base):not(feOffset):not(ym-measure):not(defs):not(head):not(circle):not(clippath):not(g):not(svg):not(path):not(noscript):not(link):not(title):not(script):not(meta):not(style):not(a):not(abbr):not(address):not(area):not(article):not(aside):not(audio):not(b):not(bdi):not(bdo):not(blockquote):not(body):not(br):not(button):not(canvas):not(caption):not(cite):not(code):not(col):not(colgroup):not(command):not(datalist):not(dd):not(del):not(details):not(dfn):not(div):not(dl):not(dt):not(em):not(embed):not(fieldset):not(figcaption):not(figure):not(footer):not(form):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(header):not(hr):not(html):not(i):not(iframe):not(img):not(input):not(ins):not(kbd):not(keygen):not(label):not(legend):not(li):not(main):not(map):not(mark):not(menu):not(meter):not(nav):not(object):not(ol):not(optgroup):not(option):not(output):not(p):not(param):not(pre):not(progress):not(q):not(rp):not(rt):not(ruby):not(s):not(samp):not(section):not(select):not(small):not(source):not(span):not(strong):not(sub):not(summary):not(sup):not(table):not(tbody):not(td):not(textarea):not(tfoot):not(th):not(thead):not(time):not(tr):not(track):not(u):not(ul):not(var):not(video):not(wbr):not(font):not(line):not(text):not(filter):not(image):not(noindex):not(center):not(picture)
-newser.com#$#freeze-element #divVote; freeze-element #divRightRail '' #divRightRailContent
-foreverymom.com#$#freeze-element .post abort .facebook_comment_post #fb-root
-grammarist.com#$#freeze-element #content-sidebar-wrap abort
-canadafreepress.com#$#freeze-element .col-md-8 '' [data-spotim-default-areas] [data-post-url]; freeze-element .col-md-4 '' .row
-independentminute.com#$#freeze-element #content-main '' .twitter-tweet twitter-tweet-rendered; freeze-element .side-widget subtree
-conservativefiringline.com#$#freeze-element #revere-report-widget abort; freeze-element .post
-dcdirtylaundry.com#$#freeze-element .textwidget abort+subtree
-designbump.com#$#freeze-element .cb-entry-content; freeze-element .cb-sidebar '' .banner
-ipatriot.com#$#freeze-element .article-content abort; freeze-element .revere-report-logo abort
-breakingfirst.com#$#freeze-element .evo-right-sidebar abort .theiaStickySidebar; freeze-element .evo-post abort
-deneenborelli.com#$#freeze-element .wpb_wrapper subtree
-naturalblaze.com#$#freeze-element .content-sidebar-wrap abort; freeze-element article abort
-beforeitsnews.com#$#freeze-element .widget-area abort; freeze-element #story_column abort
-videogamesblogger.com#$#freeze-element .listedArticle abort; freeze-element #sideBarContent abort+subtree
-gamersheroes.com#$#freeze-element .sc_section abort .sc_blogger
-rightwingtribune.com#$#freeze-element .mh-sidebar abort; freeze-element .entry-content abort
-dcclothesline.com#$#freeze-element #td_social_sharing_article_bottom abort
-madworldnews.com#$#freeze-element .post abort
-clashdaily.com#$#freeze-element .td-post-content abort .twitter-tweet .essb_links
-tosavealife.com#$#freeze-element .post abort
-allthingsvegas.com#$#freeze-element .vw-page-navigation abort
-bestfunnyjokes4u.com#$#freeze-element .post-bodycopy abort
-dailylol.com#$#freeze-element .post abort
-patriotnationpress.com#$#freeze-element .widget_recent_entries abort .cb-sidebar-widget-title
-thedesigninspiration.com#$#freeze-element .article-body abort
-wakingtimes.com#$#freeze-element .widget-area abort
-threepercenternation.com#$#freeze-element .widget_text abort
-survivalnation.com#$#freeze-element .vw-post-tabed-content abort; freeze-element .post abort
-greatamericanpolitics.com#$#freeze-element .td-ss-main-content abort'; freeze-element .post abort
-vitamiiin.com#$#freeze-element .prev-next-nav abort
-americasfreedomfighters.com#$#freeze-element #sidebar abort; freeze-element .entry abort
-steadfastherald.com#$#freeze-element .page-content abort; freeze-element .nav-wrapper abort
 ! #CV-673
 hotmovs.com##div[class^="vda-closeplay"]
 beeg.com,oral-amateure.com,upornia.com,hotmovs.com,voyeurhit.com,hdzog.com#$#abort-on-property-write ads_priv
@@ -1453,8 +1407,9 @@ youdbox.com#$#abort-on-property-read encodeURIComponent
 nosteam.ro#$#abort-on-property-write jsPop21
 manganelo.tv#$#abort-on-property-read document.createElement
 1piecemanga.com#$#abort-on-property-read document.createElement
+manga18fx.com#$#abort-on-property-read document.getElementsByTagName
 ! #CV-667
-gomovies.film,gomovies.sc,gomovies.es,gomovieshub.io,openloadmovies.net,openloadmovies.review,vidsrc.me,movies123.xyz,bonstreams.net,yts.am,keeplinks.co,flashx.pw,flashx.tv,cloudvideo.tv,gogoanime.cloud,revivelink.com#$#abort-on-property-read atob
+gomovies.film,gomovies.sc,gomovies.es,gomovie.ms,gomovieshub.io,openloadmovies.net,openloadmovies.review,vidsrc.me,movies123.xyz,bonstreams.net,yts.am,keeplinks.co,flashx.pw,flashx.tv,cloudvideo.tv,gogoanime.cloud,revivelink.com#$#abort-on-property-read atob
 getsurl.com,gslink.co,gsurl.in,gsurl.me,g5u.pw#$#abort-on-property-write Fingerprint2
 gogoanimes.tv#$#abort-on-property-write atob
 holavid.com,liivideo.com#$#abort-on-property-read Math.sin
@@ -1654,12 +1609,11 @@ dom.wp.pl,wiadomosci.wp.pl,wawalove.wp.pl,turystyka.wp.pl,teleshow.wp.pl,opinie.
 parenting.pl,echirurgia.pl,dobreprogramy.pl,abczdrowie.pl,wp.pl#$#override-property-read rekid 0
 wp.pl#$#abort-on-property-write gafReady
 o2.pl,wp.pl#?#div:-abp-has(> script:-abp-contains(=== 'function'))
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath './/div[@class and @* and not (@id)]//a[@class and @* and not (@id)][string-length(@href)>1000]//div[@class]//img[@class and @* and not (@id)][string-length(@src)>100]/ancestor::div[@class and @* and not(@id)][3]'
+echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//a[string-length(@href)>1000]/img[@class and @*[not(name() = "class")]][string-length(@src)>125]'
 echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//div[@class and @*[not(@class)]=""]/div[not(*) and not(normalize-space())][@class and @*[not(@class)]=""]/ancestor::div[@class and @*[not(@class)]=""][contains(@class," ")][contains(@*[not(@class)]," ")][string-length(@*[not(@class)]) > 25]'
-echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath './/div[@class]//a[string-length(@href)>500]/div[@class]/div[@class]//img[@class][string-length(@src)>70]/ancestor::div[@class and not(@id)][5]'
-echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//div/a[string-length(@href) > 1510]/div[@class]/img[@class][string-length(@src) > 100]/ancestor::div[@class and not(@id)][2]'
-echirurgia.pl,kardiolo.pl,dobreprogramy.pl,o2.pl,kafeteria.pl,parenting.pl,autokult.pl,pudelek.pl,nerwica.com,medycyna24.pl,money.pl,smaczneblogi.pl,komorkomania.pl,gadzetomania.pl,open.fm,fotoblogia.pl,abczdrowie.pl,autocentrum.pl,wp.pl,~poczta.wp.pl#$#hide-if-matches-xpath '//a[@class and @* and not (@id)][string-length(@href) > 1000]/img[@class and @* and not (@id)][string-length(@src) > 100]/ancestor::div[@class and @* and not(@id)][5]'
-echirurgia.pl,dobreprogramy.pl,o2.pl,autokult.pl,pudelek.pl,money.pl,wp.pl#$#hide-if-matches-xpath '//div[@id]/a[@id]/img[string-length(@src) < 120][contains(normalize-space(),"")][@class="img-full show"]/ancestor::div[1]'
-kafeteria.pl,medycyna24.pl,komorkomania.pl,gadzetomania.pl,fotoblogia.pl,echirurgia.pl,dobreprogramy.pl,o2.pl,autokult.pl,pudelek.pl,money.pl,wp.pl#$#hide-if-matches-xpath '//div[@*]/div[@class][contains(normalize-space(),"")]/iframe[@*][string-length(@src) < 150] /ancestor::div[3][@*]'
+echirurgia.pl,dobreprogramy.pl,o2.pl,autokult.pl,pudelek.pl,money.pl,wp.pl#$#hide-if-matches-xpath '//div[@id]/a[@id]/img[string-length(@src) < 120][contains(normalize-space()," ")][@class="img-full show"]/ancestor::div[1]'
+kafeteria.pl,medycyna24.pl,komorkomania.pl,gadzetomania.pl,fotoblogia.pl,echirurgia.pl,dobreprogramy.pl,o2.pl,autokult.pl,pudelek.pl,money.pl,wp.pl#$#hide-if-matches-xpath '//div[@*]/div[@class][contains(normalize-space()," ")]/iframe[@*][string-length(@src) < 150] /ancestor::div[3][@*]'
 kafeteria.pl,medycyna24.pl,komorkomania.pl,gadzetomania.pl,fotoblogia.pl,echirurgia.pl,dobreprogramy.pl,o2.pl,autokult.pl,pudelek.pl,money.pl,wp.pl#$#hide-if-matches-xpath '//div[@*]/p[contains(normalize-space(), " ")][@*]/preceding-sibling::label[1][@class]/ancestor::div[2]'
 ! MISC
 www.elektroda.pl#$#abort-on-property-read popupStatus; abort-on-property-write welcomeAdContainer
@@ -1858,6 +1812,10 @@ boerse-online.de#@#.social_wrapper
 ! FDA-2302
 @@||aswpsdkus.com/notify/*/ua-html-prompt.min.js$domain=ran.de
 @@||aswpsdkus.com/notify/*/ua-sdk.min.js$domain=ran.de
+! FDA-2411 & FDA-2412
+@@||taboola.com/computerbild/*/json?$domain=computerbild.de
+@@||taboola.com/libtrc/$domain=bz-berlin.de|computerbild.de
+@@||taboola.com/bzde/trc/3/json?$domain=bz-berlin.de
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
 ! ----- Generic ----- !
