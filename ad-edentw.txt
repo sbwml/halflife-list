@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: RTYPk4+/zs9KikgoUwcBYw
+! Checksum: jBC4WZzk34ggW9Qucm6M1Q
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202109060820
-! Last Modified: 2021年09月06日 08:20
+! Version: 202109130819
+! Last Modified: 2021年09月13日 08:19
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -515,7 +515,7 @@ poznamka.ru##body > [id]:not([class])[style^="z-index"]
 in-trend.biz##body > [id][style^="z-index"]
 fightnews.info##body > blockquote
 torrnado.win##body > div > .a-overlay
-finget.ru,katalog-aktsii.ru,rp5.by,rp5.kz,rp5.ru,rp5.ua,vikings-warofclans.ru##body > div:not([id]):not([class])[style^="position"][style*="background"][style*="z-index"]
+finget.ru,katalog-aktsii.ru,rp5.by,rp5.kz,rp5.ru,rp5.ua,sms24.info,sms24.me,vikings-warofclans.ru##body > div:not([id]):not([class])[style^="position"][style*="background"][style*="z-index"]
 just-for-fun.ru##body > div[class*="-container"][class*="-hide"]
 gametech.ru,mixnews.lv,reshish.ru,vesty.co.il,woman.ru,www.ixbt.com##body > div[class]:not([id])[style*="position"][style*="fixed"][style*="z-index:"][style*="background-color"]
 anticollector.biz.ua,cnc3018.ru,factorio.su##body > div[class][style*="background"][style*="display: block"]
@@ -611,6 +611,8 @@ egy.best,egybest.asia,egybest.bid,egybest.biz,egybest.cheap,egybest.co,egybest.c
 ! arabseed.me,baramjak.com,egynow.live,hawak.net,movizland.com,movizland.online,egyanime.com,egydead.com#$#abort-current-inline-script String.fromCharCode /atob|btoa|break/
 ! #CV-754
 akwam.cc,akoam.com,akoam.net,akwam.co,akwam.cx,akwam.net,akwam.org,gateanime.com,gocoo.co#$#abort-on-property-read String.fromCharCode
+A: #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="تعرف على المزيد" or text()="تقديم طلب الآن" or text()="إرسال رسالة" or text()="تسوق الآن" or text()="الحصول على العرض" or text()="تبرّع الآن" or text()="تسجيل"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/bulgarian.txt ***
 ! #CV-667
 ! gledaiseriali.net#$#abort-current-inline-script Math zfgloaded
@@ -633,6 +635,8 @@ iyingshi9.tv#$#override-property-read YZM.ads.state false
 ! #CV-667
 ! hdzone.org#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/czech.txt ***
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Sponzorováno" or text()="Stáhnout" or text()="Přihlásit odběr"  or text()="Požádat" or text()="Další informace" or text()="Získat nabídku" or text()="Získat cenovou nabídku" or text()="Zaregistrovat se" or text()="Hrát hru" or text()="Rezervovat"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-655
 idnes.cz,expres.cz#$#hide-if-matches-xpath './/*[string-length(@class) < 50]/following-sibling::div[@class]/div[string-length(@id) > 30]/ancestor::div[string-length(@class) > 43]|.//*[string-length(@class) < 50][@style="margin: auto;"]/div[2]/ancestor::*[1]'
 idnes.cz#$#hide-if-matches-xpath '//div/a[string-length(@href) > 500]//img[string-length(@src) > 80]/ancestor::div[@class][2]'
@@ -1001,6 +1005,7 @@ cat_*dog$subdocument,domain=novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz|te
 ||www.kupi.cz/*&*=$subdocument,domain=www.kupi.cz
 /^https:\/\/www\.(kupi|super|sport|novinky|sreality)\.cz\/[A-Za-z0-9\/_!=-]{140,}/$subdocument,domain=kupi.cz|super.cz|sport.cz|novinky.cz|sreality.cz
 /^https:\/\/www\.seznamzpravy\.cz\/[A-Za-z0-9\/_!=-]{100,}/$subdocument,xmlhttprequest,domain=seznamzpravy.cz
+seznamzpravy.cz/*seznamzpravy.cz$subdocument
 novinky.cz,super.cz,sport.cz,seznamzpravy.cz,kupi.cz##[data-cy], [data-e2e-advert], a[href*="adurl="]
 novinky.cz,super.cz,sport.cz,kupi.cz##.burRman
 novinky.cz,super.cz,sport.cz,horoskopy.cz##div[data-impressionurl]
@@ -1018,6 +1023,8 @@ novinky.cz,super.cz,sport.cz,kupi.cz##iframe[data-cy-loaded]
 novinky.cz,kupi.cz,sport.cz,super.cz##.superPrclanek
 kupi.cz##[data-sssp]
 seznamzpravy.cz#$#abort-on-property-write Object.prototype.writeAd
+seznamzpravy.cz#?#body[class*="baner"]
+seznamzpravy.cz#?#iframe[src*="sklik/imp"]
 novinky.cz,kupi.cz,sport.cz,super.cz##.Aldremas, .plachta-middle
 novinky.cz,kupi.cz,sport.cz,super.cz##iframe[data-cx-loaded]
 novinky.cz,kupi.cz,sport.cz,super.cz##.plachta-overall-img
@@ -1198,6 +1205,8 @@ dlouha-videa.cz#$#abort-on-property-read _0x4c29
 ! #CV-660
 ajaxshowtime.com#?#div:-abp-properties(content: "Advertentie";)
 ajaxshowtime.com##div.leaderboard_ad + div
+! #CV-761
+facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Gesponsord" or text()="Shoppen" or text()="Nu luisteren" or text()="Nu boeken" or text()="Meer informatie" or text()="Pagina leuk vinden" or text()="Nu aanvragen" or text()="Volgen" or text()="Geïnteresseerd" or text()="Registreren"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/english.txt ***
 ! #CV-717
 yandex.com#$#hide-if-contains ad li.serp-item 'li.serp-item div.label'
@@ -1266,14 +1275,14 @@ y2mate.com#$#abort-on-property-read dispatchEvent
 ||facebook.com/tr$third-party
 ||connect.facebook.net^*/fbds.js$third-party
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/object[@type="nested/pressable"]/a[@role="link"]/span[contains(text(),"Patrocinado") or contains(text(),"Sponsa") or contains(text(),"Bersponsor") or contains(text(),"Commandité") or contains(text(),"Ditaja") or contains(text(),"Được tài trợ") or contains(text(),"Gesponsert") or contains(text(),"Gesponsord") or contains(text(),"Patrocinado") or contains(text(),"Publicidad") or contains(text(),"Sponsa") or contains(text(),"Sponset") or contains(text(),"Sponsored") or contains(text(),"Sponsorisé") or contains(text(),"Sponsorizat") or contains(text(),"Sponsorizzato") or contains(text(),"Sponsorlu") or contains(text(),"Sponsorowane") or contains(text(),"Реклама") or contains(text(),"ממומן") or contains(text(),"تمويل شوي") or contains(text(),"دارای پشتیبانی مالی") or contains(text(),"سپانسرڈ") or contains(text(),"مُموَّل") or contains(text(),"प्रायोजित") or contains(text(),"সৌজন্যে") or contains(text(),"ได้รับการสนับสนุน") or contains(text(),"内容") or contains(text(),"贊助") or contains(text(),"Sponsoroitu")]/ancestor::span[2]'
-facebook.com#$#hide-if-matches-xpath './/span[@class]/span[@id]/span[@class]/following-sibling::a[@aria-label="label"][@class]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
-facebook.com#$#hide-if-labelled-by /^Sponsorlu|Sponsored|Gesponsert|Patrocinado|Sponsorisé|Commandité|Gesponsord|Sponsorowane|Реклама|Sponsa|Sponset|Sponsorizat|Bersponsor|Ditaja|Sponsorizzato|贊助|赞助内容|ได้รับการสนับสนุน|प्रायोजित|'دارای پشتیبانی مالی'|'تمويل شوي'|সৌজন্যে|مُموَّل|سپانسرڈ|ממומן|Sponsoroitu$/ 'a>span>span' [data-pagelet^="FeedUnit_"]
-facebook.com#$#hide-if-matches-xpath './/a[@aria-label="Sponsorlu" or @aria-label="Sponsored" or @aria-label="Gesponsert" or @aria-label="Patrocinado" or @aria-label="Sponsorisé" or @aria-label="Commandité" or @aria-label="Gesponsord" or @aria-label="Sponsorowane" or @aria-label="Реклама" or @aria-label="Sponsa" or @aria-label="Sponset" or @aria-label="Sponsorizat" or @aria-label="Bersponsor" or @aria-label="Ditaja" or @aria-label="Sponsorizzato" or @aria-label="贊助" or @aria-label="赞助内容" or @aria-label="ได้รับการสนับสนุน" or @aria-label="प्रायोजित" or @aria-label="সৌজন্যে" or @aria-label="مُموَّل" or @aria-label="ממומן" or @aria-label="سپانسرڈ" or @aria-label="تمويل شوي" or @aria-label="دارای پشتیبانی مالی" or @aria-label="Sponsoroitu"]/ancestor::div[@data-pagelet[starts-with(normalize-space(),"FeedUnit_")]]'
-facebook.com#$#hide-if-matches-xpath './/div[@id="watch_feed"]//div[@data-pagelet="MainFeed"]//a[@aria-label="label"]//ancestor::div[8][not(@id)][starts-with(@class,"_")]'
-facebook.com#$#hide-if-matches-xpath './/a[@aria-label="Sponsorlu" or @aria-label="Sponsored" or @aria-label="Gesponsert" or @aria-label="Patrocinado" or @aria-label="Sponsorisé" or @aria-label="Commandité" or @aria-label="Gesponsord" or @aria-label="Sponsorowane" or @aria-label="Реклама" or @aria-label="Sponsa" or @aria-label="Sponset" or @aria-label="Sponsorizat" or @aria-label="Bersponsor" or @aria-label="Ditaja" or @aria-label="Sponsorizzato" or @aria-label="贊助" or @aria-label="赞助内容" or @aria-label="ได้รับการสนับสนุน" or @aria-label="प्रायोजित" or @aria-label="সৌজন্যে" or @aria-label="مُموَّل" or @aria-label="ממומן" or @aria-label="سپانسرڈ" or @aria-label="تمويل شوي" or @aria-label="دارای پشتیبانی مالی" or @aria-label="Sponsoroitu"]/ancestor::div[9][@class][not(@id)]'
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Sponsored" or text()="Apply Now" or text()="Shop Now" or text()="Sign Up" or text()="Get Offer" or text()="Learn More" or text()="Book Now" or text()="Sign Up" or text()="Download" or text()="Subscribe" or text()="Get Directions" or text()="Watch More" or text()="Get Quote" or text()="Send Message" or text()="Support Now" or text()="Get Tickets" or text()="Contact Us" or text()="Play Game" or text()="Like Page"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
-facebook.com##div[data-pagelet="RightRail"] a[aria-labelledby][target="_blank"][tabindex="0"]
+facebook.com#$#hide-if-matches-xpath '//a/span/span/span[contains("Sponsored Gesponsert Sponsorisé Commandité Patrocinado Publicidad Bersponsor",concat(./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][1],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][2],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][3],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][4],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][5],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][6],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][7],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][8],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][9],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][10],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][11],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][12],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][13],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][14]))][count(./span[not(self::node()[contains(@style,"absolute")])]) > 6]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+facebook.com#$#hide-if-matches-xpath '//a/span/span/span[contains( "Sponsored Gesponsert Sponsorisé Commandité Patrocinado Publicidad Bersponsor", concat(./span[not(self::node()[contains(@style,"absolute")])][1],./span[not(self::node()[contains(@style,"absolute")])][2],./span[not(self::node()[contains(@style,"absolute")])][3],./span[not(self::node()[contains(@style,"absolute")])][4],./span[not(self::node()[contains(@style,"absolute")])][5],./span[not(self::node()[contains(@style,"absolute")])][6],./span[not(self::node()[contains(@style,"absolute")])][7],./span[not(self::node()[contains(@style,"absolute")])][8],./span[not(self::node()[contains(@style,"absolute")])][9],./span[not(self::node()[contains(@style,"absolute")])][10],./span[not(self::node()[contains(@style,"absolute")])][11],./span[not(self::node()[contains(@style,"absolute")])][12],./span[not(self::node()[contains(@style,"absolute")])][13],./span[not(self::node()[contains(@style,"absolute")])][14]))][count(./span[not(self::node()[contains(@style,"absolute")])]) > 6]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+facebook.com#$#hide-if-matches-xpath '//a/span/span/b[contains("Sponsored Gesponsert Sponsorisé Commandité Patrocinado Publicidad Bersponsor", concat(./b[not(self::node()[contains(@style,"none")])][1],./b[not(self::node()[contains(@style,"none")])][2],./b[not(self::node()[contains(@style,"none")])][3],./b[not(self::node()[contains(@style,"none")])][4],./b[not(self::node()[contains(@style,"none")])][5],./b[not(self::node()[contains(@style,"none")])][6],./b[not(self::node()[contains(@style,"none")])][7],./b[not(self::node()[contains(@style,"none")])][8],./b[not(self::node()[contains(@style,"none")])][9],./b[not(self::node()[contains(@style,"none")])][10],./b[not(self::node()[contains(@style,"none")])][11],./b[not(self::node()[contains(@style,"none")])][12],./b[not(self::node()[contains(@style,"none")])][13],./b[not(self::node()[contains(@style,"none")])][14]))][count(./b[not(self::node()[contains(@style,"none")])]) > 6]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+www.facebook.com#$#hide-if-matches-xpath './/div[@id="watch_feed"]//div[@data-pagelet="MainFeed"]//a[@aria-label="label"]//ancestor::div[8][not(@id)][starts-with(@class,"_")]'
+www.facebook.com##div[data-pagelet="RightRail"] a[aria-labelledby][role="link"][target="_blank"][tabindex="0"]
+www.facebook.com#$#hide-if-matches-xpath './/object[@type="nested/pressable"]/a[@role="link"]/span[contains(text(),"Patrocinado") or contains(text(),"Sponsa") or contains(text(),"Bersponsor") or contains(text(),"Commandité") or contains(text(),"Ditaja") or contains(text(),"Gesponsert") or contains(text(),"Gesponsord") or contains(text(),"Patrocinado") or contains(text(),"Publicidad") or contains(text(),"Sponsa") or contains(text(),"Sponset") or contains(text(),"Sponsored") or contains(text(),"Sponsorisé") or contains(text(),"Sponsorizat") or contains(text(),"Sponsorizzato") or contains(text(),"Sponsorlu") or contains(text(),"Sponsorowane") or contains(text(),"Реклама") or contains(text(),"ממומן") or contains(text(),"تمويل شوي") or contains(text(),"دارای پشتیبانی مالی") or contains(text(),"سپانسرڈ") or contains(text(),"مُموَّل") or contains(text(),"प्रायोजित") or contains(text(),"সৌজন্যে") or contains(text(),"ได้รับการสนับสนุน") or contains(text(),"内容") or contains(text(),"贊助") or contains(text(),"Sponsoroitu") or text()="May Sponsor" or text()="Được tài trợ"]/ancestor::span[2]'
+! Filipino
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Mag-apply Na" or text()="Mag-sign Up" or text()="Mamili Na" or text()="Mag-book Na" or text()="Alamin Pa" or text()="Kontakin Kami"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-241
 swatchseries.to#$#abort-on-property-read zfgloadednative
 ! #CV-661
@@ -1485,7 +1494,6 @@ bing.com##[id$="adsMvCarousel"]
 bing.com#?#li[class="b_algo"]:-abp-has(> h2 + div[class="b_caption"] > p[class])
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Envoyer un message" or text()="Inscrivez-vous dès maintenant" or text()="S’inscrire" or text()="En savoir plus" or text()="Acheter" or text()="Réserver" or text()="Obtenir un devis" or text()="Postuler maintenant" or text()="Profiter de l’offre" or text()="Aimer la Page" or text()="Ça m’intéresse" or text()="Télécharger" or text()="Intéressé(e)"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-663
 letocard.fr#$#freeze-element .nav-menu abort [id^="menu-item-"]
 mamieastuce.com#$#freeze-element #sidebar abort .widget_text
@@ -1551,7 +1559,6 @@ vostfree.com#$#abort-on-property-write _pop
 strtapeadblock.me#$#abort-on-property-write _pao
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/german.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Seite gefällt mir" or text()="Weitere Infos" or text()="Herunterladen" or text()="Weitere ansehen" or text()="Jetzt bewerben" or text()="Jetzt kaufen" or text()="Jetzt buchen"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-691
 ebay.de#$#hide-if-contains-visible-text /Anzeige|ANZEIGE/ 'li.s-item' 'li.s-item span[role="text"]'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/hebrew.txt ***
@@ -1566,9 +1573,12 @@ walla.co.il,sheee.co.il##[src^="https://tpc.googlesyndication.com/simgad/"]
 walla.co.il,sheee.co.il##a[on^="tap:exit-api.exit(target='landingPage',_googClickLocation="]
 walla.co.il,sheee.co.il##a[href^="https://kvdhzjfrudaxrleb."], a[href*="/m.php?ziga="]
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/hungarian.txt ***
+! CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Hirdetés" or text()="További információ" or text()="Letöltés" or text()="Játék indítása" or text()="Regisztráció" or text()="Jelentkezés most" or text()="Tetszik az oldal" or text()="Érdekel" or text()="Üzenet küldése" or text()="Bolt felkeresése" or text()="Foglalás most" or text()="Jegyek"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/indian.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/a[@aria-label]/span/span//b[text()="प्रायोजित"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+www.facebook.com#$#hide-if-matches-xpath './/a[@aria-label]/span/span//b[text()="प्रायोजित"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="ਸੁਨੇਹਾ ਭੇਜੋ" or text()="ਸਾਈਨ ਅੱਪ ਕਰੋ" or text()="ਹੁਣੇ ਖਰੀਦੋ" or text()="ਹੋਰ ਜਾਣੋ" or text()="ਡਾਉਨਲੋਡ ਕਰੋ" or text()="ਉਧਾਰਣ ਲਓ" or text()="ਹੁਣ ਸੁਣੋ"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-741
 ! jvpnews.com#$#abort-current-inline-script atob TextDecoder
 ! #CV-669
@@ -1576,11 +1586,13 @@ newstm.in,3pm.in##a[href*="/click.htm?"][target="_blank"]
 ! Popup/Popunder/Clickunder
 ! xxx-indian-porn.com#$#abort-current-inline-script popunder
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/indonesian.txt ***
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Berlangganan" or text()="Penawaran" or text()="Daftar" or text()="Selengkapnya" or text()="Daftar Sekarang" or text()="Pesan Sekarang" or text()="Tonton Lainnya" or text()="Hubungi Kami" or text()="Unduh" or text()="Sukai Halaman"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-667
 ! citpekalongan.com,designmyhomee.com,mangacanblog.com,marthamatika.com,tokusatsuindo.com,unbrick.id#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/italian.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Iscriviti" or text()="Richiedi subito" or text()="Invia un messaggio" or text()="Guarda di più" or text()="Scopri di più"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Iscriviti" or text()="Richiedi subito" or text()="Guarda di più" or text()="Scopri di più" or text()="Prenota subito" or text()="Scarica" or text()="Ottieni i biglietti" or text()="Acquista ora"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-667
 ! mp3-gratis.it#$#abort-current-inline-script Math zfgloaded
 ! Popup/Popunder
@@ -1604,7 +1616,7 @@ tivi.fi#$#hide-if-matches-xpath '//div[contains(text(),"Kaupallinen yhteistyö")
 iltalehti.fi#$#hide-if-matches-xpath '//span[contains(text(),"Kaupallinen yhteistyö")]/../../../..'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/polish.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Zainteresowany(a)" or text()="Wyślij wiadomość" or text()="Wyślij wniosek" or text()="Pobierz" or text()="Polub stronę" or text()="Zarejestruj się" or text()="Kup teraz" or text()="Więcej informacji" or text()="Zdobądź bilety"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Zainteresowany(a)" or text()="Wyślij wniosek" or text()="Pobierz" or text()="Polub stronę" or text()="Zarejestruj się" or text()="Kup teraz" or text()="Więcej informacji" or text()="Zdobądź bilety" or text()="Zarezerwuj teraz"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-705
 !www.wp.pl#$#abort-on-property-read SlotRegistrar; abort-current-inline-script PRELOAD randvar
 dobreprogramy.pl#$#abort-on-property-read wp_adv_labels
@@ -1647,7 +1659,8 @@ naekranie.pl#$#abort-on-property-read adQueue
 ! Popup/Popunder/Clickunder
 !filmy69.pl#$#abort-current-inline-script document.querySelectorAll popMagic
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/portuguese.txt ***
-! #CV-660
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Saber mais" or text()="Saiba mais" or text()="Gostar da Página" or text()="Curtir Página" or text()="Baixar" or text()="Cadastre-se" or text()="Solicitar agora" or text()="Assistir mais" or text()="Comprar agora" or text()="Obter oferta" or text()="Obter ingressos" or text()="Reservar agora"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-741
 diariodocentrodomundo.com.br#$#abort-on-property-read TextDecoder
 ! #CV-692
@@ -1662,6 +1675,8 @@ filmesonlinegratis.com#$#abort-on-property-read atob
 ! #CV-667
 ! 4bac.ro,cinemasfera.com,filme-bune.biz#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/russian.txt ***
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Подать заявку" or text()="Подробнее" or text()="Скачать" or text()="В магазин" or text()="Связаться с нами" or text()="Регистрация" or text()="Играть" or text()="Пожертвовать" or text()="Забронировать" or text()="Меню"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-244
 ~market.yandex.ru,~market.yandex.kz,~market.yandex.by,~market.yandex.ua,~telephony.yandex.ru,yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr#$#hide-if-matches-xpath '//div[@class="feed__item _size_small"][@id]/div[string-length(@class) > 200][contains(@class," ")]'
 ~market.yandex.ru,~market.yandex.kz,~market.yandex.by,~market.yandex.ua,~telephony.yandex.ru,yandex.ru,yandex.kz,yandex.uz,yandex.by,yandex.ua,yandex.fr#$#hide-if-matches-xpath '//div[@class="feed__item _size_big"][@id]/div[string-length(@class) > 200][contains(@class," ")]'
@@ -1725,7 +1740,7 @@ fastpic.org,~new.fastpic.org,fastpic.ru,~new.fastpic.ru#$#abort-on-property-read
 softportal.com#$#abort-on-property-read popupShowInterval; abort-on-property-read Object.prototype.str_replace
 city.ogo.ua#$#abort-on-property-read myatu_bgm
 erofishki.cc,fishki.net#$#abort-on-property-read fishki.adv
-agronom.com.ua,mediasat.info,housechief.ru,fainaidea.com,1informer.com,dyvys.info#$#abort-on-property-read td_ad_background_click_target
+itech.co.ua,agronom.com.ua,mediasat.info,housechief.ru,fainaidea.com,1informer.com,dyvys.info#$#abort-on-property-read td_ad_background_click_target
 gdz-putina.fun,gdz.ninja,gdz.ru,gdzotputina.club,gdzputina.net,gdzputina.ru,megaresheba.com,megaresheba.ru,resheba.me,spishi.fun,zoobrilka.net#$#abort-on-property-write app.book.external
 dfiles.ru#$#abort-on-property-read ads_script
 sports.ru,tribuna.com#$#override-property-read Object.prototype.getRandomArrayElement noopFunc
@@ -1741,6 +1756,7 @@ serialfilm.ru,freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.
 hdkinoteatr.com#$#abort-on-property-read cuec
 freehat.cc#$#abort-on-property-read advFirstClickOpenNewTab
 anitokyo.tv,hcdn.online,kinofilm.co,anipoisk.org#$#abort-on-property-read ClickUndercookie
+cosplay-porn.one#$#abort-on-property-read biads
 ! Video ads
 yastatic.net#$#abort-on-property-read Object.prototype.vast
 ! #CV-547
@@ -1765,7 +1781,6 @@ www.ukr.net#$#override-property-read Math.random trueFunc; hide-if-shadow-contai
 112ua.tv,24boxing.com.ua,4mama.ua,avtovod.com.ua,avtovod.org.ua,besplatka.ua,bilshe.com,buhgalter.com.ua,buhgalter911.com,businessua.com,censor.net,dengi.ua,enovosty.com,epravda.com.ua,eurointegration.com.ua,f1analytic.com,facenews.ua,football-ukraine.com,football24.ua,footballtransfer.com.ua,gismeteo.ua,gorod.dp.ua,hvylya.net,inforesist.org,internetua.com,kolobok.ua,kp.ua,kriminal.tv,lifedon.com.ua,mport.ua,nashamama.com,newsyou.info,nnovosti.info,okino.ua,ostro.org,perevod.i.ua,real-vin.com,sinoptik.ua,smak.ua,sportanalytic.com,toneto.net,tv.ua,tvgid.ua,u-news.com.ua,udoktora.net,vsetv.com,zdorovia.com.ua#$#override-property-read String.prototype.charCodeAt trueFunc
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/spanish.txt ***
 ! #CV-761
-facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Obtener acceso" or text()="Más información" or text()="Comprar" or text()="Postularte" or text()="Descargar" or text()="Ver boletos" or text()="Registrarte" or text()="Reservar" or text()="Contactarnos" or text()="Patrocinado" or text()="Ver más" or text()="Enviar mensaje" or text()="Me gusta esta página" or text()="Publicidad"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-667
 !envivotv.net,lucenpop.com.es,pokefanleoretrogames.com,topflix.tv#$#abort-current-inline-script Math zfgloaded
 ! #9272
@@ -1785,11 +1800,15 @@ gamestorrents.com,gamestorrents.nu,perfectgirls.es#$#abort-on-property-read open
 !jkanime.net#$#abort-current-inline-script Math break
 !animefenix.com#$#abort-current-inline-script document.createElement _yzvesi
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/turkish.txt ***
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Teklifi Al" or text()="Sayfayı Beğen" or text()="Daha Fazla Bilgi Al" or text()="Şimdi Başvur" or text()="Kaydol" or text()="Şimdi Alışveriş Yap" or text()="Takip Et" or text()="Şimdi Bağışta Bulun" or text()="Oyna" or text()="Şimdi Rezervasyon Yap" or text()="Bilet Al" or text()="Bizimle İletişime Geç"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! #CV-717
 yandex.com.tr#$#hide-if-contains reklam li.serp-item 'li.serp-item div.label'
 ! #CV-667
 !asksiirleri.org#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/vietnamese.txt ***
+! #CV-761
+www.facebook.com#$#hide-if-matches-xpath './/span[@class][@dir="auto"]/span[@class][not(@style) and not(@id)][text()="Tìm hiểu thêm" or text()="Đăng ký ngay" or text()="Đăng ký" or text()="Đăng ký dài hạn" or text()="Liên hệ với chúng tôi" or text()="Mua ngay" or text()="Tải xuống" or text()="Đặt ngay"]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_")]'
 ! MISC
 lb.topphimhd.info#$#override-property-read adsData_ar true
 fancoiphim.net#$#override-property-read time_load_ads_1 0
