@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: sH19kSXBGtdzsD+BIL1Y/w
+! Checksum: dA46BJT0CgBXKPeYqMdsvA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202110180819
-! Last Modified: 2021年10月18日 08:19
+! Version: 202110250820
+! Last Modified: 2021年10月25日 08:20
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -112,6 +112,7 @@ shadbase.com##img[alt="adblock"]
 /adblock_gate/images/animated.gif?
 /adblock_notify.js
 /adblocker-detected.
+/adblocker-feature?
 /adblocker/modal.
 /adblocker_message_
 /AdblockMessage.
@@ -124,6 +125,7 @@ shadbase.com##img[alt="adblock"]
 /google-adblock.
 /inc/antiblock.
 /nonAdBlock/*
+/popup/adblocker
 /testAB.bundle.
 /wdbloogablock.js
 /wp-content/plugins/ad-block-defender/*
@@ -271,6 +273,7 @@ _adblock_killer.
 ##.adblock_floating_message
 ##.adblockalert
 ##.adblocker-message
+##.adblocker-root
 ##.adblocker-wrap
 ##.ads-block-warning
 ##.adsblocked
@@ -295,6 +298,7 @@ _adblock_killer.
 ##.svg-adblock-full--box
 ##.test-adblock-overlay
 ##.top-bar-adblock
+##.wp_adblock_detect
 ##[class][data-sitename][data-header-version] > div[id^="detection-block"]
 ##adblock-detect
 ##adblock-modal-component
@@ -419,7 +423,7 @@ kubik3.ru##.adbs
 ideya-biznesa.ru##.admania_adblock_detector
 cofp.ru##.admitad-checker-popup
 24video.xxx##.adt
-rusrek.com##.alert
+nonameno.com,rusrek.com##.alert
 vk.barkov.net##.alert-danger
 2ip.me,2ip.ua##.alert-mess > .row
 stroi-help.ru##.alert_warn
@@ -1270,6 +1274,8 @@ y2mate.com#$#abort-on-property-read dispatchEvent
 ||facebook.com/tr$third-party
 ||connect.facebook.net^*/fbds.js$third-party
 ! #CV-761
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[@aria-label="label"][@role="link"]/span[not (@*)]/span/span[count(child::span) >= 28][count(child::span) <= 40]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[@aria-label="label"][@role="link"]/span[not (@*)]/span/b[count(child::b) >= 28][count(child::b) <= 40]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/span[@class]/a[@aria-label[.="Patrocinado" or .="Sponsa" or .="Bersponsor" or .="Commandité" or .="Ditaja" or .="Gesponsert" or .="Gesponsord" or .="Patrocinado" or .="Publicidad" or .="Sponsa" or .="Sponset" or .="Sponsored" or .="Sponsorisé" or .="Sponsorizat" or .="Sponsorizzato" or .="Sponsorlu" or .="Sponsorowane" or .="Реклама" or .="ממומן" or .="تمويل شوي" or .="دارای پشتیبانی مالی" or .="سپانسرڈ" or .="مُموَّل" or .="प्रायोजित" or .="সৌজন্যে" or .="ได้รับการสนับสนุน" or .="内容" or .="贊助" or .="Sponsoroitu" or .="May Sponsor" or .="Được tài trợ"]]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
 @@||www.facebook.com^$generichide
 @@||web.facebook.com^$generichide
@@ -1491,7 +1497,7 @@ about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.
 ! #CV-691
 ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-contains-visible-text SPONSORED 'li.s-item' 'li.s-item span[role="text"]'
 ebay.es,ebay.fr,ebay.ca,ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-matches-xpath '//div[@class="s-item__title-tag"][text()="SPONSORED" or text()="SPONSORISÉ" or text()="PATROCINADOS"]/ancestor::li[1][starts-with(@class,"s-item")]'
-ebay.es,ebay.fr,ebay.ca,ebay.co.uk,ebay.com,ebay.com.au,ebay.at,ebay.ch,ebay.be,ebay.com.my,ebay.nl,ebay.it,ebay.pl#$#hide-if-matches-xpath './/div[contains(@class,"s-item__")]/following-sibling::span[@class]/span[@role="text"][count(child::span[@class]) >= 28][(contains(text(),""))]/ancestor::li[1][starts-with(@class,"s-item")]'
+ebay.es,ebay.fr,ebay.ca,ebay.co.uk,ebay.com,ebay.com.au,ebay.at,ebay.ch,ebay.be,ebay.com.my,ebay.nl,ebay.it,ebay.pl##li[class^="s-item s-item__sep-on-bottom"]
 ! #CV-698
 thegatewaypundit.com#$#abort-on-property-read adtoniq; abort-on-property-write adtoniq; abort-on-property-write bomab; abort-on-property-write zacak; abort-on-property-write kozuq
 ! #CV-667
@@ -1582,12 +1588,13 @@ dl-protect.best,dl-protect.top,dl-protect.xyz,dl-protect1.com,ed-protect.org,ext
 dl-protect.best,dl-protect.top,dl-protect.xyz,dl-protect1.com,ed-protect.org,extreme-down.in,extreme-down.link,extreme-down.live,extreme-down.ninja,extreme-down.one,extreme-down.pro,extreme-down.top,extreme-down.tv,extreme-down.video,extreme-down.work,extreme-down.xyz,extreme-download.im,extreme-download.ninja,extreme-download.xyz,french-stream.lol,french-stream.re,hdss.la,hdss.to,japscan.cc,japscan.com,japscan.se,japscan.to,japscan.ws,lelscan-vf.co,one-piece-streaming-vostfr.com,streaming-vostfr.net,streamingfrance.com,summarynetworks.com,toonanime.tv,vostfree.com,wawacity.bz,wawacity.co,wawacity.ec,wawacity.ninja,wawacity.vip#$#abort-current-inline-script Math /atob|btoa|break/
 *$popup,domain=strtapeadblock.me
 strtapeadblock.me#$#abort-on-property-write _pao
+about:blank$popup,domain=ianimes.org|dood.ws|vizplay.icu|streamzz.to
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/german.txt ***
 ! #CV-761
 ! #CV-691
 ebay.de#$#hide-if-contains-visible-text /Anzeige|ANZEIGE/ 'li.s-item' 'li.s-item span[role="text"]'
 ebay.de#$#hide-if-matches-xpath './/div[contains(@class,"s-item__")]/following-sibling::span[@class]/span[@role="text"][count(child::span[@class]) >= 28][(contains(text(),""))]/ancestor::li[1][starts-with(@class,"s-item")]'
-ebay.de#$#hide-if-matches-xpath '//div[@class="s-item__title-tag"][text()="Gesponsert"]/ancestor::li[1][starts-with(@class,"s-item")]'
+ebay.de##li[class^="s-item s-item__sep-on-bottom"]
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/hebrew.txt ***
 ! #CV-741
 yad2.co.il#$#abort-current-inline-script TextDecoder
@@ -1709,15 +1716,18 @@ zen.yandex.ru##div[class*="is-parent-size_undefined"]
 avtovzglyad.ru,dni.ru,baby.ru#$#abort-on-property-read Ya
 kakprosto.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-write window.yaProxy; abort-on-property-write Object.defineProperty
 /^https?://www\.liveinternet\.ru/[^\s]{100,}/$header=content-type=application/json
+||liveinternet.ru/$header=content-type=text/javascript
 otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
 ||sdamgia.ru/$header=content-type=text/javascript
 gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru#$#abort-on-property-read Object.prototype.showRTB
 yandex.by,yandex.fr,yandex.kz,~telephony.yandex.ru,yandex.ru,yandex.ua,yandex.uz##[class*="mg-grid__"]>div[class*=_status_success]
 razlozhi.ru,24smi.org,auto.ru,drive2.ru,gorodrabot.ru,kinopoisk.ru#$#abort-on-property-read Element.prototype.attachShadow; abort-on-iframe-property-read Element.prototype.attachShadow
 ||24smi.org/$header=content-type=text/javascript
+||24smi.org/$header=content-type=application/json
 /^https:\/\/st2\.razlozhi\.ru\/\w{9}\/.{100,300}$/$script,domain=razlozhi.ru
 gorodrabot.ru#$#abort-on-property-read Object.prototype.storeBlockSettings
 ||echo.msk.ru/$header=content-type=text/javascript
+||echo.msk.ru/$header=content-type=application/json
 ! #CV-659
 ringside24.com,gagadget.com#$#abort-on-property-read localStorage
 sinoptik.ua,dynamo.kiev.ua#$#abort-on-property-read document.documentElement.createShadowRoot
@@ -1786,6 +1796,8 @@ rsload.net#$#abort-current-inline-script window.addEventListener load
 web-shpargalka.ru#$#abort-on-property-read Date.prototype.toUTCString
 musify.club#$#abort-on-property-read get_ya_browser
 kakoysegodnyaprazdnik.ru,xn--80aaiebcrjcibi8adgdtsm9z.xn--p1ai#$#abort-on-property-read google_jobrunner
+cq.ru#$#hide-if-matches-xpath './/a[@class][@target="_blank"]/following::img[@class][string-length(@src) > 70]/ancestor::div[@data-faeaf or @dta-addab]'
+cq.ru#$#abort-on-property-read loadBanners
 ! Popup/popunder/clickunder
 serialfilm.ru,freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,zloekino.su,zloekino.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,zloekino.com#$#abort-on-property-read open
 piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
@@ -1812,9 +1824,9 @@ vesti.ua,lrepacks.net#$#abort-current-inline-script document.createElement atob
 ! #CV-685
 vsetut.su,animedia.tv#$#abort-on-property-read zfgformats
 ! CV-715
-informator.ua,kriminal.tv,4studio.com.ua,112ua.tv,newsoneua.tv,zikua.tv,gorodkiev.com.ua,volynpost.com,uanews.org.ua,dialogs.org.ua,technoportal.com.ua,pingvin.pro,fakty.ua,cikavosti.com,versii.if.ua#$#abort-on-property-read weekCallbacks
+informator.ua,kriminal.tv,4studio.com.ua,112ua.tv,newsoneua.tv,zikua.tv,gorodkiev.com.ua,volynpost.com,uanews.org.ua,dialogs.org.ua,technoportal.com.ua,pingvin.pro,fakty.ua,cikavosti.com,versii.if.ua,mignews.com.ua#$#abort-on-property-read weekCallbacks
 ! #CV-716
-1news.com.ua,365news.biz,4mama.ua,4studio.com.ua,7days-ua.com,apnews.com.ua,argumentiru.com,asiaplustj.info,autotheme.info,beauty.ua,begemot-media.com,begemot.media,chas.cv.ua,cheline.com.ua,cikavosti.com,cn.ua,comments.ua,day.kyiv.ua,depo.ua,dnews.dn.ua,dv-gazeta.info,dyvys.info,economistua.com,edinstvennaya.ua,ekovolga.com,expert.in.ua,fedpress.ru,forpost.media,fraza.com,glavnoe.ua,glavnoe24.ru,glavpost.ua,golosinfo.com.ua,gorodkiev.com.ua,gov.ua,grad.ua,greenpost.ua,inforpost.com,itechua.com,iz.com.ua,khersonline.net,kolizhanka.com.ua,krymr.com,kurskcity.ru,liga.net,mi100.info,mind.ua,moirebenok.ua,mycompplus.ru,nakanune.ru,narodna-pravda.ua,nashbryansk.ru,newsoneua.tv,ngp-ua.info,novavlada.info,novynarnia.com,odessa-life.od.ua,pg11.ru,pingvin.pro,pl.com.ua,podpricelom.com.ua,politnavigator.net,poltava365.com,portal.lviv.ua,praktika-vlasti.com.ua,prm.ua,procherk.info,profootball.ua,radiosvoboda.org,ratel.kz,real-vin.com,risu.ua,rivnenews.com.ua,rusjev.net,russianshowbiz.info,semobile.com.ua,sport-kr.com.ua,sud.ua,superdom.ua,te.ua,telekritika.ua,ternopillive.com.ua,treebuna.info,tverigrad.ru,tverisport.ru,tvoymalysh.com.ua,uainfo.org,uanews.org.ua,uatv.ua,unn.com.ua,vchaspik.ua,versii.if.ua,vgolos.com.ua,viva.ua,volnorez.com.ua,volyninfo.com,volynpost.com,volynua.com,vsviti.com.ua,westnews.info,womo.ua,wpristav.ru,wworld.com.ua,zikua.tv#$#abort-current-inline-script document.createElement /ru-n4p|ua-n4p|загрузка.../
+1news.com.ua,365news.biz,4mama.ua,4studio.com.ua,7days-ua.com,apnews.com.ua,argumentiru.com,asiaplustj.info,autotheme.info,beauty.ua,begemot-media.com,begemot.media,chas.cv.ua,cheline.com.ua,cikavosti.com,cn.ua,comments.ua,day.kyiv.ua,depo.ua,dnews.dn.ua,dv-gazeta.info,dyvys.info,economistua.com,edinstvennaya.ua,ekovolga.com,expert.in.ua,fedpress.ru,forpost.media,fraza.com,glavnoe.ua,glavnoe24.ru,glavpost.ua,golosinfo.com.ua,gorodkiev.com.ua,gov.ua,grad.ua,greenpost.ua,inforpost.com,itechua.com,iz.com.ua,khersonline.net,kolizhanka.com.ua,krymr.com,kurskcity.ru,liga.net,mi100.info,mind.ua,moirebenok.ua,mycompplus.ru,nakanune.ru,narodna-pravda.ua,nashbryansk.ru,newsoneua.tv,ngp-ua.info,novavlada.info,novynarnia.com,odessa-life.od.ua,pg11.ru,pingvin.pro,pl.com.ua,podpricelom.com.ua,politnavigator.net,poltava365.com,portal.lviv.ua,praktika-vlasti.com.ua,prm.ua,procherk.info,profootball.ua,radiosvoboda.org,ratel.kz,real-vin.com,risu.ua,rivnenews.com.ua,rusjev.net,russianshowbiz.info,semobile.com.ua,sport-kr.com.ua,sud.ua,superdom.ua,te.ua,telekritika.ua,ternopillive.com.ua,treebuna.info,tverigrad.ru,tverisport.ru,tvoymalysh.com.ua,uainfo.org,uanews.org.ua,uatv.ua,unn.com.ua,vchaspik.ua,versii.if.ua,vgolos.com.ua,viva.ua,volnorez.com.ua,volyninfo.com,volynpost.com,volynua.com,vsviti.com.ua,westnews.info,womo.ua,wpristav.ru,wworld.com.ua,zikua.tv,mignews.com.ua#$#abort-current-inline-script document.createElement /ru-n4p|ua-n4p|загрузка.../
 marieclaire.ua#$#abort-current-inline-script redram /загрузка.../
 ! #CV-667
 empireg.ru#$#abort-current-inline-script Math zfgloaded
