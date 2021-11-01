@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dA46BJT0CgBXKPeYqMdsvA
+! Checksum: ERvn/QsruYNaUuGC+330og
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202110250820
-! Last Modified: 2021年10月25日 08:20
+! Version: 202111010821
+! Last Modified: 2021年11月01日 08:21
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1274,8 +1274,8 @@ y2mate.com#$#abort-on-property-read dispatchEvent
 ||facebook.com/tr$third-party
 ||connect.facebook.net^*/fbds.js$third-party
 ! #CV-761
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[@aria-label="label"][@role="link"]/span[not (@*)]/span/span[count(child::span) >= 28][count(child::span) <= 40]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[@aria-label="label"][@role="link"]/span[not (@*)]/span/b[count(child::b) >= 28][count(child::b) <= 40]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//a/span/span/span[contains("Sponsored Gesponsert Patrocinado Sponsorisé Publicidad Commandité Gesponsord Sponsorowane Sponset Bersponsor Sponsorizzato",concat(./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][1],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][2],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][3],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][4],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][5],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][6],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][7],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][8],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][9],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][10],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][11],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][12],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][13],./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][14]))][count(./span[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])]) > 6]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//a/span/span/b[contains("Sponsored Gesponsert Patrocinado Sponsorisé Publicidad Commandité Gesponsord Sponsorowane Sponset Bersponsor Sponsorizzato",concat(./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][1],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][2],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][3],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][4],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][5],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][6],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][7],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][8],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][9],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][10],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][11],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][12],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][13],./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])][14]))][count(./b[not(self::node()[contains(@style,"absolute") or contains(@style,"none")])]) > 6]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/span[@class]/a[@aria-label[.="Patrocinado" or .="Sponsa" or .="Bersponsor" or .="Commandité" or .="Ditaja" or .="Gesponsert" or .="Gesponsord" or .="Patrocinado" or .="Publicidad" or .="Sponsa" or .="Sponset" or .="Sponsored" or .="Sponsorisé" or .="Sponsorizat" or .="Sponsorizzato" or .="Sponsorlu" or .="Sponsorowane" or .="Реклама" or .="ממומן" or .="تمويل شوي" or .="دارای پشتیبانی مالی" or .="سپانسرڈ" or .="مُموَّل" or .="प्रायोजित" or .="সৌজন্যে" or .="ได้รับการสนับสนุน" or .="内容" or .="贊助" or .="Sponsoroitu" or .="May Sponsor" or .="Được tài trợ"]]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]'
 @@||www.facebook.com^$generichide
 @@||web.facebook.com^$generichide
@@ -1445,6 +1445,8 @@ vidshare.tv,vidshar.tv,series.movie,gowatchseries.movie,gowatchseries.tv#$#abort
 nosteam.ro#$#abort-on-property-write jsPop21
 manganelo.tv#$#abort-on-property-read document.createElement
 manga18fx.com#$#abort-on-property-read Math.floor
+bangtubevideos.com#$#override-property-read setTimeout noopFunc; abort-on-property-write location.replace
+spankbang.com#$#abort-on-property-write window.open
 ! #CV-667
 gomovies.film,gomovies.sc,gomovies.es,gomovie.ms,gomovieshub.io,openloadmovies.net,openloadmovies.review,vidsrc.me,movies123.xyz,bonstreams.net,yts.am,keeplinks.co,flashx.pw,flashx.tv,cloudvideo.tv,gogoanime.cloud,revivelink.com#$#abort-on-property-read atob
 getsurl.com,gslink.co,gsurl.in,gsurl.me,g5u.pw,clipwatching.com,protect-mylinks.com#$#abort-current-inline-script document.createElement String.fromCharCode
@@ -1695,6 +1697,8 @@ anitube.be,anitube.cx,anitube.cz#$#abort-on-property-write _pop
 ||torcidatricolor.tv/*.gif$image
 kastream.biz#$#abort-on-property-write open
 filmesonlinegratis.com#$#abort-on-property-read atob
+multicanais.tv#$#abort-current-inline-script document.createElement _whvbtwzo
+cinevision.online#$#abort-on-property-write atob
 ! #CV-667
 filmesonlinegratis.com#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/romanian.txt ***
@@ -1765,6 +1769,7 @@ facenews.ua,molitvy.guru,nizhny.ru,svadba.expert#$#abort-on-property-read XMLHtt
 kaztorka.org#$#abort-current-inline-script document.createElement Math.random
 naruto-base.su#$#abort-on-property-read njranu
 nnm-club.lib,nnm-club.me,nnmclub.ro,nnmclub.to#$#prevent-listener load appendChild
+nnm-club.lib,nnm-club.me,nnmclub.ro,nnmclub.to#$#prevent-listener click _0x
 vestivrn.ru#$#abort-on-property-read video.preroll
 rutor.in#$#abort-current-inline-script document.createElement ExternalChromePop
 paratechnik.ru#$#abort-current-inline-script decodeURIComponent
@@ -1798,6 +1803,7 @@ musify.club#$#abort-on-property-read get_ya_browser
 kakoysegodnyaprazdnik.ru,xn--80aaiebcrjcibi8adgdtsm9z.xn--p1ai#$#abort-on-property-read google_jobrunner
 cq.ru#$#hide-if-matches-xpath './/a[@class][@target="_blank"]/following::img[@class][string-length(@src) > 70]/ancestor::div[@data-faeaf or @dta-addab]'
 cq.ru#$#abort-on-property-read loadBanners
+shanson320.ru,lrepacks.net#$#abort-current-inline-script document.createElement atob
 ! Popup/popunder/clickunder
 serialfilm.ru,freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,zloekino.su,zloekino.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,zloekino.com#$#abort-on-property-read open
 piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
@@ -1820,7 +1826,7 @@ ucoz.club,yaminecraft.ru,dva-kolesa.my1.ru,nintendo.moy.su,kino-v-dome.net,psxwo
 kinogo.eu,gidonline.eu#$#abort-on-property-read target_script
 radikal.ru#$#abort-current-inline-script document.createElement String.fromCharCode; abort-on-property-read ads_script; abort-on-property-read atob; abort-on-property-read loaded_blocks_directadvert; abort-on-property-read utarget_script
 ! #CV-742
-vesti.ua,lrepacks.net#$#abort-current-inline-script document.createElement atob
+vesti.ua#$#abort-current-inline-script document.createElement atob
 ! #CV-685
 vsetut.su,animedia.tv#$#abort-on-property-read zfgformats
 ! CV-715
@@ -1875,6 +1881,7 @@ lxhentai.com#$#abort-current-inline-script document.cookie
 thienhatruyen.com#$#abort-current-inline-script $ pc-popup-2
 beeng.org#$#abort-current-inline-script $ .wrapper
 phimlau.online#$#abort-current-inline-script atob /Y1/
+sexphimhd.net#$#abort-current-inline-script Math
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-hotfix/main/hotfix.txt ***
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
