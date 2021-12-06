@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QqDtDy+QeHXajBfTEBHJ/A
+! Checksum: rI2xbcZMTm0VQFlXMfO7lQ
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202111290820
-! Last Modified: 2021年11月29日 08:20
+! Version: 202112060821
+! Last Modified: 2021年12月06日 08:21
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1136,7 +1136,8 @@ maslo=$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|bles
 karaoketexty.cz#$#hide-if-matches-xpath './/a[string-length(@href) >120][@target="_blank"]/ancestor-or-self::a[@href]'
 ||www.karaoketexty.cz/*/*.png$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
 ||www.karaoketexty.cz/*/*.jpg$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
-seznamzpravy.cz#$#hide-if-matches-xpath '//iframe[@src][@data-healed][@id]/parent::div[@class]/ancestor-or-self::div[@class][5]/parent::div[1]'
+novinky.cz#$#hide-if-matches-xpath '//a[@href][@title]/div[@class][@style]/parent::a/ancestor-or-self::div[2]'
+horoskopy.cz,novinky.cz,seznamzpravy.cz#$#hide-if-matches-xpath '//iframe[@src][@id]/parent::div[@class]/ancestor-or-self::div[@class][3]'
 ! #CV-780
 .cz/*,,*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mobilmania.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
 =autapay/*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mobilmania.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
@@ -1282,7 +1283,7 @@ y2mate.com#$#abort-on-property-read dispatchEvent
 ||connect.facebook.net^*/fbds.js$third-party
 ! #CV-761
 www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /^Sponsorlu|Sponsored|Gesponsert|Patrocinado|Sponsorisé|Publicidad|Commandité|Gesponsord|Sponsorowane|Реклама|Sponsa|Sponset|Sponsorizat|Bersponsor|Ditaja|Sponsorizzato|'May Sponsor'|'Được tài trợ'|贊助|赞助内容|ได้รับการสนับสนุน|प्रायोजित|'دارای پشتیبانی مالی'|'تمويل شوي'|সৌজন্যে|مُموَّل|سپانسرڈ|ממומן$/ div[aria-posinset] span
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//*[@aria-label="label"][string-length(@class) >= 224][(count(descendant::*) > 8)]/span[(count(descendant::*) > 40)]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_1")]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//a[@aria-label="label"][string-length(@class) >= 287]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]/ancestor-or-self::div[starts-with(@data-pagelet,"FeedUnit_1") or starts-with(@aria-posinset,"2")]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//*[@aria-label][string-length(@class) >= 225][(count(descendant::*) > 8)]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby]/ancestor::div[starts-with(@data-pagelet,"FeedUnit_1")]'
 www.facebook.com,web.facebook.com#$#json-override 'data.node.comet_sections.context_layout.story.comet_sections.metadata.0.story.ghl_label.text data.viewer.news_feed.edges.0.node.comet_sections.context_layout.story.comet_sections.metadata.0.story.ghl_label.text' 14213549526573598 '' /SPONSORED/; hide-if-matches-xpath '//*[contains(text(),"14213549526573598")]/ancestor::div[@class]/div[@aria-posinset or @aria-describedby or @aria-labelledby]'
 www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /^Sponsorlu|Sponsored|Gesponsert|Patrocinado|Sponsorisé|Publicidad|Commandité|Gesponsord|Sponsorowane|Реклама|Sponsa|Sponset|Sponsorizat|Bersponsor|Ditaja|Sponsorizzato|'May Sponsor'|'Được tài trợ'|贊助|赞助内容|ได้รับการสนับสนุน|प्रायोजित|'دارای پشتیبانی مالی'|'تمويل شوي'|সৌজন্যে|مُموَّل|سپانسرڈ|ממומן$/ div[data-pagelet^="FeedUnit_"] span
@@ -1822,7 +1823,7 @@ cq.ru#$#abort-on-property-read CQ.routes.getAds
 shanson320.ru,lrepacks.net#$#abort-current-inline-script document.createElement atob
 ! Popup/popunder/clickunder
 freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,anicat.ru#$#abort-on-property-read open
-piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
+domahatv.com,piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
 hdkinoteatr.com#$#abort-on-property-read cuec
 fapreactor.com,pornreactor.cc#$#abort-current-inline-script Math decodeURIComponent
 budport.com.ua#$#abort-current-inline-script $ append
@@ -1878,6 +1879,7 @@ jkanime.net#$#abort-current-inline-script Math break
 animefenix.com#$#abort-current-inline-script document.createElement _yzvesi
 pelisplus.so#$#abort-on-property-write _zoxxpiee
 iguarras.com,iputitas.net#$#abort-on-property-read afScript
+comicsporno.xxx,pornoreino.com,mespornogratis.com,felizporno.com#$#abort-current-inline-script document.querySelectorAll popMagic
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/turkish.txt ***
 ! #CV-717
 yandex.com.tr#$#hide-if-contains reklam li.serp-item 'li.serp-item div.label'
@@ -1888,17 +1890,20 @@ asksiirleri.org#$#abort-current-inline-script Math zfgloaded
 lb.topphimhd.info#$#override-property-read adsData_ar true
 fancoiphim.net#$#override-property-read time_load_ads_1 0
 truyen3s.com#$#abort-current-inline-script document.createElement _zepaf
+blog.abit.vn#$#abort-on-property-read document.cookie
 ! Popup/Popunder/Clickunder
 motphimmoi.net,biphimtv.net,rphangs.net,mrcong.com#$#abort-on-property-read open; abort-on-property-write window.location.href
 fembed.com,femax20.com,zo3x.ml,mrdhan.com,lxhentai.com,m.blogtruyen.vn#$#abort-on-property-read open
 phimgii.net#$#abort-current-inline-script jQuery /preload-11bet/
-fancoiphim.net,khophimhd.net#$#abort-current-inline-script JSON.parse /atob/
+fancoiphim.net,khophimhd.net,downloadsachmienphi.com#$#abort-current-inline-script JSON.parse atob
 tapmoi.net#$#abort-on-property-read SmartPopunder
 lxhentai.com#$#abort-current-inline-script document.cookie
 thienhatruyen.com#$#abort-current-inline-script $ pc-popup-2
 phimlau.online#$#abort-current-inline-script atob /Y1/
 sexphimhd.net#$#abort-current-inline-script Math
 360thethao.net#$#abort-current-inline-script onload /puURL/
+xnxx-sex-videos.com#$#abort-current-inline-script setTimeout /window.location/
+xnxx-sex-videos.com#$#override-property-read user_out false
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-hotfix/main/hotfix.txt ***
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
