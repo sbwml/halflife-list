@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: pravTAEmS7coD3CGheN0Uw
+! Checksum: oOOMdokAm+S0EIpZ3JlQGg
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202205090834
-! Last Modified: 2022年05月09日 08:34
+! Version: 202205160836
+! Last Modified: 2022年05月16日 08:36
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -79,6 +79,7 @@ biggestplayer.me##.soret
 spanishdict.com##.whitelist
 play44.net,videobug.net,videofun.me,vidzur.com,yucache.net##[style^="position: absolute; width: 100%;"]
 pkmods.com##body > div[style*="z-index"][style*="background"]
+leechyscripts.com##div[class^="chp_ads_block_modal"]
 strikeout.co,vipbox.sx,vipleague.co,vipleague.is##div[style="display: block;"]
 nexusmods.com##div[style="float: left; width: 728px; height: 90px; background: #313131;"]
 playonlinux.com##div[style="text-align:center;  border-radius:7px; width:160px;  border:1px solid #666666;  margin-left:5px;padding-right:5px;color:#FFF;  background-color:#666;font-family:Maven Pro,century gothic, arial, helvetica, sans serif;padding-top:94px;  height:600px;  padding-left:5px; font-size:18px; "]
@@ -428,7 +429,6 @@ exler.ru##.adblock-pls
 ##.adblock-stop
 zakon.kz##.adblock_alert
 tassbiz.ru##.adblock_notif
-ogorod.ru##.adblock_popup_warning
 hentaiz.org##.adblocker
 telesputnik.ru##.adbPopup
 kubik3.ru##.adbs
@@ -594,7 +594,6 @@ bigpuzzle.ru##td[valign="top"][width="240px"][height="600"]
 ||gamemag.ru/assets/*/js.cookie.js
 ||helpsetup.ru/home/solnisko.php
 ||i140.ru/js/etxm*.js|$script
-||imageban.ru/template/js/nt.js
 ||ipprof.ru/wp-content/plugins/ad-blocking-advisor/
 ||kontrolnaya-rabota.ru^*/fuckadblock.$script
 ||kontrolnaya-rabota.ru^*/toastr.$script,stylesheet
@@ -1144,7 +1143,7 @@ jawcloud.co,kimcartoon.to,europixhd.net,europixhd.com,gledajonline.net,hdeuropix
 bs.to,burningseries.co#$#abort-current-inline-script Object
 vivo.sx#$#abort-current-inline-script Math
 hclips.com,hdzog.com,hotmovs.com,inporn.com,pornhits.com,porntop.com,senzuri.tube,thegay.com,thegay.tube,txxx.com,upornia.com,vjav.com,voyeurhit.com#$#abort-current-inline-script mz
-gdespaces.com,spac.me,spac1.com,spac1.me,spac1.net,spaces-blogs.com,spaces.im,spcs.me,strip2.in,strip2.xxx#$#abort-on-property-read Object.prototype.initOnPlay; abort-current-inline-script __require /clickunder/
+gdespaces.com,spac.me,spac1.com,spac1.me,spac1.net,spac1.ru,spaces-blogs.com,spaces.im,spcs.me,strip2.in,strip2.xxx#$#abort-on-property-read Object.prototype.initOnPlay; abort-current-inline-script __require /clickunder/
 mrpornx.com,myyouporn.com#$#abort-current-inline-script eval String.fromCharCode
 gounlimited.to#$#abort-on-property-read atob
 0xxx.ws,sxyprn.com,sxyprn.net#$#abort-current-inline-script decodeURI decodeURIComponent
@@ -1189,6 +1188,9 @@ pornwhite.com##.bottom-banners
 freeuseporn.com#$#override-property-read p18 undefined
 4kporn.xxx,cambro.tv,mangovideo.club###kt_player > a[href][target="_blank"]
 pornhits.com,porntop.com#$#abort-current-inline-script ACtMan
+letsjerk.tv#?#div[class*="widget_text"]:-abp-has(>div:-abp-contains(Advertisement))
+letsjerk.tv#$#abort-current-inline-script asgPopScript
+manhuascan.me#$#abort-on-property-read localStorage; abort-on-property-write JSON.parse
 ! #CV-667
 gomovies.film,gomovies.sc,gomovies.es,gomovie.ms,gomovieshub.io,openloadmovies.net,openloadmovies.review,vidsrc.me,movies123.xyz,bonstreams.net,yts.am,keeplinks.co,flashx.pw,flashx.tv,cloudvideo.tv,gogoanime.cloud,revivelink.com#$#abort-on-property-read atob
 getsurl.com,gslink.co,gsurl.in,gsurl.me,g5u.pw,clipwatching.com,protect-mylinks.com#$#abort-current-inline-script document.createElement String.fromCharCode
@@ -1221,7 +1223,7 @@ ling.online,pornj.com,upornia.com,realgfporn.com#$#abort-on-property-read encode
 vidlo.us,abcvideo.cc,extramovies.casa,hdvid.online,pstream.net,dlapk4all.com,pandamovies.pw,gounlimited.to,rexdlfile.com,file-up.org,gledajonline.net,loadsubs.net,topeuropix.net,zippyshare.com,europixhd.net,europixhd.com,hdeuropix.io,hxfile.co#$#abort-on-property-read decodeURIComponent
 mult34.com,remaxhd.one#$#abort-current-inline-script decodeURI; abort-on-property-read decodeURIComponent
 hdvid.online#$#abort-on-property-read Fingerprint2; abort-on-property-read atob
-vidbem.com,upload4earn.org,uploadbyte.com#$#abort-on-property-read localStorage
+cineb.net,vidbem.com,upload4earn.org,uploadbyte.com#$#abort-on-property-read localStorage
 dood.so,dood.to,dood.video,dood.watch,dood.la,dood.ws,doodstream.co,doodstream.com#$#abort-on-property-read DoodPop; abort-on-property-write adb; abort-on-property-write cRAds; abort-on-property-write xRds; abort-on-property-write xPoPAdS
 youdbox.com,vudeo.net#$#abort-current-inline-script String.fromCharCode XMLHttpRequest
 filecrypt.cc,filecrypt.co#$#abort-on-property-read isAdblock
@@ -1252,6 +1254,7 @@ sxyprn.com#$#abort-current-inline-script vast_urls; override-property-read D4zz 
 123moviesgo.club#$#abort-current-inline-script Math /break|case/
 pinayvids.com#$#abort-current-inline-script decodeURIComponent; override-property-read D4zz undefined
 eztv.tf,eztv.unblockit.llc,eztv.yt,ytstv.me,yts.do,yts.mx,yts.movie,yts.rs#$#abort-current-inline-script s2ss52
+idope.cyou,yts2.cc#$#abort-on-property-read JSON.stringify
 *$popup,third-party,domain=streamega.com|123putlocker.club|openloadmovies.bz
 about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.com|strtapeadblock.me|slreamplay.cc
 /favicon.ico$popup,domain=vidshare.tv|vudeo.net
@@ -1269,8 +1272,8 @@ about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.
 ##[href^="//x4pollyxxpush.com/"]
 ! #CV-691
 ebay.com#$#hide-if-contains-visible-text /Sponsored/ div[aria-label] div[class]
-ebay.ca,ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-contains-visible-text /Sponsored/ 'li.s-item' 'div.s-item span[aria-hidden]'
 ebay.ca,ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-matches-xpath './/span[contains(@class,"s-item__sep--multi-line") and contains(text(),"S") and contains(text(),"p") and contains(text(),"o") and contains(text(),"n") and contains(text(),"s") and contains(text(),"o") and contains(text(),"r") and contains(text(),"e") and contains(text(),"d")]/parent::span/ancestor::li[1][starts-with(@class,"s-item")]'
+ebay.ca,ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-matches-xpath './/div[starts-with(@class,"s-item")]/a[contains(@href,"trkparms=ispr")]/parent::div[contains(@class,"clearfix")]/ancestor-or-self::li[1][starts-with(@class,"s-item")]'
 ebay.co.uk,ebay.com,ebay.com.au#$#hide-if-contains-visible-text /Sponsored/ 'li.s-item' 'li.s-item span'
 ! #CV-698
 thegatewaypundit.com#$#abort-on-property-read adtoniq; abort-on-property-write adtoniq; abort-on-property-write bomab; abort-on-property-write zacak; abort-on-property-write kozuq
@@ -1282,7 +1285,8 @@ topwwnews.com#$#abort-on-property-read localStorage
 ! #CV-697
 thetrendspotter.net,theavtimes.com#$#abort-on-property-read advads_passive_ads
 ! #CV-782
-www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read playerResponse.adPlacements undefined; override-property-read ytInitialPlayerResponse.adPlacements undefined
+www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read playerResponse.adPlacements undefined;
+www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read ytInitialPlayerResponse.adPlacements undefined;
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#json-prune '0.playerResponse.adPlacements 0.playerResponse.playerAds 1.playerResponse.adPlacements 1.playerResponse.playerAds 2.playerResponse.adPlacements 2.playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds ytInitialPlayerResponse.adPlacements ytInitialPlayerResponse.playerAds adPlacements playerAds'
 ! Fallback
 www.youtube.com,m.youtube.com,music.youtube.com,youtube-nocookie.com#$#simulate-event-poc click button.ytp-ad-skip-button
@@ -1321,7 +1325,9 @@ www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//a[@aria-label][@hre
 ! Experimental
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a/span/span[@aria-labelledby]/span[contains(@style,"flex")]/span[contains(@style,"flex") or contains(@style,"order: 1") and contains(text(),"S") or contains(text(),"P") or contains(text(),"G") or contains(text(),"C")]//following-sibling::span[contains(@style,"flex")]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby or starts-with(@data-pagelet,"FeedUnit_")]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a/span/span[@aria-labelledby]/span[contains(@style,"flex") and contains(text(),"S") or contains(text(),"P") or contains(text(),"G") or contains(text(),"C") or contains(@style,"order: 1")]//following-sibling::span[contains(@style,"flex")]/ancestor::div[@aria-posinset or @aria-describedby or @aria-labelledby or starts-with(@data-pagelet,"FeedUnit_")]'
-www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /(.*[Sponsored].*){9,}[^\u00A0\s]|(.*[Publicidad].*){10,}[^\u00A0\s]|(.*[Commandité].*){10,}/ div[data-pagelet*="FeedUnit_"] 'a[href="#"] span[aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /^(?=[^s]*s)(?=[^p]*p)(?=[^o]*o)(?=[^n]*n)(?=[^r]*r)(?=[^e]*e)(?=[^d]*d).+/ div[data-pagelet^="FeedUnit_"] 'a[href="#"] span[aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /^(?=[^p]*p)(?=[^u]*u)(?=[^b]*b)(?=[^l]*l)(?=[^i]*i)(?=[^c]*c)(?=[^d]*d)(?=[^a]*a).+/ div[data-pagelet^="FeedUnit_"] 'a[href="#"] span[aria-labelledby]'
+www.facebook.com,web.facebook.com#$#hide-if-contains-visible-text /^(?=[^s]*s)(?=[^p]*p)(?=[^o]*o)(?=[^n]*n)(?=[^r]*r)(?=[^i]*i)(?=[^é]*é).+/ div[data-pagelet^="FeedUnit_"] 'a[href="#"] span[aria-labelledby]'
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt ***
 ! #CV-691
 ebay.fr#$#hide-if-contains-visible-text /(.*S.*p.*o.*n.*s.*o.*r.*i.*s.*é⁣.*)/ 'li.s-item' 'li.s-item span[role="text"]'
@@ -1504,6 +1510,7 @@ onifile.com#$#abort-on-property-read _pop
 pobtre.wtf##a[target="_blank"] > img[width="728"][height="90"]
 yayanimes.net#$#abort-current-inline-script document.createElement _wtxnqkt
 animesonline22.com#$#abort-current-inline-script JSON.parse /atob|btoa|break/
+gekkou.com.br#$#abort-current-inline-script document.querySelectorAll popMagic
 ! #CV-667
 filmesonlinegratis.com#$#abort-current-inline-script Math zfgloaded
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/romanian.txt ***
@@ -1602,7 +1609,7 @@ lrepacks.net#$#abort-current-inline-script document.createElement 'delete window
 igroutka.ru#$#override-property-read Object.prototype.afg true
 sibnet.ru#$#prevent-listener DOMContentLoaded 'pobeda'
 ! Popup/popunder/clickunder
-freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,wseries.ru#$#abort-on-property-read open
+freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,xittv.net,potokcdn.com,buzday.ru,nsday.ru,orenday.ru,perevolockday.ru,saltday.ru,sorochinskday.ru,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,zloekino.site#$#abort-on-property-read open
 domahatv.com,piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,pornoakt.vip,porn720.biz,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
 hdkinoteatr.com#$#abort-on-property-read cuec
 fapreactor.com,pornreactor.cc#$#abort-current-inline-script Math decodeURIComponent
@@ -1693,8 +1700,8 @@ bongdahomnay.tech#$#abort-on-property-read $
 ! Popup/Popunder/Clickunder
 viet69.org#$#abort-current-inline-script JSON.parse /atob|btoa|break/; abort-current-inline-script String.fromCharCode /atob|btoa|break/; abort-current-inline-script Math /atob|btoa|break/
 rphangs.com,mrcong.com#$#abort-on-property-read open; abort-on-property-write window.location.href
-fembed.com,femax20.com,zo3x.ml,mrdhan.com,lxhentai.com,m.blogtruyen.vn,viettoons.tv,bphimmoi.net#$#abort-on-property-read open
-xemphimgii.net,phimhdvns.net,fimnhez.net#$#abort-current-inline-script jQuery popurl
+fembed.com,femax20.com,zo3x.ml,mrdhan.com,lxhentai.com,m.blogtruyen.vn,viettoons.tv,vzphimmoi.net#$#abort-on-property-read open
+phimgif.net,phimhdvns.net,fimnhez.net#$#abort-current-inline-script jQuery popurl
 baliphim.com,lucaphim.com#$#abort-current-inline-script parseInt break;case $.
 khophimhd.net,downloadsachmienphi.com,truyen2u.net#$#abort-current-inline-script JSON.parse atob
 tapmoi.net#$#abort-on-property-read SmartPopunder
@@ -1710,6 +1717,7 @@ phimmoii123.com#$#abort-on-property-read matchMedia
 metruyenchu.com#$#abort-on-property-write window.onclick
 ##[href^="//mage98rquewz.com/"]
 *$third-party,script,domain=sexdiaryz.xyz
+phimhays.com#$#abort-current-inline-script jQuery window.open
 ! *** Fetched from: https://raw.githubusercontent.com/abp-filters/abp-filters-hotfix/main/hotfix.txt ***
 ! FDA-2830
 @@||cdn.jsdelivr.net/npm/just-detect-adblock@*/dist/bundle.umd.min.js|
