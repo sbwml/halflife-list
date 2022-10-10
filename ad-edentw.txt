@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: QzQ/IzxPViAKdS+3/TnZPg
+! Checksum: CQkQhkX7Eycci0kZ8nTfIA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202210100905
-! Last Modified: 2022年10月10日 09:05
+! Version: 202210110005
+! Last Modified: 2022年10月11日 00:05
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -1653,6 +1653,7 @@ yayanimes.net#$#abort-current-inline-script document.createElement _wtxnqkt
 animesonline22.com#$#abort-current-inline-script JSON.parse /atob|btoa|break/
 gekkou.com.br#$#abort-current-inline-script document.querySelectorAll popMagic
 gofilmes.me#$#abort-on-property-read zfgformats
+betteranime.net#$#abort-current-inline-script document.createElement _mdttdpu
 ! #CV-667
 filmesonlinegratis.com#$#abort-current-inline-script Math zfgloaded
 ! *** abp-filters-anti-cv:romanian.txt ***
@@ -1695,8 +1696,7 @@ indoxx1.show##img[src^="blob:https://indoxx1.show/"]
 ! #CV-250
 megatfile.cc,gidonline.eu,dc-marvel.org,torrent-soft.net#$#abort-on-property-read atob
 ! MISC
-||sm.news/$header=content-type=application/json
-sm.news#$#abort-on-property-read AdFox_getCodeScript
+sm.news#$#abort-current-inline-script String.fromCharCode decodeURIComponent
 7ogorod.ru,shtrafsud.ru,autonevod.ru#$#abort-on-property-read flat_pm_arr
 hitfm.ua,kissfm.ua,radiorelax.ua,radioroks.ua,rusradio.ua#$#abort-on-property-write prerole_length
 www.goha.ru,3dnews.ru#$#abort-on-property-read Ya
@@ -1740,7 +1740,7 @@ kakoysegodnyaprazdnik.ru,xn--80aaiebcrjcibi8adgdtsm9z.xn--p1ai#$#abort-on-proper
 cq.ru#$#hide-if-matches-xpath './/a[@class][@target="_blank"]/following::img[@class][string-length(@src) > 70]/ancestor::div[@class][1]'
 cq.ru#$#prevent-listener DOMContentLoaded 'banners'
 shanson320.ru#$#abort-current-inline-script document.createElement atob
-spletnik.ru#$#abort-on-property-read Object.prototype.createHostAsserter; abort-on-property-read Object.prototype.DlEDrf; cookie-remover bltsr;
+spletnik.ru#$#abort-on-property-read document.cookie.indexOf; cookie-remover wordpress_test_cookie;
 ||spletnik.ru/$header=content-type=text/javascript
 coderlessons.com,facenews.ua,fixx.one,its-kids.ru,molitvy.guru,nizhny.ru,pro100hobbi.ru,publy.ru,samelectric.ru,svadba.expert,vibir.ru#$#abort-on-property-read XMLHttpRequest
 lrepacks.net#$#abort-current-inline-script document.createElement 'delete window'
@@ -1883,7 +1883,7 @@ player-cdn.com###playback-fake
 vebo5.net,xoilac5.net##.modal.fade.show
 vebo5.net,xoilac5.net#$#abort-current-inline-script jQuery popupBanners
 vebo5.net,xoilac5.net#$#abort-on-property-read adsRedirectPopups
-sex6688.link#$#override-property-read D4zz noopFunc
+sex6688.link,viet69.gg#$#override-property-read D4zz noopFunc
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2830
 @@||cdn.jsdelivr.net/npm/just-detect-adblock@*/dist/bundle.umd.min.js|
