@@ -2,9 +2,9 @@ name: Build adblock rules files
 on:
   schedule:
     - cron: 0 0 * * 1
-#  push:
-#    branch:
-#      - "test"
+  watch:
+    types: started
+
 jobs:
   build:
     name: Build
@@ -28,7 +28,7 @@ jobs:
           echo "ANTI_ADBLOCK_KILLER_FILTERS_URL=https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt" >> $GITHUB_ENV
           echo "ANTIADBLOCKFILTERS_URL=https://easylist-downloads.adblockplus.org/antiadblockfilters.txt" >> $GITHUB_ENV
           echo "ABP_FILTERS_ANTI_CV_URL=https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt" >> $GITHUB_ENV
-          echo "XINGGSF_MV_URL=https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt" >> $GITHUB_ENV
+          echo "XINGGSF_MV_URL=https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt" >> $GITHUB_ENV
           echo "GOPATH=$(dirname $GITHUB_WORKSPACE)" >> $GITHUB_ENV
           echo "$(dirname $GITHUB_WORKSPACE)/bin" >> $GITHUB_PATH
         shell: bash
@@ -132,18 +132,3 @@ jobs:
           #git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/list.git"
           git fetch --unshallow origin
           git push -u origin master
-
-      - name: Git push assets to gitee & coding
-        if: steps.diffResult.outputs.status == 'success' && steps.diffResult.outputs.status == 'false'
-        run: |
-          rm -rf .git/
-          git init
-          git config --local user.name "actions"
-          git config --local user.email "action@github.com"
-          git checkout -b master
-          git add --all
-          git commit -m "${{ env.RELEASE_NAME }}"
-          #git remote add origin "https://${{ secrets.GITEE_ACCOUNT }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/${{ secrets.GITEE_NAME }}/list.git"
-          #git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/list.git"
-          git fetch --unshallow origin
-          git push -u -f origin master
