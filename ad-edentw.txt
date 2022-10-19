@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: CQkQhkX7Eycci0kZ8nTfIA
+! Checksum: +8qLVgIt8EgH/m/Be1zgGA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202210110005
-! Last Modified: 2022年10月11日 00:05
+! Version: 202210192005
+! Last Modified: 2022年10月19日 20:05
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -28,11 +28,11 @@
 ##.detected-block-modal
 ##.no-ad-reminder
 kimo.ma##.adb
-myegy.cc,myegy.io,myegy.to##.disclaimer
 4algeria.com###exposeMask
 chahid4u.tk###unblocker
 4algeria.com##.xenOverlay
 shahid4u.club#@#.adsBox
+@@||ency-educ.com^$generichide
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_chinese.txt ***
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_czech.txt ***
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_dutch.txt ***
@@ -512,7 +512,6 @@ alensat.org,forummikrotik.ru###phpbb-ads-ab
 3dsmaxvideo.ru,archicadvideo.ru,autocadvideo.ru,coreldrawvideo.ru,excelvideo.ru,kompasvideo.ru,photoshopvideo.ru,solidworksvideo.ru,wordvideo.ru###prozrachnyi2,#video_window2
 sostav.ru###rek_blocker
 math-prosto.ru###requestShutOfBlocker
-pb.wtf,piratbit.org,piratbit.ru###result > .request
 mnogoto4ka.ru###sb-site > div[class][style*="z-index"][style*="999999"]
 professorweb.ru###submain > div[class^="a"][style]
 kaermorhen.ru###top-line-container
@@ -1109,6 +1108,7 @@ kickassanime.io##.ka-ax-wrapper
 /sid*$domain=kickassanime.io
 /mya/lfa.js$domain=thewatchcartoononline.tv|wcostream.com
 mangareader.net,kiss-anime.ws,animeland.us#$#abort-on-property-read bbHideDiv
+narutohentaidb.com#$#abort-on-property-write BackDropNar; hide-if-matches-xpath './/canvas[contains(@style,"padding")]/ancestor::div[contains(@style,"z-index")][1]';
 ! #CV-659
 filmxy.one##.promo-contents
 y2mate.com#$#abort-on-property-read dispatchEvent
@@ -1242,6 +1242,7 @@ mkvcage.com,pastehere.xyz,vidshare.tv,govid.me,hdvid.tv,ovid.pro#$#abort-on-prop
 baytorrent.eu.org,europixhd.com,europixhd.net,file-up.org,force-download.com,force-download.es,force-download.fr,force-download.net,gledajonline.net,hdeuropix.io,loadsubs.net,novom.ru,pirateproxy.earth,pirateproxy.live,thehiddenbay.com,thepiratebay.org,thepiratebay.vip,thepiratebay10.org,topeuropix.net,tpb.party,uploadproper.com,uploadproper.net#$#abort-on-property-read atob
 bagas31.info#$#abort-on-property-write atob
 rarbg.to,rarbg2019.org,rarbgaccess.org,rarbgdata.org,rarbgget.org,rarbggo.org,rarbgmirror.com,rarbgmirror.org,rarbgmirrored.org,rarbgproxy.org,rarbgprx.org,rarbgto.org,rarbgunblock.com,rarbgweb.org#$#abort-on-property-read LieDetector
+toon69.com#$#abort-on-property-read adConfig
 onlystream.tv#$#abort-on-property-read BetterJsPop
 hdvid.tv,ovid.pro#$#abort-on-property-read atob; abort-on-property-read encodeURIComponent; abort-on-property-write _pop
 limetorrents.cyou,gaobook.review,mavplayer.xyz,vaplayer.xyz,xstreamcdn.com,flashx.pw,flashx.tv,embed.media,fembed.com,hxfile.co,mavplay.xyz,myyouporn.com,vidplayer.cz#$#abort-on-property-read AaDetector
@@ -1314,7 +1315,7 @@ naughtymachinima.com#$#abort-on-property-read window.open; abort-on-property-rea
 fullporner.com#$#abort-on-property-read ad; abort-on-property-read ad_list
 animepahe.com#$#abort-on-property-read _0x43d1; abort-on-property-read _0x53b5
 receive-smss.com#$#abort-on-property-read adBlockEnabled
-smallseotools.com#$#abort-on-property-read FITS.Config
+smallseotools.com#$#abort-on-property-read FITS.Config; override-property-read adpushup undefined; abort-on-property-read run_grammarly_frist; hide-if-matches-xpath './/img[contains(@src,".gif")]/ancestor-or-self::a[contains(@onclick,"Grammarly")]'
 root-nation.com#$#hide-if-matches-xpath './/img[contains(@alt,"Infinix ")]/parent::div[@class="backstretch"]/ancestor-or-self::div[1]'
 root-nation.com#$#hide-if-matches-xpath '//source/following::img[@src]/ancestor::a[@class]/ancestor-or-self::div[@id="tdi_29"]'
 ! #CV-667
@@ -1450,8 +1451,12 @@ instacart.com##a[href*="category_hero_id_"]
 samsclub.com#$#hide-if-matches-xpath '//span[@class="sc-specials-label"]/parent::div[@class="sc-specials"]/ancestor::li'
 ! #CV-663
 canadafreepress.com,conservativefiringline.com,ipatriot.com,naturalblaze.com,patriotnationpress.com,populistpress.com#$#abort-on-property-read document.getElementsByClassName; abort-on-property-read following-ad-container
+rightwingnews.com#$#abort-on-property-read document.getElementsByTagName
 ! Japanese sites
 nikaraw.com#$#abort-on-property-read afStorage
+nicovideo.jp##a[href^="https://click.speee-ad.jp"]
+nicovideo.jp#$#hide-if-matches-xpath './/li[@class="count ads"]/parent::ul/ancestor::li[contains(@class,"adVideoItem")]'; hide-if-matches-xpath './/h1[text()="Niconico Ads"]/following::img[contains(@class,"UadVideoItem-image")]/parent::div[contains(@class,"UadVideoItem")]/ancestor::div[contains(@class,"UadVideosContainer")]'; hide-if-matches-xpath './/img[contains(@class,"NicoadVideoItem")]/parent::a[contains(@class,"NicoadVideoItem")]/ancestor::div[starts-with(@class,"NicoadVideosContainer")]'; hide-if-matches-xpath './/div[@data-nicoad-sponsor]/following::a[starts-with(@class,"NicoAdContainer")]/parent::div[contains(@class,"NicoAdContainer")]/ancestor::section[@class="TopPage-section"]'; hide-if-matches-xpath './/img[contains(@class,"UadVideoItem")]/parent::div[starts-with(@class,"UadVideoItem")]/ancestor::div[contains(@class,"UadVideosContainer")]';
+||nimg.jp/nicoad/instream/video/*.mp4$media,domain=nicovideo.jp
 ! *** abp-filters-anti-cv:fb_non-graph.txt ***
 ! #CV-761
 www.facebook.com,web.facebook.com#$#race start; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrwae]{12}|[Patrocind]{11}|[Sponsrizat]{13}/ 'div[role=feed] div[role=article]' a[href="#"][role="link"]; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrwae]{12}|[Patrocind]{11}|[Sponsrizat]{13}/ 'div[role=feed] div[role=article]' a[href^="?__cft__"]; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrwae]{12}|[Patrocind]{11}|[Sponsrizat]{13}/ 'div[role=feed] div[role=article]' a[href="#"][role="link"]>span>span>b; hide-if-matches-xpath './/div[@role="feed"]//div[@role="article"]//a[@aria-label[.="Patrocinado" or .="Sponsa" or .="Bersponsor" or .="Commandité" or .="Ditaja" or .="Gesponsert" or .="Gesponsord" or .="Sponsrad" or .="Publicidad" or .="Sponsoreret" or .="Sponset" or .="Sponsored" or .="Sponsorisé" or .="Sponsorizat" or .="Sponsorizzato" or .="Sponsorlu" or .="Sponsorowane" or .="Реклама" or .="ממומן" or .="تمويل شوي" or .="دارای پشتیبانی مالی" or .="سپانسرڈ" or .="مُموَّل" or .="प्रायोजित" or .="সৌজন্যে" or .="ได้รับการสนับสนุน" or .="内容" or .="贊助" or .="Sponsoroitu" or .="May Sponsor" or .="Được tài trợ"]]/ancestor::div[@role="article"]'; race stop;
@@ -1567,6 +1572,8 @@ hotabis.com#$#override-property-read td_ad_background_click_link undefined
 ! Popup/Popunder/Clickunder
 komikcast.me#$#abort-on-property-read localStorage; abort-on-property-write JSON.parse
 beritabaru.news,solusi.cyou#$#override-property-read setTimeout noopFunc
+! MISC
+komikdewasa.me#$#abort-on-property-write adsbyjuicy; override-property-read R undefined; hide-if-matches-xpath '//a[@target="_blank"]/img[contains(@class,"align")]/ancestor::div[starts-with(@class,"blox")]'; hide-if-matches-xpath '//a[@target="_blank"]/img[contains(@class,"align")]/ancestor-or-self::a[@href][1]'
 ! *** abp-filters-anti-cv:italian.txt ***
 ! #CV-667
 mp3-gratis.it#$#abort-current-inline-script Math zfgloaded
@@ -1752,6 +1759,7 @@ hardwareluxx.ru#$#abort-current-inline-script jQuery backgroundImage
 changeua.com,ictv.ua,inter.ua,k1.ua,novy.tv,ntn.ua,starlight.digital,stb.ua,teleportal.ua#$#override-property-read Object.prototype.CreativeAdBreaks undefined
 anime.anidub.com,anidub.club,anidub.link,anime.anidub.life,online.anidub.com,online.anidub.life#$#prevent-listener click window.open
 4pda.to#$#hide-if-matches-xpath './/*[not(self::div)]//script[contains(text(),"Math.ceil")]/ancestor::*[not(self::div)][1]'; hide-if-matches-xpath './/*[not(self::div)]//script[contains(text(),"toLowerCase")]/ancestor::div[2]'; hide-if-matches-xpath './/a[@target="_blank"]/img[@alt="" and @title=""]/ancestor::td[1]'
+kanobu.ru#$#json-prune results.fixed
 ! Popup/popunder/clickunder
 tv-assia.org,freehat.cc,tt-cup.com,zerno-ua.com,oxax.tv,prostoporno.help,vmusi.ru,xittv.net,potokcdn.com,lostpix.com,uploadimagex.com,volynpost.com,wowskill.ru,hlamer.ru,oveg.ru#$#abort-on-property-read open
 domahatv.com,piratam.net,piratca.net,sexitorrent.com,sextor.org,xtorrent.net,xxxrip.net,torrent-pirat.com,porn720.biz,pornoakt.vip,pornopuk.com,hentai-share.one,huyamba.tv,xxxtor.com#$#abort-current-inline-script document.querySelectorAll popMagic
@@ -1843,6 +1851,7 @@ netflix-izle.com#$#override-property-read reklam_1 undefined; override-property-
 blog.abit.vn#$#abort-on-property-read document.cookie
 phimhay3s.com#$#json-prune ads
 90phut6.live#$#abort-current-inline-script $ overlay;abort-current-inline-script setTimeout overlay
+xoilac5.live#$#abort-current-inline-script jQuery overlay
 aoe.vn#$#abort-on-property-read parseInt
 gametv.vn#$#abort-current-inline-script $ homeModal
 watchsb.com#$#abort-on-property-read __Y
@@ -1883,7 +1892,7 @@ player-cdn.com###playback-fake
 vebo5.net,xoilac5.net##.modal.fade.show
 vebo5.net,xoilac5.net#$#abort-current-inline-script jQuery popupBanners
 vebo5.net,xoilac5.net#$#abort-on-property-read adsRedirectPopups
-sex6688.link,viet69.gg#$#override-property-read D4zz noopFunc
+sex6688.link,viet69.gg#$#abort-on-property-read parseInt
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2830
 @@||cdn.jsdelivr.net/npm/just-detect-adblock@*/dist/bundle.umd.min.js|
