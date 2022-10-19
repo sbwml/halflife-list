@@ -2,12 +2,9 @@ name: Build adblock rules files
 on:
   schedule:
     - cron: 0 0 * * 1
-  watch:
-    types: started
 
 jobs:
   build:
-    if: github.event.repository.owner.id == github.event.sender.id
     name: Build
     runs-on: ubuntu-latest
     steps:
