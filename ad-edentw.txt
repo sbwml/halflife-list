@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 10QoW5MtRm9z3of5ALuT8w
+! Checksum: ClAj2uvTFm1lsOkA97/JzQ
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202308070836
-! Last Modified: 2023年08月07日 08:36
+! Version: 202308140829
+! Last Modified: 2023年08月14日 08:29
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -400,9 +400,10 @@ ajaxshowtime.com##div.leaderboard_ad + div
 ! *** abp-filters-anti-cv:english.txt ***
 ! #CV-691
 ebay.com,ebay.co.uk,ebay.de#$#hide-if-matches-xpath '//li[@data-viewport]//span[text()="Sponsored" or text()="Anzeige"]/ancestor::li[@data-viewport]'
-ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.pl,ebay.it,ebay.nl,ebay.be,ebay.fr,ebay.es,ebay.com.hk,ebay.com.sg,ebay.ph#$#race start; hide-if-matches-computed-xpath './/div[@aria-labelledby="{{}}"]/ancestor::li[contains(@class,"s-item")]' './/style[contains(text(),":root")]' '/span\.(.{9})/'; hide-if-contains-visible-text /S⁣p⁣o⁣n⁣s⁣o⁣r⁣e⁣d|A⁣n⁣z⁣e⁣i⁣g⁣e|S⁣p⁣o⁣n⁣s⁣o⁣r⁣i⁣s⁣é⁣⁣|S⁣p⁣o⁣n⁣s⁣o⁣r⁣i⁣z⁣z⁣a⁣t⁣o⁣⁣|S⁣p⁣o⁣n⁣s⁣o⁣r⁣o⁣w⁣a⁣n⁣e|G⁣e⁣s⁣p⁣o⁣n⁣s⁣o⁣r⁣d|P⁣a⁣t⁣r⁣o⁣c⁣i⁣n⁣a⁣d⁣o|贊⁣助/ li[data-viewport] 'span.s-item__sep>span[role]' '-disable-bg-color-check:true' 'position:absolute'; race stop;
+ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.pl,ebay.it,ebay.nl,ebay.be,ebay.fr,ebay.es,ebay.com.hk,ebay.com.sg,ebay.ph#$#race start; hide-if-matches-computed-xpath './/span[@class="s-item__sep"]/span[@aria-labelledby="{{}}"]/ancestor::li[@data-viewport]' './/style[contains(text(),"display: inline")]' '/span\.(.{9})/'; hide-if-matches-computed-xpath './/span[@*="{{}}"]/ancestor::li[contains(@class,"s-item")]' './/style[contains(text(),":root")]' '/span\.(.{9})/'; hide-if-matches-computed-xpath './/div[@aria-labelledby="{{}}"]/ancestor::li[contains(@class,"s-item")]' './/style[contains(text(),":root")]' '/span\.(.{9})/'; hide-if-matches-computed-xpath './/span[@class="s-item__sep"]/span[@aria-labelledby="{{}}"]/ancestor::li[@data-viewport]' './/style[contains(text(),"-2000")]' '/}\\s*span\.(.{9})/'; hide-if-contains-visible-text /S⁣p⁣o⁣n⁣s⁣o⁣r⁣e⁣d|A⁣n⁣z⁣e⁣i⁣g⁣e|S⁣p⁣o⁣n⁣s⁣o⁣r⁣i⁣s⁣é⁣⁣|S⁣p⁣o⁣n⁣s⁣o⁣r⁣i⁣z⁣z⁣a⁣t⁣o⁣⁣|S⁣p⁣o⁣n⁣s⁣o⁣r⁣o⁣w⁣a⁣n⁣e|G⁣e⁣s⁣p⁣o⁣n⁣s⁣o⁣r⁣d|P⁣a⁣t⁣r⁣o⁣c⁣i⁣n⁣a⁣d⁣o|贊⁣助/ li[data-viewport] 'span.s-item__sep>span[role]' '-disable-bg-color-check:true' 'position:absolute'; hide-if-contains-and-matches-style // li[data-viewport] 'li[data-viewport] span.s-item__sep>div' /./ '/\\swidth: [1-9]/'; race stop;
 ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.pl,ebay.it,ebay.nl,ebay.be,ebay.fr,ebay.es,ebay.com.hk,ebay.com.sg,ebay.ph#$#hide-if-matches-xpath './/div[@data-view]/a[@class="srp-1p__link"]//div[text()="Sponsored"]/ancestor::div[@data-view][@class][1]'
-ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.pl,ebay.it,ebay.nl,ebay.be,ebay.fr,ebay.es,ebay.com.hk,ebay.com.sg,ebay.ph#$#hide-if-matches-xpath './/div[contains(@class,"sponsored-infotip")]/parent::div[starts-with(@class,"ads")]/parent::div[contains(@class,"ads")]/ancestor::div[@id and @aria-label="Advertisement"]/ancestor-or-self::div[@style]'
+ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.pl,ebay.it,ebay.nl,ebay.be,ebay.fr,ebay.es,ebay.com.hk,ebay.com.sg,ebay.ph#$#hide-if-matches-xpath './/div[contains(@class,"sponsored-infotip")]/parent::div[starts-with(@class,"ads")]/parent::div[contains(@class,"ads")]/ancestor::div[@id and @aria-label="Advertisement"]'
+ebay.fr#$#hide-if-matches-xpath './/a[@*]/img [@src][contains(@alt,"reconditionné")]/parent::a[@class="srp-banner"]/ancestor::li[contains(@class,"SIMPLE_IMAGE_BANNER")][1]'
 ! #CV-737
 cnn.com#$#strip-fetch-query-parameter caid warnermediacdn.com; strip-fetch-query-parameter afid warnermediacdn.com
 ! #CV-1149
@@ -647,11 +648,11 @@ bing.com#?#li[class="b_algo"]:-abp-has(>h2 + div[class="b_caption"] > [class^="b
 bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #CV-1190
-instacart.com#$#hide-if-matches-xpath './/span[@class][contains(text(),"")]/preceding::div[@aria-label][@role]/div[@style]/parent::div[starts-with(@aria-label,"Product") and @role and @class]/ancestor::*[1]/parent::div[1]'
+instacart.com#$#race start; hide-if-matches-xpath './/span[@class][contains(text(),"")]/preceding::div[@aria-label][@role]/div[@style]/parent::div[starts-with(@aria-label,"Product") and @role and @class]/ancestor::*[1]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eligible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eliggible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; race stop;
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span[2]/preceding::img[contains(@src,"metadata=copyright")]/ancestor::a[contains(@href,"interaction_id")]/ancestor::header'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span/preceding::img[contains(@src,"metadata=copyright")][contains(@alt,"")][@data-testid]/ancestor::a[contains(@href,"interaction_id")]/ancestor::section[@id][@class][not(@id="store-wrapper") and not(@id="js-app")]'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span[2]/preceding::img[contains(@src,"cloudfront.net/uploads/image_display_")][@alt]/parent::div[@class][1]'
-instacart.com#$#hide-if-matches-xpath './/span[@class][contains(text(),"Spon")]/ancestor::div[@class][1]/parent::div'
+instacart.com#$#hide-if-matches-xpath './/span[starts-with(@class,"e-1r5")][contains(text(),"red")]/parent::div[1]'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span[contains(@style,"display:")][2]/ancestor::section[@class="e-wbvail"]'
 instacart.com#$#hide-if-matches-xpath './/a[@href]//img[@data-testid]/following::div[.//span[text()]/following-sibling::span[text()]][1]/parent::div[@class]/parent::a[@href]/ancestor::div[@class and @id][1]'
 instacart.com#$#hide-if-matches-xpath './/source[@media]/following-sibling::img[contains(@alt,"Sponsored")]/parent::picture/ancestor::div[@class][1]'
@@ -891,6 +892,8 @@ adblockeronstreamtape.xyz,adblockplustape.com,adblockstreamtape.art,adblockstrea
 animeunity.cc#$#abort-on-property-read zfgstorage; abort-current-inline-script document.documentElement break;case; abort-on-property-read decodeURI;
 aniwatch.to#$#abort-current-inline-script XMLHttpRequest
 asura.gg#$#hide-if-matches-xpath './/div[@language]/video[@src]/ancestor::div[@style]/parent::div[@id="tip_text_content"]/ancestor::div[@style][@id][1]'
+dl-protect.link#$#abort-current-inline-script addEventListener DOMContentLoaded; hide-if-matches-xpath './/a[@style="cursor: pointer;"]/img[@src][@onmouseover]/ancestor::center/parent::div[1]/ancestor::div[@class="row"]'
+aliexpress.com#$#hide-if-contains-visible-text /AD/ 'a[class][style^="width: 190px"]' 'span[class]'
 ! Video ads
 ||content.sinpartycdn.com/*pre-roll-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
 ||content.sinpartycdn.com/videos-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
@@ -1281,7 +1284,7 @@ horo.mail.ru,pogoda.mail.ru,tv.mail.ru#$#abort-on-property-read MrgContext
 minigames.mail.ru#$#abort-on-property-read MG_CONFIG.adv.fit_mimic
 mmminigames.mail.ru#$#abort-current-inline-script addEventListener advRefreshInterval
 ! #CV-713
-3dn.ru,a-point.info,addfiles.ru,asia-tv.su,at.ua,all-for-kompa.ru,autosimgames.ru,chernobyl-soul.com,clan.su,cliphq.ru,coop-lands.ru,db-energo.ru,devdrivers.ru,do.am,dtva-it-rus.gq,elegos.ru,elektronika56.ru,elektrosat.ru,fon-ki.com,for-gsm.ru,free-dream.ru,ftechedu.ru,fukushima-news.ru,gals.md,gamesdendy.ru,giginfo.ru,gloria-cedric.ru,goldformat.ru,greenflash.su,hero-empire.com,igrul-ka.ru,jetvis.ru,krasnickij.ru,krolmen.ru,kubik3.ru,megaclips.net,mod-rus.ru,mow-portal.ru,moy.su,mp3songs.ru,mp4android.ru,musiklip.ru,my1.ru,narod.ru,newgames.com.ua,novospasskoe-city.ru,obschestvo-9999.gq,omsimclub.ru,online-supernatural.ru,onlinestargate.ru,only-paper.ru,others.name,pidru4nik.com,pkrc.ru,play-force.ru,pohoronnoe-byuro.com,pokatushki-pmr.ru,pro-zakupki.ru,project-ss.ru,psxworld.ru,radiodom.org,rocketdockfree.ru,sdr-deluxe.com,skidrowcrack.ru,soft-game.net,stalker-gsc.ru,stalker-zone.info,stalkermods.ru,svadbatomsk.ru,tes-game.ru,torm-egan.ru,torrent-file.top,torfiles.ru,ucoz.club,ucoz.com,ucoz.net,ucoz.org,ucoz.ru,ucoz.ua,usite.pro,vodopads.ru,vsthouse.ru,warcraftda.ru,xakevsoft.ru,xn--80aeshkkbdj.xn--p1ai,yaminecraft.ru,zona-stalkera.ru#$#abort-on-property-read Object.prototype.clunduse; abort-on-property-read k_init; abort-on-property-read Object.prototype.u_vastplayer
+3dn.ru,a-point.info,addfiles.ru,akkordam.ru,asia-tv.su,at.ua,all-for-kompa.ru,autosimgames.ru,chernobyl-soul.com,clan.su,cliphq.ru,coop-lands.ru,db-energo.ru,devdrivers.ru,do.am,dtva-it-rus.gq,elegos.ru,elektronika56.ru,elektrosat.ru,fon-ki.com,for-gsm.ru,free-dream.ru,ftechedu.ru,fukushima-news.ru,gals.md,gamesdendy.ru,giginfo.ru,gloria-cedric.ru,goldformat.ru,greenflash.su,hero-empire.com,igrul-ka.ru,jetvis.ru,krasnickij.ru,krolmen.ru,kubik3.ru,megaclips.net,mod-rus.ru,mow-portal.ru,moy.su,mp3songs.ru,mp4android.ru,musiklip.ru,my1.ru,narod.ru,newgames.com.ua,novospasskoe-city.ru,obschestvo-9999.gq,omsimclub.ru,online-supernatural.ru,onlinestargate.ru,only-paper.ru,others.name,pidru4nik.com,pkrc.ru,play-force.ru,pohoronnoe-byuro.com,pokatushki-pmr.ru,pro-zakupki.ru,project-ss.ru,psxworld.ru,radiodom.org,rocketdockfree.ru,sdr-deluxe.com,skidrowcrack.ru,soft-game.net,stalker-gsc.ru,stalker-zone.info,stalkermods.ru,svadbatomsk.ru,tes-game.ru,torm-egan.ru,torrent-file.top,torfiles.ru,ucoz.club,ucoz.com,ucoz.net,ucoz.org,ucoz.ru,ucoz.ua,usite.pro,vodopads.ru,vsthouse.ru,warcraftda.ru,xakevsoft.ru,xn--80aeshkkbdj.xn--p1ai,yaminecraft.ru,zona-stalkera.ru#$#abort-on-property-read Object.prototype.clunduse; abort-on-property-read k_init; abort-on-property-read Object.prototype.u_vastplayer
 kinogo.eu,gidonline.eu#$#abort-on-property-read target_script
 ! #CV-742
 vesti.ua#$#abort-current-inline-script document.createElement atob
@@ -1367,6 +1370,7 @@ bongda365a.club#$#override-property-read isSkipAds true
 zingnews.vn#$#abort-on-property-read adtimaConfig
 baomoi.com#$#abort-on-property-write AdtimaBaomoi
 xoivo7.info#$#override-property-read adsPlayer '';override-property-read adsTvcs ''
+kenh14.vn#$#override-property-read Constants.allowAds false
 ! Popup/Popunder/Clickunder
 fembed.com,femax20.com,zo3x.ml,mrdhan.com,m.blogtruyen.vn,viettoons.tv#$#abort-on-property-read open
 khophimhd.net,downloadsachmienphi.com,tvhay.top#$#abort-current-inline-script JSON.parse atob
@@ -1401,139 +1405,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2830
 @@||cdn.jsdelivr.net/npm/just-detect-adblock@*/dist/bundle.umd.min.js|
-! FD-3979 / FD-4056
-@@||acceptableauthority.com^$script,xmlhttprequest
-@@||alluringbucket.com^$script,xmlhttprequest
-@@||ambitiousanimal.com^$script,xmlhttprequest
-@@||anxiousapples.com^$script,xmlhttprequest
-@@||badgeboat.com^$script,xmlhttprequest
-@@||blesspizzas.com^$script,xmlhttprequest
-@@||brotherslocket.com^$script,xmlhttprequest
-@@||bushesbag.com^$script,xmlhttprequest
-@@||carelesshat.com^$script,xmlhttprequest
-@@||castcream.com^$script,xmlhttprequest
-@@||cavecurtain.com^$script,xmlhttprequest
-@@||charmingcough.com^$script,xmlhttprequest
-@@||charmingplate.com^$script,xmlhttprequest
-@@||clammychicken.com^$script,xmlhttprequest
-@@||clumsycar.com^$script,xmlhttprequest
-@@||concernedchickens.com^$script,xmlhttprequest
-@@||cowscrayon.com^$script,xmlhttprequest
-@@||creditcreature.com^$script,xmlhttprequest
-@@||damagedroll.com^$script,xmlhttprequest
-@@||deadpanmarble.com^$script,xmlhttprequest
-@@||debonairtree.com^$script,xmlhttprequest
-@@||delicateducks.com^$script,xmlhttprequest
-@@||differentcoat.com^$script,xmlhttprequest
-@@||dustydime.com^$script,xmlhttprequest
-@@||drainpaste.com^$script,xmlhttprequest
-@@||enormousfoot.com^$script,xmlhttprequest
-@@||fearfulmint.com^$script,xmlhttprequest
-@@||flowerycreature.com^$script,xmlhttprequest
-@@||fortunatemark.com^$script,xmlhttprequest
-@@||fuzzyerror.com^$script,xmlhttprequest
-@@||generalprose.com^$script,xmlhttprequest
-@@||givevacation.com^$script,xmlhttprequest
-@@||guidecent.com^$script,xmlhttprequest
-@@||handsomelyhealth.com^$script,xmlhttprequest
-@@||harborcaption.com^$script,xmlhttprequest
-@@||hospitablehall.com^$script,xmlhttprequest
-@@||heartbreakingmind.com^$script,xmlhttprequest
-@@||imminentshake.com^$script,xmlhttprequest
-@@||inconclusiveaction.com^$script,xmlhttprequest
-@@||inputicicle.com^$script,xmlhttprequest
-@@||interestingpot.com^$script,xmlhttprequest
-@@||looseloaf.com^$script,xmlhttprequest
-@@||lunchroomlock.com^$script,xmlhttprequest
-@@||materialparcel.com^$script,xmlhttprequest
-@@||mellowbike.com^$script,xmlhttprequest
-@@||muteknife.com^$script,xmlhttprequest
-@@||muterange.com^$script,xmlhttprequest
-@@||needyneedle.com^$script,xmlhttprequest
-@@||nightwound.com^$script,xmlhttprequest
-@@||numerousnest.com^$script,xmlhttprequest
-@@||oppositeparcel.com^$script,xmlhttprequest
-@@||paintpear.com^$script,xmlhttprequest
-@@||passivepolo.com^$script,xmlhttprequest
-@@||pastcabbage.com^$script,xmlhttprequest
-@@||plausiblecable.com^$script,xmlhttprequest
-@@||poeticpackage.com^$script,xmlhttprequest
-@@||popcornfood.com^$script,xmlhttprequest
-@@||pricklyjourney.com^$script,xmlhttprequest
-@@||pricklypies.com^$script,xmlhttprequest
-@@||psychedelicarithmetic.com^$script,xmlhttprequest
-@@||questionableobservation.com^$script,xmlhttprequest
-@@||rainyzinc.com^$script,xmlhttprequest
-@@||rampantwork.com^$script,xmlhttprequest
-@@||rangeplayground.com^$script,xmlhttprequest
-@@||regulatesleet.com^$script,xmlhttprequest
-@@||rehabilitatereason.com^$script,xmlhttprequest
-@@||representativebat.com^$script,xmlhttprequest
-@@||rhetoricaltoes.com^$script,xmlhttprequest
-@@||rottenray.com^$script,xmlhttprequest
-@@||ruralrobin.com^$script,xmlhttprequest
-@@||seashoreturn.com^$script,xmlhttprequest
-@@||secretivestick.com^$script,xmlhttprequest
-@@||sensorsmile.com^$script,xmlhttprequest
-@@||shakyseat.com^$script,xmlhttprequest
-@@||sheltercellar.com^$script,xmlhttprequest
-@@||sickflock.com^$script,xmlhttprequest
-@@||sincereseashore.com^$script,xmlhttprequest
-@@||sinkbooks.com^$script,xmlhttprequest
-@@||slimyseashore.com^$script,xmlhttprequest
-@@||slopesoap.com^$script,xmlhttprequest
-@@||smilingswim.com^$script,xmlhttprequest
-@@||soapsmoke.com^$script,xmlhttprequest
-@@||sombersticks.com^$script,xmlhttprequest
-@@||steepsister.com^$script,xmlhttprequest
-@@||stingsquirrel.com^$script,xmlhttprequest
-@@||strangeclocks.com^$script,xmlhttprequest
-@@||stretchsneeze.com^$script,xmlhttprequest
-@@||strivesquirrel.com^$script,xmlhttprequest
-@@||sugarfriction.com^$script,xmlhttprequest
-@@||swelteringsmile.com^$script,xmlhttprequest
-@@||tangyamount.com^$script,xmlhttprequest
-@@||tastelesstoes.com^$script,xmlhttprequest
-@@||telephoneapparatus.com^$script,xmlhttprequest
-@@||temptteam.com^$script,xmlhttprequest
-@@||thingstaste.com^$script,xmlhttprequest
-@@||tiredthroat.com^$script,xmlhttprequest
-@@||toadtexture.com^$script,xmlhttprequest
-@@||tritebadge.com^$script,xmlhttprequest
-@@||troubleshade.com^$script,xmlhttprequest
-@@||unablehope.com^$script,xmlhttprequest
-@@||unadvisedengine.com^$script,xmlhttprequest
-@@||unwieldyplastic.com^$script,xmlhttprequest
-@@||volatileprofit.com^$script,xmlhttprequest
-@@||volatilerainstorm.com^$script,xmlhttprequest
-@@||wellgroomedhydrant.com^$script,xmlhttprequest
-@@||whispermeeting.com^$script,xmlhttprequest
-@@||wildcommittee.com^$script,xmlhttprequest
-@@||inquisitiveice.com^$script,xmlhttprequest
-@@||secretivesheep.com^$script,xmlhttprequest
-@@||rebelhen.com^$script,xmlhttprequest
-@@||guardeddirection.com^$script,xmlhttprequest
-@@||adamantsnail.com^$script,xmlhttprequest
-@@||scribblestring.com^$script,xmlhttprequest
-@@||serioussuit.com^$script,xmlhttprequest
-@@||losslace.com^$script,xmlhttprequest
-@@||healflowers.com^$script,xmlhttprequest
-@@||exchangedetail.com^$script,xmlhttprequest
-@@||engineertrick.com^$script,xmlhttprequest
-@@||pumpedpancake.com^$script,xmlhttprequest
-@@||shiverscissors.com^$script,xmlhttprequest
-@@||blushingbread.com^$script,xmlhttprequest
-@@||averageactivity.com^$script,xmlhttprequest
-@@||virtualvincent.com^$script,xmlhttprequest
-@@||cushiondrum.com^$script,xmlhttprequest
-@@||combativecar.com^$script,xmlhttprequest
-@@||vengefulgrass.com^$script,xmlhttprequest
-@@||painstakingpickle.com^$script,xmlhttprequest
-@@||pocketfaucet.com^$script,xmlhttprequest
-@@||stretchsquirrel.com^$script,xmlhttprequest
-@@||unbecominglamp.com^$script,xmlhttprequest
-@@||restrainstorm.com^$script,xmlhttprequest
-@@||spookyskate.com^$script,xmlhttprequest
+! FD-3979
 @@||2znp09oa.com^$script,xmlhttprequest
 @@||4jnzhl0d0.com^$script,xmlhttprequest
 @@||5mcwl.pw^$script,xmlhttprequest
@@ -1556,6 +1428,8 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||abstractedauthority.com^$script,xmlhttprequest
 @@||absurdapple.com^$script,xmlhttprequest
 @@||absurdwater.com^$script,xmlhttprequest
+@@||acceptableauthority.com^$script,xmlhttprequest
+@@||achieverknee.com^$script,xmlhttprequest
 @@||acidpigs.com^$script,xmlhttprequest
 @@||acousticairplane.com^$script,xmlhttprequest
 @@||acousticsapparel.com^$script,xmlhttprequest
@@ -1564,6 +1438,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||actoramusement.com^$script,xmlhttprequest
 @@||actuallysheep.com^$script,xmlhttprequest
 @@||actuallysnake.com^$script,xmlhttprequest
+@@||adamantsnail.com^$script,xmlhttprequest
 @@||additionant.com^$script,xmlhttprequest
 @@||adorableanger.com^$script,xmlhttprequest
 @@||advertisementafterthought.com^$script,xmlhttprequest
@@ -1578,17 +1453,21 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||alikeaddition.com^$script,xmlhttprequest
 @@||alikearm.com^$script,xmlhttprequest
 @@||aliveachiever.com^$script,xmlhttprequest
+@@||aliveappliance.com^$script,xmlhttprequest
 @@||alleyskin.com^$script,xmlhttprequest
 @@||allowmailbox.com^$script,xmlhttprequest
+@@||alluringbucket.com^$script,xmlhttprequest
 @@||aloofmetal.com^$script,xmlhttprequest
 @@||aloofvest.com^$script,xmlhttprequest
 @@||alpineactor.com^$script,xmlhttprequest
 @@||amazingairplane.com^$script,xmlhttprequest
 @@||ambiguousalarm.com^$script,xmlhttprequest
 @@||ambiguousanger.com^$script,xmlhttprequest
+@@||ambiguousdinosaurs.com^$script,xmlhttprequest
 @@||ambiguousincome.com^$script,xmlhttprequest
 @@||ambiguousquilt.com^$script,xmlhttprequest
 @@||ambitiousagreement.com^$script,xmlhttprequest
+@@||ambitiousanimal.com^$script,xmlhttprequest
 @@||amusementmorning.com^$script,xmlhttprequest
 @@||amusinggirls.com^$script,xmlhttprequest
 @@||ancientact.com^$script,xmlhttprequest
@@ -1617,12 +1496,16 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||automaticairplane.com^$script,xmlhttprequest
 @@||automaticflock.com^$script,xmlhttprequest
 @@||automaticside.com^$script,xmlhttprequest
+@@||avalonalbum.com^$script,xmlhttprequest
+@@||averageactivity.com^$script,xmlhttprequest
 @@||averageamusement.com^$script,xmlhttprequest
 @@||awakebird.com^$script,xmlhttprequest
 @@||awarealley.com^$script,xmlhttprequest
 @@||awesomeagreement.com^$script,xmlhttprequest
+@@||awesomeattack.com^$script,xmlhttprequest
 @@||awzbijw.com^$script,xmlhttprequest
 @@||axiomaticalley.com^$script,xmlhttprequest
+@@||badgeboat.com^$script,xmlhttprequest
 @@||bagbeam.com^$script,xmlhttprequest
 @@||balancemailbox.com^$script,xmlhttprequest
 @@||balloonbit.com^$script,xmlhttprequest
@@ -1651,9 +1534,12 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||bhcumsc.com^$script,xmlhttprequest
 @@||billowybead.com^$script,xmlhttprequest
 @@||bitterbear.com^$script,xmlhttprequest
+@@||bizarrebaseball.com^$script,xmlhttprequest
+@@||blesspizzas.com^$script,xmlhttprequest
 @@||blotburn.com^$script,xmlhttprequest
 @@||blushingbeast.com^$script,xmlhttprequest
 @@||blushingboundary.com^$script,xmlhttprequest
+@@||blushingbread.com^$script,xmlhttprequest
 @@||blushingwar.com^$script,xmlhttprequest
 @@||boilingbeetle.com^$script,xmlhttprequest
 @@||boilingcredit.com^$script,xmlhttprequest
@@ -1665,6 +1551,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||boringcoat.com^$script,xmlhttprequest
 @@||bouncyfront.com^$script,xmlhttprequest
 @@||bouncyproperty.com^$script,xmlhttprequest
+@@||boundlessveil.com^$script,xmlhttprequest
 @@||brandybison.com^$script,xmlhttprequest
 @@||brashbead.com^$script,xmlhttprequest
 @@||bravebone.com^$script,xmlhttprequest
@@ -1678,6 +1565,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||broadcastbed.com^$script,xmlhttprequest
 @@||broaddoor.com^$script,xmlhttprequest
 @@||brothersbucket.com^$script,xmlhttprequest
+@@||brotherslocket.com^$script,xmlhttprequest
 @@||bruisebaseball.com^$script,xmlhttprequest
 @@||brushdaughter.com^$script,xmlhttprequest
 @@||btez8.xyz^$script,xmlhttprequest
@@ -1687,6 +1575,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||burgerbrush.com^$script,xmlhttprequest
 @@||burnbubble.com^$script,xmlhttprequest
 @@||burstblade.com^$script,xmlhttprequest
+@@||bushesbag.com^$script,xmlhttprequest
 @@||businessbells.com^$script,xmlhttprequest
 @@||bustlinganimal.com^$script,xmlhttprequest
 @@||bustlingbath.com^$script,xmlhttprequest
@@ -1700,6 +1589,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||callousbrake.com^$script,xmlhttprequest
 @@||calmcactus.com^$script,xmlhttprequest
 @@||calmcough.com^$script,xmlhttprequest
+@@||calypsocapsule.com^$script,xmlhttprequest
 @@||cannonjudo.com^$script,xmlhttprequest
 @@||cannontwin.com^$script,xmlhttprequest
 @@||capablecows.com^$script,xmlhttprequest
@@ -1707,18 +1597,23 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||capriciouscorn.com^$script,xmlhttprequest
 @@||capsquirrel.com^$script,xmlhttprequest
 @@||carefuldolls.com^$script,xmlhttprequest
+@@||carelesshat.com^$script,xmlhttprequest
 @@||caringcast.com^$script,xmlhttprequest
 @@||caringzinc.com^$script,xmlhttprequest
 @@||carpentercomparison.com^$script,xmlhttprequest
 @@||carriagecan.com^$script,xmlhttprequest
 @@||carscannon.com^$script,xmlhttprequest
+@@||castcream.com^$script,xmlhttprequest
 @@||catalogdiscovery.com^$script,xmlhttprequest
 @@||catschickens.com^$script,xmlhttprequest
 @@||causecherry.com^$script,xmlhttprequest
 @@||cautiouscrate.com^$script,xmlhttprequest
 @@||cautiouscredit.com^$script,xmlhttprequest
+@@||cavecurtain.com^$script,xmlhttprequest
 @@||chairscrack.com^$script,xmlhttprequest
 @@||channelcamp.com^$script,xmlhttprequest
+@@||charmingcough.com^$script,xmlhttprequest
+@@||charmingplate.com^$script,xmlhttprequest
 @@||cheerfulrange.com^$script,xmlhttprequest
 @@||chemicalcoach.com^$script,xmlhttprequest
 @@||chemicalsnake.com^$script,xmlhttprequest
@@ -1731,14 +1626,18 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||childlikeform.com^$script,xmlhttprequest
 @@||chinsnakes.com^$script,xmlhttprequest
 @@||chunkycactus.com^$script,xmlhttprequest
+@@||cinemabonus.com^$script,xmlhttprequest
 @@||circlelevel.com^$script,xmlhttprequest
 @@||clamcelery.com^$script,xmlhttprequest
+@@||clammychicken.com^$script,xmlhttprequest
 @@||clammytree.com^$script,xmlhttprequest
 @@||clearcabbage.com^$script,xmlhttprequest
 @@||cloisteredcord.com^$script,xmlhttprequest
 @@||cloisteredhydrant.com^$script,xmlhttprequest
 @@||closedcows.com^$script,xmlhttprequest
 @@||cloudsdestruction.com^$script,xmlhttprequest
+@@||clovercabbage.com^$script,xmlhttprequest
+@@||clumsycar.com^$script,xmlhttprequest
 @@||clumsyrock.com^$script,xmlhttprequest
 @@||coachquartz.com^$script,xmlhttprequest
 @@||coatfood.com^$script,xmlhttprequest
@@ -1746,6 +1645,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||colossalchance.com^$script,xmlhttprequest
 @@||colossalclouds.com^$script,xmlhttprequest
 @@||colossalcoat.com^$script,xmlhttprequest
+@@||combativecar.com^$script,xmlhttprequest
 @@||combativedetail.com^$script,xmlhttprequest
 @@||combbelief.com^$script,xmlhttprequest
 @@||combbit.com^$script,xmlhttprequest
@@ -1757,7 +1657,9 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||completecabbage.com^$script,xmlhttprequest
 @@||complextoad.com^$script,xmlhttprequest
 @@||conceptualizereading.com^$script,xmlhttprequest
+@@||concernedchickens.com^$script,xmlhttprequest
 @@||concernedcondition.com^$script,xmlhttprequest
+@@||concerneddrink.com^$script,xmlhttprequest
 @@||conditionchange.com^$script,xmlhttprequest
 @@||conditioncrush.com^$script,xmlhttprequest
 @@||confesschairs.com^$script,xmlhttprequest
@@ -1766,6 +1668,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||consciousdirt.com^$script,xmlhttprequest
 @@||consistpotato.com^$script,xmlhttprequest
 @@||controlswim.com^$script,xmlhttprequest
+@@||cookchalk.com^$script,xmlhttprequest
 @@||coordinatedbedroom.com^$script,xmlhttprequest
 @@||coordinatedcoat.com^$script,xmlhttprequest
 @@||coordinatedcub.com^$script,xmlhttprequest
@@ -1775,13 +1678,17 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||copytitle.com^$script,xmlhttprequest
 @@||correctchaos.com^$script,xmlhttprequest
 @@||cosmosjackson.com^$script,xmlhttprequest
+@@||courageousbaby.com^$script,xmlhttprequest
 @@||coverapparatus.com^$script,xmlhttprequest
+@@||cowscrayon.com^$script,xmlhttprequest
 @@||crabbychin.com^$script,xmlhttprequest
 @@||crafthenry.com^$script,xmlhttprequest
 @@||cratecamera.com^$script,xmlhttprequest
 @@||crawlclocks.com^$script,xmlhttprequest
 @@||crayoncompetition.com^$script,xmlhttprequest
+@@||creditcreature.com^$script,xmlhttprequest
 @@||critictruck.com^$script,xmlhttprequest
+@@||crowdedmass.com^$script,xmlhttprequest
 @@||cubchannel.com^$script,xmlhttprequest
 @@||culturedcrayon.com^$script,xmlhttprequest
 @@||cumbersomecake.com^$script,xmlhttprequest
@@ -1791,7 +1698,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||curlycannon.com^$script,xmlhttprequest
 @@||currentcollar.com^$script,xmlhttprequest
 @@||curtaincows.com^$script,xmlhttprequest
+@@||curvedhoney.com^$script,xmlhttprequest
+@@||curvedsquirrel.com^$script,xmlhttprequest
+@@||curvycord.com^$script,xmlhttprequest
 @@||curvycry.com^$script,xmlhttprequest
+@@||cushiondrum.com^$script,xmlhttprequest
 @@||cushionpig.com^$script,xmlhttprequest
 @@||cutecalculator.com^$script,xmlhttprequest
 @@||cutechin.com^$script,xmlhttprequest
@@ -1799,6 +1710,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||cutepopcorn.com^$script,xmlhttprequest
 @@||cuteturkey.com^$script,xmlhttprequest
 @@||damageddistance.com^$script,xmlhttprequest
+@@||damagedroll.com^$script,xmlhttprequest
 @@||damdoor.com^$script,xmlhttprequest
 @@||dampdock.com^$script,xmlhttprequest
 @@||dancemistake.com^$script,xmlhttprequest
@@ -1807,9 +1719,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||dashingdirt.com^$script,xmlhttprequest
 @@||dashingdrop.com^$script,xmlhttprequest
 @@||dashingsweater.com^$script,xmlhttprequest
+@@||deadpanmarble.com^$script,xmlhttprequest
 @@||deadpantruck.com^$script,xmlhttprequest
 @@||deafeningdock.com^$script,xmlhttprequest
 @@||debonairdust.com^$script,xmlhttprequest
+@@||debonairtree.com^$script,xmlhttprequest
 @@||debonairway.com^$script,xmlhttprequest
 @@||decidedrum.com^$script,xmlhttprequest
 @@||decisivebase.com^$script,xmlhttprequest
@@ -1821,6 +1735,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||defectivesun.com^$script,xmlhttprequest
 @@||defiantrice.com^$script,xmlhttprequest
 @@||delegatediscussion.com^$script,xmlhttprequest
+@@||delicateducks.com^$script,xmlhttprequest
 @@||delightfulhour.com^$script,xmlhttprequest
 @@||desertedbreath.com^$script,xmlhttprequest
 @@||desertedrat.com^$script,xmlhttprequest
@@ -1832,8 +1747,10 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||detailedkitten.com^$script,xmlhttprequest
 @@||detectdinner.com^$script,xmlhttprequest
 @@||detectdiscovery.com^$script,xmlhttprequest
+@@||differentcoat.com^$script,xmlhttprequest
 @@||difficultfog.com^$script,xmlhttprequest
 @@||diplomahawaii.com^$script,xmlhttprequest
+@@||direfuldesk.com^$script,xmlhttprequest
 @@||discreetfield.com^$script,xmlhttprequest
 @@||dispensablestranger.com^$script,xmlhttprequest
 @@||distancefinger.com^$script,xmlhttprequest
@@ -1857,6 +1774,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||drabsize.com^$script,xmlhttprequest
 @@||draconiancurve.com^$script,xmlhttprequest
 @@||dragzebra.com^$script,xmlhttprequest
+@@||drainpaste.com^$script,xmlhttprequest
 @@||dramaticcondition.com^$script,xmlhttprequest
 @@||dramaticdirection.com^$script,xmlhttprequest
 @@||drawermice.com^$script,xmlhttprequest
@@ -1866,6 +1784,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||driverequest.com^$script,xmlhttprequest
 @@||drivingdirt.com^$script,xmlhttprequest
 @@||drydrum.com^$script,xmlhttprequest
+@@||dustydime.com^$script,xmlhttprequest
 @@||dustyrabbits.com^$script,xmlhttprequest
 @@||dustywave.com^$script,xmlhttprequest
 @@||earthquakeend.com^$script,xmlhttprequest
@@ -1892,7 +1811,9 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||endurableshop.com^$script,xmlhttprequest
 @@||energeticexample.com^$script,xmlhttprequest
 @@||energeticladybug.com^$script,xmlhttprequest
+@@||engineertrick.com^$script,xmlhttprequest
 @@||enormousearth.com^$script,xmlhttprequest
+@@||enormousfoot.com^$script,xmlhttprequest
 @@||entertainingeyes.com^$script,xmlhttprequest
 @@||enthusiasticdad.com^$script,xmlhttprequest
 @@||enthusiasticring.com^$script,xmlhttprequest
@@ -1901,16 +1822,19 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||erraticreaction.com^$script,xmlhttprequest
 @@||evaluateend.com^$script,xmlhttprequest
 @@||evanescentedge.com^$script,xmlhttprequest
+@@||exchangedetail.com^$script,xmlhttprequest
 @@||exclusivebrass.com^$script,xmlhttprequest
 @@||expansioneggnog.com^$script,xmlhttprequest
 @@||experienceeggs.com^$script,xmlhttprequest
 @@||exuberanteyes.com^$script,xmlhttprequest
 @@||exuberantsoda.com^$script,xmlhttprequest
+@@||exultantdrop.com^$script,xmlhttprequest
 @@||facilitategrandfather.com^$script,xmlhttprequest
 @@||fadedprofit.com^$script,xmlhttprequest
 @@||fadedsnow.com^$script,xmlhttprequest
 @@||fadewaves.com^$script,xmlhttprequest
 @@||faintflag.com^$script,xmlhttprequest
+@@||fairfeeling.com^$script,xmlhttprequest
 @@||fallaciousfifth.com^$script,xmlhttprequest
 @@||falsefeet.com^$script,xmlhttprequest
 @@||falseframe.com^$script,xmlhttprequest
@@ -1929,6 +1853,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||faultyfowl.com^$script,xmlhttprequest
 @@||fearfowl.com^$script,xmlhttprequest
 @@||fearfulfish.com^$script,xmlhttprequest
+@@||fearfulmint.com^$script,xmlhttprequest
 @@||fearlessfaucet.com^$script,xmlhttprequest
 @@||feebleshock.com^$script,xmlhttprequest
 @@||fifthborder.com^$script,xmlhttprequest
@@ -1940,11 +1865,14 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||flockflame.com^$script,xmlhttprequest
 @@||floodprincipal.com^$script,xmlhttprequest
 @@||flowerstreatment.com^$script,xmlhttprequest
+@@||flowerycreature.com^$script,xmlhttprequest
+@@||floweryfact.com^$script,xmlhttprequest
 @@||floweryoperation.com^$script,xmlhttprequest
 @@||foamyfood.com^$script,xmlhttprequest
 @@||forecasttiger.com^$script,xmlhttprequest
 @@||foregoingfowl.com^$script,xmlhttprequest
 @@||forgetfulflowers.com^$script,xmlhttprequest
+@@||fortunatemark.com^$script,xmlhttprequest
 @@||fourarithmetic.com^$script,xmlhttprequest
 @@||fourfork.com^$script,xmlhttprequest
 @@||frailflock.com^$script,xmlhttprequest
@@ -1961,22 +1889,27 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||fumblingselection.com^$script,xmlhttprequest
 @@||functionalcrown.com^$script,xmlhttprequest
 @@||funnyairplane.com^$script,xmlhttprequest
+@@||furryfork.com^$script,xmlhttprequest
 @@||furryhorses.com^$script,xmlhttprequest
 @@||futuristicapparatus.com^$script,xmlhttprequest
 @@||futuristicfairies.com^$script,xmlhttprequest
 @@||futuristicfifth.com^$script,xmlhttprequest
 @@||futuristicfold.com^$script,xmlhttprequest
 @@||fuzzybasketball.com^$script,xmlhttprequest
+@@||fuzzyerror.com^$script,xmlhttprequest
 @@||fuzzyflavor.com^$script,xmlhttprequest
 @@||fuzzyweather.com^$script,xmlhttprequest
 @@||gammamaximum.com^$script,xmlhttprequest
 @@||gaudybeginner.com^$script,xmlhttprequest
+@@||generalprose.com^$script,xmlhttprequest
 @@||giddycoat.com^$script,xmlhttprequest
 @@||giftedglue.com^$script,xmlhttprequest
 @@||giftedthumb.com^$script,xmlhttprequest
 @@||giraffepiano.com^$script,xmlhttprequest
+@@||givevacation.com^$script,xmlhttprequest
 @@||gleamingtrade.com^$script,xmlhttprequest
 @@||glisteningguide.com^$script,xmlhttprequest
+@@||glisteningsign.com^$script,xmlhttprequest
 @@||gloriousbeef.com^$script,xmlhttprequest
 @@||gloriouscracker.com^$script,xmlhttprequest
 @@||glossysense.com^$script,xmlhttprequest
@@ -1996,7 +1929,9 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||gripcorn.com^$script,xmlhttprequest
 @@||grouchypush.com^$script,xmlhttprequest
 @@||guaranteelamp.com^$script,xmlhttprequest
+@@||guardeddirection.com^$script,xmlhttprequest
 @@||guardedschool.com^$script,xmlhttprequest
+@@||guidecent.com^$script,xmlhttprequest
 @@||guiltlessbasketball.com^$script,xmlhttprequest
 @@||guitargrandmother.com^$script,xmlhttprequest
 @@||gulliblecamp.com^$script,xmlhttprequest
@@ -2004,20 +1939,27 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||h78xb.pw^$script,xmlhttprequest
 @@||habitualhumor.com^$script,xmlhttprequest
 @@||haltingbadge.com^$script,xmlhttprequest
+@@||haltingdivision.com^$script,xmlhttprequest
 @@||haltinggold.com^$script,xmlhttprequest
 @@||hammerhearing.com^$script,xmlhttprequest
 @@||handleteeth.com^$script,xmlhttprequest
 @@||handsomeindustry.com^$script,xmlhttprequest
+@@||handsomelyhealth.com^$script,xmlhttprequest
 @@||handyfield.com^$script,xmlhttprequest
 @@||handyfireman.com^$script,xmlhttprequest
 @@||happenhistory.com^$script,xmlhttprequest
+@@||harborcaption.com^$script,xmlhttprequest
 @@||harborcub.com^$script,xmlhttprequest
 @@||hardtofindmilk.com^$script,xmlhttprequest
 @@||hatefulrequest.com^$script,xmlhttprequest
 @@||hauntlist.com^$script,xmlhttprequest
 @@||headyhook.com^$script,xmlhttprequest
+@@||healflowers.com^$script,xmlhttprequest
+@@||hearinglizards.com^$script,xmlhttprequest
+@@||heartbreakingmind.com^$script,xmlhttprequest
 @@||hearthorn.com^$script,xmlhttprequest
 @@||heavyplayground.com^$script,xmlhttprequest
+@@||helpcollar.com^$script,xmlhttprequest
 @@||hesitanttoothpaste.com^$script,xmlhttprequest
 @@||hfc195b.com^$script,xmlhttprequest
 @@||highfalutinbox.com^$script,xmlhttprequest
@@ -2037,6 +1979,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||hoplaugh.com^$script,xmlhttprequest
 @@||horsenectar.com^$script,xmlhttprequest
 @@||hosenews.com^$script,xmlhttprequest
+@@||hospitablehall.com^$script,xmlhttprequest
 @@||humdrumhat.com^$script,xmlhttprequest
 @@||hurtgrape.com^$script,xmlhttprequest
 @@||hurtteeth.com^$script,xmlhttprequest
@@ -2049,6 +1992,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||illfatedsnail.com^$script,xmlhttprequest
 @@||illustriousoatmeal.com^$script,xmlhttprequest
 @@||immensehoney.com^$script,xmlhttprequest
+@@||imminentshake.com^$script,xmlhttprequest
 @@||imperfectinstrument.com^$script,xmlhttprequest
 @@||importedincrease.com^$script,xmlhttprequest
 @@||importedinsect.com^$script,xmlhttprequest
@@ -2061,14 +2005,18 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||impulsehands.com^$script,xmlhttprequest
 @@||impulsejewel.com^$script,xmlhttprequest
 @@||incompetentjoke.com^$script,xmlhttprequest
+@@||inconclusiveaction.com^$script,xmlhttprequest
 @@||infamousstream.com^$script,xmlhttprequest
 @@||informengine.com^$script,xmlhttprequest
 @@||innocentinvention.com^$script,xmlhttprequest
 @@||innocentwax.com^$script,xmlhttprequest
+@@||inputicicle.com^$script,xmlhttprequest
+@@||inquisitiveice.com^$script,xmlhttprequest
 @@||inquisitiveinvention.com^$script,xmlhttprequest
 @@||instrumentinsect.com^$script,xmlhttprequest
 @@||instrumentsponge.com^$script,xmlhttprequest
 @@||intelligentscissors.com^$script,xmlhttprequest
+@@||interestingpot.com^$script,xmlhttprequest
 @@||interestsmoke.com^$script,xmlhttprequest
 @@||internalsink.com^$script,xmlhttprequest
 @@||inventionpassenger.com^$script,xmlhttprequest
@@ -2081,6 +2029,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||jailbulb.com^$script,xmlhttprequest
 @@||jamexistence.com^$script,xmlhttprequest
 @@||joblessdrum.com^$script,xmlhttprequest
+@@||joyoussurprise.com^$script,xmlhttprequest
 @@||justicejudo.com^$script,xmlhttprequest
 @@||k54nw.pw^$script,xmlhttprequest
 @@||kitesquirrel.com^$script,xmlhttprequest
@@ -2103,20 +2052,29 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||lettucecopper.com^$script,xmlhttprequest
 @@||lettucelimit.com^$script,xmlhttprequest
 @@||levelbehavior.com^$script,xmlhttprequest
+@@||liftedknowledge.com^$script,xmlhttprequest
 @@||lightcushion.com^$script,xmlhttprequest
 @@||literatelight.com^$script,xmlhttprequest
 @@||livelumber.com^$script,xmlhttprequest
 @@||livelylaugh.com^$script,xmlhttprequest
+@@||livelyreward.com^$script,xmlhttprequest
 @@||lizardslaugh.com^$script,xmlhttprequest
 @@||longinglettuce.com^$script,xmlhttprequest
+@@||looseloaf.com^$script,xmlhttprequest
 @@||lorenzourban.com^$script,xmlhttprequest
+@@||losslace.com^$script,xmlhttprequest
 @@||loudlunch.com^$script,xmlhttprequest
 @@||lovelydrum.com^$script,xmlhttprequest
+@@||loveseashore.com^$script,xmlhttprequest
 @@||lowlocket.com^$script,xmlhttprequest
 @@||lp3tdqle.com^$script,xmlhttprequest
+@@||ludicrousarch.com^$script,xmlhttprequest
 @@||lumberamount.com^$script,xmlhttprequest
 @@||lumpylumber.com^$script,xmlhttprequest
+@@||lunchroomlock.com^$script,xmlhttprequest
 @@||maddeningpowder.com^$script,xmlhttprequest
+@@||magicaljoin.com^$script,xmlhttprequest
+@@||magicalmonth.com^$script,xmlhttprequest
 @@||magnetairport.com^$script,xmlhttprequest
 @@||magnificentmeasure.com^$script,xmlhttprequest
 @@||magnificentmist.com^$script,xmlhttprequest
@@ -2133,9 +2091,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||materialisticfan.com^$script,xmlhttprequest
 @@||materialisticmark.com^$script,xmlhttprequest
 @@||materialmoon.com^$script,xmlhttprequest
+@@||materialparcel.com^$script,xmlhttprequest
 @@||measurecaption.com^$script,xmlhttprequest
 @@||meatydime.com^$script,xmlhttprequest
 @@||medusasailor.com^$script,xmlhttprequest
+@@||mellowbike.com^$script,xmlhttprequest
 @@||melodicminute.com^$script,xmlhttprequest
 @@||memopilot.com^$script,xmlhttprequest
 @@||memorizeneck.com^$script,xmlhttprequest
@@ -2149,6 +2109,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||mimosamajor.com^$script,xmlhttprequest
 @@||mindlessmark.com^$script,xmlhttprequest
 @@||minormeeting.com^$script,xmlhttprequest
+@@||minuterhythm.com^$script,xmlhttprequest
 @@||miscreantmine.com^$script,xmlhttprequest
 @@||miscreantmoon.com^$script,xmlhttprequest
 @@||mixedreading.com^$script,xmlhttprequest
@@ -2163,14 +2124,18 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||muddledaftermath.com^$script,xmlhttprequest
 @@||mundanepollution.com^$script,xmlhttprequest
 @@||murkymeeting.com^$script,xmlhttprequest
+@@||muteknife.com^$script,xmlhttprequest
+@@||muterange.com^$script,xmlhttprequest
 @@||mysteriousmonth.com^$script,xmlhttprequest
 @@||nappyattack.com^$script,xmlhttprequest
 @@||necessarywax.com^$script,xmlhttprequest
+@@||needyneedle.com^$script,xmlhttprequest
 @@||negotiatetime.com^$script,xmlhttprequest
 @@||neighborlywatch.com^$script,xmlhttprequest
 @@||nervoussummer.com^$script,xmlhttprequest
 @@||niftyhospital.com^$script,xmlhttprequest
 @@||niftyjelly.com^$script,xmlhttprequest
+@@||nightwound.com^$script,xmlhttprequest
 @@||noiselessplough.com^$script,xmlhttprequest
 @@||nonchalantnerve.com^$script,xmlhttprequest
 @@||nondescriptcrowd.com^$script,xmlhttprequest
@@ -2180,17 +2145,21 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||nostalgicknot.com^$script,xmlhttprequest
 @@||nostalgicneed.com^$script,xmlhttprequest
 @@||nothingmethod.com^$script,xmlhttprequest
+@@||nothingunit.com^$script,xmlhttprequest
 @@||nulldiscussion.com^$script,xmlhttprequest
 @@||nullnorth.com^$script,xmlhttprequest
+@@||numerousnest.com^$script,xmlhttprequest
 @@||nuttyorganization.com^$script,xmlhttprequest
 @@||oafishobservation.com^$script,xmlhttprequest
 @@||obscenesidewalk.com^$script,xmlhttprequest
 @@||observantice.com^$script,xmlhttprequest
 @@||omniscientfeeling.com^$script,xmlhttprequest
 @@||omniscientspark.com^$script,xmlhttprequest
+@@||operationchicken.com^$script,xmlhttprequest
 @@||operationkettle.com^$script,xmlhttprequest
 @@||opinionsurprise.com^$script,xmlhttprequest
 @@||oppositeoperation.com^$script,xmlhttprequest
+@@||oppositeparcel.com^$script,xmlhttprequest
 @@||optimallimit.com^$script,xmlhttprequest
 @@||orangeoperation.com^$script,xmlhttprequest
 @@||outstandingincome.com^$script,xmlhttprequest
@@ -2201,6 +2170,8 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||owlsr.us^$script,xmlhttprequest
 @@||paddleangle.com^$script,xmlhttprequest
 @@||pailcrime.com^$script,xmlhttprequest
+@@||painstakingpickle.com^$script,xmlhttprequest
+@@||paintpear.com^$script,xmlhttprequest
 @@||paintplantation.com^$script,xmlhttprequest
 @@||paleleaf.com^$script,xmlhttprequest
 @@||pamelarandom.com^$script,xmlhttprequest
@@ -2211,9 +2182,12 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||parcelcreature.com^$script,xmlhttprequest
 @@||parchedangle.com^$script,xmlhttprequest
 @@||parchedsofa.com^$script,xmlhttprequest
+@@||pardonpopular.com^$script,xmlhttprequest
 @@||parsimoniouspolice.com^$script,xmlhttprequest
 @@||partplanes.com^$script,xmlhttprequest
 @@||passengerpage.com^$script,xmlhttprequest
+@@||passivepolo.com^$script,xmlhttprequest
+@@||pastcabbage.com^$script,xmlhttprequest
 @@||pastepot.com^$script,xmlhttprequest
 @@||pastoralcorn.com^$script,xmlhttprequest
 @@||pastoralroad.com^$script,xmlhttprequest
@@ -2227,6 +2201,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||persuadesupport.com^$script,xmlhttprequest
 @@||petiteumbrella.com^$script,xmlhttprequest
 @@||photographpan.com^$script,xmlhttprequest
+@@||physicalbikes.com^$script,xmlhttprequest
 @@||pietexture.com^$script,xmlhttprequest
 @@||pigspie.com^$script,xmlhttprequest
 @@||pinpointpotato.com^$script,xmlhttprequest
@@ -2234,6 +2209,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||piquantprice.com^$script,xmlhttprequest
 @@||piquantstove.com^$script,xmlhttprequest
 @@||pizzasnut.com^$script,xmlhttprequest
+@@||placeframe.com^$script,xmlhttprequest
 @@||placidperson.com^$script,xmlhttprequest
 @@||plainplayground.com^$script,xmlhttprequest
 @@||plainrequest.com^$script,xmlhttprequest
@@ -2241,15 +2217,22 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||plantdigestion.com^$script,xmlhttprequest
 @@||plantpotato.com^$script,xmlhttprequest
 @@||plantrelation.com^$script,xmlhttprequest
+@@||plausiblecable.com^$script,xmlhttprequest
 @@||pleasantpump.com^$script,xmlhttprequest
 @@||plotparent.com^$script,xmlhttprequest
 @@||plotrabbit.com^$script,xmlhttprequest
 @@||pluckypocket.com^$script,xmlhttprequest
+@@||pluckytaste.com^$script,xmlhttprequest
+@@||pocketfaucet.com^$script,xmlhttprequest
 @@||pocketsonic.com^$script,xmlhttprequest
 @@||podiumpresto.com^$script,xmlhttprequest
+@@||poeticpackage.com^$script,xmlhttprequest
+@@||pointlesspocket.com^$script,xmlhttprequest
 @@||pointlessrifle.com^$script,xmlhttprequest
 @@||poisedpig.com^$script,xmlhttprequest
 @@||politegoldfish.com^$script,xmlhttprequest
+@@||politeplanes.com^$script,xmlhttprequest
+@@||popcornfood.com^$script,xmlhttprequest
 @@||possessivebucket.com^$script,xmlhttprequest
 @@||possibleboats.com^$script,xmlhttprequest
 @@||powderprofit.com^$script,xmlhttprequest
@@ -2262,6 +2245,8 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||previousplayground.com^$script,xmlhttprequest
 @@||previouspotato.com^$script,xmlhttprequest
 @@||pricklydebt.com^$script,xmlhttprequest
+@@||pricklyjourney.com^$script,xmlhttprequest
+@@||pricklypies.com^$script,xmlhttprequest
 @@||pricklyplastic.com^$script,xmlhttprequest
 @@||printerplasma.com^$script,xmlhttprequest
 @@||producecopy.com^$script,xmlhttprequest
@@ -2271,10 +2256,13 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||promopassage.com^$script,xmlhttprequest
 @@||propertypotato.com^$script,xmlhttprequest
 @@||proudprose.com^$script,xmlhttprequest
+@@||psychedelicarithmetic.com^$script,xmlhttprequest
+@@||psychedelicchess.com^$script,xmlhttprequest
 @@||puffyloss.com^$script,xmlhttprequest
 @@||puffypaste.com^$script,xmlhttprequest
 @@||puffypull.com^$script,xmlhttprequest
 @@||puffypurpose.com^$script,xmlhttprequest
+@@||pumpedpancake.com^$script,xmlhttprequest
 @@||punyplant.com^$script,xmlhttprequest
 @@||purchasesuggestion.com^$script,xmlhttprequest
 @@||puzzlingproperty.com^$script,xmlhttprequest
@@ -2283,8 +2271,10 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||quaintborder.com^$script,xmlhttprequest
 @@||quaintcan.com^$script,xmlhttprequest
 @@||quarterbean.com^$script,xmlhttprequest
+@@||questionableobservation.com^$script,xmlhttprequest
 @@||quicksandear.com^$script,xmlhttprequest
 @@||quietknowledge.com^$script,xmlhttprequest
+@@||quillkick.com^$script,xmlhttprequest
 @@||quizzicalzephyr.com^$script,xmlhttprequest
 @@||rabbitbreath.com^$script,xmlhttprequest
 @@||rabbitrifle.com^$script,xmlhttprequest
@@ -2295,8 +2285,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||rainyhand.com^$script,xmlhttprequest
 @@||rainyrule.com^$script,xmlhttprequest
 @@||rainystretch.com^$script,xmlhttprequest
+@@||rainyzinc.com^$script,xmlhttprequest
 @@||rambunctiousvoyage.com^$script,xmlhttprequest
+@@||rampantwork.com^$script,xmlhttprequest
 @@||rangecake.com^$script,xmlhttprequest
+@@||rangeplayground.com^$script,xmlhttprequest
 @@||rapidkittens.com^$script,xmlhttprequest
 @@||raresummer.com^$script,xmlhttprequest
 @@||readgoldfish.com^$script,xmlhttprequest
@@ -2306,6 +2299,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||readysnails.com^$script,xmlhttprequest
 @@||realizerecess.com^$script,xmlhttprequest
 @@||realizevacation.com^$script,xmlhttprequest
+@@||rebelhen.com^$script,xmlhttprequest
 @@||rebelsubway.com^$script,xmlhttprequest
 @@||receptivebranch.com^$script,xmlhttprequest
 @@||receptiveink.com^$script,xmlhttprequest
@@ -2318,15 +2312,21 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||referdriving.com^$script,xmlhttprequest
 @@||reflectivereward.com^$script,xmlhttprequest
 @@||regularplants.com^$script,xmlhttprequest
+@@||regulatesleet.com^$script,xmlhttprequest
+@@||rehabilitatereason.com^$script,xmlhttprequest
 @@||rejectfairies.com^$script,xmlhttprequest
 @@||repeatsweater.com^$script,xmlhttprequest
 @@||replaceroute.com^$script,xmlhttprequest
+@@||representativebat.com^$script,xmlhttprequest
 @@||representativeray.com^$script,xmlhttprequest
 @@||resolutekey.com^$script,xmlhttprequest
 @@||resonantbrush.com^$script,xmlhttprequest
 @@||resonantrock.com^$script,xmlhttprequest
 @@||respectrain.com^$script,xmlhttprequest
+@@||restrainstorm.com^$script,xmlhttprequest
 @@||rhetoricalloss.com^$script,xmlhttprequest
+@@||rhetoricaltoes.com^$script,xmlhttprequest
+@@||rhetoricalveil.com^$script,xmlhttprequest
 @@||rhymezebra.com^$script,xmlhttprequest
 @@||rhythmmoney.com^$script,xmlhttprequest
 @@||richreceipt.com^$script,xmlhttprequest
@@ -2334,6 +2334,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||righteouscrayon.com^$script,xmlhttprequest
 @@||rightfulfall.com^$script,xmlhttprequest
 @@||rigidrobin.com^$script,xmlhttprequest
+@@||ringplant.com^$script,xmlhttprequest
 @@||ringplayground.com^$script,xmlhttprequest
 @@||ringsrecord.com^$script,xmlhttprequest
 @@||ritzykey.com^$script,xmlhttprequest
@@ -2342,9 +2343,12 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||rodeopolice.com^$script,xmlhttprequest
 @@||roofrelation.com^$script,xmlhttprequest
 @@||roomyreading.com^$script,xmlhttprequest
+@@||roseincome.com^$script,xmlhttprequest
+@@||rottenray.com^$script,xmlhttprequest
 @@||roughroll.com^$script,xmlhttprequest
 @@||ruddycast.com^$script,xmlhttprequest
 @@||ruddywash.com^$script,xmlhttprequest
+@@||ruralrobin.com^$script,xmlhttprequest
 @@||rusticprice.com^$script,xmlhttprequest
 @@||ruthlessdegree.com^$script,xmlhttprequest
 @@||ruthlessmilk.com^$script,xmlhttprequest
@@ -2367,7 +2371,9 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||scaredcomfort.com^$script,xmlhttprequest
 @@||scaredsidewalk.com^$script,xmlhttprequest
 @@||scaredsnake.com^$script,xmlhttprequest
+@@||scaredsnakes.com^$script,xmlhttprequest
 @@||scaredstory.com^$script,xmlhttprequest
+@@||scaredswing.com^$script,xmlhttprequest
 @@||scarfsmash.com^$script,xmlhttprequest
 @@||scarfthought.com^$script,xmlhttprequest
 @@||scatteredheat.com^$script,xmlhttprequest
@@ -2382,11 +2388,15 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||screechingfurniture.com^$script,xmlhttprequest
 @@||screechingslip.com^$script,xmlhttprequest
 @@||screechingstove.com^$script,xmlhttprequest
+@@||scribblestring.com^$script,xmlhttprequest
 @@||scrollservice.com^$script,xmlhttprequest
 @@||scrubswim.com^$script,xmlhttprequest
 @@||seashoresociety.com^$script,xmlhttprequest
+@@||seashoreturn.com^$script,xmlhttprequest
 @@||seatsmoke.com^$script,xmlhttprequest
 @@||secretivecub.com^$script,xmlhttprequest
+@@||secretivesheep.com^$script,xmlhttprequest
+@@||secretivestick.com^$script,xmlhttprequest
 @@||secretspiders.com^$script,xmlhttprequest
 @@||secretturtle.com^$script,xmlhttprequest
 @@||seedscissors.com^$script,xmlhttprequest
@@ -2394,19 +2404,26 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||selectivesummer.com^$script,xmlhttprequest
 @@||selfishsea.com^$script,xmlhttprequest
 @@||selfishsnake.com^$script,xmlhttprequest
+@@||sensorsmile.com^$script,xmlhttprequest
 @@||separateshow.com^$script,xmlhttprequest
 @@||separatesilver.com^$script,xmlhttprequest
+@@||serioussuit.com^$script,xmlhttprequest
+@@||serpentshampoo.com^$script,xmlhttprequest
 @@||shaggytank.com^$script,xmlhttprequest
 @@||shakegoldfish.com^$script,xmlhttprequest
 @@||shakesuggestion.com^$script,xmlhttprequest
+@@||shakyseat.com^$script,xmlhttprequest
 @@||shakysurprise.com^$script,xmlhttprequest
 @@||shakytaste.com^$script,xmlhttprequest
 @@||shallowblade.com^$script,xmlhttprequest
 @@||shallowsmile.com^$script,xmlhttprequest
 @@||sharppatch.com^$script,xmlhttprequest
+@@||sheltercellar.com^$script,xmlhttprequest
 @@||shesubscriptions.com^$script,xmlhttprequest
 @@||shinesavage.com^$script,xmlhttprequest
 @@||shinestuart.com^$script,xmlhttprequest
+@@||shirtsidewalk.com^$script,xmlhttprequest
+@@||shiverscissors.com^$script,xmlhttprequest
 @@||shockinggrass.com^$script,xmlhttprequest
 @@||shockingship.com^$script,xmlhttprequest
 @@||shopbreakfast.com^$script,xmlhttprequest
@@ -2415,6 +2432,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||shrillspoon.com^$script,xmlhttprequest
 @@||shutseashore.com^$script,xmlhttprequest
 @@||shyseed.com^$script,xmlhttprequest
+@@||sickflock.com^$script,xmlhttprequest
 @@||sicksmash.com^$script,xmlhttprequest
 @@||silentcredit.com^$script,xmlhttprequest
 @@||silentwrench.com^$script,xmlhttprequest
@@ -2424,8 +2442,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||simplesidewalk.com^$script,xmlhttprequest
 @@||simplisticstem.com^$script,xmlhttprequest
 @@||sincerebuffalo.com^$script,xmlhttprequest
+@@||sincereseashore.com^$script,xmlhttprequest
 @@||sinceresubstance.com^$script,xmlhttprequest
 @@||singroot.com^$script,xmlhttprequest
+@@||sinkbooks.com^$script,xmlhttprequest
+@@||sixauthority.com^$script,xmlhttprequest
 @@||sixscissors.com^$script,xmlhttprequest
 @@||sizesidewalk.com^$script,xmlhttprequest
 @@||skillfuldrop.com^$script,xmlhttprequest
@@ -2434,16 +2455,21 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||sleepcartoon.com^$script,xmlhttprequest
 @@||slimopinion.com^$script,xmlhttprequest
 @@||slimyscarf.com^$script,xmlhttprequest
+@@||slimyseashore.com^$script,xmlhttprequest
 @@||slipperysack.com^$script,xmlhttprequest
+@@||slopesoap.com^$script,xmlhttprequest
 @@||sloppycalculator.com^$script,xmlhttprequest
 @@||sloppyearthquake.com^$script,xmlhttprequest
 @@||smallbeginner.com^$script,xmlhttprequest
 @@||smashshoe.com^$script,xmlhttprequest
 @@||smashsurprise.com^$script,xmlhttprequest
+@@||smilingcattle.com^$script,xmlhttprequest
 @@||smilingshake.com^$script,xmlhttprequest
+@@||smilingswim.com^$script,xmlhttprequest
 @@||smilingwaves.com^$script,xmlhttprequest
 @@||smoggysnakes.com^$script,xmlhttprequest
 @@||smoggystation.com^$script,xmlhttprequest
+@@||snailscart.com^$script,xmlhttprequest
 @@||snailsengine.com^$script,xmlhttprequest
 @@||snakemineral.com^$script,xmlhttprequest
 @@||snakesshop.com^$script,xmlhttprequest
@@ -2451,11 +2477,13 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||sneakystew.com^$script,xmlhttprequest
 @@||snoresmile.com^$script,xmlhttprequest
 @@||soaprange.com^$script,xmlhttprequest
+@@||soapsmoke.com^$script,xmlhttprequest
 @@||soggysponge.com^$script,xmlhttprequest
 @@||somberattack.com^$script,xmlhttprequest
 @@||somberscarecrow.com^$script,xmlhttprequest
 @@||sombersea.com^$script,xmlhttprequest
 @@||sombersquirrel.com^$script,xmlhttprequest
+@@||sombersticks.com^$script,xmlhttprequest
 @@||somberstructure.com^$script,xmlhttprequest
 @@||sombersurprise.com^$script,xmlhttprequest
 @@||songssmoke.com^$script,xmlhttprequest
@@ -2476,12 +2504,16 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||specialscissors.com^$script,xmlhttprequest
 @@||specialsnake.com^$script,xmlhttprequest
 @@||specialstatement.com^$script,xmlhttprequest
+@@||spectacularstamp.com^$script,xmlhttprequest
 @@||spellsalsa.com^$script,xmlhttprequest
 @@||spendpest.com^$script,xmlhttprequest
 @@||spidersboats.com^$script,xmlhttprequest
 @@||spiffymachine.com^$script,xmlhttprequest
+@@||spikyslave.com^$script,xmlhttprequest
 @@||spirebaboon.com^$script,xmlhttprequest
+@@||spitefulstop.com^$script,xmlhttprequest
 @@||spongesalt.com^$script,xmlhttprequest
+@@||spookyskate.com^$script,xmlhttprequest
 @@||spookysleet.com^$script,xmlhttprequest
 @@||spookyslope.com^$script,xmlhttprequest
 @@||spoonsilk.com^$script,xmlhttprequest
@@ -2513,10 +2545,12 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||stat.pet^$script,xmlhttprequest
 @@||statementsweater.com^$script,xmlhttprequest
 @@||statuesquebrush.com^$script,xmlhttprequest
+@@||stayaction.com^$script,xmlhttprequest
 @@||steadfastseat.com^$script,xmlhttprequest
 @@||steadfastsound.com^$script,xmlhttprequest
 @@||steadfastsystem.com^$script,xmlhttprequest
 @@||steadycopper.com^$script,xmlhttprequest
+@@||steepsister.com^$script,xmlhttprequest
 @@||steepsquirrel.com^$script,xmlhttprequest
 @@||stepplane.com^$script,xmlhttprequest
 @@||stereoproxy.com^$script,xmlhttprequest
@@ -2526,6 +2560,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||stickysheet.com^$script,xmlhttprequest
 @@||stiffgame.com^$script,xmlhttprequest
 @@||stiffstem.com^$script,xmlhttprequest
+@@||stingsquirrel.com^$script,xmlhttprequest
 @@||stockingsneeze.com^$script,xmlhttprequest
 @@||storescissors.com^$script,xmlhttprequest
 @@||storeslope.com^$script,xmlhttprequest
@@ -2533,11 +2568,16 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||stormyachiever.com^$script,xmlhttprequest
 @@||stoveseashore.com^$script,xmlhttprequest
 @@||straightnest.com^$script,xmlhttprequest
+@@||strangeclocks.com^$script,xmlhttprequest
+@@||strangersponge.com^$script,xmlhttprequest
 @@||strangesink.com^$script,xmlhttprequest
 @@||stretchsister.com^$script,xmlhttprequest
+@@||stretchsneeze.com^$script,xmlhttprequest
+@@||stretchsquirrel.com^$script,xmlhttprequest
 @@||stringsmile.com^$script,xmlhttprequest
 @@||stripedburst.com^$script,xmlhttprequest
 @@||strivesidewalk.com^$script,xmlhttprequest
+@@||strivesquirrel.com^$script,xmlhttprequest
 @@||structurerod.com^$script,xmlhttprequest
 @@||stupendousselection.com^$script,xmlhttprequest
 @@||stupendoussleet.com^$script,xmlhttprequest
@@ -2554,6 +2594,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||suddensoda.com^$script,xmlhttprequest
 @@||suddenstructure.com^$script,xmlhttprequest
 @@||sugarcurtain.com^$script,xmlhttprequest
+@@||sugarfriction.com^$script,xmlhttprequest
 @@||sulkybutter.com^$script,xmlhttprequest
 @@||sulkycook.com^$script,xmlhttprequest
 @@||summerobject.com^$script,xmlhttprequest
@@ -2562,9 +2603,11 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||superficialsquare.com^$script,xmlhttprequest
 @@||supervisegoldfish.com^$script,xmlhttprequest
 @@||suspendseed.com^$script,xmlhttprequest
+@@||swankysquare.com^$script,xmlhttprequest
 @@||sweepsheep.com^$script,xmlhttprequest
 @@||sweetslope.com^$script,xmlhttprequest
 @@||swellstocking.com^$script,xmlhttprequest
+@@||swelteringsmile.com^$script,xmlhttprequest
 @@||swimslope.com^$script,xmlhttprequest
 @@||swordgoose.com^$script,xmlhttprequest
 @@||symbolizebeast.com^$script,xmlhttprequest
@@ -2573,29 +2616,38 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||systemizecoat.com^$script,xmlhttprequest
 @@||talentedsteel.com^$script,xmlhttprequest
 @@||tangibleteam.com^$script,xmlhttprequest
+@@||tangyamount.com^$script,xmlhttprequest
 @@||tarttendency.com^$script,xmlhttprequest
 @@||tastefulsongs.com^$script,xmlhttprequest
+@@||tastelesstoes.com^$script,xmlhttprequest
 @@||tastelesstrees.com^$script,xmlhttprequest
+@@||tastesnake.com^$script,xmlhttprequest
 @@||tawdryson.com^$script,xmlhttprequest
 @@||tdzvm.pw^$script,xmlhttprequest
+@@||tediousticket.com^$script,xmlhttprequest
 @@||tedioustooth.com^$script,xmlhttprequest
 @@||teenytinycellar.com^$script,xmlhttprequest
 @@||teenytinyshirt.com^$script,xmlhttprequest
 @@||teenytinytongue.com^$script,xmlhttprequest
 @@||teenyvolcano.com^$script,xmlhttprequest
 @@||teethfan.com^$script,xmlhttprequest
+@@||telephoneapparatus.com^$script,xmlhttprequest
+@@||tempertrick.com^$script,xmlhttprequest
 @@||tempttalk.com^$script,xmlhttprequest
+@@||temptteam.com^$script,xmlhttprequest
 @@||tendersugar.com^$script,xmlhttprequest
 @@||tendertest.com^$script,xmlhttprequest
 @@||terriblethumb.com^$script,xmlhttprequest
 @@||terrificgoose.com^$script,xmlhttprequest
 @@||terrifictooth.com^$script,xmlhttprequest
 @@||testedtouch.com^$script,xmlhttprequest
+@@||teststocking.com^$script,xmlhttprequest
 @@||texturetrick.com^$script,xmlhttprequest
 @@||therapeuticcars.com^$script,xmlhttprequest
 @@||thickticket.com^$script,xmlhttprequest
 @@||thicktrucks.com^$script,xmlhttprequest
 @@||thingsafterthought.com^$script,xmlhttprequest
+@@||thingstaste.com^$script,xmlhttprequest
 @@||thinkablefloor.com^$script,xmlhttprequest
 @@||thinkablerice.com^$script,xmlhttprequest
 @@||thinkabletrick.com^$script,xmlhttprequest
@@ -2608,12 +2660,15 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||threetruck.com^$script,xmlhttprequest
 @@||throattrees.com^$script,xmlhttprequest
 @@||thunderingrose.com^$script,xmlhttprequest
+@@||thunderingtendency.com^$script,xmlhttprequest
 @@||ticketaunt.com^$script,xmlhttprequest
 @@||ticklesign.com^$script,xmlhttprequest
 @@||timeterritory.com^$script,xmlhttprequest
 @@||timetwig.com^$script,xmlhttprequest
 @@||tinytendency.com^$script,xmlhttprequest
+@@||tiredthroat.com^$script,xmlhttprequest
 @@||tiresomethunder.com^$script,xmlhttprequest
+@@||toadtexture.com^$script,xmlhttprequest
 @@||toecircle.com^$script,xmlhttprequest
 @@||toedrawer.com^$script,xmlhttprequest
 @@||toothbrushnote.com^$script,xmlhttprequest
@@ -2627,11 +2682,14 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||trappush.com^$script,xmlhttprequest
 @@||trapteaching.com^$script,xmlhttprequest
 @@||treadbun.com^$script,xmlhttprequest
+@@||tremendousearthquake.com^$script,xmlhttprequest
 @@||tremendousplastic.com^$script,xmlhttprequest
 @@||tremendoustime.com^$script,xmlhttprequest
 @@||tremendoustreatment.com^$script,xmlhttprequest
 @@||trickycelery.com^$script,xmlhttprequest
+@@||tritebadge.com^$script,xmlhttprequest
 @@||troubledtail.com^$script,xmlhttprequest
+@@||troubleshade.com^$script,xmlhttprequest
 @@||truckstomatoes.com^$script,xmlhttprequest
 @@||tumblebirds.com^$script,xmlhttprequest
 @@||tutorthing.com^$script,xmlhttprequest
@@ -2640,10 +2698,15 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||tzwaw.pw^$script,xmlhttprequest
 @@||ubiquitousyard.com^$script,xmlhttprequest
 @@||ultraoranges.com^$script,xmlhttprequest
+@@||unablehope.com^$script,xmlhttprequest
+@@||unadvisedengine.com^$script,xmlhttprequest
 @@||unarmedindustry.com^$script,xmlhttprequest
+@@||unbecomingbikes.com^$script,xmlhttprequest
 @@||unbecominghall.com^$script,xmlhttprequest
+@@||unbecominglamp.com^$script,xmlhttprequest
 @@||uncoveredcircle.com^$script,xmlhttprequest
 @@||uncoveredexpert.com^$script,xmlhttprequest
+@@||understoodocean.com^$script,xmlhttprequest
 @@||unequalbrake.com^$script,xmlhttprequest
 @@||unevenstring.com^$script,xmlhttprequest
 @@||unifyaddition.com^$script,xmlhttprequest
@@ -2657,18 +2720,25 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||unusedstone.com^$script,xmlhttprequest
 @@||unusualtitle.com^$script,xmlhttprequest
 @@||unwieldyhealth.com^$script,xmlhttprequest
+@@||unwieldyplastic.com^$script,xmlhttprequest
 @@||unwrittenspot.com^$script,xmlhttprequest
 @@||usedexample.com^$script,xmlhttprequest
+@@||uselesslumber.com^$script,xmlhttprequest
 @@||uttermosthobbies.com^$script,xmlhttprequest
 @@||vanfireworks.com^$script,xmlhttprequest
+@@||vengefulgrass.com^$script,xmlhttprequest
 @@||venusgloria.com^$script,xmlhttprequest
 @@||verdantanswer.com^$script,xmlhttprequest
 @@||verifyvegetable.com^$script,xmlhttprequest
 @@||verseballs.com^$script,xmlhttprequest
 @@||virgoplato.com^$script,xmlhttprequest
+@@||virtualvincent.com^$script,xmlhttprequest
 @@||vivaciousveil.com^$script,xmlhttprequest
 @@||voicevegetable.com^$script,xmlhttprequest
+@@||volatileprofit.com^$script,xmlhttprequest
+@@||volatilerainstorm.com^$script,xmlhttprequest
 @@||voraciousgrip.com^$script,xmlhttprequest
+@@||voyagepotato.com^$script,xmlhttprequest
 @@||vq1qi.pw^$script,xmlhttprequest
 @@||waggishpig.com^$script,xmlhttprequest
 @@||wakefulcook.com^$script,xmlhttprequest
@@ -2679,7 +2749,9 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||wateryvan.com^$script,xmlhttprequest
 @@||wearbasin.com^$script,xmlhttprequest
 @@||wearywater.com^$script,xmlhttprequest
+@@||wellgroomedapparel.com^$script,xmlhttprequest
 @@||wellgroomedbat.com^$script,xmlhttprequest
+@@||wellgroomedhydrant.com^$script,xmlhttprequest
 @@||wellmadefrog.com^$script,xmlhttprequest
 @@||whineattempt.com^$script,xmlhttprequest
 @@||whirlwealth.com^$script,xmlhttprequest
@@ -2687,8 +2759,10 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||whisperingbadge.com^$script,xmlhttprequest
 @@||whisperingcrib.com^$script,xmlhttprequest
 @@||whisperingflesh.com^$script,xmlhttprequest
+@@||whispermeeting.com^$script,xmlhttprequest
 @@||wigglygeese.com^$script,xmlhttprequest
 @@||wigglyindustry.com^$script,xmlhttprequest
+@@||wildcommittee.com^$script,xmlhttprequest
 @@||wildernesscamera.com^$script,xmlhttprequest
 @@||wirecomic.com^$script,xmlhttprequest
 @@||wistfulflight.com^$script,xmlhttprequest
@@ -2703,6 +2777,7 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||wryfinger.com^$script,xmlhttprequest
 @@||wtaccesscontrol.com^$script,xmlhttprequest
 @@||xovq5nemr.com^$script,xmlhttprequest
+@@||yamstamp.com^$script,xmlhttprequest
 @@||youngmarble.com^$script,xmlhttprequest
 @@||youthfulnoise.com^$script,xmlhttprequest
 @@||zbwp6ghm.com^$script,xmlhttprequest
@@ -2710,49 +2785,6 @@ lxmanga.net#$#abort-current-inline-script $ PopUnder
 @@||zestycrime.com^$script,xmlhttprequest
 @@||zippywind.com^$script,xmlhttprequest
 @@||zlp6s.pw^$script,xmlhttprequest
-@@||avalonalbum.com^$script,xmlhttprequest
-@@||awesomeattack.com^$script,xmlhttprequest
-@@||bizarrebaseball.com^$script,xmlhttprequest
-@@||calypsocapsule.com^$script,xmlhttprequest
-@@||concerneddrink.com^$script,xmlhttprequest
-@@||cookchalk.com^$script,xmlhttprequest
-@@||crowdedmass.com^$script,xmlhttprequest
-@@||curvedsquirrel.com^$script,xmlhttprequest
-@@||fairfeeling.com^$script,xmlhttprequest
-@@||furryfork.com^$script,xmlhttprequest
-@@||glisteningsign.com^$script,xmlhttprequest
-@@||hearinglizards.com^$script,xmlhttprequest
-@@||helpcollar.com^$script,xmlhttprequest
-@@||joyoussurprise.com^$script,xmlhttprequest
-@@||livelyreward.com^$script,xmlhttprequest
-@@||ludicrousarch.com^$script,xmlhttprequest
-@@||magicaljoin.com^$script,xmlhttprequest
-@@||magicalmonth.com^$script,xmlhttprequest
-@@||minuterhythm.com^$script,xmlhttprequest
-@@||nothingunit.com^$script,xmlhttprequest
-@@||pardonpopular.com^$script,xmlhttprequest
-@@||physicalbikes.com^$script,xmlhttprequest
-@@||placeframe.com^$script,xmlhttprequest
-@@||pluckytaste.com^$script,xmlhttprequest
-@@||psychedelicchess.com^$script,xmlhttprequest
-@@||ringplant.com^$script,xmlhttprequest
-@@||scaredsnakes.com^$script,xmlhttprequest
-@@||scaredswing.com^$script,xmlhttprequest
-@@||smilingcattle.com^$script,xmlhttprequest
-@@||snailscart.com^$script,xmlhttprequest
-@@||spikyslave.com^$script,xmlhttprequest
-@@||spitefulstop.com^$script,xmlhttprequest
-@@||teststocking.com^$script,xmlhttprequest
-@@||unbecomingbikes.com^$script,xmlhttprequest
-@@||understoodocean.com^$script,xmlhttprequest
-@@||voyagepotato.com^$script,xmlhttprequest
-@@||yamstamp.com^$script,xmlhttprequest
-@@||achieverknee.com^$script,xmlhttprequest
-@@||pointlesspocket.com^$script,xmlhttprequest
-@@||rhetoricalveil.com^$script,xmlhttprequest
-@@||wellgroomedapparel.com^$script,xmlhttprequest
-@@||tediousticket.com^$script,xmlhttprequest
-@@||vengefulgrass.com^$script,xmlhttprequest
 ! FDA-2994
 @@||fundingchoicesmessages.google.com^$script,xmlhttprequest,subdocument
 ! AakList (Anti-Adblock Killer)
