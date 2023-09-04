@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: p8V0LWXRJ1ZVXEnjn8jRlA
+! Checksum: 1NZSJpE6IQl2NU8vEGXH5w
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202308280829
-! Last Modified: 2023年08月28日 08:29
+! Version: 202309040830
+! Last Modified: 2023年09月04日 08:30
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -409,7 +409,7 @@ ebay.com,ebay.co.uk,ebay.com.au,ebay.ca,ebay.fr,ebay.at,ebay.de,ebay.it,ebay.es#
 ! #CV-737
 cnn.com#$#strip-fetch-query-parameter caid warnermediacdn.com; strip-fetch-query-parameter afid warnermediacdn.com
 ! #CV-1149
-etsy.com#$#hide-if-matches-xpath '//span[text()="vertisement" and "by"]/ancestor::a[contains(@class,"b6")][@data-palette-listing-image]/ancestor-or-self::li[contains(@class,"wt-grid__item-xs-6")]'
+etsy.com#$#hide-if-contains-visible-text '/[aA]d(\\s)*by/' li 'li div.wt-text-caption' 'width: 0px'
 etsy.com##a[href*="listing_page_ad_row"]
 ! #CV-1056
 www.linkedin.com#$#simulate-event-poc click 'xpath(//*[text()="Promoted" or text()="Sponsored" or text()="Dipromosikan" or text()="Propagováno" or text()="Promoveret" or text()="Anzeige" or text()="Promocionado" or text()="促銷內容" or text()="Post sponsorisé" or text()="프로모션" or text()="Post sponsorizzato" or text()="广告" or text()="プロモーション" or text()="Treść promowana" or text()="Patrocinado" or text()="Promovat" or text()="Продвигается" or text()="Marknadsfört" or text()="Nai-promote" or text()="ได้รับการโปรโมท" or text()="Öne çıkarılan içerik" or text()="الترويج"]/ancestor::div[@data-id]//video[@autoplay="autoplay"])' 10
@@ -648,7 +648,7 @@ bing.com#?#li[class="b_algo"]:-abp-has(>h2 + div[class="b_caption"] > [class^="b
 bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #CV-1190
-instacart.com#$#race start; hide-if-matches-xpath './/span[@class][contains(text(),"")]/preceding::div[@aria-label][@role]/div[@style]/parent::div[starts-with(@aria-label,"Product") and @role and @class]/ancestor::*[1]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eligible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-ellligiblee]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-ellllligible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eligiible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eliiggiible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-eliiggible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-elligible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/div[@class]//div[@data-sp-ellligible]/ancestor::div[@aria-label="Product"]/parent::div[1]'; race stop;
+instacart.com#$#hide-if-matches-xpath './/div[@class]//div/@*[contains(name(),"data-fp")]/ancestor::div[@aria-label="Product"]/parent::div[1]'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span[2]/preceding::img[contains(@src,"metadata=copyright")]/ancestor::a[contains(@href,"interaction_id")]/ancestor::header'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span/preceding::img[contains(@src,"metadata=copyright")][contains(@alt,"")][@data-testid]/ancestor::a[contains(@href,"interaction_id")]/ancestor::section[@id][@class][not(@id="store-wrapper") and not(@id="js-app")]'
 instacart.com#$#hide-if-matches-xpath './/*[@class]/span[2]/preceding::img[contains(@src,"cloudfront.net/uploads/image_display_")][@alt]/parent::div[@class][1]'
