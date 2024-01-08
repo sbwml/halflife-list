@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: JW7AcVy+7YCa5ngDtibn6Q
+! Checksum: iP+nclF3TTNROtegohoq8A
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202401010836
-! Last Modified: 2024年01月01日 08:36
+! Version: 202401080834
+! Last Modified: 2024年01月08日 08:34
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -411,6 +411,7 @@ ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay
 ebay.fr#$#hide-if-matches-xpath './/a[@*]/img [@src][contains(@alt,"reconditionné")]/parent::a[@class="srp-banner"]/ancestor::li[contains(@class,"SIMPLE_IMAGE_BANNER")][1]'
 ebay.com,ebay.co.uk,ebay.com.au,ebay.ca,ebay.fr,ebay.at,ebay.de,ebay.it,ebay.es#$#hide-if-contains-visible-text /Sponsored|Anzeigen|Sponsorisé|Sponsorizzati|Sponsorowane|G⁣e⁣s⁣p⁣o⁣n⁣s⁣o⁣r⁣d|Patrocinado/ 'li[class^="carousel__snap-point"][style]>div[data-viewport]>a' 'span'
 ebay.com,ebay.co.uk,ebay.com.au,ebay.ca,ebay.fr,ebay.at,ebay.de,ebay.it,ebay.es#$#hide-if-matches-xpath './/div/h2[contains(@class,"merch")][contains(translate(text(), "SPONSORED", "sponsored"), "sponsored") or contains(translate(text(), "SPONSORISÉS", "sponsorisés"), "sponsorisés") or contains(translate(text(), "PATROCINADOS", "patrocinados"), "patrocinados") or contains(translate(text(), "ANZEIGEN", "anzeigen"), "anzeigen") or contains(translate(text(), "SPONSORIZZATI", "sponzorizzati"), "sponsorizzati") or contains(translate(text(), "SPONSORIZZATE", "sponzorizzate"), "sponsorizzate")]/ancestor::div[contains(@class,"merch")]/parent::div[@class="merch-module"]'
+ebay.com,ebay.com.au,ebay.co.uk,ebay.com.my,ebay.ie,ebay.ca,ebay.at,ebay.de,ebay.ch,ebay.it,ebay.fr,ebay.es,ebay.com.sg,ebay.ph#$#hide-if-matches-xpath './/span[@class="s-item__sponsor"][text()]/ancestor-or-self::li[contains(@class,"s-item")][1]'
 ! #CV-737
 cnn.com#$#strip-fetch-query-parameter caid warnermediacdn.com; strip-fetch-query-parameter afid warnermediacdn.com; strip-fetch-query-parameter conf_csid warnermediacdn.com; strip-fetch-query-parameter app_csid warnermediacdn.com
 ||warnermedia.com/api/v1/events?*=ad-break*^$xmlhttprequest,domain=cnn.com
@@ -640,15 +641,15 @@ topwwnews.com#$#abort-on-property-read localStorage
 ! #CV-697
 thetrendspotter.net,theavtimes.com#$#abort-on-property-read advads_passive_ads
 ! #CV-782
-www.youtube.com#$#skip-video 'video.html5-main-video' './/ytd-player//div[contains(@class,"ad-interrupting")]' 5;simulate-mouse-event 'button.ytp-ad-skip-button-modern$delay=0';simulate-mouse-event 'button.ytp-ad-skip-button-modern'
-www.youtube.com,m.youtube.com,youtube-nocookie.com#$#skip-video 'video.html5-main-video' './/ytd-player//div[contains(@class,"ad-interrupting")]'; simulate-mouse-event 'button.ytp-ad-skip-button,button.ytp-ad-skip-button-modern$delay=0'
-www.youtube.com,m.youtube.com,youtube-nocookie.com#$#skip-video 'video.html5-main-video' './/ytd-player//div[contains(@class,"ad-interrupting")]'; simulate-mouse-event 'button.ytp-ad-skip-button,button.ytp-ad-skip-button$delay=0'
+www.youtube.com#$#skip-video 'video.html5-main-video' './/ytd-player//div[contains(@class,"ad-interrupting")]' 5;simulate-mouse-event 'button.ytp-ad-skip-button-modern'
+www.youtube.com,m.youtube.com,youtube-nocookie.com#$#skip-video 'video.html5-main-video' './/ytd-player//div[contains(@class,"ad-interrupting")]'
 www.youtube.com,m.youtube.com,youtube-nocookie.com#$#skip-video 'video.html5-main-video' './/div[contains(@class,"video-ads")]//div[@class="ytp-ad-player-overlay"]'
 www.youtube.com,m.youtube.com,youtube-nocookie.com#$#skip-video 'video.html5-main-video' './/ytlr-player//div[contains(@class,"ad-interrupting")]'
 music.youtube.com,youtubekids.com#$#json-prune '0.playerResponse.adPlacements 0.playerResponse.playerAds 1.playerResponse.adPlacements 1.playerResponse.playerAds 2.playerResponse.adPlacements 2.playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds ytInitialPlayerResponse.adPlacements ytInitialPlayerResponse.playerAds adPlacements playerAds'
 music.youtube.com,youtubekids.com#$#override-property-read playerResponse.adPlacements undefined;
 music.youtube.com,youtubekids.com#$#override-property-read ytInitialPlayerResponse.adPlacements undefined;
 www.youtube.com#$#hide-if-matches-xpath './/yta-ad-text[@style]/parent::*[contains(@class,"ad-badge")]/ancestor::ytlr-banner-cta-renderer'; hide-if-matches-xpath './/yta-ad-text[@style]/parent::*[contains(@class,"ad-badge")]/ancestor::ytlr-ad-attribution'
+www.youtube.com#$#hide-if-matches-xpath '//*[contains(@class,"ytlr-metadata-badge-renderer--ad-stark")][text()]/ancestor-or-self::ytlr-ad-slot-renderer'
 ! Fallback
 www.youtube.com,m.youtube.com,music.youtube.com,youtube-nocookie.com#$#simulate-mouse-event 'button.ytp-ad-skip-button$delay=0'
 www.youtube.com,m.youtube.com,music.youtube.com,youtube-nocookie.com#$#simulate-mouse-event 'button.ytp-ad-skip-button-modern$delay=0'
@@ -664,12 +665,13 @@ bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #CV-1190
 instacart.com,instacart.ca#$#hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' li 'li div[aria-label="Product"]'
-instacart.com,instacart.ca#$#race start; hide-if-matches-xpath './/div[@class]//div/@*[contains(name(),"data-sp")]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-rp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-qp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-tp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-up-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vvp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vvvp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-fp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-ap-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; race stop;
+instacart.com,instacart.ca#$#race start; hide-if-matches-xpath './/div[@class]//div/@*[contains(name(),"data-sp")]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-rp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-qp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-tp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-up-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vvp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-vvvp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-fp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-ap-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-bp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-cp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; hide-if-matches-xpath './/img[contains(@alt,"Sponsored")]/parent::*[@*[contains(name(),"data-dp-eligible")]]/ancestor::div[@aria-label="Product"]/parent::div[1]'; race stop;
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/span[text()]/preceding::div[@aria-hidden="true"]/preceding::source[@media]/following-sibling::img[contains(@alt,"Sponsored")]/ancestor::*[@id][@class][1]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/div[count(child::span[@style and text()])=2]/parent::div//div[@class][(text()="Picked For You")]/ancestor::div[@class][2]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/div[count(child::*[text()])=2]/parent::div/ancestor::article[@id and @class]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/*[@class]/span/preceding::img[contains(@src,"metadata=copyright")][contains(@alt,"")]/preceding::a[@class][contains(@href,"interaction_id")]/ancestor-or-self::div[@id and @class][1][not(@id="store-wrapper") and not(@id="js-app")]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/video[@disablepictureinpicture]/ancestor-or-self::div[contains(@id,"video-player")]/ancestor::div[@id][@class][1][not(@id="store-wrapper") and not(@id="js-app")]'
+instacart.com,instacart.ca#$#hide-if-matches-xpath './/*[@class]/span/preceding::img[contains(@src,"metadata=copyright")][contains(@alt,"")][@class]/ancestor-or-self::section[@id][1]'
 instacart.com#$#hide-if-matches-xpath './/img[@alt="Sponsored"][contains(@src,"spoonsored_")]/parent::div[1]'; hide-if-matches-xpath './/div[@class]/span/preceding::img[contains(@src,"image_display_banner")][contains(@alt,"Silk")][not(@type)][not(@srcset)]/ancestor-or-self::section[1]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/*[@class]/span[contains(@style,"display:")][2]/ancestor::div[@id="Featured Items"]'
 instacart.com,instacart.ca#$#hide-if-matches-xpath './/div[count(child::span[@style and text()])=2]/parent::div//div[contains(text(),"Recommended for you")]/ancestor::div[@class][1]/ancestor::div[@class][1]'
@@ -691,7 +693,6 @@ ipatriot.com##div[class^="textwidget"] > div[class^="pi_"]
 rightwingnews.com##.z-ad-inline
 procoinnews.com##div[id^="adcovery-"]
 procoinnews.com,dailylol.com#$#override-property-read setTimeout noopFunc; abort-on-property-read document.body.innerHTML; override-property-read Object.defineProperty undefined; hide-if-matches-xpath '//main[@class][@role][@id]/parent::div[1]/ancestor-or-self::div[@class][1]';
-beforeitsnews.com#$#override-property-read setTimeout noopFunc; abort-on-property-read document.body.innerHTML;
 ! #CV-1416
 www.booking.com#$#hide-if-contains-visible-text /Ad/ 'div div[data-testid^="property-card"]' 'span[aria-expanded] span'
 ! #CV-1454
@@ -1358,6 +1359,7 @@ sdamgia.ru#$#abort-on-property-read Object.prototype.getRenderToElement
 ||vgtimes.ru^$xmlhttprequest,header=x-yandex-req-id
 liveball.cc,liveball.uno#$#abort-on-property-read ABNS
 zab.ru#$#abort-on-property-read document.body.style
+1progs.com#$#prevent-listener DOMContentLoaded landingUrl
 ! Prevent auto reload
 24boxing.com.ua,bilshe.com,businessua.com,f1analytic.com,football-ukraine.com,footballgazeta.com,footballtransfer.com.ua,glianec.com,nashamama.com,sportanalytic.com,stravy.net,zdorovia.com.ua#$#abort-current-inline-script setInterval reload
 ! Popup/popunder/clickunder
@@ -1452,6 +1454,7 @@ rainanime.net#$#abort-on-property-read NativeAd
 mercadolibre.com.ar,mercadolibre.com.bo,mercadolivre.com.br,mercadolibre.cl,mercadolibre.com.co,mercadolibre.co.cr,mercadolibre.com.do,mercadolibre.com.ec,mercadolibre.com.gt,mercadolibre.com.hn,mercadolibre.com.mx,mercadolibre.com.ni,mercadolibre.com.pa,mercadolibre.com.py,mercadolibre.com.pe,mercadolibre.com.sv,mercadolibre.com.uy,mercadolibre.com.ve#$#hide-if-matches-xpath './/div[@class="ui-search-item__pub-container"]/preceding::a[@rel="nofollow,sponsored"]/ancestor::div[contains(@class,"ui-search-result__wrapper")]'
 mercadolibre.com.ar,mercadolibre.com.bo,mercadolivre.com.br,mercadolibre.cl,mercadolibre.com.co,mercadolibre.co.cr,mercadolibre.com.do,mercadolibre.com.ec,mercadolibre.com.gt,mercadolibre.com.hn,mercadolibre.com.mx,mercadolibre.com.ni,mercadolibre.com.pa,mercadolibre.com.py,mercadolibre.com.pe,mercadolibre.com.sv,mercadolibre.com.uy,mercadolibre.com.ve#$#hide-if-matches-xpath './/span[@class="ui-search-sidebar-placements__title"][text()]/ancestor::div[@class="ui-search-sidebar-placements title-placements"]/parent::div[@class="ui-search-sidebar-placements__display"]'
 mercadolibre.com.ar,mercadolibre.com.bo,mercadolivre.com.br,mercadolibre.cl,mercadolibre.com.co,mercadolibre.co.cr,mercadolibre.com.do,mercadolibre.com.ec,mercadolibre.com.gt,mercadolibre.com.hn,mercadolibre.com.mx,mercadolibre.com.ni,mercadolibre.com.pa,mercadolibre.com.py,mercadolibre.com.pe,mercadolibre.com.sv,mercadolibre.com.uy,mercadolibre.com.ve#$#hide-if-matches-xpath './/a[@rel="nofollow, sponsored"]//ancestor-or-self::section[@class="ui-recommendations-carousel-wrapper-ref"][1]'
+mercadolibre.com.ar,mercadolibre.com.bo,mercadolivre.com.br,mercadolibre.cl,mercadolibre.com.co,mercadolibre.co.cr,mercadolibre.com.do,mercadolibre.com.ec,mercadolibre.com.gt,mercadolibre.com.hn,mercadolibre.com.mx,mercadolibre.com.ni,mercadolibre.com.pa,mercadolibre.com.py,mercadolibre.com.pe,mercadolibre.com.sv,mercadolibre.com.uy,mercadolibre.com.ve#$#hide-if-matches-xpath './/p[contains(@class,"ui-recommendations-font-color--GRAY")][text()]//ancestor-or-self::section[@class="ui-recommendations-carousel-wrapper-ref"][1]'
 ! *** abp-filters-anti-cv:turkish.txt ***
 ! #CV-717
 yandex.com.tr#$#hide-if-contains reklam li.serp-item 'li.serp-item div.label'
@@ -1491,23 +1494,23 @@ thienhatruyen.com#$#abort-current-inline-script $ pc-popup-2
 sexphimhd.net,gvnvh18.com#$#abort-current-inline-script Math
 xnxx-sex-videos.com#$#abort-current-inline-script setTimeout /window.location/
 xnxx-sex-videos.com#$#override-property-read user_out false
-truyensieuhay.com,quangcaoyenbai.com,khoaiphim.com,phimmoi.io,sieudamtv.net,ephimchill.com,motphimhan.cc,maclife.io,ophimhdvn3.net,thuvienhd.xyz#$#abort-on-property-read document.cookie
+truyensieuhay.com,quangcaoyenbai.com,khoaiphim.com,phimmoi.io,sieudamtv.me,ephimchill.com,motphimhan.cc,maclife.io,ophimhdvn3.net,thuvienhd.xyz,xemtv.tvhayhd.com#$#abort-on-property-read document.cookie
 metruyenchu.com#$#abort-on-property-write window.onclick
 ##[href^="//mage98rquewz.com/"]
-truyentuan.com#$#abort-current-inline-script $ btpop
+truyentuanop.com#$#abort-current-inline-script $ btpop
 player-cdn.com#$#override-property-read detectAdBlockAll noopFunc; override-property-read detectAdBlock noopFunc
 player-cdn.com###playback-fake
-xoilac86.net#$#abort-on-property-read adsRedirectPopups
+xoilac96.net#$#abort-on-property-read adsRedirectPopups
 sexdiaryz.us#$#abort-on-property-read parseInt
 linkneverdie.net#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
 javnong.cc#$#abort-on-property-read Math.round
-viet69.tube,ungtycomicsvip.com,truyengihotqua.net,dualeotruyenww.com,yurineko.net,vlxyz.tv,javhay.media,phimsexhay669.co,cliphot69.biz,doctruyen3qmoi.com,hentaizz.vip,animehay.city,vlxx.xxx,heo69.top,tuoi69.one,top1sex.club,lenlut.net,xemsex.asia,hentai-vn.com,sexphim1.com,cdn.streamvl.sbs,buomtv.tv,motchillzz.in,truyenvnhay.tv#$#abort-current-inline-script WebAssembly instantiate
+viet69.id,ungtycomicsvip.com,truyengihotqua.net,dualeotruyenww.com,yurineko.net,vlxyz.tv,javhay.cam,phimsexhay669.co,cliphot69.biz,doctruyen3qmoi.com,hentaizz.vip,animehay.city,vlxx.xxx,heo69.top,tuoi69.one,top1sex.club,lenlut.net,xemsex.asia,hentai-vn.com,sexphim1.com,cdn.streamvl.sbs,buomtv.tv,motchillzz.in,truyenvnhay.tv#$#abort-current-inline-script WebAssembly instantiate
 animevietsub.fan#$#abort-current-inline-script document.documentElement break;case
 phimdinhcao.net,phimlongtieng.net,phimdinhcao.com#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl;abort-current-inline-script document.createElement script
 mephimnhe1.net#$#abort-current-inline-script jQuery popurl
 khoaiphim.com#$#abort-current-inline-script jQuery click_time
-dualeotruyenww.com#$#abort-current-inline-script document.addEventListener popunder
+dualeotruyenww.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
 lxmanga.net#$#abort-current-inline-script $ PopUnder
 truyen35.vn#$#abort-current-inline-script jQuery click_ads
 toptruyenne.com#$#abort-current-inline-script Promise instance
@@ -1579,6 +1582,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||aloofvest.com^$script,xmlhttprequest
 @@||alpineactor.com^$script,xmlhttprequest
 @@||amazingairplane.com^$script,xmlhttprequest
+@@||ambiguousafternoon.com^$script,xmlhttprequest
 @@||ambiguousalarm.com^$script,xmlhttprequest
 @@||ambiguousanger.com^$script,xmlhttprequest
 @@||ambiguousdinosaurs.com^$script,xmlhttprequest
@@ -1586,6 +1590,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||ambiguousquilt.com^$script,xmlhttprequest
 @@||ambitiousagreement.com^$script,xmlhttprequest
 @@||ambitiousanimal.com^$script,xmlhttprequest
+@@||amethystzenith.com^$script,xmlhttprequest
 @@||amuckafternoon.com^$script,xmlhttprequest
 @@||amusementmorning.com^$script,xmlhttprequest
 @@||amusinggirls.com^$script,xmlhttprequest
@@ -1607,6 +1612,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||arizonapuzzle.com^$script,xmlhttprequest
 @@||aromamirror.com^$script,xmlhttprequest
 @@||aspiringattempt.com^$script,xmlhttprequest
+@@||astonishingair.com^$script,xmlhttprequest
 @@||attractiveafternoon.com^$script,xmlhttprequest
 @@||attractivecap.com^$script,xmlhttprequest
 @@||audioarctic.com^$script,xmlhttprequest
@@ -1645,6 +1651,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||beastbeef.com^$script,xmlhttprequest
 @@||beautifulhobbies.com^$script,xmlhttprequest
 @@||bedsberry.com^$script,xmlhttprequest
+@@||beetleend.com^$script,xmlhttprequest
 @@||begintrain.com^$script,xmlhttprequest
 @@||beneficialbeef.com^$script,xmlhttprequest
 @@||benthose.com^$script,xmlhttprequest
@@ -1672,6 +1679,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||boringcoat.com^$script,xmlhttprequest
 @@||bouncyfront.com^$script,xmlhttprequest
 @@||bouncyproperty.com^$script,xmlhttprequest
+@@||boundarybusiness.com^$script,xmlhttprequest
 @@||boundlessveil.com^$script,xmlhttprequest
 @@||brandybison.com^$script,xmlhttprequest
 @@||brashbead.com^$script,xmlhttprequest
@@ -1694,6 +1702,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||bulbbait.com^$script,xmlhttprequest
 @@||bunchance.com^$script,xmlhttprequest
 @@||burgerbrush.com^$script,xmlhttprequest
+@@||burlywhistle.com^$script,xmlhttprequest
 @@||burnbubble.com^$script,xmlhttprequest
 @@||burstblade.com^$script,xmlhttprequest
 @@||bushesbag.com^$script,xmlhttprequest
@@ -1727,12 +1736,14 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||castcream.com^$script,xmlhttprequest
 @@||catalogdiscovery.com^$script,xmlhttprequest
 @@||catschickens.com^$script,xmlhttprequest
+@@||cattlecommittee.com^$script,xmlhttprequest
 @@||causecherry.com^$script,xmlhttprequest
 @@||cautiouscrate.com^$script,xmlhttprequest
 @@||cautiouscredit.com^$script,xmlhttprequest
 @@||cavecurtain.com^$script,xmlhttprequest
 @@||chairscrack.com^$script,xmlhttprequest
 @@||chairsdonkey.com^$script,xmlhttprequest
+@@||changeablecats.com^$script,xmlhttprequest
 @@||channelcamp.com^$script,xmlhttprequest
 @@||charmingcough.com^$script,xmlhttprequest
 @@||charmingplate.com^$script,xmlhttprequest
@@ -1740,6 +1751,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||chemicalcoach.com^$script,xmlhttprequest
 @@||chemicalsnake.com^$script,xmlhttprequest
 @@||cherriescare.com^$script,xmlhttprequest
+@@||cherriescloud.com^$script,xmlhttprequest
 @@||chesscherry.com^$script,xmlhttprequest
 @@||chesscolor.com^$script,xmlhttprequest
 @@||chewcoat.com^$script,xmlhttprequest
@@ -1768,11 +1780,13 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||colossalchance.com^$script,xmlhttprequest
 @@||colossalclouds.com^$script,xmlhttprequest
 @@||colossalcoat.com^$script,xmlhttprequest
+@@||colossalcry.com^$script,xmlhttprequest
 @@||combativecar.com^$script,xmlhttprequest
 @@||combativedetail.com^$script,xmlhttprequest
 @@||combbelief.com^$script,xmlhttprequest
 @@||combbit.com^$script,xmlhttprequest
 @@||combclover.com^$script,xmlhttprequest
+@@||combcompetition.com^$script,xmlhttprequest
 @@||comfortablecheese.com^$script,xmlhttprequest
 @@||commonalmanac.com^$script,xmlhttprequest
 @@||commonswing.com^$script,xmlhttprequest
@@ -1802,6 +1816,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||copycarpenter.com^$script,xmlhttprequest
 @@||copyrightaccesscontrols.com^$script,xmlhttprequest
 @@||copytitle.com^$script,xmlhttprequest
+@@||coralreverie.com^$script,xmlhttprequest
 @@||correctchaos.com^$script,xmlhttprequest
 @@||cosmosjackson.com^$script,xmlhttprequest
 @@||courageousbaby.com^$script,xmlhttprequest
@@ -1834,11 +1849,13 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||curvycry.com^$script,xmlhttprequest
 @@||cushiondrum.com^$script,xmlhttprequest
 @@||cushionpig.com^$script,xmlhttprequest
+@@||cutcurrent.com^$script,xmlhttprequest
 @@||cutecalculator.com^$script,xmlhttprequest
 @@||cutechin.com^$script,xmlhttprequest
 @@||cutecushion.com^$script,xmlhttprequest
 @@||cutepopcorn.com^$script,xmlhttprequest
 @@||cuteturkey.com^$script,xmlhttprequest
+@@||dailydivision.com^$script,xmlhttprequest
 @@||damageddistance.com^$script,xmlhttprequest
 @@||damagedroll.com^$script,xmlhttprequest
 @@||damdoor.com^$script,xmlhttprequest
@@ -1931,22 +1948,27 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||ejyymghi.com^$script,xmlhttprequest
 @@||elasticchange.com^$script,xmlhttprequest
 @@||elasticducks.com^$script,xmlhttprequest
+@@||elderlybean.com^$script,xmlhttprequest
 @@||elderlyinsect.com^$script,xmlhttprequest
 @@||elderlyscissors.com^$script,xmlhttprequest
 @@||elderlytown.com^$script,xmlhttprequest
 @@||elephantqueue.com^$script,xmlhttprequest
+@@||eminentbubble.com^$script,xmlhttprequest
 @@||emptyescort.com^$script,xmlhttprequest
 @@||enchantedjudge.com^$script,xmlhttprequest
 @@||enchantedtop.com^$script,xmlhttprequest
+@@||enchantingvalley.com^$script,xmlhttprequest
 @@||encourageidea.com^$script,xmlhttprequest
 @@||encourageshock.com^$script,xmlhttprequest
 @@||encouragingleaf.com^$script,xmlhttprequest
+@@||encouragingthread.com^$script,xmlhttprequest
 @@||encouragingvase.com^$script,xmlhttprequest
 @@||encouragingwilderness.com^$script,xmlhttprequest
 @@||endurablecrayon.com^$script,xmlhttprequest
 @@||endurableshop.com^$script,xmlhttprequest
 @@||energeticexample.com^$script,xmlhttprequest
 @@||energeticladybug.com^$script,xmlhttprequest
+@@||engineergrape.com^$script,xmlhttprequest
 @@||engineertrick.com^$script,xmlhttprequest
 @@||enormousearth.com^$script,xmlhttprequest
 @@||enormousfoot.com^$script,xmlhttprequest
@@ -1994,7 +2016,9 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||fearfulfish.com^$script,xmlhttprequest
 @@||fearfulmint.com^$script,xmlhttprequest
 @@||fearlessfaucet.com^$script,xmlhttprequest
+@@||featherstage.com^$script,xmlhttprequest
 @@||feebleshock.com^$script,xmlhttprequest
+@@||fewkittens.com^$script,xmlhttprequest
 @@||fifthborder.com^$script,xmlhttprequest
 @@||finalizeforce.com^$script,xmlhttprequest
 @@||firstfrogs.com^$script,xmlhttprequest
@@ -2011,6 +2035,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||floweryfact.com^$script,xmlhttprequest
 @@||floweryoperation.com^$script,xmlhttprequest
 @@||foamyfood.com^$script,xmlhttprequest
+@@||followborder.com^$script,xmlhttprequest
 @@||forecasttiger.com^$script,xmlhttprequest
 @@||foregoingfowl.com^$script,xmlhttprequest
 @@||forgetfulflowers.com^$script,xmlhttprequest
@@ -2047,6 +2072,8 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||gammamaximum.com^$script,xmlhttprequest
 @@||gaudybeginner.com^$script,xmlhttprequest
 @@||generalprose.com^$script,xmlhttprequest
+@@||generateoffice.com^$script,xmlhttprequest
+@@||giantsvessel.com^$script,xmlhttprequest
 @@||giddycoat.com^$script,xmlhttprequest
 @@||giftedglue.com^$script,xmlhttprequest
 @@||giftedthumb.com^$script,xmlhttprequest
@@ -2092,6 +2119,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||handsomelyhealth.com^$script,xmlhttprequest
 @@||handyfield.com^$script,xmlhttprequest
 @@||handyfireman.com^$script,xmlhttprequest
+@@||haplesshydrant.com^$script,xmlhttprequest
 @@||happenhistory.com^$script,xmlhttprequest
 @@||harborcaption.com^$script,xmlhttprequest
 @@||harborcub.com^$script,xmlhttprequest
@@ -2232,6 +2260,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||makeshiftmine.com^$script,xmlhttprequest
 @@||maliciousmusic.com^$script,xmlhttprequest
 @@||maniacalappliance.com^$script,xmlhttprequest
+@@||marblediscussion.com^$script,xmlhttprequest
 @@||markedcrayon.com^$script,xmlhttprequest
 @@||markedmeasure.com^$script,xmlhttprequest
 @@||markedpail.com^$script,xmlhttprequest
@@ -2319,6 +2348,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||oppositeparcel.com^$script,xmlhttprequest
 @@||optimallimit.com^$script,xmlhttprequest
 @@||orangeoperation.com^$script,xmlhttprequest
+@@||organizationdogs.com^$script,xmlhttprequest
 @@||outstandingincome.com^$script,xmlhttprequest
 @@||outstandingsnails.com^$script,xmlhttprequest
 @@||ovalweek.com^$script,xmlhttprequest
@@ -2327,6 +2357,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||owlsr.us^$script,xmlhttprequest
 @@||paddleangle.com^$script,xmlhttprequest
 @@||pailcrime.com^$script,xmlhttprequest
+@@||pailpatch.com^$script,xmlhttprequest
 @@||painstakingpickle.com^$script,xmlhttprequest
 @@||paintpear.com^$script,xmlhttprequest
 @@||paintplantation.com^$script,xmlhttprequest
@@ -2428,8 +2459,10 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||puffypull.com^$script,xmlhttprequest
 @@||puffypurpose.com^$script,xmlhttprequest
 @@||pumpedpancake.com^$script,xmlhttprequest
+@@||pumpedpurpose.com^$script,xmlhttprequest
 @@||punyplant.com^$script,xmlhttprequest
 @@||purchasesuggestion.com^$script,xmlhttprequest
+@@||purposepipe.com^$script,xmlhttprequest
 @@||puzzlingproperty.com^$script,xmlhttprequest
 @@||q20jqurls0y7gk8.info^$script,xmlhttprequest
 @@||quacksquirrel.com^$script,xmlhttprequest
@@ -2493,6 +2526,9 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||resonantrock.com^$script,xmlhttprequest
 @@||respectrain.com^$script,xmlhttprequest
 @@||restrainstorm.com^$script,xmlhttprequest
+@@||restructureinvention.com^$script,xmlhttprequest
+@@||retrievemint.com^$script,xmlhttprequest
+@@||rhetoricalactivity.com^$script,xmlhttprequest
 @@||rhetoricalloss.com^$script,xmlhttprequest
 @@||rhetoricaltoes.com^$script,xmlhttprequest
 @@||rhetoricalveil.com^$script,xmlhttprequest
@@ -2527,6 +2563,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||ruthlessrobin.com^$script,xmlhttprequest
 @@||sablesmile.com^$script,xmlhttprequest
 @@||sablesong.com^$script,xmlhttprequest
+@@||saffronrefuge.com^$script,xmlhttprequest
 @@||sailsuit.com^$script,xmlhttprequest
 @@||samestretch.com^$script,xmlhttprequest
 @@||sandinsect.com^$script,xmlhttprequest
@@ -2536,6 +2573,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||savoryorange.com^$script,xmlhttprequest
 @@||savorystructure.com^$script,xmlhttprequest
 @@||saysidewalk.com^$script,xmlhttprequest
+@@||scarcecard.com^$script,xmlhttprequest
 @@||scarcesign.com^$script,xmlhttprequest
 @@||scarcesurprise.com^$script,xmlhttprequest
 @@||scarecrowslip.com^$script,xmlhttprequest
@@ -2583,6 +2621,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||serendipityecho.com^$script,xmlhttprequest
 @@||serioussuit.com^$script,xmlhttprequest
 @@||serpentshampoo.com^$script,xmlhttprequest
+@@||settleshoes.com^$script,xmlhttprequest
 @@||shaggytank.com^$script,xmlhttprequest
 @@||shakegoldfish.com^$script,xmlhttprequest
 @@||shakesuggestion.com^$script,xmlhttprequest
@@ -2625,6 +2664,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||sizesidewalk.com^$script,xmlhttprequest
 @@||skillfuldrop.com^$script,xmlhttprequest
 @@||skillfulsock.com^$script,xmlhttprequest
+@@||skisofa.com^$script,xmlhttprequest
 @@||slaysweater.com^$script,xmlhttprequest
 @@||sleepcartoon.com^$script,xmlhttprequest
 @@||slimopinion.com^$script,xmlhttprequest
@@ -2648,6 +2688,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||snakemineral.com^$script,xmlhttprequest
 @@||snakesshop.com^$script,xmlhttprequest
 @@||snakesstone.com^$script,xmlhttprequest
+@@||sneakwind.com^$script,xmlhttprequest
 @@||sneakystew.com^$script,xmlhttprequest
 @@||snoresmile.com^$script,xmlhttprequest
 @@||soaprange.com^$script,xmlhttprequest
@@ -2663,6 +2704,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||sombersurprise.com^$script,xmlhttprequest
 @@||songssmoke.com^$script,xmlhttprequest
 @@||sootheside.com^$script,xmlhttprequest
+@@||soothingglade.com^$script,xmlhttprequest
 @@||sophisticatedstory.com^$script,xmlhttprequest
 @@||sophisticatedstove.com^$script,xmlhttprequest
 @@||sordidsmile.com^$script,xmlhttprequest
@@ -2699,10 +2741,12 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||spottedsnow.com^$script,xmlhttprequest
 @@||springaftermath.com^$script,xmlhttprequest
 @@||springsister.com^$script,xmlhttprequest
+@@||spuriousair.com^$script,xmlhttprequest
 @@||spuriousbase.com^$script,xmlhttprequest
 @@||spurioussteam.com^$script,xmlhttprequest
 @@||spuriousstranger.com^$script,xmlhttprequest
 @@||spysubstance.com^$script,xmlhttprequest
+@@||squalidscrew.com^$script,xmlhttprequest
 @@||squashfriction.com^$script,xmlhttprequest
 @@||squeakzinc.com^$script,xmlhttprequest
 @@||squealingturn.com^$script,xmlhttprequest
@@ -2710,6 +2754,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||squirrelhands.com^$script,xmlhttprequest
 @@||stakingbasket.com^$script,xmlhttprequest
 @@||stakingscrew.com^$script,xmlhttprequest
+@@||stakingshock.com^$script,xmlhttprequest
 @@||stakingslope.com^$script,xmlhttprequest
 @@||stakingsmile.com^$script,xmlhttprequest
 @@||staleseat.com^$script,xmlhttprequest
@@ -2732,6 +2777,8 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||stereoproxy.com^$script,xmlhttprequest
 @@||stereotypedclub.com^$script,xmlhttprequest
 @@||stereotypedsugar.com^$script,xmlhttprequest
+@@||stewedge.com^$script,xmlhttprequest
+@@||stewspiders.com^$script,xmlhttprequest
 @@||stickssheep.com^$script,xmlhttprequest
 @@||stickysheet.com^$script,xmlhttprequest
 @@||stiffgame.com^$script,xmlhttprequest
@@ -2743,6 +2790,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||storeslope.com^$script,xmlhttprequest
 @@||storesurprise.com^$script,xmlhttprequest
 @@||stormyachiever.com^$script,xmlhttprequest
+@@||stormyfold.com^$script,xmlhttprequest
 @@||stoveseashore.com^$script,xmlhttprequest
 @@||straightnest.com^$script,xmlhttprequest
 @@||strangeclocks.com^$script,xmlhttprequest
@@ -2785,6 +2833,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||sweepsheep.com^$script,xmlhttprequest
 @@||sweetslope.com^$script,xmlhttprequest
 @@||swellstocking.com^$script,xmlhttprequest
+@@||swelteringsleep.com^$script,xmlhttprequest
 @@||swelteringsmile.com^$script,xmlhttprequest
 @@||swimslope.com^$script,xmlhttprequest
 @@||swingslip.com^$script,xmlhttprequest
@@ -2859,6 +2908,8 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||torpidtoothpaste.com^$script,xmlhttprequest
 @@||toweringrun.com^$script,xmlhttprequest
 @@||tradetooth.com^$script,xmlhttprequest
+@@||tranquilamulet.com^$script,xmlhttprequest
+@@||tranquilcanyon.com^$script,xmlhttprequest
 @@||tranquilside.com^$script,xmlhttprequest
 @@||translateoatmeal.com^$script,xmlhttprequest
 @@||trappush.com^$script,xmlhttprequest
@@ -2919,6 +2970,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||verifyvegetable.com^$script,xmlhttprequest
 @@||verseballs.com^$script,xmlhttprequest
 @@||vibrantsundown.com^$script,xmlhttprequest
+@@||violetreading.com^$script,xmlhttprequest
 @@||virgoplato.com^$script,xmlhttprequest
 @@||virtualvincent.com^$script,xmlhttprequest
 @@||vivaciousveil.com^$script,xmlhttprequest
@@ -2931,12 +2983,14 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||vq1qi.pw^$script,xmlhttprequest
 @@||waggishpig.com^$script,xmlhttprequest
 @@||wakefulcook.com^$script,xmlhttprequest
+@@||wantingwindow.com^$script,xmlhttprequest
 @@||warmafterthought.com^$script,xmlhttprequest
 @@||warmquiver.com^$script,xmlhttprequest
 @@||warnwing.com^$script,xmlhttprequest
 @@||waryfog.com^$script,xmlhttprequest
 @@||washbanana.com^$script,xmlhttprequest
 @@||wateryvan.com^$script,xmlhttprequest
+@@||waterywave.com^$script,xmlhttprequest
 @@||wearbasin.com^$script,xmlhttprequest
 @@||wearywater.com^$script,xmlhttprequest
 @@||wellgroomedapparel.com^$script,xmlhttprequest
@@ -2970,6 +3024,7 @@ nettruyenus.net#$#abort-on-property-read sp
 @@||wtaccesscontrol.com^$script,xmlhttprequest
 @@||xovq5nemr.com^$script,xmlhttprequest
 @@||yamstamp.com^$script,xmlhttprequest
+@@||yieldingwoman.com^$script,xmlhttprequest
 @@||youngmarble.com^$script,xmlhttprequest
 @@||youthfulnoise.com^$script,xmlhttprequest
 @@||zbwp6ghm.com^$script,xmlhttprequest
@@ -2987,9 +3042,6 @@ nettruyenus.net#$#abort-on-property-read sp
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#json-prune '0.playerResponse.adPlacements 0.playerResponse.playerAds 1.playerResponse.adPlacements 1.playerResponse.playerAds 2.playerResponse.adPlacements 2.playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds ytInitialPlayerResponse.adPlacements ytInitialPlayerResponse.playerAds adPlacements playerAds'
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read playerResponse.adPlacements undefined;
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read ytInitialPlayerResponse.adPlacements undefined;
-! Fallback
-www.youtube.com,m.youtube.com,music.youtube.com,youtube-nocookie.com#$#simulate-mouse-event 'button.ytp-ad-skip-button$delay=0'
-www.youtube.com,m.youtube.com,music.youtube.com,youtube-nocookie.com#$#simulate-mouse-event 'button.ytp-ad-skip-button-modern$delay=0'
 ! AakList (Anti-Adblock Killer)
 ! ----- Anti-Adblockers ------------------------------------------------------------------------------------------------------------------- !
 ! ----- Generic ----- !
