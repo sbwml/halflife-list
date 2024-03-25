@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: RmAk0zMDkCo6Mr/klSa/Lg
+! Checksum: UT93rIew3isDxy6Ep9QPAA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202403180803
-! Last Modified: 2024年03月18日 08:03
+! Version: 202403250803
+! Last Modified: 2024年03月25日 08:03
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -59,13 +59,10 @@ nivod5.tv,nivod8.tv#$#override-property-read detailParams.is_ad_play false
 hdzone.org#$#abort-current-inline-script Math zfgloaded
 ! *** abp-filters-anti-cv:czech.txt ***
 ! #CV-655
-iprima.cz,www.seznam.cz,novinky.cz,super.cz,ahaonline.cz,expres.cz,kinobox.cz,horoskopy.cz#$#json-override ads ''
-kinobox.cz,novinky.cz,expres.cz,fights.cz,tiscali.cz,hudebniskupiny.cz,osobnosti.cz,ahaonline.cz,super.cz#$#prevent-listener beforeunload (); cookie-remover /^_?adb/;
+iprima.cz,www.seznam.cz,novinky.cz,super.cz,ahaonline.cz,kinobox.cz,horoskopy.cz#$#json-override ads ''
+kinobox.cz,novinky.cz,fights.cz,hudebniskupiny.cz,ahaonline.cz,super.cz#$#prevent-listener beforeunload (); cookie-remover /^_?adb/;
 sauto.cz#$#override-property-read sssp undefined
 super.cz#$#override-property-read sspPositions null
-expres.cz,idnes.cz#$#override-property-read pxReady null
-blesk.cz,expres.cz,idnes.cz#$#abort-on-property-read Object.prototype.kununu_mul
-blesk.cz,expres.cz,idnes.cz#$#cookie-remover /^adb$|adb\.key|^[a-z]{5,11}$/
 iprima.cz##.sas_center, .px-ad, .sas_mone, .mone_box, .ifr-passback, [data-sas_status], div[id^="sas_"], div[class^="mas_mone_"], [data-alter_area="leaderboardpremium-1"], [data-alter_area="boardbottom-1"], .ifr-masshack, .px-zone, .sas_megaboard, .ifr-classflak, [data-sas-creative], #cnn_reklama, div[class^="mas_"], ._sasia_fcid, [class^="mas"][class$="_clue"]
 iprima.cz#?#div:-abp-has(>.mone_header)
 iprima.cz##.px-type-banner
@@ -84,108 +81,77 @@ iprima.cz##.dekes_reblika
 ?v127|$script,domain=iprima.cz
 /area=halfpagead$xmlhttprequest,domain=iprima.cz
 /area=branding$xmlhttprequest,domain=iprima.cz
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.inserted_rtb
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[id^="ad-"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[data-track-ad]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##leaderBoard
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.movingAd
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###brandingCreativeWrapper
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[data-google-container-id], .is_stuck
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##a[href*=";adfibeg="]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz#?#div:-abp-has(>[class$="selfpromo"])
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[class^="stickyContentBottom_"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.ad__in
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.ad-skywrapper
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##iframe[id^="iframeWrapper-"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##[class^="ad "]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##a[href*="Banner"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##a[href*="pubsrcid="]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.ads
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##a[href*="banner"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.sticky-content
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.SC_TBlock
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###leader_board
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.ad-skyscrapper
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###Moitor-1
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##div[style*="_banner_branding_cnc_"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###banner_id
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###banner
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###creativelink
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.rollWrapper
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz###ValRageBottom
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##a[href*="branding"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,www.idnes.cz,expres.cz#?#div:-abp-has(>a[href$="/personalizovana-reklama/"])
-blesk.cz##.gam-wrapper
-expres.cz,idnes.cz##div[data-redistribute="ad"]
-idnes.cz###foto-reklama
+ahaonline.czinfo.cz,onetv.cz##.inserted_rtb
+ahaonline.czinfo.cz,onetv.cz##[id^="ad-"]
+ahaonline.czinfo.cz,onetv.cz##[data-track-ad]
+ahaonline.czinfo.cz,onetv.cz##leaderBoard
+ahaonline.czinfo.cz,onetv.cz##.movingAd
+ahaonline.czinfo.cz,onetv.cz###brandingCreativeWrapper
+ahaonline.czinfo.cz,onetv.cz##[data-google-container-id], .is_stuck
+ahaonline.czinfo.cz,onetv.cz##a[href*=";adfibeg="]
+ahaonline.czinfo.cz,onetv.cz#?#div:-abp-has(>[class$="selfpromo"])
+ahaonline.czinfo.cz,onetv.cz##[class^="stickyContentBottom_"]
+ahaonline.czinfo.cz,onetv.cz##.ad__in
+ahaonline.czinfo.cz,onetv.cz##.ad-skywrapper
+ahaonline.czinfo.cz,onetv.cz##iframe[id^="iframeWrapper-"]
+ahaonline.czinfo.cz,onetv.cz##[class^="ad "]
+ahaonline.czinfo.cz,onetv.cz##a[href*="Banner"]
+ahaonline.czinfo.cz,onetv.cz##a[href*="pubsrcid="]
+ahaonline.czinfo.cz,onetv.cz##.ads
+ahaonline.czinfo.cz,onetv.cz##a[href*="banner"]
+ahaonline.czinfo.cz,onetv.cz##.sticky-content
+ahaonline.czinfo.cz,onetv.cz##.SC_TBlock
+ahaonline.czinfo.cz,onetv.cz###leader_board
+ahaonline.czinfo.cz,onetv.cz##.ad-skyscrapper
+ahaonline.czinfo.cz,onetv.cz###Moitor-1
+ahaonline.czinfo.cz,onetv.cz##div[style*="_banner_branding_cnc_"]
+ahaonline.czinfo.cz,onetv.cz###banner_id
+ahaonline.czinfo.cz,onetv.cz###banner
+ahaonline.czinfo.cz,onetv.cz###creativelink
+ahaonline.czinfo.cz,onetv.cz##.rollWrapper
+ahaonline.czinfo.cz,onetv.cz###ValRageBottom
+ahaonline.czinfo.cz,onetv.cz##a[href*="branding"]
+ahaonline.czinfo.cz,onetv.cz#?#div:-abp-has(>a[href$="/personalizovana-reklama/"])
 ||domnovrek.com^$third-party
-/partnerJsApi/v3?previousZHashes=&hash=*&clbk=sklik$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-&uid=ssp-$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-.cz/*/js/a.js|$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-||cdn.user-api.com^$domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-||cnc.cdn.dopc.cz.^$script,domain=blesk.cz
-||cnc.cdn.dopc.cz^*?format=js$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/scripts^$subdocument,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-.cz/*/area=adblock$script,popup,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-&pssp1=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|www.idnes.cz|expres.cz
-&cmpState=$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|expres.cz|www.idnes.cz
-&ifr=0|$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|iprima.cz
-=js&lst=$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|iprima.cz|tiscali.cz|kinobox.cz|osobnosti.cz|karaoketexty.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
-/tigatage:$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|iprima.cz|tiscali.cz|kinobox.cz|osobnosti.cz|karaoketexty.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
-||w-cached.cncenter.cz/js/cnc-ads-controller.$script,domain=blesk.cz|extra.cz|reflex.cz|zive.cz|auto.cz|e15.cz|autorevue.cz|dama.cz|maminka.cz|mojezdravi.cz|zeny.cz|onetv.cz|info.cz|ahaonline.cz
-client=ca-pub-$subdocument,domain=iprima.cz|www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-reflex.cz###gl-nat
-e15.cz##.mys-wrapper
-blesk.cz##.banner-ifortuna
-blesk.cz##article[data-track-element-id*="prPremium"]
-blesk.cz##div[data-track-element-id^="prStandardZpravy"]
-blesk.cz###px2-wall-wrap
-blesk.cz###stickyfloatLeftEmptySpaceCheckLeft
-blesk.cz##div[class^="sticky-wrapper"]
-expres.cz,idnes.cz##[class^="r-main"]
-expres.cz#$#hide-if-contains-visible-text /[a-zA-Z]/ '*[class][id]' span[id][data-rsize]
-dama.cz##[class*="ads-"]
-zeny.cz,auto.cz##[data-track-ad]
+/partnerJsApi/v3?previousZHashes=&hash=*&clbk=sklik$script,domain=ahaonline.cz|info.cz|onetv.cz
+&uid=ssp-$script,domain=ahaonline.cz|info.cz|onetv.cz
+.cz/*/js/a.js|$script,domain=ahaonline.cz|info.cz|onetv.cz
+||cdn.user-api.com^$domain=ahaonline.cz|info.cz|onetv.cz
+||cnc.cdn.dopc.cz^*?format=js$script,domain=ahaonline.cz|info.cz|onetv.cz
+/scripts^$subdocument,domain=ahaonline.cz|info.cz|onetv.cz
+.cz/*/area=adblock$script,popup,domain=ahaonline.cz|info.cz|onetv.cz
+&pssp1=$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+&cmpState=$script,domain=ahaonline.cz|info.cz|onetv.cz
+&ifr=0|$script,domain=www.ahaonline.cz|info.cz|onetv.cz|iprima.cz
+=js&lst=$script,domain=www.ahaonline.cz|info.cz|onetv.cz|iprima.cz|kinobox.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
+/tigatage:$script,domain=www.ahaonline.cz|info.cz|onetv.cz|iprima.cz|kinobox.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
+||w-cached.cncenter.cz/js/cnc-ads-controller.$script,domain=extra.cz|onetv.cz|info.cz|ahaonline.cz
+client=ca-pub-$subdocument,domain=iprima.cz|www.ahaonline.cz|info.cz|onetv.cz
 super.cz##img[id^="rs-bg-img"]
-reflex.cz##img[title$=".cz"][src^="https://www.reflex.cz/"]
-auto.cz##.halfpageAd, [class*="wrapperH-prapper"], [class*="billboard-bottom"], img[width='970'][height="310"], [data-io-article-url] a[target='_top'], video[id^="video-"][preload="auto"][webkit-playsinline="webkit-playsinline"], [class*="ads-leader"], #KoqisAoAce
-www.blesk.cz##[class*="-wrapperf-prapper"], [class*="pikyTentBot_"], #stickyBottomRightAbsolute, [class="lol__out"], img[width='970'][height="310"], a[style*="blewid: 970px; height: 310px"], div[id*="-hor"]
-autorevue.cz##.bx-sky, .bx-rectangle-article
-maminka.cz##div[class*="bx-sky "]
 super.cz##div[class*="color-0"]
 super.cz##div[id*="superPrclanek-"][class$="timeline-content"]
-dama.cz##div[class^="sky-wrap"]
-maminka.cz,blesk.cz,reflex.cz,e15.cz##a[class*="-combined"]
-blesk.cz#$#abort-current-inline-script document.createElement adbDetect; prevent-listener beforeunload (); override-property-read adBlockerFound undefined;
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz###stickyBanner
-tiscali.cz##a[target="_blank"][href*="tiscali.cz"]>img[src*="tiscali.cz"]
+kinobox.cz,nasepenize.cz###stickyBanner
 kinobox.cz##.box.banner_300, #b300_fixbox
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##.btitle-right
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##a[href*="IdBnrP="][href*="IdCamp="]
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##[id^="pxBanner"]
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##a.click-layer#clickLayer
+kinobox.cz,nasepenize.cz##.btitle-right
+kinobox.cz,nasepenize.cz##a[href*="IdBnrP="][href*="IdCamp="]
+kinobox.cz,nasepenize.cz##[id^="pxBanner"]
+kinobox.cz,nasepenize.cz##a.click-layer#clickLayer
 nasepenize.cz##a[target="_blank"][class="tracked-event"]>img:only-child
-karaoketexty.cz,kinobox.cz###stickyWrap
-karaoketexty.cz##.ad_large_square
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##a[target="_blank"]>img[class*="-click-"]
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##.sticky[stickystop]
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##[class$=" sticky"]
-karaoketexty.cz##[class$="_rightcolumn"]
-karaoketexty.cz###sky_right_col
-osobnosti.cz##.hide-screenbot
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz##div[class$="-rightcJ"]
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz,spisovatele.cz##.SC_TBlock
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##.pe-link
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##.wrap-advert
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##.quaquaquakva
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##[href*=";cdata="]
-tiscali.cz##.bs-hp
-fights.cz,tiscali.cz###desktop-square-top, #desktop-leader-top, .desktop-square-top, .desktop-leader-top
+kinobox.cz###stickyWrap
+kinobox.cz,nasepenize.cz##a[target="_blank"]>img[class*="-click-"]
+kinobox.cz,nasepenize.cz##.sticky[stickystop]
+kinobox.cz,nasepenize.cz##[class$=" sticky"]
+kinobox.cz,nasepenize.cz##div[class$="-rightcJ"]
+kinobox.cz,nasepenize.cz,fights.cz,spisovatele.cz##.SC_TBlock
+kinobox.cz,nasepenize.cz,fights.cz##.pe-link
+kinobox.cz,nasepenize.cz,fights.cz##.wrap-advert
+kinobox.cz,nasepenize.cz,fights.cz##.quaquaquakva
+kinobox.cz,nasepenize.cz,fights.cz##[href*=";cdata="]
+fights.cz###desktop-square-top, #desktop-leader-top, .desktop-square-top, .desktop-leader-top
 fights.cz##.banner-add
 nasepenize.cz###side-offer-wrap
-tiscali.cz##[class*="-ld-top"]
 nasepenize.cz#?#:-abp-has(>[class$="selfpromo"])
-tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##[id*="tmAdVideo"], [class=" pe-banner"]
+kinobox.cz,nasepenize.cz,fights.cz##[id*="tmAdVideo"], [class=" pe-banner"]
 fights.cz,spisovatele.cz##body>a[target="_blank"]
 /dynamic^$image,domain=kupi.cz
 ||super.cz/*&*=$subdocument,domain=super.cz
@@ -284,40 +250,34 @@ novinky.cz##div[class*="advert-static"]
 novinky.cz##div[class*="banner-ad"]
 novinky.cz##article[class$="advert-item--default"]
 novinky.cz##img[src*="1T4PK70hS2C"]
-novinky.cz,super.cz,sport.cz,expres.cz##.barMan
+novinky.cz,super.cz,sport.cz##.barMan
 novinky.cz,seznamzpravy.cz,sport.cz##div[data-adtrackingtemporaryurl]
 novinky.cz,seznamzpravy.cz,sport.cz##div[style="background-color: rgb(255, 255, 255);"] > a[href][target="_blank"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,expres.cz##a[href*="verdsi="][href*="&ip="]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,expres.cz##[href*="&token="][target="_blank"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,expres.cz##a[href^="//api.mgid.com/"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##div[style*='background-image: url("https://www.']
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.ad-skycrapper
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,osobnosti.cz,tiscali.cz,karaoketexty.cz,kinobox.cz##[id*="Adform"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##div[style*="background-image"][style*="branding"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##.article-advertisement
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz##div[id^="cnc-"][class^="cnc-"]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,karaoketexty.cz##div[class$="-banner"]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,iprima.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##div[id$="horiz"]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,iprima.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##iframe[src*=" javascript: window"]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,iprima.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##.pe-banner
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,iprima.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##.advert
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,iprima.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##a[href*="?action=ppl&cid="]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,expres.cz##div[style*="background-image: url("][style*="background-repeat: no-repeat;"]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,onetv.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##a.tracked-event[data-tid]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,onetv.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##a.tracked-event[href*="&tcid="]
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz###ads-leader, #ads-leader-board
-ahaonline.cz,auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,info.cz,karaoketexty.cz,kinobox.cz,kupi.cz,maminka.cz,mojezdravi.cz,nasepenize.cz,novinky.cz,onetv.cz,osobnosti.cz,reflex.cz,sport.cz,super.cz,tiscali.cz,zeny.cz,zive.cz##.foto-iframe-ads
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,expres.cz#?#div:-abp-has(>small:-abp-contains(Reklama))
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,novinky.cz,kupi.cz,sport.cz,super.cz,horoskopy.cz,tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##a[href*="?adurl="]
-auto.cz,autorevue.cz,maminka.cz,reflex.cz,ahaonline.cz,blesk.cz,dama.cz,e15.cz,info.cz,mojezdravi.cz,onetv.cz,zeny.cz,zive.cz,novinky.cz,kupi.cz,sport.cz,super.cz,horoskopy.cz,tiscali.cz,kinobox.cz,osobnosti.cz,karaoketexty.cz,nasepenize.cz,fights.cz##a[href*="mondor_hopToSeti"]
-||d49-a.sdn.cz^$image,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|info.cz|iprima.cz|karaoketexty.cz|kinobox.cz|kupi.cz|lidovky.cz|maminka.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|onetv.cz|osobnosti.cz|reflex.cz|sport.cz|super.cz|tiscali.cz|zeny.cz|zive.cz
-||userscontent.com^$image,domain=ahaonline.cz|auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|info.cz|iprima.cz|karaoketexty.cz|kinobox.cz|kupi.cz|lidovky.cz|maminka.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|onetv.cz|osobnosti.cz|reflex.cz|sport.cz|super.cz|tiscali.cz|zeny.cz|zive.cz
-karaoketexty.cz#$#hide-if-matches-xpath './/a[string-length(@href) >120][@target="_blank"]/ancestor-or-self::a[@href]'
-||www.karaoketexty.cz/*/*.png$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
-||www.karaoketexty.cz/*/*.jpg$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
-@@||karaoketexty.cz/img/*.png$image,domain=karaoketexty.cz
-@@||karaoketexty.cz/img/*.jpg$image,domain=karaoketexty.cz
-?client=ca-pub-$script,domain=karaoketexty.cz
+ahaonline.czinfo.cz,onetv.cz##a[href*="verdsi="][href*="&ip="]
+ahaonline.czinfo.cz,onetv.cz##[href*="&token="][target="_blank"]
+ahaonline.czinfo.cz,onetv.cz##a[href^="//api.mgid.com/"]
+ahaonline.czinfo.cz,onetv.cz##div[style*='background-image: url("https://www.']
+ahaonline.czinfo.cz,onetv.cz##.ad-skycrapper
+ahaonline.czinfo.cz,onetv.cz,kinobox.cz##[id*="Adform"]
+ahaonline.czinfo.cz,onetv.cz##div[style*="background-image"][style*="branding"]
+ahaonline.czinfo.cz,onetv.cz##.article-advertisement
+ahaonline.czinfo.cz,onetv.cz##div[id^="cnc-"][class^="cnc-"]
+ahaonline.czinfo.cz,onetv.cz##div[class$="-banner"]
+ahaonline.cz,info.cz,iprima.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##div[id$="horiz"]
+ahaonline.cz,info.cz,iprima.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##iframe[src*=" javascript: window"]
+ahaonline.cz,info.cz,iprima.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##.pe-banner
+ahaonline.cz,info.cz,iprima.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##.advert
+ahaonline.cz,info.cz,iprima.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##a[href*="?action=ppl&cid="]
+ahaonline.czinfo.cz,onetv.cz##div[style*="background-image: url("][style*="background-repeat: no-repeat;"]
+ahaonline.cz,info.cz,kinobox.cz,kupi.cz,nasepenize.cz,onetv.cz##a.tracked-event[data-tid]
+ahaonline.cz,info.cz,kinobox.cz,kupi.cz,nasepenize.cz,onetv.cz##a.tracked-event[href*="&tcid="]
+ahaonline.cz,info.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz###ads-leader, #ads-leader-board
+ahaonline.cz,info.cz,kinobox.cz,kupi.cz,nasepenize.cz,novinky.cz,onetv.cz,sport.cz,super.cz##.foto-iframe-ads
+ahaonline.czinfo.cz,onetv.cz#?#div:-abp-has(>small:-abp-contains(Reklama))
+ahaonline.czinfo.cz,onetv.cz,novinky.cz,kupi.cz,sport.cz,super.cz,horoskopy.cz,kinobox.cz,nasepenize.cz,fights.cz##a[href*="?adurl="]
+ahaonline.czinfo.cz,onetv.cz,novinky.cz,kupi.cz,sport.cz,super.cz,horoskopy.cz,kinobox.cz,nasepenize.cz,fights.cz##a[href*="mondor_hopToSeti"]
+||d49-a.sdn.cz^$image,domain=ahaonline.cz|info.cz|iprima.cz|kinobox.cz|kupi.cz|lidovky.cz|nasepenize.cz|novinky.cz|onetv.cz|sport.cz|super.cz
+||userscontent.com^$image,domain=ahaonline.cz|info.cz|iprima.cz|kinobox.cz|kupi.cz|lidovky.cz|nasepenize.cz|novinky.cz|onetv.cz|sport.cz|super.cz
 novinky.cz#$#hide-if-matches-xpath '//div[@id][contains(@style, "max-width: 100%;")]//iframe[@style]/ancestor::div[@style]'
 novinky.cz#$#hide-if-matches-xpath '//a[@href][@title]/div[@class][@style]/parent::a/ancestor-or-self::div[2]'
 horoskopy.cz,seznamzpravy.cz#$#hide-if-matches-xpath '//iframe[@src][@id]/parent::div[@class]/ancestor-or-self::div[@class][1][not(starts-with(@class,"twitter"))]'
@@ -325,42 +285,34 @@ novinky.cz#$#hide-if-matches-xpath './/div[@style]/div[contains(@style,"position
 novinky.cz#$#hide-if-matches-xpath './/div[@class="tpl-king-bottom-content"]//h3[@class]/a[@target="_top"]/ancestor::article[contains(@class,"advert")]/parent::div[1]'; hide-if-matches-xpath '//div[@id][@style]//div[@*="ad-content"]//iframe[@style]/ancestor::div[@*="mol-advert" and @*="RENDERED"][@style]'; hide-if-matches-xpath './/div[@class]/span[text()][@*="atm-label"]/following::a[@target]/ancestor::article[@*="advert-item"]'; hide-if-matches-xpath './/div[@class][@style]/div[@style]//iframe[@width][@style]/ancestor::div[@*="RENDERED" or @*="mol-advert"]'
 seznamzpravy.cz,sport.cz#$#hide-if-matches-xpath '//div[@class]/div[@*="mol-advert"]'
 ! #CV-780
-.cz/*,,*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=autapay/*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-play/safety=^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-miniplayer/safety=^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=miniplayer/$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-,e8o,$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Ostatni$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Pare-toll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Busroll-$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Paretol-$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Qa-retoll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/poho0ze5nci=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/naChotina=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/elLOeonora=$xmlhttprequest,script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/past.js|$script,domain=expres.cz|www.idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/pasta.js|$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-&ADFAssetID=$media,domain=expres.cz|www.idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|iprima.cz
-||videos-fms.jwpsrv.com/*/content/conversions/*.mp4|$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-||jwpsrv.com/content/conversions/*/videos/*.mp4?token=$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-?bv=0&autoScaleBox=$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Postroll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Preroll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-=Paretoll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/fal854heat^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-hlouhopAes=no5$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/ledo2vnyce=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz
-/?bn=*&ord=$xmlhttprequest,script,domain=expres.cz|idnes.cz
-ad0R$xmlhttprequest,domain=expres.cz|idnes.cz
-/doubleclick_dmm^*/file.mp4$media,domain=expres.cz|idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|ahaonline.cz|blesk.cz|dama.cz|e15.cz|info.cz|mojezdravi.cz|onetv.cz|zeny.cz|zive.cz|iprima.cz
+.cz/*,,*,|$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=autapay/*,|$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+play/safety=^$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+miniplayer/safety=^$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=miniplayer/$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+,e8o,$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Ostatni$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Pare-toll$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Busroll-$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Paretol-$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Qa-retoll$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/poho0ze5nci=$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/naChotina=$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/elLOeonora=$xmlhttprequest,script,domain=ahaonline.cz|info.cz|onetv.cz
+/past.js|$script,domain=www.ahaonline.cz|info.cz|onetv.cz
+/pasta.js|$script,domain=ahaonline.cz|info.cz|onetv.cz
+&ADFAssetID=$media,domain=www.ahaonline.cz|info.cz|onetv.cz|iprima.cz
+||videos-fms.jwpsrv.com/*/content/conversions/*.mp4|$media,domain=ahaonline.cz|info.cz|onetv.cz
+||jwpsrv.com/content/conversions/*/videos/*.mp4?token=$media,domain=ahaonline.cz|info.cz|onetv.cz
+?bv=0&autoScaleBox=$media,domain=ahaonline.cz|info.cz|onetv.cz
+=Postroll$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Preroll$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+=Paretoll$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/fal854heat^$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+hlouhopAes=no5$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/ledo2vnyce=$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
+/doubleclick_dmm^*/file.mp4$media,domain=ahaonline.cz|info.cz|onetv.cz|iprima.cz
 novinky.cz,super.cz,sport.cz##[class*="ClickThrough"]
-expres.cz,idnes.cz##a[href*="area=preroll_"]
-expres.cz,idnes.cz##a[href*="click?xai="]
-expres.cz,idnes.cz##videoplayer>video[data-io-video-title*="_idnestv_"]
-expres.cz,idnes.cz##a[href*="preroll"]
-idnes.cz,expres.cz##a[href*=";cdata="]
-idnes.cz,expres.cz##a[href*="/supertag=InstreamVideo/"]
 preroll$xmlhttprequest,domain=iprima.cz
 midroll$xmlhttprequest,domain=iprima.cz
 postroll$xmlhttprequest,domain=iprima.cz
@@ -390,7 +342,173 @@ www.seznam.cz#$#override-property-read sssp noopFunc
 ! MISC
 zoznam.sk#$#hide-if-matches-xpath './/div[contains(text(),"Reklama")]/preceding-sibling::div[@class][2]/ancestor::*[3]'
 zoznam.sk#$#hide-if-matches-xpath './/div[@class]/iframe[@id][@title][string-length(@src) > 90]/ancestor::div[1]'
-info.cz,lupa.cz,karaoketexty.cz,hnonline.sk#$#abort-current-inline-script Math.random adb
+info.cz,lupa.cz,hnonline.sk#$#abort-current-inline-script Math.random adb
+expres.cz#$#json-override ads ''
+expres.cz,tiscali.cz,osobnosti.cz#$#prevent-listener beforeunload (); cookie-remover /^_?adb/;
+expres.cz,idnes.cz#$#override-property-read pxReady null
+blesk.cz,expres.cz,idnes.cz#$#abort-on-property-read
+blesk.cz,expres.cz,idnes.cz#$#cookie-remover /^adb$|adb\.key|^[a-z]{5,11}$/
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.inserted_rtb
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##[id^="ad-"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##[data-track-ad]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##leaderBoard
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.movingAd
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###brandingCreativeWrapper
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##[data-google-container-id], .is_stuck
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##a[href*=";adfibeg="]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz#?#div:-abp-has(>[class$="selfpromo"])
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##[class^="stickyContentBottom_"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.ad__in
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.ad-skywrapper
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##iframe[id^="iframeWrapper-"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##[class^="ad "]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##a[href*="Banner"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##a[href*="pubsrcid="]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.ads
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##a[href*="banner"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.sticky-content
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.SC_TBlock
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###leader_board
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.ad-skyscrapper
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###Moitor-1
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##div[style*="_banner_branding_cnc_"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###banner_id
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###banner
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###creativelink
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.rollWrapper
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz###ValRageBottom
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##a[href*="branding"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,www.idnes.cz,expres.cz#?#div:-abp-has(>a[href$="/personalizovana-reklama/"])
+blesk.cz##.gam-wrapper
+expres.cz,idnes.cz##div[data-redistribute="ad"]
+idnes.cz###foto-reklama
+/partnerJsApi/v3?previousZHashes=&hash=*&clbk=sklik$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+&uid=ssp-$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+.cz/*/js/a.js|$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+||cdn.user-api.com^$domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+||cnc.cdn.dopc.cz.^$script,domain=blesk.cz
+||cnc.cdn.dopc.cz^*?format=js$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/scripts^$subdocument,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+.cz/*/area=adblock$script,popup,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+&pssp1=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz|www.idnes.cz|expres.cz
+&cmpState=$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz|expres.cz|www.idnes.cz
+&ifr=0|$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=js&lst=$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz|tiscali.cz|kinobox.cz|osobnosti.cz|karaoketexty.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
+/tigatage:$script,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz|tiscali.cz|kinobox.cz|osobnosti.cz|karaoketexty.cz|nasepenize.cz|fights.cz|novinky.cz|super.cz|sport.cz|kupi.cz|horoskopy.cz
+||w-cached.cncenter.cz/js/cnc-ads-controller.$script,domain=blesk.cz|reflex.cz|zive.cz|auto.cz|e15.cz|autorevue.cz|dama.cz|maminka.cz|mojezdravi.cz|zeny.cz
+client=ca-pub-$subdocument,domain=www.idnes.cz|expres.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+reflex.cz###gl-nat
+e15.cz##.mys-wrapper
+blesk.cz##.banner-ifortuna
+blesk.cz##article[data-track-element-id*="prPremium"]
+blesk.cz##div[data-track-element-id^="prStandardZpravy"]
+blesk.cz###px2-wall-wrap
+blesk.cz###stickyfloatLeftEmptySpaceCheckLeft
+blesk.cz##div[class^="sticky-wrapper"]
+expres.cz,idnes.cz##[class^="r-main"]
+expres.cz#$#hide-if-contains-visible-text /[a-zA-Z]/ '*[class][id]' span[id][data-rsize]
+dama.cz##[class*="ads-"]
+zeny.cz,auto.cz##[data-track-ad]
+reflex.cz##img[title$=".cz"][src^="https://www.reflex.cz/"]
+auto.cz##.halfpageAd, [class*="wrapperH-prapper"], [class*="billboard-bottom"], img[width='970'][height="310"], [data-io-article-url] a[target='_top'], video[id^="video-"][preload="auto"][webkit-playsinline="webkit-playsinline"], [class*="ads-leader"], #KoqisAoAce
+www.blesk.cz##[class*="-wrapperf-prapper"], [class*="pikyTentBot_"], #stickyBottomRightAbsolute, [class="lol__out"], img[width='970'][height="310"], a[style*="blewid: 970px; height: 310px"], div[id*="-hor"]
+autorevue.cz##.bx-sky, .bx-rectangle-article
+maminka.cz##div[class*="bx-sky "]
+dama.cz##div[class^="sky-wrap"]
+maminka.cz,blesk.cz,reflex.cz,e15.cz##a[class*="-combined"]
+blesk.cz#$#abort-current-inline-script  adbDetect; prevent-listener beforeunload (); override-property-read adBlockerFound undefined;
+tiscali.cz,osobnosti.cz,karaoketexty.cz###stickyBanner
+tiscali.cz##a[target="_blank"][href*="tiscali.cz"]>img[src*="tiscali.cz"]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.btitle-right
+tiscali.cz,osobnosti.cz,karaoketexty.cz##a[href*="IdBnrP="][href*="IdCamp="]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##[id^="pxBanner"]
+tiscali.cz,osobnosti.cz,karaoketexty.cz###clickLayer
+karaoketexty.cz###stickyWrap
+karaoketexty.cz##.ad_large_square
+tiscali.cz,osobnosti.cz,karaoketexty.cz##a[target="_blank"]>img[class*="-click-"]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.sticky[stickystop]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##[class$=" sticky"]
+karaoketexty.cz##[class$="_rightcolumn"]
+karaoketexty.cz###sky_right_col
+osobnosti.cz##.hide-screenbot
+tiscali.cz,osobnosti.cz,karaoketexty.cz##div[class$="-rightcJ"]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.SC_TBlock
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.pe-link
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.wrap-advert
+tiscali.cz,osobnosti.cz,karaoketexty.cz##.quaquaquakva
+tiscali.cz,osobnosti.cz,karaoketexty.cz##[href*=";cdata="]
+tiscali.cz##.bs-hp
+tiscali.cz###desktop-square-top, #desktop-leader-top, .desktop-square-top, .desktop-leader-top
+tiscali.cz##[class*="-ld-top"]
+tiscali.cz,osobnosti.cz,karaoketexty.cz##[id*="tmAdVideo"], [class=" pe-banner"]
+expres.cz##.barMan
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,expres.cz##a[href*="verdsi="][href*="&ip="]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,expres.cz##[href*="&token="][target="_blank"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,expres.cz##a[href^="//api.mgid.com/"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##div[style*='background-image: url("https://www.']
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.ad-skycrapper
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,osobnosti.cz,tiscali.cz,karaoketexty.cz##[id*="Adform"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##div[style*="background-image"][style*="branding"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##.article-advertisement
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz##div[id^="cnc-"][class^="cnc-"]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,karaoketexty.cz##div[class$="-banner"]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##div[id$="horiz"]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##iframe[src*=" javascript: window"]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##.pe-banner
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##.advert
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##a[href*="?action=ppl&cid="]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,expres.cz##div[style*="background-image: url("][style*="background-repeat: no-repeat;"]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##a.tracked-event[data-tid]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##a.tracked-event[href*="&tcid="]
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz###ads-leader, #ads-leader-board
+auto.cz,autorevue.cz,blesk.cz,dama.cz,e15.cz,expres.cz,karaoketexty.cz,maminka.cz,mojezdravi.cz,osobnosti.cz,reflex.cz,tiscali.cz,zeny.cz,zive.cz##.foto-iframe-ads
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,expres.cz#?#div:-abp-has(>small:-abp-contains(Reklama))
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,tiscali.cz,osobnosti.cz,karaoketexty.cz##a[href*="?adurl="]
+auto.cz,autorevue.cz,maminka.cz,reflex.cz,blesk.cz,dama.cz,e15.cz,mojezdravi.cz,zeny.cz,zive.cz,tiscali.cz,osobnosti.cz,karaoketexty.cz##a[href*="mondor_hopToSeti"]
+||d49-a.sdn.cz^$image,domain=auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|karaoketexty.cz|kinobox.cz|kupi.cz|lidovky.cz|maminka.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|osobnosti.cz|reflex.cz|sport.cz|super.cz|tiscali.cz|zeny.cz|zive.cz
+||userscontent.com^$image,domain=auto.cz|autorevue.cz|blesk.cz|dama.cz|e15.cz|expres.cz|karaoketexty.cz|kinobox.cz|kupi.cz|lidovky.cz|maminka.cz|mojezdravi.cz|nasepenize.cz|novinky.cz|osobnosti.cz|reflex.cz|sport.cz|super.cz|tiscali.cz|zeny.cz|zive.cz
+karaoketexty.cz#$#hide-if-matches-xpath './/a[string-length(@href) >120][@target="_blank"]/ancestor-or-self::a[@href]'
+||www.karaoketexty.cz/*/*.png$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
+||www.karaoketexty.cz/*/*.jpg$domain=karaoketexty.cz,rewrite=abp-resource:2x2-transparent-png
+@@||karaoketexty.cz/img/*.png$image,domain=karaoketexty.cz
+@@||karaoketexty.cz/img/*.jpg$image,domain=karaoketexty.cz
+?client=ca-pub-$script,domain=karaoketexty.cz
+.cz/*,*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=autapay/*,|$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+play/safety=^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+miniplayer/safety=^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=miniplayer/$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+e8o,$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Ostatni$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Pare-toll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Busroll-$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Paretol-$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Qa-retoll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/poho0ze5nci=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/naChotina=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/elLOeonora=$xmlhttprequest,script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/past.js|$script,domain=expres.cz|www.idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/pasta.js|$script,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+&ADFAssetID=$media,domain=expres.cz|www.idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+||videos-fms.jwpsrv.com/*/content/conversions/*.mp4|$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+||jwpsrv.com/content/conversions/*/videos/*.mp4?token=$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+?bv=0&autoScaleBox=$media,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Postroll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Preroll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+=Paretoll$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/fal854heat^$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+hlouhopAes=no5$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/ledo2vnyce=$xmlhttprequest,domain=auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+/?bn=*&ord=$xmlhttprequest,script,domain=expres.cz|idnes.cz
+ad0R$xmlhttprequest,domain=expres.cz|idnes.cz
+/doubleclick_dmm^*/file.mp4$media,domain=expres.cz|idnes.cz|auto.cz|autorevue.cz|maminka.cz|reflex.cz|blesk.cz|dama.cz|e15.cz|mojezdravi.cz|zeny.cz|zive.cz
+expres.cz,idnes.cz##a[href*="area=preroll_"]
+expres.cz,idnes.cz##a[href*="click?xai="]
+expres.cz,idnes.cz##videoplayer>video[data-io-video-title*="_idnestv_"]
+expres.cz,idnes.cz##a[href*="preroll"]
+idnes.cz,expres.cz##a[href*=";cdata="]
+idnes.cz,expres.cz##a[href*="/supertag=InstreamVideo/"]
+karaoketexty.cz#$#abort-current-inline-script  adb
 ! Popup/Popunder
 dlouha-videa.cz#$#abort-on-property-read _0x4c29
 ! *** abp-filters-anti-cv:dutch.txt ***
@@ -404,8 +522,8 @@ noon.com#$#hide-if-matches-xpath './/div[@class][contains(text(),"Sponsored")]/a
 noon.com#$#hide-if-matches-xpath './/span[text()="Sponsored"]/preceding::img[contains(@src,"/ads/banner")]/ancestor-or-self::div[contains(@class,"adBannerModule")][@data-qa]/parent::div'
 noon.com##div[data-slotid*="hero_banner_"]
 ! #RM-68
-cars.com#$#hide-if-matches-xpath './/a[@data-linkname="inventory-ad-header"]/ancestor-or-self::div[@class="inventory-ad-main vehicle-card-main"]'
-cars.com#$#hide-if-matches-xpath './/span[@class="hero-cta-sponsored"][contains(text(),"Sponsored")]/preceding::img[@class="sponsored-hero-cta"]/ancestor::a[@aria-describedby][contains(@href,"adclick")]/ancestor-or-self::section[@id="primary-hero"]'
+cars.com#$#hide-if-matches-xpath './/a[@data-linkname="inventory-ad-header"]/ancestor-or-self::div[contains(@class,"inventory-ad")]'
+cars.com#$#hide-if-matches-xpath './/span[@class="hero-cta-tag"][contains(text(),"Sponsored")]/preceding::img[@class="sponsored-hero-cta"]/ancestor::a[@aria-describedby][contains(@href,"adclick")]/ancestor-or-self::section[@id="primary-hero"]'
 ! CV-1935
 ##.jag8CityBio212023
 reddit.com##.jag8CityBio212023
@@ -424,8 +542,9 @@ ebay.*#$#hide-if-contains-visible-text /Sponsored|Anzeigen|Sponsorisé|Sponsoriz
 ebay.*#$#hide-if-contains-visible-text /[Ss]ponsored|[Aa]nzeigen|[Ss]ponsorisé|[Ss]ponsorizzat[ie]|[Ss]ponsorowane|[Gg]⁣e⁣s⁣p⁣o⁣n⁣s⁣o⁣r⁣d|[Pp]atrocinado/ 'div[class^="recs-placement-arrangement"]' 'div.recs-card-container div.recs-header div ^^sh^^ *'
 ebay.*#$#hide-if-matches-xpath './/div[contains(@class,"pd-sponsored")]/parent::div[starts-with(@class,"ads-")]/ancestor::div[@data-testid="x-ads-placements"]'
 ! sp
-ebay.*#$#race start; hide-if-contains-visible-text /Sponsored|Anzeigen|Sponsorisé|Sponsorizzato|Sponsorowane|Gesponsord|Patrocinado|Anzeige/ 'li.s-item' '* li div>span>div ^^sh^^ span:not([aria-hidden="true"])'; hide-if-contains-and-matches-style /./ li[data-viewport] 'li[data-viewport] .s-item__sep>div ^^sh^^ span' /./ 'overflow-x: visible'; hide-if-contains-visible-text /./ 'li[data-viewport]' '.s-item__sep>div ^^sh^^ span:nth-child(2)'; hide-if-matches-computed-xpath './/div[contains(@class, "s-item__detail")]/span/div[@aria-labelledby = "{{}}"]/ancestor::li' './/style[contains(text(),"size: var")]' /^\\s*div\\.(.*?)_/; race stop;
+ebay.*#$#race start; hide-if-contains-visible-text /Sponsored|Anzeigen|Sponsorisé|Sponsorizzato|Sponsorowane|Gesponsord|Patrocinado|Anzeige/ 'li.s-item' '* li div>span>div ^^sh^^ span:not([aria-hidden="true"])'; hide-if-contains-and-matches-style /./ li[data-viewport] 'li[data-viewport] .s-item__sep>div ^^sh^^ span' /./ 'overflow-x: visible'; hide-if-contains-visible-text /./ 'li[data-viewport]' '.s-item__sep>div ^^sh^^ span:nth-child(2)'; hide-if-matches-computed-xpath './/div[contains(@class, "s-item__detail")]/span/div[@aria-labelledby = "{{}}"]/ancestor::li' './/style[contains(text(),"size: var")]' /^\\s*div\\.(.*?)_/; hide-if-matches-computed-xpath './/div[contains(@class,"s-item__detail")]/span/span[@aria-labelledby="{{}}"]/ancestor::li' './/script[contains(text(),"CSSStyleDeclaration")]' /getPropertyValue\\(\\"\\-\\-(.*?)\\"/; hide-if-matches-computed-xpath './/div[contains(@class,"s-item__detail")]/span/span[@aria-labelledby="{{}}"]/ancestor::li' './/style[contains(text(),"div:first-line")]' '/0px;\\s\\-\\-(.*?)\\:/'; race stop;
 ebay.*#$#hide-if-matches-computed-xpath './/style[contains(text(),"data:image")][contains(text(),"aria-labelledby")][contains(text(),"{{}}")]' './/style[contains(text(),"display: var")]' /span\.(.*?)\\s/; hide-if-matches-computed-xpath './/span[@class="s-item__sep"]/span[@aria-labelledby = "{{}}"]/ancestor::li' './/style[not(@style)][contains(text(),"data:image")][contains(text(),"aria-labelledby")]' /aria-labelledby=(.*?)\\]/
+ebay.*#$#hide-if-matches-computed-xpath './/style[contains(text(),"data:image")][contains(text(),":root")][contains(text(),"{{}}")]' './/script[contains(text(),"previousElementSibling")]' /b\\=.(.*?).\\=\\=/; hide-if-matches-computed-xpath './/span[@class="s-item__sep"]/span[@aria-labelledby][contains(@style,"{{}}")]/ancestor::li' './/style[not(@style)][contains(text(),"data:image")][contains(text(),":root")]' /root\\{(.*?)\\:/
 ! #CV-737
 cnn.com#$#strip-fetch-query-parameter caid warnermediacdn.com; strip-fetch-query-parameter afid warnermediacdn.com; strip-fetch-query-parameter conf_csid warnermediacdn.com; strip-fetch-query-parameter app_csid warnermediacdn.com
 ||warnermedia.com/api/v1/events?*=ad-break*^$xmlhttprequest,domain=cnn.com
@@ -662,18 +781,18 @@ bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #RM-9
 ! sl
-instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ section ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ *'; race stop;
-instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#cart-body li' '#cart-body li div[aria-label="Product"] * ^^sh^^  section ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#cart-body li' '#cart-body li div[aria-label="Product"] * ^^sh^^ *'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ section ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'li' 'li div[aria-label="Product"] * ^^sh^^ div ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ article ^^sh^^ *'; race stop;
 ! ta
-instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ section 'section ^^sh^^ section ^^sh^^ article>div+*'; hide-if-contains-visible-text /./ section 'section ^^sh^^ article>div+div[aria-hidden]>span'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ section 'section ^^sh^^ section ^^sh^^ article>div+*'; hide-if-contains-visible-text /./ section 'section ^^sh^^ article>div+div[aria-hidden]>span'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' div 'div ^^sh^^ div ^^sh^^ * div[aria-hidden]'; race stop;
 instacart.com#$#hide-if-matches-xpath './/img[@alt="Sponsored"][contains(@src,"spoonsored_")]/parent::div[1]'; hide-if-matches-xpath './/div[@class]/span/preceding::img[contains(@src,"image_display_banner")][contains(@alt,"Silk")][not(@type)][not(@srcset)]/ancestor-or-self::section[1]'
 ! mc
-instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ div 'div * ^^sh^^ section ^^sh^^ div>div+div'; hide-if-contains-visible-text /./ div 'div * ^^sh^^ * div>div+div'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ div 'div * ^^sh^^ section ^^sh^^ div>div+div'; hide-if-contains-visible-text /./ div 'div * ^^sh^^ * div>div+div'; hide-if-contains-visible-text /./ div 'div * ^^sh^^ div ^^sh^^ * div>div+div'; race stop;
 ! fi
-instacart.com,instacart.ca#$#hide-if-matches-xpath './/*[@class]/span[contains(@style,"display:")][2]/ancestor::div[@id="Featured Items"]'
+instacart.ca,instacart.com#$#hide-if-matches-xpath './/*[@class]/span[contains(@style,"display:")][2]/ancestor::div[@id="Featured Items"]'
 ! pfy
-instacart.com,instacart.ca#$#hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div#item_details>div>div' 'div#item_details>div>div div>h2~div'
-instacart.com,instacart.ca#$#hide-if-has-and-matches-style 'img[alt="Sponsored"]' 'div[data-testid="regimen-section"] div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^  section ^^sh^^ *'
+instacart.ca,instacart.com#$#hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div#item_details>div>div' 'div#item_details>div>div div>h2~div'
+! fbt
+instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' 'div[data-testid="regimen-section"] div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^  section ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ div ^^sh^^ *'; race stop;
 instacart.com,instacart.ca#$#abort-on-property-write window.ADBLOCK_DETECTED
 ! #RM-3
 lowes.com#$#hide-if-matches-xpath './/div[@class][contains(text(),"Sponsored")]/ancestor::div[@class="carousel-inner-container "]/preceding::h2[@class][@role][contains(text(),"Sponsored")]/ancestor-or-self::div[contains(@class,"recommended")][1]'
@@ -726,7 +845,7 @@ instagram.com#$#race start; hide-if-contains-visible-text '/Anzeige|Gesponsert|S
 factfeed.com,mdrntoday.com,travelroo.com###vidazooAd
 factfeed.com,mdrntoday.com,travelroo.com#$#hide-if-matches-xpath './/div[contains(@class,"ad-lines") and contains(text(),"ADVERTISEMENT")]/parent::div[@class="ad-text-box"]/ancestor::div[@class][@style]'
 ! #RM-16
-aliexpress.com,aliexpress.us#$#hide-if-contains-visible-text /AD|Annonce|Anuncio|Anzeige/ 'div > div > a[target="_blank"]' 'div[class]'
+aliexpress.com,aliexpress.us#$#hide-if-contains-visible-text /AD|Annonce|Anuncio|Anzeige|Reklama|Anúncio|광고|Advertentie|Ann|إعلان|מודעה/ 'div > div > a[target="_blank"]' 'div[class]'
 ! #RM-66
 newegg.com#$#hide-if-matches-xpath './/div[contains(@class,"menu-box")]/span[contains(text(),"Sponsored")]/ancestor::div[contains(@class,"at-side")]'; hide-if-matches-xpath './/div[@class="row-body-inner"]//div[contains(@class,"menu-box")]/span[contains(text(),"Sponsored")]/ancestor::div[@class][2]'; hide-if-contains-visible-text /Sponsored/ div[class^="product"] 'div[class][style]>span';
 newegg.com#$#hide-if-matches-xpath './/a[@class="item-img"][@rel]/following::span[contains(text(),"Sponsored")]/ancestor::div[contains(@class,"item-cell")][starts-with(@id,"item_cell")]'
@@ -819,6 +938,7 @@ gaytxxx.com,transtxxx.com,txxx.com#$#abort-on-property-read jwplayer.utils.Timer
 sendspace.com#$#abort-on-property-read runad false
 engvideo.net,hianime.to,hollymoviehd.cc,ling-online.net#$#abort-current-inline-script document.documentElement break;case
 eporner.com#$#override-property-read exo99HL3903jjdxtrnLoad null; abort-on-property-read window.location.replace.getadb; cookie-remover ADBp
+freshsexvideos.com,sexvideos.rodeo,xxxvideo.link,ixxx.onl,xvideosx.one,xxxpor.org,xmxx.live#$#cookie-remover tgpOut; abort-current-inline-script document.querySelectorAll popMagic; override-property-read setTimeout noopFunc;
 ! MISC
 airsoftmilsimnews.com#$#abort-on-property-read td_ad_background_click_target
 baytorrent.eu.org,europixhd.com,europixhd.net,file-up.org,force-download.com,force-download.es,force-download.net,gledajonline.net,hdeuropix.io,loadsubs.net,novom.ru,pirateproxy.earth,pirateproxy.live,thehiddenbay.com,thepiratebay.org,thepiratebay.vip,thepiratebay10.org,topeuropix.net,tpb.party,uploadproper.com,uploadproper.net#$#abort-on-property-read atob
@@ -1000,8 +1120,8 @@ www.facebook.com,web.facebook.com#$#race start; hide-if-contains-visible-text /[
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelledby and @aria-describedby]//span/div[@class][@role][contains(., "Anzeige") or contains(., "Sponsored") or contains(., "Sponsorlu") or contains(., "Gesponsert") or contains(., "Patrocinado") or contains(., "Sponsorisé") or contains(., "Commandité") or contains(., "Gesponsord") or contains(., "Sponsorowane") or contains(., "Publicidad") or contains(., "Sponsrad") or contains(., "Sponsoreret") or contains(., "Sponsoroitu") or contains(., "Sponsa") or contains(., "Sponset") or contains(., "Sponsorizat") or contains(., "Bersponsor") or contains(., "Ditaja") or contains(., "Sponsorizzato") or contains(., "May Sponsor") or contains(., "Реклама") or contains(., "贊助") or contains(., "赞助内容") or contains(., "ได้รับการสนับสนุน") or contains(., "Được tài trợ") or contains(., "प्रायोजित") or contains(., "دارای پشتیبانی مالی") or contains(., "تمويل شوي") or contains(., "সৌজন্যে") or contains(., "مُموَّل") or contains(., "سپانسرڈ") or contains(., "ממומן") or contains(., "Hirdetés")]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/span[@id="ssrb_feed_start"]/following-sibling::div//div[@aria-labelledby and @aria-describedby]//div[contains(text(),"Sponsored")]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com##a[href*="ad_preferences"]>span[class][dir]
-www.facebook.com,web.facebook.com#?#:xpath(.//div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@class][@rel][@target]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1])
-www.facebook.com,web.facebook.com#?#:xpath(.//div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@aria-label][@class][@href][@role][@tabindex]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1])
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@class][@rel][@target]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@aria-label][@class][@href][@role][@tabindex]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[contains(@href,"ads/about")][text()]//ancestor::span'
 ! Rules that don't need to change
 @@||www.facebook.com^$generichide
@@ -1038,6 +1158,7 @@ filmtelecharger.net,libertyvf.co,libertyvf.tv,libertyvf.com,streaming-one.com,ex
 cdiscount.com#$#hide-if-matches-xpath './/div[contains(@class,"sponsored")]/ancestor::li[@class="abLabel"]'; hide-if-matches-xpath './/div[contains(@class,"sponsored")]/ancestor::li[1]'
 cdiscount.com#$#hide-if-matches-xpath './/div[contains(@class,"sponsored")]/parent::div[@id]/ancestor::div[@class="o-block"]'
 cdiscount.com#$#hide-if-matches-xpath './/div[contains(@class,"sponsored")]/ancestor-or-self::div[contains(@id,"AdDisplay") and  contains(@data-action,"AdsDisplay")]'
+cdiscount.com#$#hide-if-matches-xpath '//div[@class="c-sponsoredMentions"]/parent::div[@class]'; hide-if-matches-xpath './/article[contains(@class,"sponsored")]//ancestor::div[@id][@class="c-fp__cell--side"]';
 cdiscount.com#$#hide-if-matches-xpath './/a[@href]/img[@title]/ancestor::div[contains(@class,"resultbox--pub")][1]'; hide-if-matches-xpath './/a[@target][@aria-label="bannerlink"]/parent::div[@class][1]'; hide-if-matches-xpath './/ul[@id]//a[contains(@rel, "sponsored")]/ancestor::li[1]';
 ! MISC
 netu.tv,hqq.tv,hqq.watch#$#abort-on-property-read ownerid
@@ -1107,6 +1228,7 @@ hotabis.com#$#override-property-read td_ad_background_click_link undefined
 ! Popup/Popunder/Clickunder
 komikcast.me#$#abort-on-property-read localStorage; abort-on-property-write JSON.parse
 beritabaru.news,solusi.cyou#$#override-property-read setTimeout noopFunc
+westmanga.fun#$#abort-on-property-read doOpen1 false; override-property-read puShown1 true; abort-current-inline-script document.cookie
 ! MISC
 komikdewasa.me#$#abort-on-property-write adsbyjuicy; override-property-read R undefined; hide-if-matches-xpath '//a[@target="_blank"]/img[contains(@class,"align")]/ancestor::div[starts-with(@class,"blox")]'; hide-if-matches-xpath '//a[@target="_blank"]/img[contains(@class,"align")]/ancestor-or-self::a[@href][1]'
 ! *** abp-filters-anti-cv:italian.txt ***
@@ -1264,7 +1386,7 @@ kinohome.net##a[data-i]
 indoxx1.show##img[src^="blob:https://indoxx1.show/"]
 /img.akubebas.com^$image,script,domain=indoxx1.show
 ! #CV-250
-gidonline.eu,dc-marvel.org,torrent-soft.net#$#abort-on-property-read atob
+gidonline.eu,torrent-soft.net#$#abort-on-property-read atob
 ! MISC
 sm.news#$#abort-current-inline-script decodeURIComponent blocked
 7ogorod.ru,autonevod.ru,shtrafsud.ru,tophallclub.ru,zazloo.ru#$#abort-on-property-read fpm_attr
@@ -1476,6 +1598,7 @@ phimvuihd.org#$#override-property-read urlAds ''
 thapcam4.net#$#simulate-mouse-event '#modalasd$continue,delay=300'
 phimvietsub.pro,api.anime3s.com,subnhanh.xyz#$#override-property-read maxAds 0
 web.phimsexvn.mobi,londep.io,phimsexviet.io,ww1.phimsexvietnam.live,clipsex.xxx,xxxvietnam.io,gaimup.net,phimsexvip.cc,xem.ditnhau.cc,xx.phimsexnhathay.com#$#override-property-read video.adVast ''
+www.iosviet.com#$#override-property-read timer 0
 ! Popup/Popunder/Clickunder
 fembed.com,femax20.com,m.blogtruyenvn.org,viettoons.tv,vinaurl.net,animet.net,anh.moe,truyenhentaivn.com#$#abort-on-property-read open
 khophimhd.net,downloadsachmienphi.com,tvhay.top#$#abort-current-inline-script JSON.parse atob
@@ -1490,28 +1613,28 @@ metruyenchu.com#$#abort-on-property-write window.onclick
 truyentuan.xyz#$#abort-current-inline-script $ btpop
 player-cdn.com#$#override-property-read detectAdBlockAll noopFunc; override-property-read detectAdBlock noopFunc
 player-cdn.com###playback-fake
-xoilac86c.live#$#abort-on-property-read adsRedirectPopups
+etellekt.com#$#abort-on-property-read adsRedirectPopups
 sexdiaryz.us#$#abort-on-property-read parseInt
 linkneverdie.net#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
 javnong.cc#$#abort-on-property-read Math.round
-viet69.bz,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenme.com,yurineko.net,vlxyz.vc,javhay.in,phimsexhay669.org,cliphot69.city,doctruyen3qvn.net,hentaizz.me,animehay.me,vlxx.xxx,heo69.vc,top1sex.club,lenlut.tv,xemxxx.net,hentaivn.top,sexvn1.cc,cdn.streamvl.sbs,www.buomtv.app,truyenvn.club,cdnstream.sbs,javtiful.com,tuoi69.blog,quatvn2.club,tenmientruyengi.net,topxxxviet.com,phim18hd.top,web.sexviet88.day,sexphetv.pro,helvid.net#$#abort-current-inline-script WebAssembly instantiate
+viet69.ca,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenza.com,yurineko.net,vlxyz.vc,javhay.in,phimsexhay669.org,cliphot69.city,doctruyen3qvn.net,hentaizz.pro,animehay.me,vlxx.xxx,heo69.vc,top1sex.club,lenlut.tv,phimsex.ai,hentaivn.day,sexvn1.cc,cdn.streamvl.sbs,www.buomtv.app,truyenvn.club,cdnstream.sbs,javtiful.com,tuoi69.media,quatvn2.club,tenmientruyengi.net,ww2.topsexviet.com,phim18hd.top,web.sexviet88.day,sexdep9x.pro,demo.14412882.com#$#abort-current-inline-script WebAssembly instantiate
 animevietsub.io#$#abort-current-inline-script document.documentElement break;case
 phimdinhcao.net,phimlongtieng.net,phimdinhcao.com#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl
 phimgichill.net,hhhay.tv,hh3dhay.pro,truyengihotnha.com,truyengihotnha.net#$#abort-current-inline-script eval $._Eu
-gocphimvnn.com,p.thoctv.com#$#abort-current-inline-script document.createElement script
+gocphimmoi.com,p.thoctv.com#$#abort-current-inline-script document.createElement script
 mephimnhe1.net#$#abort-current-inline-script jQuery popurl
 phimhdc.net,motchill.ac#$#abort-current-inline-script document.addEventListener linksToOpen
 khoaiphim.com,phimmoinay.tv#$#abort-current-inline-script jQuery click_time
-dualeotruyenme.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
-lxmanga.net#$#abort-current-inline-script $ PopUnder
+dualeotruyenza.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
+lxmanga88.com#$#abort-current-inline-script $ PopUnder
 truyen35.vn#$#abort-current-inline-script jQuery click_ads
 www.toptruyen3.info#$#abort-current-inline-script Promise instance
 truyenqqvn.com,animehay.me#$#abort-current-inline-script document.addEventListener window.open
 audiotruyenfull.com#$#abort-on-property-read adpiaListUrl
 vailonxx.com,phimlongtieng.com,phimlongtieng.net#$#abort-current-inline-script jQuery window.open
-tctruyen.com,tctruyen.net,abtruyen.com,phimss.com#$#abort-current-inline-script $ popup
-nettruyenall.com#$#abort-current-inline-script Promise break;case
+tctruyen.net,abtruyen.net,phimss.com#$#abort-current-inline-script $ popup
+nettruyennn.com#$#abort-current-inline-script Promise break;case
 holyfilm.org#$#abort-current-inline-script window.addEventListener window.open
 nettruyenus.net#$#abort-on-property-read sp
 phimtho.net#$#abort-current-inline-script $ p0pUpRandom
@@ -1521,6 +1644,8 @@ truyensextv.com#$#abort-current-inline-script document.addEventListener popup
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2994
 @@||fundingchoicesmessages.google.com^$script,xmlhttprequest,subdocument
+! FD-5355
+kleinanzeigen.de#@#[data-adid]
 ! *** abp-filters-anti-cv:distribution/abp-filters-partners.txt ***
 ! Filters to be used by distribution partners
 ! #CV-782
