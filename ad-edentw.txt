@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: lYTQjZ4Cu6dYn08hC73I+g
+! Checksum: rD6JlZ4haL/5PjSJigFO4Q
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202407080803
-! Last Modified: 2024年07月08日 08:03
+! Version: 202407150803
+! Last Modified: 2024年07月15日 08:03
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -758,9 +758,6 @@ softonic.com,softonic.jp,softonic.nl,softonic.pl,softonic.com.br#?#li[class^="li
 softonic.com,softonic.jp,softonic.nl,softonic.pl,softonic.com.br#?#li[class*="list-articles__item"]:-abp-contains(/Sponsorisé|Sponsorizzato|Gesponsert|スポンサー|Promotie|Sponsorowany|Patrocinado/)
 softonic.com,softonic.jp,softonic.nl,softonic.pl,softonic.com.br#?#div[class^="highlight-list__item"]:-abp-contains(/Sponsorisé|Sponsorizzato|Gesponsert|スポンサー|Promotie|Sponsorowany|Patrocinado/)
 softonic.com,softonic.jp,softonic.nl,softonic.pl,softonic.com.br,softonic.ru#$#prevent-listener click 'native code'
-thegatewaypundit.com##a[href="#"]
-thegatewaypundit.com##a[href*="cloudfront.net"]
-||cloudfront.net^$domain=thegatewaypundit.com
 stevivor.com#$#hide-if-matches-xpath '//div[@id][@style]/div[contains(@id,"ad")]/ancestor::div[contains(@class,"mmt")]'
 ! #CV-666
 eztv.re,pstream.net#$#abort-on-property-write adcashMacros
@@ -785,8 +782,6 @@ flashx.tv#$#abort-on-property-read affLink
 adpop.me,amyscans.com,aquipelis.net,arenavision.in,arenavision.us,blogdepelis.com,canalenvivogratis.com,cinemitas.com,danfra.com,dclinks.info,descargarplaystore.net,desmaxgo.com,elitegoltv.me,extreme-d0wn.net,filmesonlinegratis.com,futbollibre.online,hqq.tv,hqq.watch,inkapelis.com,lhmjihd.blogspot.com,limpi.tv,livefootball.live,locopelis.com,megawarez.org,mostafidoun.com,pastepvp.org,peliculas24.me,peliculascine.net,peliculasdeprincesas.net,peliculasio.com,peliculasyseries.org,pelisgratis.me,pelishd.live,pelisplanet.com,pelisplus.online,pelix.tv,pirlotv.com.es,pruiebannnn.blogspot.com,recpelis.net,repelis.net,rojadirectatv.info,rojadirectatv.stream,series21.com,seriesflixapp.net,seuseriado.com,seutorrent.com,siestrenos.com,sonpelishd.com,sonpelishd.net,tarjetarojaonline.tv,tarjetarojatvonline.com,tecmaxsoft.com,televisionparatodos.tv,tuzonafut.net,verpeliculasenlatino.com,voirfilm.me,voirfilms.mx,webtvonlive.com,hdvid.tv,ovid.pro#$#abort-on-property-read smrtSB; abort-on-property-read smrtSP
 ! #CV-368
 kimcartoon.to#$#abort-on-property-read NativeAd
-! #CV-698
-thegatewaypundit.com#$#abort-on-property-read adtoniq; abort-on-property-write adtoniq; abort-on-property-write bomab; abort-on-property-write zacak; abort-on-property-write kozuq
 ! #CV-754
 2gomovies.to#$#abort-on-property-write _0x287f; abort-on-property-write _0x2f53; abort-on-property-write _0x16f4
 topwwnews.com#$#abort-on-property-read localStorage
@@ -817,14 +812,14 @@ bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #RM-9
 ! sl, sc, fbt
-instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ section ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'li' 'li div[aria-label="Product"] * ^^sh^^ div ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ article ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] * ^^sh^^ * ^^sh^^ *'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ * ^^sh^^ *'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ article>div'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] article>div'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] div[style]>div[style]'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div>li[data-testid]' 'div[aria-label="Product"] div[style]>span'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' li div[aria-label="Product"] 'div[aria-label="Product"] aside[style] div>span'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] *'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ section ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' '#store-wrapper li' '#store-wrapper li div[aria-label="Product"] * ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'li' 'li div[aria-label="Product"] * ^^sh^^ div ^^sh^^ *'; hide-if-has-and-matches-style 'section[style]' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ article ^^sh^^ *'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] * ^^sh^^ * ^^sh^^ *'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ * ^^sh^^ *'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] * ^^sh^^ article>div'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] article>div'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div[aria-label="Product"]' 'div[aria-label="Product"] div[style]>div[style]'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div>li[data-testid]' 'div[aria-label="Product"] div[style]>span'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' li div[aria-label="Product"] 'div[aria-label="Product"] aside[style] div>span'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] *'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; race stop;
 ! ta, mc
-instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ section 'section ^^sh^^ section ^^sh^^ article>div+*'; hide-if-contains-visible-text /./ section 'section ^^sh^^ article>div+div[aria-hidden]>span'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' div 'div * ^^sh^^ * ^^sh^^ * div[aria-hidden]'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' div 'div ^^sh^^ div ^^sh^^ * div[aria-hidden]'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' span[id] 'span[id] * ^^sh^^ * ^^sh^^ * div[aria-hidden]'; hide-if-has-and-matches-style 'img[alt*="spons"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sored_"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' article[id] 'article[id] *'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text /./ section 'section ^^sh^^ section ^^sh^^ article>div+*'; hide-if-contains-visible-text /./ section 'section ^^sh^^ article>div+div[aria-hidden]>span'; hide-if-has-and-matches-style 'img[alt="Sponsored"]' div 'div * ^^sh^^ * ^^sh^^ * div[aria-hidden]'; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' div 'div ^^sh^^ div ^^sh^^ * div[aria-hidden]'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' span[id] 'span[id] * ^^sh^^ * ^^sh^^ * div[aria-hidden]'; hide-if-has-and-matches-style 'img[alt*="spons"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sored_"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' article[id] 'article[id] *'; race stop;
 instacart.com#$#hide-if-matches-xpath './/img[@alt="Sponsored"][contains(@src,".svg")]/parent::div[1]'; hide-if-matches-xpath './/div[@class]/span/preceding::img[contains(@src,"image_display_banner")][contains(@alt,"Silk")][not(@type)][not(@srcset)]/ancestor-or-self::section[1]'
 ! fi
 instacart.ca,instacart.com#$#hide-if-matches-xpath './/*[@class]/span[contains(@style,"display:")][2]/ancestor::div[@id="Featured Items"]'
 ! pfy, ian
-instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div#item_details>div>div' 'div#item_details>div>div div>h2~div'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[src*="sored_"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-contains-visible-text '/S(\\s)*p(\\s)*o(\\s)*n(\\s)*s(\\s)*o(\\s)*r(\\s)*e(\\s)*d/' 'div#item_details>div>div' 'div#item_details>div>div div>h2~div'; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[src*="sored_"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' 'div#item_details>div>div' 'div#item_details>div>div div>h2+div'; race stop;
 instacart.com,instacart.ca#$#abort-on-property-write window.ADBLOCK_DETECTED
 ! #RM-3
 lowes.com#$#hide-if-matches-xpath './/div[@class][contains(text(),"Sponsored")]/ancestor::div[@class="carousel-inner-container "]/preceding::h2[@class][@role][contains(text(),"Sponsored")]/ancestor-or-self::div[contains(@class,"recommended")][1]'
@@ -1098,6 +1093,7 @@ vidmoly.to###dos_vlock
 vidmoly.to#$#abort-current-inline-script addEventListener DOMContentLoaded
 @@||nosteam.ro/notcaptcha/adheader.js$domain=nosteamgames.ro
 xvideos.com##div[id^="video-ad"]+div[class]
+xv-ru.com,xvideos.com#$#prevent-listener load exoJsPop101
 filelions.com,filelions.to#$#hide-if-matches-xpath './/div[contains(@style,"position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01")]/self::div[1]'
 adblockeronstreamtape.xyz,adblockplustape.com,adblockstreamtape.art,adblockstreamtape.site,noblocktape.com,shavetape.cash,stapadblockuser.xyz,stapewithadblock.monster,strcloud.link,streamadblocker.xyz,streamadblockplus.com,streamadblockplus.xyz,streamtape.cc,streamtape.com,streamtape.net,streamtape.to,streamtape.xyz,streamtapeadblock.art,strtape.cloud,strtape.site,strtape.tech,tapewithadblock.org#$#abort-current-inline-script JSON.parse Promise; abort-current-inline-script document.createElement adblock;
 */larkf?id=*$domain=animeunity.cc
@@ -1184,17 +1180,17 @@ www.facebook.com,web.facebook.com#$#race start; hide-if-contains-visible-text /[
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelledby and @aria-describedby]//span/div[@class][@role][contains(., "Anzeige") or contains(., "Sponsored") or contains(., "Sponsorlu") or contains(., "Gesponsert") or contains(., "Patrocinado") or contains(., "Sponsorisé") or contains(., "Commandité") or contains(., "Gesponsord") or contains(., "Sponsorowane") or contains(., "Publicidad") or contains(., "Sponsrad") or contains(., "Sponsoreret") or contains(., "Sponsoroitu") or contains(., "Sponsa") or contains(., "Sponset") or contains(., "Sponsorizat") or contains(., "Bersponsor") or contains(., "Ditaja") or contains(., "Sponsorizzato") or contains(., "May Sponsor") or contains(., "Реклама") or contains(., "贊助") or contains(., "赞助内容") or contains(., "ได้รับการสนับสนุน") or contains(., "Được tài trợ") or contains(., "प्रायोजित") or contains(., "دارای پشتیبانی مالی") or contains(., "تمويل شوي") or contains(., "সৌজন্যে") or contains(., "مُموَّل") or contains(., "سپانسرڈ") or contains(., "ממומן") or contains(., "Hirdetés") or contains(., "ಪ್ರಾಯೋಜಿತ")]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/span[@id="ssrb_feed_start"]/following-sibling::div//div[@aria-labelledby and @aria-describedby]//div[contains(text(),"Sponsored")]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com##a[href*="ad_preferences"]>span[class][dir]
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@class][@rel][@target]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@aria-label][@class][@href][@role][@tabindex]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
-www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/a[contains(@href,"ads/about")][text()]//ancestor::span'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@aria-label][@href][@role][@tabindex]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")]//span[text()]/ancestor-or-self::a[contains(@href,"/ads/about/?entry_product=ad_preferences")]/parent::div[1]'
 ! Rules that don't need to change
 @@||www.facebook.com^$generichide
 @@||web.facebook.com^$generichide
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@role="complementary"]//span/following::a[@aria-labelledby][@role="link"][@target="_blank"][@tabindex="0"]/ancestor-or-self::span'
 www.facebook.com,web.facebook.com#$#race start; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrizato]{11}|[Sponsrowane]{11}|[Anzeig]{6}|[Patrocnado]{11}|स्पॉन्सर्ड/ 'div#watch_feed div[class^="_"]' 'a[href="#"][role="link"]'; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrizato]{11}|[Sponsrowane]{11}|[Anzeig]{6}|[Patrocnado]{11}|स्पॉन्सर्ड/ 'div#watch_feed div[class^="_"]' 'a[href^="?__cft__"] span'; race stop;
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/object[@type="nested/pressable"]/a[@role="link"]/span[contains("|Sponsoreret|Sponsrad|Patrocinado|Sponsa|Bersponsor|Commandité|Ditaja|Gesponsert|Gesponsord|Publicidad|Sponset|Sponsored|Sponsorisé|Sponsorizat|Sponsorizzato|Sponsorlu|Sponsorowane|Реклама|ממומן|تمويل شوي|دارای پشتیبانی مالی|سپانسرڈ|مُموَّل|प्रायोजित|সৌজন্যে|ได้รับการสนับสนุน|内容|贊助|Sponsoroitu|May Sponsor|Được tài trợ|", concat("|", text(), "|"))]/ancestor::span[2]'
-! CV-1216
+! wp
 www.facebook.com,web.facebook.com#$#skip-video 'video[playsinline]'; simulate-mouse-event 'xpath(.//div[@id="watch_feed"]//div[@class]/span/span[@dir="auto"][contains(.,"Skip") or contains(.,"Omitir") or contains(.,"Salta") or contains(.,"Ignorer") or contains(.,"Pomiń") or contains(.,"Pular")])$delay=0'
+www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//div[@id="watch_feed"]//span[@class][@dir="auto"][contains(., "Sponsored") or contains(.,"Sponsorisé") or contains(.,"Sponsorizzato") or contains(.,"Publicidad") or contains(.,"Sponsorowane") or contains(.,"Anzeige") or contains(.,"Ge⁣s⁣p⁣o⁣n⁣s⁣o⁣r⁣d") or contains(.,"Patrocinado") or contains(.,"स्पॉन्सर्ड")]/ancestor-or-self::a[@aria-label][@href][@role="link"][@target="_blank"]/parent::div[1]'
 ! Experimental
 ! *** abp-filters-anti-cv:french.txt ***
 ! #CV-691
@@ -1337,7 +1333,7 @@ allegro.*#$#hide-if-matches-xpath './/div[contains(@data-analytics-view-label,"s
 allegro.*#$#hide-if-matches-xpath './/span[.="Sponsorowane" or .="Sponzorováno"]/ancestor::div[@data-box-id][contains(@data-analytics-tags,"advertising")]';
 allegro.pl#$#hide-if-matches-xpath './/div[contains(@data-analytics-groups,"reklam") or contains(@data-analytics-groups,"kampanijna") or contains(@data-box-name,"Ads")]/ancestor::div[@data-box-name="structure-container"]';
 ! PL
-allegro.*#$#race start; hide-if-matches-xpath './/span[.="Sponsorowane" or .= "Sponsored" or .="Рекламні" or .="Sponzorované"]//ancestor::article'; hide-if-contains-visible-text /Sponsorowane|Sponsored|Рекламні|Sponzorované/ 'article' 'div[id]' 'content'; race stop;
+allegro.*#$#race start; hide-if-matches-xpath './/span[.="Sponsorowane" or .= "Sponsored" or .="Рекламні" or .="Sponzorované"]//ancestor::article'; hide-if-contains-visible-text /Sponsorowane|Sponsored|Рекламні|Sponzorované/ 'article' 'div[id]' 'content'; hide-if-matches-xpath './/div[@data-test-tag="dsa"]/preceding::a[contains(@href,"clicks?emission_unit_")]/ancestor-or-self::article[@data-verification-id][@aria-label]'; race stop;
 ! #CV-705
 www.wp.pl#$#abort-on-property-read SlotRegistrar; abort-current-inline-script PRELOAD randvar
 dobreprogramy.pl#$#abort-on-property-read wp_adv_labels
@@ -1676,7 +1672,7 @@ xoivo2.online,tructiepdabong5.co,vaoroi365.com#$#override-property-read adsPlaye
 kenh14.vn#$#override-property-read Constants.allowAds false
 vndoc.com#$#override-property-read seconds 0
 phimvuihd.org#$#override-property-read urlAds ''
-live.thapcam12.net#$#simulate-mouse-event '#modalasd$continue,delay=300'
+live.thapcam17.net#$#simulate-mouse-event '#modalasd$continue,delay=300'
 phimvietsub.pro,api.anime3s.com,subnhanh.xyz#$#override-property-read maxAds 0
 web.motsex.net,vuasex.club,phimsexviet.io,phimsexvietnam.app,clipsex.xxx,gm.phimsexnhanh.tv,clipsex.cam,link.ditnhau.cc,phim.sexhayvl.org,xx.clipsexhot.net,xx.sexkhongchemoi.com#$#override-property-read video.adVast ''
 www.iosviet.com#$#override-property-read timer 0
@@ -1696,27 +1692,27 @@ metruyenchu.com#$#abort-on-property-write window.onclick
 truyentuan.xyz#$#abort-current-inline-script $ btpop
 player-cdn.com#$#override-property-read detectAdBlockAll noopFunc; override-property-read detectAdBlock noopFunc
 player-cdn.com###playback-fake
-ucreconomicforecast.org#$#abort-on-property-read adsRedirectPopups
+opendatafrance.net#$#abort-on-property-read adsRedirectPopups
 sexdiaryz.us#$#abort-on-property-read parseInt
 linkneverdie.net#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
 javnong.cc#$#abort-on-property-read Math.round
-viet69.tax,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenbot.com,yurineko.net,vlxyz.tube,javhay.click,phimsexhay669.pro,cliphot69.blog,doctruyen3qx.pro,hentaizz.xyz,animehay.bio,vlxx.xxx,heo69.moe,top1sex.club,lenlut.tv,sexmup18.com,hentaivn.today,sexvn1.cc,cdn.streamvl.sbs,www.buomtv.vip,truyenvn.me,cdnstream.sbs,javtiful.com,sexvn.tuoi69s.com,quatvn.day,tenmientruyengi.net,topviet69.com,phim18hd.sex,live.sexviet88.biz,gaidep3x.pro,demo.14412882.com,sexphimhd.vip,ungtycomicsvip.net,xemphim18.cc,cliphot69.buzz,hhtq5.vip#$#abort-current-inline-script WebAssembly instantiate
+viet69.name,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenbi.com,yurineko.net,vlxyz.tube,javhay.click,phimsexhay669.pro,cliphot69.blog,doctruyen3qvn.pro,hentaizz.xyz,animehay.in,vlxx.xxx,heo69.moe,top1sex.club,lenlut.tv,sexmup18.com,hentaivn.today,sexvn1.cc,cdn.streamvl.sbs,www.buomtv.vip,truyenvn.cam,cdnstream.sbs,javtiful.com,sexvn.tuoi69s.com,quatvn.day,tenmientruyengi.net,topviet69.com,phim18hd.sex,live.sexviet88.dev,gaidep3x.pro,demo.14412882.com,sexphimhd.vip,ungtycomicsvip.net,xemphim18.cc,cliphot69.buzz,hhtq5.vip#$#abort-current-inline-script WebAssembly instantiate
 phimtuoitho.tv#$#abort-current-inline-script document.documentElement break;case
 phimdinhcao.net,phimlongtieng.net,phimdinhcao.com#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl
-phimgichill.net,hhhay.tv,hh3dhay.pro,truyengihotnha.com,truyengihotnha.net,3dchill.shop,animevietsub.dev#$#abort-current-inline-script eval $._Eu
-gocphimtvi.com,p.thoctv.com#$#abort-current-inline-script document.createElement script
+phimgichill.net,hhhay.tv,hh3dhay.pro,truyengihotnha.com,truyengihotnha.net,3dchill.shop,animevietsub.app#$#abort-current-inline-script eval $._Eu
+gocphimi.com,p.thoctv.com#$#abort-current-inline-script document.createElement script
 mephimnhe1.net#$#abort-current-inline-script jQuery popurl
-vphimhdc.com,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
+fphimhdc.com,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
 khoaiphim.com,phimmoinay.tv#$#abort-current-inline-script jQuery click_time
-dualeotruyenbot.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
-lxmanga.cfd#$#abort-current-inline-script $ PopUnder
+dualeotruyenbi.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
+lxmanga.life#$#abort-current-inline-script $ PopUnder
 truyen35.shop#$#abort-current-inline-script jQuery click_ads
-www.toptruyenx.pro#$#abort-current-inline-script Promise instance
-truyenqqvn.com,animehay.bio#$#abort-current-inline-script document.addEventListener window.open
+www.toptruyenvn.pro#$#abort-current-inline-script Promise instance
+truyenqqvn.com,animehay.in#$#abort-current-inline-script document.addEventListener window.open
 audiotruyenfull.com#$#abort-on-property-read adpiaListUrl
-vailonxx.vip,phimlongtieng.com,phimlongtieng.net#$#abort-current-inline-script jQuery window.open
-tctruyen.cc,abtruyen.net,phimss.com#$#abort-current-inline-script $ popup
+vailonxx.co,phimlongtieng.com,phimlongtieng.net#$#abort-current-inline-script jQuery window.open
+tctruyen.cc,abtruyen.net#$#abort-current-inline-script $ popup
 nettruyenhq.com#$#abort-current-inline-script Promise break;case
 holyfilm.org#$#abort-current-inline-script window.addEventListener window.open
 www.nettruyenupp.com#$#abort-on-property-read sp
@@ -1728,15 +1724,18 @@ imail.edu.vn#$#abort-current-inline-script setTimeout Aff;abort-current-inline-s
 ungtycomicsvip.net#$#abort-current-inline-script document.body.addEventListener window.open
 sex.chichnhau.net#$#abort-current-inline-script $ pop
 sexhd88.vip#$#abort-current-inline-script document.addEventListener open
-www.toptruyenx.pro#$#abort-current-inline-script setTimeout open
+www.toptruyenvn.pro#$#abort-current-inline-script setTimeout open
 cdn2.blueskychilling.online#$#abort-current-inline-script $ open
+phimmoiiii.net#$#abort-current-inline-script addEvent popu
 freeplayervideo.com,abysscdn.com,player-cdn.com,geoip.redirect-ads.com#$#override-property-read open noopFunc
+nettruyenaa.com#$#abort-on-property-read links
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2994
 @@||fundingchoicesmessages.google.com^$script,xmlhttprequest,subdocument
 ! *** abp-filters-anti-cv:distribution/abp-filters-partners.txt ***
 ! Filters to be used by distribution partners
 ! #CV-782
+www.youtube.com,youtube-nocookie.com#$#race start; skip-video '.video-stream' './/ytd-player/div[@id]//div[contains(@class,"ad-interrupting")]' '-skip-to:3' '-stop-on-video-end:true'; skip-video 'video.html5-main-video' './/div[@id="player"]/div[@id]//div[contains(@class,"ad-interrupting")]' '-skip-to:3' '-stop-on-video-end:true'; race stop; simulate-mouse-event 'button.ytp-ad-skip-button-modern$delay=0'; simulate-mouse-event 'button.ytp-skip-ad-button$delay=0';
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#json-prune '0.playerResponse.adPlacements 0.playerResponse.playerAds 1.playerResponse.adPlacements 1.playerResponse.playerAds 2.playerResponse.adPlacements 2.playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds ytInitialPlayerResponse.adPlacements ytInitialPlayerResponse.playerAds adPlacements playerAds'
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read playerResponse.adPlacements undefined;
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read ytInitialPlayerResponse.adPlacements undefined;
