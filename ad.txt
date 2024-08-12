@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: swh3/WTQfiGJO6HO/ZwLUQ
+! Checksum: GgFIFR6gQ5IZiNIz5gPbGg
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202408050803
-! Last Modified: 2024年08月05日 08:03
+! Version: 202408120803
+! Last Modified: 2024年08月12日 08:03
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -2228,6 +2228,7 @@ newduba.cn###jq_youxi
 ##center > a[target="_blank"] > img[style="padding- bottom:5px;width:960px;height:120px;"]
 ##center > a[target="_blank"] > img[style="padding- bottom:5px;width:960px;height:60px;"]
 ##div#ad_id
+##.ads_topBanner
 ##div#xinxi
 ##div[bannerlist]
 ~ix8.la##div[class^="ADTOPLB_"]
@@ -2267,6 +2268,7 @@ newduba.cn###jq_youxi
 ##img[src*=".sinaimg."][style="width:150px;height:300px"]
 ##script + #coupletBox
 ##script + #rbbox
+###index_banner[src*=".meituan.net"]
 ##script + .header_rmb
 ##script + a[href] > img[src*="lbsugc.cdn.bcebos.com"]
 ##script + a[target="_bank"] > img[src*=".c-ctrip.com"][style="width:100%;height:auto;"]
@@ -2295,11 +2297,61 @@ newduba.cn###jq_youxi
 ||38.33.15.*.gif
 ||67.21.92.*.gif
 ||cupfox.app^$third-party
+||weagehn.icu^
+||eqygki.xyz^
+||shbzjgs.cn^
+||11dyw.com^
+||irutvnco.top^
+||diskaa.com^
+||sravga.xyz^
+||shbzikj.cn^
+||xhlkvx.xyz^
+||dgkship.icu^
+||pojdnf.xyz^
+||pfkgl.top^
+||wdxxx.top^
+||ekltes.xyz^
+||gfchck.xyz^
+||knuinws.icu^
+||shbxukj.cn^
+||lvnzrh.xyz^
+||hrutvncu.top^
+||utewyc.xyz^
+||rpeutxu.icu^
+||shbxugs.cn^
+||clkwnl.xyz^
+||zjplnz.xyz^
+||crutvncf.top^
+||vinsgcs.com^
+||nxrajr.xyz^
+||hhausq.top^
+||baijs05.shop^
+||doujs05.shop^
+||mwerilxx.top^
+||fdyacma.icu^
+||wiixqm.xyz^
+||xfqynrp.cn^
+||bytmfj.xyz^
+||ywokwlx.icu^
+||ihgluu.xyz^
+||ehmhqcn.cn^
+||baijs04.shop^
+||doujs04.shop^
+||kwumme.xyz^
+||mfemiac.icu^
+||qedgcxi.cn^
+||w0054.com^
+||xlmdtiyqbkygtfkh.com^
+##a[href="https://yk63.me"]
+||uvyuqzx.cn^
 ||letlwsl.top^
 ||twerilxi.top^
 ||eyyngo.xyz^
 ||ttad125.com^
 ||tzyzlow.cn^
+||abjalrq.cn^
+||ykwykw.xyz^
+||tmoclbf.icu^
 ||script302.top^
 ||vecggfp.icu^
 ||ubeaui.xyz^
@@ -8148,7 +8200,6 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||dajiadu8.com/17.js
 ||dajiazhao.com/login/reg.js
 ||dalipan.com/api/taobao
-||dandanzan.com/res/*.js
 ||dangdang.com/adall.
 ||danlan.org/KFC/
 ||danmeixsw.com/js/mwap.js
@@ -8756,7 +8807,6 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||hc360.com/security/201409/201409021830024990.jpg
 ||hcbbsoss.oss-cn-hangzhou.aliyuncs.com^*-banner
 ||hdchina.*/styles/topshow/AD/
-||hdmoli.com/static/js/pop_promotion.js
 ||hdsky.me/adv/
 ||hdslb.com/bfs/ad/
 ||hdslb.com/js/core-v5/picment.
@@ -9222,7 +9272,6 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||jsyefc.com^
 ||jsztl.com/img/particular/tbyhq.jpg
 ||juapp5.com/geek_image/chaopai.jpeg
-||jubaibaic.com/xx/
 ||juejin.cn/content_api/v1/advert/query_adverts?
 ||juji.tv/Runtime/js/
 ||juqingw.com/js/tad
@@ -10975,8 +11024,16 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||zztongyun.com/static/js/sh.
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||imgclh.com/imgs/2024/08/07/569cfb2f078e0c42.
 !------------------------Specific element hiding rules------------------------!
 szxx.com.cn###A0
+supercloudsms.com##.container > div > a[id]
+tmioe.com##.singlegg
+kdslife.com###mainRightTopAd
+huya.com##.ab-wrap
+huya.com#?#.item-pic:-abp-has(>.img-tips)
+hcbbs.com##a[href*="&adid="]
+hcbbs.com###portal_block_3441
 huya.com##.component-ab
 huya.com##.ab-content
 ddzimu.com###popup
@@ -11741,7 +11798,6 @@ image.baidu.com###imgid > .fcimgpage
 52bug.cn###index-code
 jiangjunzy.com###index-lb
 ydss.cn###indexBlad
-hdmoli.com###index_banner
 baidu.com###index_banner_top
 3dmgame.com###index_bg_box
 qiyeku.com###index_gg
@@ -12004,7 +12060,7 @@ mail.qq.com###plp_ad_container
 image.baidu.com###plz-albums
 image.baidu.com###plz-head-banner
 naozhong.net.cn###pnl-ne0n
-ahgame.com,china.com.cn,dandanzan.com,netbardh.com,pangzitv.com,twoeggz.com###pop
+ahgame.com,china.com.cn,netbardh.com,pangzitv.com,twoeggz.com###pop
 game2.cn###pop-flash
 1688.com.au###pop-up
 apiref.com,iodraw.com,matools.com###popAd
@@ -14441,7 +14497,7 @@ sina.cn##.p_newsmore
 actoys.net##.p_top_ad
 cssmoban.com##.page-banner
 contents.internet.apps.samsung.com##.page-bar
-element-plus.org##.page-content-main-a
+element-plus.org##.page-content-main-b
 qidian.com##.page-ops
 boce.com##.page10Box1 > a[href^="http"]:not([href*="boce."])
 cngold.org##.pageAdv
@@ -15889,7 +15945,7 @@ weather.com.cn##div[class^="adpos"]
 silver.org.cn##div[class^="ads_"]
 xcar.com.cn##div[class^="adset"]
 hybbs.com##div[class^="adtop"]
-8684.cn,8684.com,iyxdm.net,kugou.com,solarzoom.com,yesky.com##div[class^="adv"]
+8684.cn,8684.com,iyxdm.org,kugou.com,solarzoom.com,yesky.com##div[class^="adv"]
 ifeng.com##div[class^="adv0"]
 ifeng.com##div[class^="adv1"]
 kumi.cn##div[class^="adz"]
@@ -16245,7 +16301,6 @@ douyin.com#?#.xgplayer>div[class]:-abp-has(svg[height="16"][width="30"])
 douyu.com#?#.SharePanel:-abp-has(> .SharePanel-content > .SharePanel-contentTitle:-abp-contains(福利))
 douyu.com#?#.bc-wrapper:-abp-has(>.wm-view>div>.isLink[href*=".qualtrics.com/"])
 douyu.com#?#.wm-general:-abp-has(.link[href*=".tmall.com"])
-ebay.com#?#li.s-item:-abp-has(span[role="text"]>span:-abp-contains(助))
 bbs.my0511.com##embed[width="970"][height="70"]
 engadget.com#?#.Py\(40px\):-abp-has(> article > .D\(f\) > .Pos\(r\)[data-ylk*=":AD;"])
 fishpi.cn#?#.module:-abp-has(>.ad)
@@ -16605,6 +16660,7 @@ andylain.com,bee.coupons,blogspot.com,blogspot.hk,blogspot.jp,blogspot.tw,comic.
 tangdoucdn.com#@#.video-ad
 i-cable.com#@#.video_ad
 che168.com#@#[data-adid]
+wnacg.com#@#.pcgg
 bitauto.com#@#a[href^="http://ad.doubleclick.net/"]
 brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk#@#div[id^="div-gpt-ad"]
@@ -17403,16 +17459,16 @@ guailie.com#@#.google-ad
 !#7
 !#8
 !#91porny.com
-91porny.org,jsav2.com,x9av1.com,x9av7.com###main > div[id^="rd"]
+91porny.org,jstv600.com,x9av7.com###main > div[id^="rd"]
 ###playerJsvLayer.jsv-layer
 91porny.com##.container-fluid.p-0[class*="mb-"]
 ##.fixed-bottom.jsv.jsv-g1
-91porny.org,jsav2.com,x9av1.com,x9av7.com##.footer + .block
+91porny.org,jstv600.com,x9av7.com##.footer + .block
 91porny.com##.jsv-g1
 ##header + #main:nth-child(n+4) .container-fluid.mb-0.p-0
 ##header + #main:nth-child(n+4) .container-fluid.mb-3.p-0
 ##header + #main:nth-child(n+4) > div[id^="po-s"]:not(#po-shd)
-jsav2.com,91porny.org,x9av1.com,x9av7.com#?#.card:-abp-has(>.card-image>a[href^="http"])
+91porny.org,jstv600.com,x9av7.com#?#.card:-abp-has(>.card-image>a[href^="http"])
 ||27gh.cc^$popup,third-party
 !#99re.com
 .gif|$domain=99re.com
@@ -17561,7 +17617,7 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + 
 ||t*.baidu.com/it/u=*,*&fm=76$third-party
 !#BaiduUnion
 /css_js/*$domain=aiyangedu.com|duanmeiwen.com|jy135.com|oh100.com|qunzou.com|ruiwen.com|unjs.com|yjbys.com|yuwenmi.com
-?*=*=*=$subdocument,domain=00cha.com|06ps.com|10000xing.cn|100how.com|1010jiajiao.com|1024sj.com|11467.com|114piaowu.com|192ly.com|1ppt.com|1ting.com|201980.com|21hubei.com|263y.com|2hanju.com|2liang.net|32r.com|32xp.com|360doc.cn|360zuowen.com|39.net|4aqq.com|5000yan.com|515fa.com|51edu.com|51sxue.com|51test.net|51zxw.net|52wubi.com|52zxw.com|5djiaren.com|5h.com|5nd.com|5seestar.com|64foot.com|66law.cn|7y7.com|86huoche.com|8794.cn|911cha.com|91jucai.com|91zhongkao.com|949949.com|9553.com|99.com.cn|9939.com|9ht.com|ab126.com|admin5.com|aihami.com|aiyangedu.com|aizhan.com|ankangwang.com|annhe.net|apple886.com|arpun.com|askci.com|aspku.com|atobo.com|b2b168.com|b2b6.com|baicaolu.net|baotang5.com|bbdj.com|bendibao.com|bianzhile.com|blog.sina.cn|boosj.com|bu-shen.com|bytravel.cn|c1km4.com|chajiaotong.com|chazidian.com|china.com|chinacar.com.cn|chinakaoyan.com|chinawj.com.cn|chuiyue.com|cidianwang.com|cjcp.com.cn|cnbanbao.cn|cncn.com|cnkang.com|cnlinfo.net|coozhi.com|cr173.com|cyyangqiguan.com|d17.cc|d1xz.net|daquan.com|dgzj.com|diangon.com|ditiezu.com|diyifanwen.com|diyju.com|dugoogle.com|dxsbb.com|eastday.com|enterdesk.com|exam58.com|fangdaijisuanqi.com|faxingzhan.com|friok.com|fun48.com|gaosan.com|gaotie.cn|gucheng.com|gugu5.com|guidaye.com|gulongbbs.com|gushiwen.cn|hc23.com|hqhot.com|huangye88.com|hxnews.com|hydcd.com|icauto.com.cn|idongde.com|isanxia.com|ixinwei.com|ixiunv.com|jeasyui.net|jf258.com|jianbihua.com|jinbaodm.com|jingdianlaoge.com|jintang114.org|jj20.com|jy135.com|latiaozixun.net|liuxue86.com|m.douban.com|makepolo.com|mama.cn|meishij.net|mipcache.bdstatic.com|miyudaquan.com|mmyuer.com|nanhuwang.com|oh100.com|pansoso.com|phb123.com|pig66.com|pikacn.com|pingguolv.com|pingshu8.com|ppzuowen.com|qcrx.cn|qcwxjs.com|qizuang.com|qm120.com|qncye.com|qqzhi.com|quwenqushi.com|riji.cn|ruiwen.com|sc115.com|shadafang.com|shenchuang.com|ssqzj.com|szdushi.com.cn|szhk.com|uzuzuz.com|webshu.net|wenkuxiazai.com|wenshenxiu.com|wenzhangba.com|wmxa.cn|woyaogexing.com|xiachufang.com|xiangha.com|xiao84.com|xiaole8.com|xiegw.cn|xywy.com|yanyue.cn|yellowurl.cn|yiqig.cn|yiyouliao.com|yjbys.com|yuwenmi.com|yxlady.com|yyrtv.com|zdface.com|zhifure.com|zhongyoo.com|zixuntop.com|ziyuanm.com|zjbiz.net|zuowen8.com|zuowenku.net|zuowenwang.net
+?*=*=*=$subdocument,domain=00cha.com|06ps.com|10000xing.cn|100how.com|1010jiajiao.com|1024sj.com|11467.com|114piaowu.com|192ly.com|1ppt.com|1ting.com|201980.com|21hubei.com|263y.com|2hanju.com|2liang.net|32r.com|32xp.com|360doc.cn|360zuowen.com|39.net|4aqq.com|5000yan.com|515fa.com|51edu.com|51sxue.com|51test.net|51zxw.net|52wubi.com|52zxw.com|5djiaren.com|5h.com|5nd.com|5seestar.com|64foot.com|66law.cn|7y7.com|86huoche.com|911cha.com|91jucai.com|91zhongkao.com|949949.com|9553.com|99.com.cn|9939.com|9ht.com|ab126.com|admin5.com|aihami.com|aiyangedu.com|aizhan.com|ankangwang.com|annhe.net|apple886.com|arpun.com|askci.com|aspku.com|atobo.com|b2b168.com|b2b6.com|baicaolu.net|baotang5.com|bbdj.com|bendibao.com|bianzhile.com|blog.sina.cn|boosj.com|bu-shen.com|bytravel.cn|c1km4.com|chajiaotong.com|chazidian.com|china.com|chinacar.com.cn|chinakaoyan.com|chinawj.com.cn|chuiyue.com|cidianwang.com|cjcp.com.cn|cnbanbao.cn|cncn.com|cnkang.com|cnlinfo.net|coozhi.com|cr173.com|cyyangqiguan.com|d17.cc|d1xz.net|daquan.com|dgzj.com|diangon.com|ditiezu.com|diyifanwen.com|diyju.com|dugoogle.com|dxsbb.com|eastday.com|enterdesk.com|exam58.com|fangdaijisuanqi.com|faxingzhan.com|friok.com|fun48.com|gaosan.com|gaotie.cn|gucheng.com|gugu5.com|guidaye.com|gulongbbs.com|gushiwen.cn|hc23.com|hqhot.com|huangye88.com|hxnews.com|hydcd.com|icauto.com.cn|idongde.com|isanxia.com|ixinwei.com|ixiunv.com|jeasyui.net|jf258.com|jianbihua.com|jinbaodm.com|jingdianlaoge.com|jintang114.org|jj20.com|jy135.com|latiaozixun.net|liuxue86.com|m.douban.com|makepolo.com|mama.cn|meishij.net|mipcache.bdstatic.com|miyudaquan.com|mmyuer.com|nanhuwang.com|oh100.com|pansoso.com|phb123.com|pig66.com|pikacn.com|pingguolv.com|pingshu8.com|ppzuowen.com|qcrx.cn|qcwxjs.com|qizuang.com|qm120.com|qncye.com|qqzhi.com|quwenqushi.com|riji.cn|ruiwen.com|sc115.com|shadafang.com|shenchuang.com|ssqzj.com|szdushi.com.cn|szhk.com|uzuzuz.com|webshu.net|wenkuxiazai.com|wenshenxiu.com|wenzhangba.com|wmxa.cn|woyaogexing.com|xiachufang.com|xiangha.com|xiao84.com|xiaole8.com|xiegw.cn|xywy.com|yanyue.cn|yellowurl.cn|yiqig.cn|yiyouliao.com|yjbys.com|yuwenmi.com|yxlady.com|yyrtv.com|zdface.com|zhifure.com|zhongyoo.com|zixuntop.com|ziyuanm.com|zjbiz.net|zuowen8.com|zuowenku.net|zuowenwang.net
 ||003store.com^
 ||0512s.com^$third-party
 ||0755rc.com^$third-party
@@ -17794,7 +17850,6 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + 
 ||b1.c1km4.com^
 ||b1.engdvd.com^
 ||b1.xiao84.com^
-||b17.8794.cn^
 ||b7sw62.pingshu8.xyz^
 ||baidu1.cardbaobao.com^
 ||baidu1.codejie.net^
@@ -18105,7 +18160,6 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + 
 ||jiliw.com^$third-party
 ||jinhonghao.cn^
 ||jintonghua.com^
-||jiyan.net^
 ||jke1.jianke.com^
 ||jquery.envi-met.com.cn^
 ||js.263y.com^
@@ -20149,6 +20203,7 @@ _box_ad_
 ||fanyi.baidu.com/pc/config
 ||fanyi.baidu.com/ait/config/cms/list?
 ||3dmgame.com/static/image/common/pc_tg3dm.
+||fc.3dmgame.com^
 !------------------------Specific element hiding rules------------------------!
 thwiki.cc###a-carousel
 baidu.com##.index-module_drawerHand__aRhcO
