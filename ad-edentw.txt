@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dSzmW3vNeDnC52SgnvIVtw
+! Checksum: bTc77Mpr89YjjHc52jfeMQ
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202408190803
-! Last Modified: 2024年08月19日 08:03
+! Version: 202408260803
+! Last Modified: 2024年08月26日 08:03
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -577,7 +577,8 @@ ebay.*#$#hide-if-matches-xpath './/a[contains(@href,"promoted_items")]/ancestor-
 ebay.*#$#hide-if-matches-xpath './/a[contains(@href,"amclksrc")]/preceding::span[@class="recs-subtitle-label-inline"]/ancestor::div[contains(@class,"recs-subtitle-label")]/ancestor-or-self::div[@data-viewport]'
 ebay.*#$#hide-if-matches-xpath './/a[@class="recs-item-tile"][contains(@href,"HOMESPLICE.SIM")]/ancestor::div[@role="list"][@class="recs-grid-wrapper"]/ancestor-or-self::div[@data-viewport]'
 ebay.com#$#hide-if-contains-visible-text /Sponsored/ 'div[role^="listitem"] div[data-viewport]' div>span[role^="text"]
-ebay.*#$#abort-on-property-read window.ebayAdsBerries.render
+ebay.*#$#hide-if-matches-xpath '//a[contains(@href,"promoted_items")][@target="_blank"][@data-click]/ancestor-or-self::div[@data-viewport][1]'
+ebay.*#$#abort-on-property-read window.ebayAdsBerries.render; abort-on-property-read window.berries
 ! sp
 ebay.*#$#race start; hide-if-contains-visible-text /Sponsored|Anzeigen|Sponsorisé|Sponsorizzato|Sponsorowane|Gesponsord|Patrocinado|Anzeige/ 'li.s-item' '* li div>span>div ^^sh^^ span:not([aria-hidden="true"])'; hide-if-contains-and-matches-style /./ li[data-viewport] 'li[data-viewport] .s-item__sep>div ^^sh^^ span' /./ 'overflow-x: visible'; hide-if-contains-visible-text /./ 'li[data-viewport]' '.s-item__sep>div ^^sh^^ span:nth-child(2)'; hide-if-matches-computed-xpath './/div[contains(@class, "s-item__detail")]/span/div[@aria-labelledby = "{{}}"]/ancestor::li' './/style[contains(text(),"size: var")]' /^\\s*div\\.(.*?)_/; hide-if-matches-computed-xpath './/div[contains(@class,"s-item__detail")]/span/span[@aria-labelledby="{{}}"]/ancestor::li' './/script[contains(text(),"CSSStyleDeclaration")]' /getPropertyValue\\(\\"\\-\\-(.*?)\\"/; hide-if-matches-computed-xpath './/div[contains(@class,"s-item__detail")]/span/span[@aria-labelledby="{{}}"]/ancestor::li' './/style[contains(text(),"div:first-line")]' '/0px;\\s\\-\\-(.*?)\\:/'; hide-if-matches-computed-xpath './/li//span[@class="s-item__sep"]/span[@aria-labelledby="{{}}"]/ancestor::li' './/div[@id="srp-river-main"]//div[@class="clipped"]/li//span[@aria-labelledby]/..' '/labelledby=\\"(s-.{7})\\"/'; hide-if-matches-computed-xpath './/li//span/span[@aria-labelledby="{{}}"]/ancestor::li' './/div[@id="srp-river-main"]/div[@class="clipped"]/li//span[@aria-labelledby]/..' '/labelledby=\\"(s-.{7})\\"/'; race stop;
 ebay.*#$#hide-if-matches-computed-xpath './/style[contains(text(),"data:image")][contains(text(),"aria-labelledby")][contains(text(),"{{}}")]' './/style[contains(text(),"display: var")]' /span\.(.*?)\\s/; hide-if-matches-computed-xpath './/span[@class="s-item__sep"]/span[@aria-labelledby = "{{}}"]/ancestor::li' './/style[not(@style)][contains(text(),"data:image")][contains(text(),"aria-labelledby")]' /aria-labelledby=(.*?)\\]/
@@ -1158,6 +1159,7 @@ hianime.to#$#hide-if-matches-xpath './/a[contains(@href,"1flix.to")]/img[@alt="1
 hdtodayz.*,moviesjoy.*#$#hide-if-matches-xpath './/img[contains(@style,"width: 100%")]/parent::a[@href][@target]/ancestor::div[@id][contains(@style,"20px")]'
 2kmoviehd.to,hdtodayz.*##div[style*="position: fixed; inset: 0px; pointer-events: auto;"]
 movies2watch.tv#$#prevent-listener break;case $.
+wsj.com#$#hide-if-matches-xpath './/div[contains(@id,"AD")]/parent::div[1]'; hide-if-matches-xpath './/iframe[contains(@src,"ServeAds")]/parent::div/ancestor::div[3]'; hide-if-matches-xpath './/div/a[contains(@href,"ad.doubleclick")]/ancestor::div[contains(@class,"realtor-container") or @style="min-height:320px"]/parent::div';
 ! Video ads
 ||content.sinpartycdn.com/*pre-roll-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
 ||content.sinpartycdn.com/videos-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
@@ -1192,8 +1194,8 @@ www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelled
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@role="feed"]//div[@role="article"]//a[@aria-label[.="Patrocinado" or .="Sponsa" or .="Bersponsor" or .="Commandité" or .="Ditaja" or .="Gesponsert" or .="Gesponsord" or .="Sponsrad" or .="Publicidad" or .="Sponsoreret" or .="Sponset" or .="Sponsored" or .="Sponsorisé" or .="Sponsorizat" or .="Sponsorizzato" or .="Sponsorlu" or .="Sponsorowane" or .="Реклама" or .="ממומן" or .="تمويل شوي" or .="دارای پشتیبانی مالی" or .="سپانسرڈ" or .="مُموَّل" or .="प्रायोजित" or .="সৌজন্যে" or .="ได้รับการสนับสนุน" or .="内容" or .="贊助" or .="Sponsoroitu" or .="May Sponsor" or .="Được tài trợ" or .="ಪ್ರಾಯೋಜಿತ" or .="स्पॉन्सर्ड" or .="広告" or .="赞助内容" or .="Рэклама" or .="Sponzorované" or .="La maalgeliyey" or .="Geborg" or .="Reklam" or .="Plaćeni oglas" or .="광고" or .="Χορηγούμενη" or .="স্পনসর্ড" or .="സ്പോൺസർ ചെയ്തത്" or .="ਸਰਪ੍ਰਸਤੀ ਪ੍ਰਾਪਤ" or .="මුදල් ගෙවා ප්‍රචාරය කරන ලදි" or .="விளம்பரம்" or .="ప్రాయోజితం చేయబడింది" or .="Спонсорирано" or .="Спонзорисано" or .="ܒܘܕܩܐ ܡܡܘܘܢܐ" or .="Reklamo"]]/ancestor::div[@role="article"]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelledby and @aria-describedby]//span/div[@class][@role][contains(., "Anzeige") or contains(., "Sponsored") or contains(., "Sponsorlu") or contains(., "Gesponsert") or contains(., "Patrocinado") or contains(., "Sponsorisé") or contains(., "Commandité") or contains(., "Gesponsord") or contains(., "Sponsorowane") or contains(., "Publicidad") or contains(., "Sponsrad") or contains(., "Sponsoreret") or contains(., "Sponsoroitu") or contains(., "Sponsa") or contains(., "Sponset") or contains(., "Sponsorizat") or contains(., "Bersponsor") or contains(., "Ditaja") or contains(., "Sponsorizzato") or contains(., "May Sponsor") or contains(., "Реклама") or contains(., "贊助") or contains(., "赞助内容") or contains(., "ได้รับการสนับสนุน") or contains(., "Được tài trợ") or contains(., "प्रायोजित") or contains(., "دارای پشتیبانی مالی") or contains(., "تمويل شوي") or contains(., "সৌজন্যে") or contains(., "مُموَّل") or contains(., "سپانسرڈ") or contains(., "ממומן") or contains(., "Hirdetés") or contains(., "ಪ್ರಾಯೋಜಿತ")]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/span[@id="ssrb_feed_start"]/following-sibling::div//div[@aria-labelledby and @aria-describedby]//div[contains(text(),"Sponsored")]/ancestor::div[@aria-labelledby and @aria-describedby]'
-www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"brs_content_label":[^,]+,"(?:category|feed_story_category|story_cat)":"SPONSORED"[^\n]+"cursor":"[^}]+\}/' '{}' 'sponsored_auction_distance';
-www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"brs_content_[^\n]+?"category":"SPONSORED"[^\n]+"cursor":"[^"]+"\}/' '{}' 'sponsored_auction_distance';
+www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"brs_c[^\n]+?"SponsoredData","ad_id"[^\n]+"cursor":"[^"]+"\}/' '{}' 'sponsored_auction_distance'
+www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"brs_content_[^\n]+?"category":"SPONSORED"[^\n]+"cursor":"[^"]+"\}/' '{}' 'sponsored_auction_distance'
 ! mp
 www.facebook.com,web.facebook.com##a[href*="ad_preferences"]>span[class][dir]
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role="main"]//following::a[@aria-label][@href][@role][@tabindex]/parent::div/ancestor::div[@class][contains(@style,"max-width") and contains(@style,"min-width")][1]'
@@ -1468,7 +1470,7 @@ otzovik.com#$#abort-on-property-read Object.prototype.RtbBlockCreateWrapper
 gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru#$#abort-on-property-read Object.prototype.showRTB
 yandex.by,yandex.fr,yandex.kz,~telephony.yandex.ru,yandex.ru,yandex.ua,yandex.uz##[class*="mg-grid__"]>div[class*=_status_success]
 razlozhi.ru,24smi.org,auto.ru,gorodrabot.ru,kinopoisk.ru#$#abort-on-property-read Element.prototype.attachShadow; abort-on-iframe-property-read Element.prototype.attachShadow
-kinopoisk.ru#$#hide-if-contains-visible-text /./ 'div[id][class]>div[id][class]' div ^^sh^^ * ^^sh^^ div[data-test]
+kinopoisk.ru#$#hide-if-contains-visible-text /./ 'div[id][class]>div[id][class]' 'div ^^sh^^ * ^^sh^^ div[data-test]'
 24smi.org#$#abort-on-property-write document.cookie; cookie-remover /^/
 gorodrabot.ru#$#abort-on-property-read Object.prototype.storeBlockSettings
 ||doramatv.live^$header=x-yandex-req-id
@@ -1721,12 +1723,12 @@ vndoc.com#$#override-property-read seconds 0
 phimvuihd.org#$#override-property-read urlAds ''
 live.thapcam17.net#$#simulate-mouse-event '#modalasd$continue,delay=300'
 phimvietsub.pro,api.anime3s.com,subnhanh.xyz#$#override-property-read maxAds 0
-web.motsex.net,vuasex.club,phimsexviet.io,phimsexvietnam.app,clipsex.xxx,gm.phimsexnhanh.tv,clipsex.cam,x.ditnhau.cc,phim.sexhayvl.org,xx.clipsexhot.net,xx.sexkhongchemoi.com#$#override-property-read video.adVast ''
+web.motsex.net,vuasex.club,phimsexviet.io,phimsexvietnam.app,clipsex.xxx,gm.phimsexnhanh.tv,clipsex.cam,mobi.ditnhau.cc,phim.sexhayvl.org,xx.clipsexhot.net,xx.sexkhongchemoi.com#$#override-property-read video.adVast ''
 www.iosviet.com#$#override-property-read timer 0
 saigon24.net#$#abort-current-inline-script document.getElementById myModal
 vn.cliphot69.live#$#override-property-read a_vid 0
 ! Popup/Popunder/Clickunder
-fembed.com,femax20.com,m.blogtruyenvn.org,viettoons.tv,vinaurl.net,animet1.net,anh.moe,maclife.io,javfc2.net,hoctot.hocmai.vn,motchilltv.us,cdn2.blueskychilling.online,ohaha79xxx.site#$#abort-on-property-read open
+fembed.com,femax20.com,m.blogtruyenvn.org,viettoons.tv,vinaurl.net,animet1.net,anh.moe,maclife.io,javfc2.net,hoctot.hocmai.vn,motchilltv.vc,cdn2.blueskychilling.online,ohaha79xxx.site,fastscans.net#$#abort-on-property-read open
 tvhay.top#$#abort-current-inline-script JSON.parse atob
 truyen2u.net#$#abort-current-inline-script eval
 thienhatruyen3.com#$#abort-current-inline-script $ pc-popup-2
@@ -1739,18 +1741,18 @@ metruyenchu.com#$#abort-on-property-write window.onclick
 truyentuan.xyz#$#abort-current-inline-script $ btpop
 player-cdn.com#$#override-property-read detectAdBlockAll noopFunc; override-property-read detectAdBlock noopFunc
 player-cdn.com###playback-fake
-xoilac86z17.live#$#abort-on-property-read adsRedirectPopups
+xoilacu.cc#$#abort-on-property-read adsRedirectPopups
 sexdiaryz.us#$#abort-on-property-read parseInt
 linkneverdie.net#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
 javnong.cc#$#abort-on-property-read Math.round
-viet69.name,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenbi.com,yurineko.net,vlxyz.tube,javhay.click,phimsexhay669.pro,cliphot69.blog,doctruyen3qvn.pro,hentaizz.biz,animehay.in,heo69.moe,top1sex.club,sexmup18.com,hentaivn.today,sexvn1.cc,streamvl.top,www.buomtv.vip,truyenvn.cam,cdnstream.sbs,javtiful.com,sexvn.tuoi69s.com,quatvn.baby,tenmientruyengi.net,topviet69.com,phim18hd.sex,live.sexviet88.dev,sexnhe.biz,demo.14412882.com,sexphimhd.vip,ungtycomicsvip.net,xem.phim18c.org,vn.cliphot69.live,hhtq5.vip,sexdiary.club#$#abort-current-inline-script WebAssembly instantiate
+viet69.name,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenbi.com,yurineko.net,vlxyz.tube,javhay.click,phimsexhay669.pro,cliphot69.blog,doctruyen3qtv.pro,hentaizz.biz,animehay.in,heo69.moe,top1sex.club,sexmup18.com,hentaivn.today,sexvn1.cc,streamvl.top,www.buomtv.vip,truyenvn.cam,cdnstream.sbs,javtiful.com,sexvn.tuoi69s.com,quatvn.baby,tenmientruyengi.net,topviet69.com,phim18hd.sex,live.sexviet88.dev,sexnhe.biz,demo.14412882.com,damsextv.pro,ungtycomicsvip.net,xem.phim18c.org,vn.cliphot69.live,hhtq5.vip,sexdiary.club#$#abort-current-inline-script WebAssembly instantiate
 phimtuoitho.tv#$#abort-current-inline-script document.documentElement break;case
 phimdinhcao.net,phimlongtieng.net,phimdinhcao.com#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl
 phimgichill.net,hhhay.tv,hh3dhay.pro,truyengihotnha.com,truyengihotnha.net,3dchill.shop,animevietsub.app#$#abort-current-inline-script eval $._Eu
-gocphimii.com,p.thoctv.com#$#abort-current-inline-script document.createElement script
+gocphimii.net,p.thoctv.com#$#abort-current-inline-script document.createElement script
 mephimnhe1.net#$#abort-current-inline-script jQuery popurl
-sphimhdc.com,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
+xemphimhdc.us,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
 khoaiphim.com,phimmoinay.tv#$#abort-current-inline-script jQuery click_time
 dualeotruyenbi.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
 lxmanga.life#$#abort-current-inline-script $ PopUnder
@@ -1779,6 +1781,7 @@ nettruyenww.com#$#abort-on-property-read links
 goctruyentranhvui2.com,mobiblog.club,truyenqqto.com#$#abort-current-inline-script WebAssembly globalThis
 thongtintruyen.com#$#abort-current-inline-script jQuery PopUnder
 hh3dhay.life#$#abort-current-inline-script Symbol break;case
+animehay.in#$#abort-current-inline-script Number ;break;case
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2994
 @@||fundingchoicesmessages.google.com^$script,xmlhttprequest,subdocument
@@ -1793,12 +1796,11 @@ www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie
 www.youtube.com,m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#$#override-property-read ytInitialPlayerResponse.adPlacements undefined;
 m.youtube.com#$#override-property-read ytInitialPlayerResponse.playerAds undefined;
 m.youtube.com#$#override-property-read ytInitialPlayerResponse.adSlots undefined;
-m.youtube.com,music.youtube.com#$#json-prune 'adBreakHeartbeatParams adPlacements adSlots playerAds ssdaiAdsConfig adPlacementRenderer playerResponse.playerConfig.ssapConfig';
-m.youtube.com,music.youtube.com#$#json-prune 'adBreakHeartbeatParams adSlots.0.adSlotRenderer adSlots.1.adSlotRenderer playerAds.0.playerLegacyDesktopWatchAdsRenderer adPlacements.0.adPlacementRenderer';
+m.youtube.com,music.youtube.com#$#json-prune 'ytInitialPlayerResponse.adPlacements ytInitialPlayerResponse.playerAds ytInitialPlayerResponse.adSlots playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adBreakHeartbeatParams adSlots.0.adSlotRenderer adSlots.1.adSlotRenderer playerAds.0.playerLegacyDesktopWatchAdsRenderer adPlacements.0.adPlacementRenderer';
 m.youtube.com#$#json-prune 'playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds adSlots playerResponse.adSlots [].playerResponse.adPlacements [].playerResponse.playerAds [].playerResponse.adSlots';
 m.youtube.com,music.youtube.com#$#override-property-read ytInitialPlayerResponse.playerConfig.ssapConfig undefined
-m.youtube.com,music.youtube.com#$#override-property-read Object.prototype.adSlots undefined
-m.youtube.com,music.youtube.com#$#override-property-read Object.prototype.adPlacements undefined
+m.youtube.com,music.youtube.com#$#override-property-read playerResponse.adSlots undefined
+m.youtube.com,music.youtube.com#$#override-property-read playerResponse.playerAds undefined
 m.youtube.com,music.youtube.com#$#override-property-read yt.ads.biscotti.getId_ undefined
 m.youtube.com,music.youtube.com#$#override-property-read yt.ads.biscotti.lastId_ undefined
 m.youtube.com,music.youtube.com#$#abort-on-property-write adBreakHeartbeatParams
