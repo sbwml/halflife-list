@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Go 1.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v5
         with:
-          go-version: "^1.14"
+          go-version: "^1.22"
 
       - name: Set $GOPATH and more variables
         run: |
@@ -32,7 +32,7 @@ jobs:
         shell: bash
 
       - name: Checkout the "master" branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: master
 
@@ -99,7 +99,7 @@ jobs:
           fi
 
       - name: Deliver download Dir
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.download.outputs.status == 'failed'
         with:
           name: AllFiles
@@ -107,7 +107,7 @@ jobs:
             ./download/
 
       - name: Deliver new and old_no_title Di
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: steps.diffResult.outputs.status == 'failed'
         with:
           name: AllFiles
