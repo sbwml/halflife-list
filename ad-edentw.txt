@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: +eo4wyOntLoCIhw3C6mClQ
+! Checksum: /yZ7n8OYb8NyZAFwWjcQrA
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202411250804
-! Last Modified: 2024年11月25日 08:04
+! Version: 202412020848
+! Last Modified: 2024年12月02日 08:48
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -557,11 +557,14 @@ tripadvisor.com#$#hide-if-matches-xpath './/span[@class="listItem"]//div[@data-a
 tripadvisor.com#$#hide-if-matches-xpath './/div[@id="typeahead_results"]//div[contains(text(),"Sponsored")]/ancestor::a[@href]'
 tripadvisor.com#$#hide-if-matches-xpath './/span[contains(text(),"Sponsored")]/ancestor::a[@target="_blank"]/ancestor::li[@class]'
 ! HP & BA
-tripadvisor.*#$#hide-if-matches-xpath './/div/span[contains(., "Sponsored")]//ancestor::a[@target]/parent::div[1]'
-tripadvisor.com#$#hide-if-matches-xpath './/div[.//span[contains(text(), "SPONSORED")]][not(@id) and not(@data-test-target) and not(ancestor::nav) and not(ancestor::header)]'
-tripadvisor.com#$#hide-if-matches-xpath './/div/span[contains(text(), "Sponsored")]/ancestor::section'
+tripadvisor.com#$#hide-if-matches-xpath './/span[contains(text(), "SPONSORED")]/ancestor-or-self::a[@target="_blank"][@href]/parent::div[1]'
+tripadvisor.com#$#hide-if-matches-xpath './/div/span[contains(text(), "Sponsored")]/ancestor::section[@class][not(@id)]'
 tripadvisor.com#$#hide-if-matches-xpath './/div[@data-curated-shelf-id and .//div[contains(text(), "Sponsored by")]]/self::div[1]'
-tripadvisor.com#$#hide-if-matches-xpath './/div[.//div[contains(text(), "Sponsored by")]][not(@id) and not(@data-test-target) and not(ancestor::nav) and not(ancestor::header)]'
+tripadvisor.com#$#hide-if-matches-xpath './/div[.//div[contains(text(), "Sponsored by")]]/parent::span[@style][1]'
+tripadvisor.com#$#hide-if-matches-xpath './/span[contains(text(), "SPONSORED")]/preceding::div[@class]/ancestor-or-self::div[@data-vjs-player="true"]/parent::div[1]'
+tripadvisor.com#$#hide-if-matches-xpath './/div[@data-test-target="hero-gallery"][../following-sibling::div//div[contains(text(),"Sponsored by")]]/parent::div/parent::div'
+! RL
+tripadvisor.com,tripadvisor.com.br,tripadvisor.ca,tripadvisor.com.mx,tripadvisor.com.ar,tripadvisor.cl,tripadvisor.co,tripadvisor.com.ve,tripadvisor.co.uk,tripadvisor.it,tripadvisor.es,tripadvisor.de,tripadvisor.fr,tripadvisor.se,tripadvisor.nl,tripadvisor.com.tr,tripadvisor.dk,tripadvisor.at,tripadvisor.com.gr,no.tripadvisor.com,tripadvisor.pt,tripadvisor.ru,tripadvisor.ch,tripadvisor.be,tripadvisor.jp,cn.tripadvisor.com,tripadvisor.in,tripadvisor.com.my,tripadvisor.com.ph,tripadvisor.com.sg,tripadvisor.co.id,tripadvisor.co.kr,th.tripadvisor.com,tripadvisor.com.tw,tripadvisor.com.hk,tripadvisor.co.za,ar.tripadvisor.com,tripadvisor.com.eg,tripadvisor.co.il#$#hide-if-matches-xpath '././/span[contains(.,"Patrocinado") or contains(.,"Annonce") or contains(.,"Sponsored") or contains (.,"Sponsorizzato") or contains(., "Gesponsert") or contains(.,"Sponsrad") or contains(.,"Gesponsord") or contains(.,"Sponsorlu") or contains(.,"Sponsoreret") or contains(.,"Χορηγία") or contains(.,"Sponset") or contains(.,"Реклама") or contains(.,"スポンサー提供") or contains(.,"赞助商") or contains(.,"Bersponsor") or contains(.,"스폰서") or contains(.,"สปอนเซอร์") or contains(.,"贊助商") or contains(.,"贊助") or contains(.,"مدعوم") or contains(.,"מודעה")]/ancestor::header/ancestor-or-self::div[2]'
 ! #RM-85
 ! #RM-78
 noon.com#$#hide-if-matches-xpath './/span[@color][contains(text(),"Sponsored")]/ancestor-or-self::div[@class="componentArea-0"]'
@@ -836,12 +839,12 @@ bing.com#?#li[class="b_algo"]:-abp-has(>[class="ad_ml1ESLItem"])
 bing.com#?#li[class="b_algo"]:-abp-has(a[href="#"]:not([class]))
 ! #RM-9
 ! sl, sc, fbt
-instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] *'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spaunsered"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spauncered"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spohnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-label="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'aside[aria-labelledby="sponsoredddddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-contains /sponsored/ 'div[class] * div[aria-label="Product"]'; hide-if-contains /sponsored/ 'div[class] * div[aria-label="Product"]' 'div[style]>div ^^sh^^ *'; hide-if-matches-xpath './/img[@alt="This is a featured product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="This is an ad product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to promote this product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to boost this product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[contains(@alt,"This is a promoted product")]/ancestor-or-self::div[@aria-label="Product"]'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[alt*="Sponsored"]' div[aria-label="Product"] 'div[aria-label="Product"] *'; hide-if-has-and-matches-style 'img[alt*="spons"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[src*="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spaunsered"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spauncered"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[alt*="spohnserd"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-label="sponsored"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-has-and-matches-style 'aside[aria-labelledby="sponsoredddddddLabel"]' 'div[class]' 'div[class] * div[aria-label="Product"]'; hide-if-contains /sponsored/ 'div[class] * div[aria-label="Product"]'; hide-if-contains /sponsored/ 'div[class] * div[aria-label="Product"]' 'div[style]>div ^^sh^^ *'; hide-if-matches-xpath './/img[@alt="This is a featured product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="This is an ad product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to promote this product"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="This is a boosted product paid for by advertisers"]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[contains(@alt,"This is a promoted product")]/ancestor-or-self::div[@aria-label="Product"]'; hide-if-matches-xpath './/img[@alt="This is an ad"]/ancestor-or-self::div[@aria-label="Product"]'; race stop;
 ! ta
-instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[src*="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sored_"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaunsered"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spauncered"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaunserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spohnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-label="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'aside[aria-labelledby="sponsoredddddddLabel"]' article[id] 'article[id] *'; hide-if-contains /sponsored/ article[id] 'article[id] *'; hide-if-matches-xpath './/img[@alt="This is a featured product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="This is an ad product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to promote this product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to boost this product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[contains(@alt,"This is a promoted product")]/ancestor-or-self::article[@id][1]'; race stop;
+instacart.ca,instacart.com#$#race start; hide-if-has-and-matches-style 'img[src*="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[src*="sored_"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaahnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spawhnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaunsered"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spauncered"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spaunserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[alt*="spohnserd"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-label="sponsored"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddddddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoreddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'img[aria-labelledby="sponsoredddddLabel"]' article[id] 'article[id] *'; hide-if-has-and-matches-style 'aside[aria-labelledby="sponsoredddddddLabel"]' article[id] 'article[id] *'; hide-if-contains /sponsored/ article[id] 'article[id] *'; hide-if-matches-xpath './/img[@alt="This is a featured product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="This is an ad product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="Advertisers have paid to promote this product"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="This is a boosted product paid for by advertisers"]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[contains(@alt,"This is a promoted product")]/ancestor-or-self::article[@id][1]'; hide-if-matches-xpath './/img[@alt="This is an ad"]/ancestor-or-self::article[@id][1]'; race stop;
 instacart.com#$#hide-if-matches-xpath './/img[@alt="Sponsored"][contains(@src,".svg")]/parent::div[1]'; hide-if-matches-xpath './/div[@class]/span/preceding::img[contains(@src,"image_display_banner")][contains(@alt,"Silk")][not(@type)][not(@srcset)]/ancestor-or-self::section[1]'
 ! mc
-instacart.ca,instacart.com#$#hide-if-matches-xpath './/img[@alt="Advertisers have paid to boost this product"]/preceding::img[@alt="Advertisement"]/ancestor-or-self::div[contains(@id,"-inner")]/parent::div'
+instacart.ca,instacart.com#$#race start; hide-if-matches-xpath './/img[@alt="Advertisers have paid to boost this product"]/preceding::img[@alt="Advertisement"]/ancestor-or-self::div[contains(@id,"-inner")]/parent::div'; hide-if-matches-xpath './/img[@alt="This is a boosted product paid for by advertisers"]/preceding::img[@alt="Advertisement"]/ancestor-or-self::div[contains(@id,"-inner")]/parent::div'; race stop;
 ! rr
 instacart.ca,instacart.com#$#hide-if-matches-xpath '//div[contains(@id,"-inner")]/ancestor-or-self::article/preceding::span[contains(text(),"Sponsored")]/ancestor-or-self::div[2]'
 instacart.com,instacart.ca#$#abort-on-property-write window.ADBLOCK_DETECTED
@@ -1204,6 +1207,7 @@ datanodes.to#$#hide-if-matches-xpath './/a[@rel][@target="_blank"]/img[@alt="Wat
 fmovies.*#$#hide-if-matches-xpath '//div[starts-with(@style, "position: fixed; inset: 0px; z-index: 2147483647; background: black; opacity: 0.01;")]';
 pixhost.to#$#prevent-listener getexoloader;
 gogoanimes.*#$#abort-current-inline-script Math break;case $.
+||kemono.su^$csp=script-src-attr 'none'
 ! Video ads
 ||content.sinpartycdn.com/*pre-roll-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
 ||content.sinpartycdn.com/videos-ads/*$media,rewrite=abp-resource:blank-mp4,domain=sinparty.com
@@ -1370,6 +1374,7 @@ mp3-gratis.it#$#abort-current-inline-script Math zfgloaded
 ! Popup/Popunder
 streamingcommunity.*#$#abort-current-inline-script String.fromCharCode /btoa|break/
 animeunity.tv#$#abort-on-property-read localStorage
+altadefinizione.*#$#abort-current-inline-script document.createElement script; hide-if-matches-xpath './/iframe[@style="position: fixed; width: 100%; height: 100%; inset: 0px; opacity: 0; z-index: 2147483647;"]';
 ! *** abp-filters-anti-cv:latvian.txt ***
 ! *** abp-filters-anti-cv:lithuanian.txt ***
 ! #CV-766
@@ -1396,21 +1401,14 @@ allegro.pl#$#hide-if-matches-xpath './/span[text()="Sponsorowane"]/ancestor::div
 allegro.pl#$#hide-if-matches-xpath './/span[text()="Sponsorowane"]/parent::div/ancestor::a[@role]';
 ! PP
 allegro.*##div[data-box-name^="ads"]
-allegro.*#$#hide-if-matches-xpath './/h2[text()][@data-role="replaceable-title"]/following::span[.="Sponsorowane" or .="Sponsored" or .="Спонсоровано" or .="Sponzorováno"]//ancestor::div[contains(@data-analytics-groups,"ads")]'; hide-if-matches-xpath './/h2[text()][@data-role="replaceable-title"]/following::span[.="Sponsorowane" or .="Sponsored" or .="Спонсоровано" or .="Sponzorováno"]/ancestor::div[@style][1]//ancestor::div[@data-box-name="structure-container" or @data-box-name="Car0usel card"]';
+allegro.*#$#hide-if-matches-xpath './/h2[text()][@data-role="replaceable-title"]/following::span[.="Sponsorowane" or .="Sponsored" or .="Спонсоровано" or .="Sponzorováno"]//ancestor::div[contains(@data-analytics-groups,"ads")]'
 allegro.*#$#hide-if-matches-xpath './/div[contains(@data-analytics-view-label,"sponsored")]/parent::div/ancestor::div[contains(@data-analytics-groups,"ads")]'
 allegro.*#?#div[data-analytics-groups*="ads.tiles"]:-abp-has(span:-abp-properties(/content: "Sponsorowane";|"Спонсороване";|"Sponsored";|"Sponzorováno";|"Sponzorované";/))
 allegro.*#?#div[data-analytics-groups*="Branded"]:-abp-has(span:-abp-properties(/content: "Sponsorowane";|"Спонсороване";|"Sponsored";|"Sponzorováno";|"Sponzorované";/))
-allegro.*#$#hide-if-contains-visible-text /Sponzorováno|Sponzorované|Sponsorowane|Sponsored|Спонсоровано/ 'div[data-analytics-category="layout.container"]:not([data-box-name="dsa container"]):not([data-analytics-groups*="allegro.product.fiche"]):not([data-box-name="items container"]):not(:has(article)), div[data-box-name^="caro"], div[data-box-name="plz stop"], div[data-box-name="pls stop"], div[data-box-name^="card carousel"], div[data-box-name="d"], div[data-box-name="b"],div[data-box-name^="Carousel card"],div[data-box-name^="department"], div[data-box-name="layout"], div[data-box-name^="container.department"], div[data-box-name^="bottom"], div[data-box-name^="container.moreOf"], div[data-box-name^="Car0usel card"], div[data-box-name^="bottom car0usels"], div[data-box-name^="car0usels.base"], div[data-box-name^="structure-container"], div[data-box-name^="Version 2 Wrapper"], div[data-box-name^="car0usels container"], div[data-box-name^="bottom carousels"], div[data-box-name^="moreOf"]' 'div>div ^^sh^^ span';
 ! HB
-allegro.*#$#hide-if-matches-xpath './/span[.="Sponsorowane" or .="Sponzorováno"]/ancestor::div[@data-box-id][contains(@data-analytics-tags,"advertising")]';
-allegro.pl#$#hide-if-matches-xpath './/div[contains(@data-analytics-groups,"reklam") or contains(@data-analytics-groups,"kampanijna") or contains(@data-box-name,"Ads")]/ancestor::div[@data-box-name="structure-container"]';
 ! PL
-allegro.*#$#race start; hide-if-matches-xpath './/span[.="Sponsorowane" or .= "Sponsored" or .="Спонсороване" or .="Sponzorované"]//ancestor::article'; hide-if-contains-visible-text /Sponsorowane|Sponsored|Спонсороване|Sponzorované/ 'article' 'div[id]' 'content'; hide-if-matches-xpath './/div[@data-test-tag="dsa"]/preceding::a[contains(@href,"clicks?emission_unit_")]/ancestor-or-self::article[@data-verification-id][@aria-label]'; hide-if-contains-visible-text /Sponzorované/ 'article' 'div>div ^^sh^^ div>span'; race stop;
-allegro.*#?#article:-abp-has(div:-abp-properties(/content: "Sponsorowane";|"Спонсороване";|"Sponsored";|"Sponzorováno";|"Sponzorované";/))
-allegro.*#?#article:-abp-has(span:-abp-properties(/content: "Sponsorowane";|"Спонсороване";|"Sponsored";|"Sponzorováno";|"Sponzorované";/))
 allegro.*#$#race start; hide-if-contains-visible-text /Sponsorowane|Sponsored|Спонсороване/ 'article' 'div[class]>div ^^sh^^ div>span'; hide-if-contains-visible-text /Sponsorowane|Sponsored|Спонсороване/ 'article' 'div[class]>div ^^sh^^ div>*'; race stop;
 ! MISC
-allegro.pl#$#override-property-read adblockEnabledPreferenceUpdated false
 ! #CV-705
 www.wp.pl#$#abort-on-property-read SlotRegistrar; abort-current-inline-script PRELOAD randvar
 dobreprogramy.pl#$#abort-on-property-read wp_adv_labels
@@ -1770,7 +1768,7 @@ aoe.vn#$#abort-on-property-read parseInt
 gametv.vn#$#abort-current-inline-script $ homeModal
 watchsb.com#$#abort-on-property-read __Y
 tinsoikeo.live#$#abort-on-property-read sessionStorage;abort-current-inline-script $ window.open
-motchill.now,ohaytv.my#$#abort-on-property-read sessionStorage
+motchill.bot,ohaytv.my#$#abort-on-property-read sessionStorage
 plvb.xyz,rk.plcdn.xyz#$#abort-on-property-read adsTvc; abort-on-property-read adsPlayer; abort-on-property-read ads; abort-on-property-read keyPlayer; abort-on-property-read adsPopupPlayer;
 hh3dhay.life,hh3dhay.xyz#$#abort-current-inline-script document.createElement /break|case/
 luotphim1.net,mephim.ink,cdnwp.icu#$#json-prune '0.time_mobile 0.time 0.link_video 0.link_video_mobile 0.link 0.link_mobile 1.time_mobile 1.time 1.link_video 1.link_video_mobile 1.link 1.link_mobile'
@@ -1779,7 +1777,7 @@ cafef.vn,gamek.vn,genk.vn,kenh14.vn,soha.vn,tuoitre.vn,afamily.vn,thanhnien.vn#$
 bongda365f.com#$#override-property-read isSkipAds true
 znews.vn#$#abort-on-property-read adtimaConfig
 baomoi.com#$#abort-on-property-write AdtimaRender
-xoivo2.online,tructiepdabong5.co,vaoroiz.tv#$#override-property-read adsPlayer '';override-property-read adsTvcs ''
+xoivo2.online,tructiepdabong5.co,ihst.org#$#override-property-read adsPlayer '';override-property-read adsTvcs ''
 kenh14.vn#$#override-property-read Constants.allowAds false
 vndoc.com#$#override-property-read seconds 0
 phimvuihd.org#$#override-property-read urlAds ''
@@ -1792,12 +1790,12 @@ cliphot69.pics#$#override-property-read a_vid 0
 ! Popup/Popunder/Clickunder
 fembed.com,femax20.com,m.blogtruyenvn.org,viettoons.tv,vinaurl.net,animet3.info,anh.moe,maclife.io,xemphimjav.com,hoctot.hocmai.vn,motchilltv.la,cdn2.blueskychilling.online,ohaha79xxx.site,fastscans4.net,herotruyen.com#$#abort-on-property-read open
 tvhay.top#$#abort-current-inline-script JSON.parse atob
-truyen2u.vip#$#abort-current-inline-script eval
+truyen247.top#$#abort-current-inline-script eval
 thienhatruyen3.com#$#abort-current-inline-script $ pc-popup-2
 sexphimhd.net,www.gvnvh.net#$#abort-current-inline-script Math
 xnxx-sex-videos.com#$#abort-current-inline-script setTimeout /window.location/
 xnxx-sex-videos.com#$#override-property-read user_out false
-truyensieuhay.com,quangcaoyenbai.com,khoaiphim.com,phimmoi.ing,sieudam.vin,ephimchill.com,ophimhdvn3.net,thuvienhd.xyz,xemtivi.tvhayhd.tv,www.khophim88s.com,nhentaivn.online,mv.dailyphimz.com,mv.phimbathu.one#$#abort-on-property-read document.cookie
+truyensieuhay.com,quangcaoyenbai.com,khoaiphim.com,phimmoi.ing,sieudam.vin,ephimchill.com,ophimhdvn3.net,thuvienhd.xyz,xemtivi.tvhayhd.tv,www.khophim88s.com,nhentaivn.online,mv.dailyphimz.com,mv.phimbathu.one,sexhihiz.ch#$#abort-on-property-read document.cookie
 metruyenchu.com#$#abort-on-property-write window.onclick
 ##[href^="//mage98rquewz.com/"]
 truyentuan.xyz#$#abort-current-inline-script $ btpop
@@ -1805,14 +1803,14 @@ xoilacxj.cc#$#abort-on-property-read adsRedirectPopups
 sexdiaryz.us#$#abort-on-property-read parseInt
 linkneverdie.net,linkneverdie.top,linkneverdie2.com#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
 javnong.cc#$#abort-on-property-read Math.round
-viet69.moi,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenomega.com,yurineko.moe,vlxyz.tube,hd.javhay.site,phimsexhay669.pro,cliphot69.skin,doctruyen3qk.pro,ihentai.chat,animehay.ink,jav.vc,top1sex.me,sexmup18.com,hentaivn.today,sexvn1.cc,streamvl.top,www.buomtv.io,truyenvn.vin,cdnstream.sbs,javtiful.com,sex.tuoi69.store,quatvn.fit,tenmientruyengi.net,topviet69.vip,phim18hd.sex,web.sexviet88.xyz,nungmup.net,demo.14412882.com,nungmup.net,ungtycomicsvip.org,xemphim18.vip,cliphot69.pics,hhtq5.vip,sexdiary.club,vn2.xvideos69.xxx#$#abort-current-inline-script WebAssembly instantiate
+viet69.ec,ungtycomicsvip.com,truyengihotqua.net,truyengihotqua.com,truyengihotdo.net,truyengihotnha.com,truyengihotnha.net,truyengihotnay.com,dualeotruyenomega.com,yurineko.moe,vlxyz.tube,hd.javhay.site,phimsexhay669.pro,cliphot69.skin,doctruyen3qk.pro,ihentai.chat,animehay.ink,jav.vc,top1sex.me,sexmup18.com,hentaivn.today,sexvn1.cc,streamvl.top,www.buomtv.io,truyenvn.vin,cdnstream.sbs,javtiful.com,sex.tuoi69.store,quatvn.fit,tenmientruyengi.net,topviet69.me,phim18hd.in,web.sexviet88.xyz,nungmup.net,demo.14412882.com,nungmup.net,ungtycomicsvip.org,xemphim18.vip,cliphot69.pics,hhtq5.vip,sexdiary.club,vn2.xvideos69.xxx,umetruyenhay.com#$#abort-current-inline-script WebAssembly instantiate
 phimtuoitho.site#$#abort-current-inline-script document.documentElement break;case
 phimdinhcao.net,phimlongtieng.net,www.phimdinhcaoz.com#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl
 phimgichill.net,hhhay.ink,hh3dhay.life,truyengihotnha.com,truyengihotnha.net,tram3d.net,animevietsub.cx#$#abort-current-inline-script eval $._Eu
 p.thoctv.com#$#abort-current-inline-script document.createElement script
 mephimnhe1.net#$#abort-current-inline-script jQuery popurl
-phimhdc.us,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
+phimhdctv.com,motchill.plus#$#abort-current-inline-script document.addEventListener linksToOpen
 khoaiphim.com,phimmoinay.tv#$#abort-current-inline-script jQuery click_time
 dualeotruyenomega.com,m.blogtruyenmoi.com#$#abort-current-inline-script document.addEventListener popunder
 lxmanga.store#$#abort-current-inline-script $ PopUnder
@@ -1822,7 +1820,7 @@ animehay.ink#$#abort-current-inline-script document.addEventListener window.open
 audiotruyenfull.com#$#abort-on-property-read adpiaListUrl
 vailonxx.vip,phimlongtieng.com,phimlongtieng.net#$#abort-current-inline-script jQuery window.open
 tctruyen.cc,abtruyenmoi.com#$#abort-current-inline-script $ popup
-truyenqq2.com,viet69.town#$#abort-current-inline-script Promise break;case
+truyenqq5.com,viet69.gold#$#abort-current-inline-script Promise break;case
 holyfilm.org#$#abort-current-inline-script window.addEventListener window.open
 www.nettruyenupp.com#$#abort-on-property-read sp
 phimtho.net#$#abort-current-inline-script $ p0pUpRandom
@@ -1840,14 +1838,13 @@ freeplayervideo.com,abysscdn.com,player-cdn.com,geoip.redirect-ads.com,playhydra
 freeplayervideo.com,abysscdn.com,player-cdn.com,geoip.redirect-ads.com,playhydrax.com#$#abort-current-inline-script document.getElementById openPop
 nettruyenww.com#$#abort-on-property-read links
 goctruyentranhvui6.com,mobiblog.club,truyenqqto.com,sextop1.team,hhvsub.com,sayhentai.one,web.sexviet88.xyz#$#abort-current-inline-script WebAssembly globalThis
-tiemsachhay.net#$#abort-current-inline-script jQuery PopUnder
 hh3dhay.life#$#abort-current-inline-script Symbol break;case
 animehay.ink#$#abort-current-inline-script Number ;break;case
 gocmod.com#$#abort-current-inline-script jQuery popup
 10gb.vn#$#abort-current-inline-script Promise detectedAdblock
 animevietsubs.net#$#abort-on-property-read _0x3f9b
 thichxemphim1.net#$#abort-on-property-read affUrls
-chichnhau.blog#$#abort-current-inline-script $ open
+sexchichnhau.net#$#abort-current-inline-script $ open
 nungmup.net#$#abort-on-property-read Cookies
 ! *** abp-filters-hotfix:hotfix.txt ***
 ! FDA-2994
