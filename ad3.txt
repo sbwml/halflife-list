@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: dFYkMocyKVILKTiRMBYfog
+! Checksum: RacWOOLNMehJ+n1mEbkOYA
 ! Title: AdFilters
 ! Expires: 12 hours
-! Version: 202503100803
-! Last Modified: 2025年03月10日 08:03
+! Version: 202503170804
+! Last Modified: 2025年03月17日 08:04
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance、EasyPrivacy，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -149,7 +149,7 @@ age.tv,agedm.org##+js(noeval-if, devtoolsDetector)
 ||toutiaoimg.com/origin/$image,domain=agedm.org
 ||dd-static.jd.com^$image,domain=subaibaiys.com
 !dandanzan.me,nunuyy5.com##+js(set,webkitRTCPeerConnection,null)
-dandanzan.*,nnyy.in,nunuyy5.com##.gm-fp-body video:style(max-height:100%!important)
+dandanzan.*,nnyy.in,nunuyy5.com##video:style(max-height:100%!important)
 yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang
 yatu.tv,yhdm7.com,yhdm95.com,xdm530.com##+js(aopw,document.oncontextmenu)
 ||www.yatu.tv:2082/image/*.gif^$image
@@ -1880,8 +1880,59 @@ newduba.cn###jq_youxi
 ||51tongji.trafficmanager.net^
 ||trafficmanager.net/o.js
 ||67.21.92.*.gif
+.z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||vnbbrx.top^
+||hylplj.icu^
+||naukreatn.com^
+||uoqc.cn^
+||xaiqrania.com^
+||jipxzz.icu^
+||mstmsbz.com^
+||hwxprd.icu^
+||nrqrbwi.top^
+||cfwlvmg.top^
+||kodwaqepr.com^
+||ajua.cn^
+||mvxh.cn^
+||lftcph.icu^
+||ak03150hou.com^
+||guqransoq.com^
+||ghegaintp.com^
+||vmjr.cn^
+||lmeurbnjs.com^
+||xielloltv.com^
+||lqfctb.icu^
+||fpxhdx.icu^
+||xbfk.cn^
+||pdochgl.top^
+||cokudsvit.com^
+||tpjw.cn^
+||straldrier.com^
+||fajkhr.icu^
+||hmbprf.icu^
+||qkax.cn^
+||apiiksn.top^
+||zogzoldop.com^
+||fqbr.cn^
+||hxnpxh.icu^
+||ecatqefal.com^
+||jjfufv.icu^
+||scesqoikq.com^
+||oajv.cn^
+||cigoqcq.top^
+||sbqg7jylmzsym.top^
+||istraxuhh.com^
+||orup.cn^
+||dtjcvd.icu^
+||vragridsn.com^
+||tpkv.cn^
+||jhrulp.icu^
+||mjvr.cn^
+||euazwot.top^
+||treqonwyp.com^
+||dvgr.cn^
 ||qtbo.cn^
 ||hnhmxj.icu^
 ||fbphnn.icu^
@@ -1893,6 +1944,8 @@ newduba.cn###jq_youxi
 ||fqnhjt.icu^
 ||lelczf.icu^
 ||shelluiqy.com^
+||ejti.cn^
+||pgyfzyv.top^
 ||thustilpn.com^
 ||nrgv.cn^
 ||hltpdd.icu^
@@ -5707,7 +5760,7 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||51ztzj.com/res/web/img/pic/inshow.jpg
 ||520call.me/ad/ad_
 ||520cc.tw/AD/
-||520click.com/ad.$domain=~video.520cc.cc
+||520click.com/ad.$domain=~video.520cc.cc|~surirt.com
 ||520xingyun.com/images/188*.gif
 ||520xs.la/js/dianrui-
 ||520z-2.com/uploadfile/sucai/
@@ -9652,7 +9705,12 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||i8tq.com/adImg/
 ||csgola.com/Public/img/lala/1.jpg
 ||adasset.flixfiend.top^
+||2345.com/guess/v1/adList
 !------------------------Specific element hiding rules------------------------!
+2345.com##.search-right-swiper-news
+2345.com##._isFirstAd
+2345.com##.part-banner > .part-ppt
+2345.com##.lian-meng-box
 6parknews.com##.ad-view
 appinn.com#?#.featured-section > .test:-abp-has(>.post-img>a[href^="http"]:not([href*="appinn."]))
 mydrivers.com##.baidu_left
@@ -20702,7 +20760,7 @@ m.babytree.com##script + a[class]
 /collector/v1/event
 /collector?report=
 /collectsysteminfo?
-/com.snowplowanalytics.snowplow/*
+/com.snowplowanalytics.snowplow/*$domain=~7plus.com.au
 /com_joomlawatch/img.php
 /common/analytics.js
 /common/ga.js
@@ -21413,7 +21471,7 @@ m.babytree.com##script + a[class]
 /log?documentUrl=
 /Log?entry=
 /log?event=
-/log?format=
+/log?format=$domain=~meet.google.com
 /log?id=
 /log?kc=
 /log?method=
@@ -22714,7 +22772,7 @@ m.babytree.com##script + a[class]
 /wps-visitor-counter/styles/js/custom.js
 /wpstatistics/v1/hit?
 /wrapper/metrics/v1/custom-metrics?
-/WRb.js
+/WRb.js^
 /wreport.js
 /writelog.js
 /wstat.pl
@@ -23104,6 +23162,7 @@ _WebVitalsReporter_
 /MailIsRead?$image
 /maillist.*/t/*$image
 /maling.roidusat.com/t/*$image
+/marketing.wrightentgroup.com/t/*$image
 /media.sailthru.com/5ik/1k4/9/*.gif
 /newsletter/log/*$image
 /newsletter/read?s=$image
@@ -23141,6 +23200,7 @@ _WebVitalsReporter_
 /t.yesware.com/t/*$image
 /T/OFC4/*$image
 /tp.mkt.vorwerk.com/r/*$image
+/track.email.$image
 /track.interestingfacts.com/?xol=
 /track.octanemail.in/sapi/*$image
 /track.sp.actionkit.com/*
@@ -24591,7 +24651,6 @@ omni.soundestlink.com$image
 ||ibpxl.com^$third-party
 ||ibpxl.net^$third-party
 ||ic-live.com^$third-party
-||icanhazip.com^$third-party
 ||iclive.com^$third-party
 ||icstats.nl^$third-party
 ||iculture.report^$third-party
@@ -27496,6 +27555,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||analytics.ynap.biz^
 ||analytics.yola.net^
 ||analytics.yolacdn.net^
+||analytics.yollamedia.com^
 ||analytics.ziftsolutions.com^
 ||analytics1.vdo.ai^
 ||analyticsehnwe.servicebus.windows.net^
@@ -28674,6 +28734,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||metrics.gs-chat.com^
 ||metrics.kmsmep.com^
 ||metrics.mdstrm.com^
+||metrics.nsureapi.com^
 ||metrics.onshape.com^
 ||metrics.pico.tools^
 ||metrics.scribblelive.com^
@@ -28784,6 +28845,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||nvidia.partners/telemetry/
 ||nwr.static.mmcdn.com^
 ||o.aolcdn.com/js/mg1.js
+||o9tt6h08li.execute-api.eu-west-1.amazonaws.com^
 ||observe-nexus.pointandplace.com^
 ||observer.ip-label.net^
 ||obseu.netgreencolumn.com^
@@ -29131,6 +29193,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||scripts.swifteq.com/hc_events.js
 ||sd-tagging.azurefd.net^
 ||sdiapi.com/reporter/
+||sdk-service.nsureapi.com/events
 ||sdk.51.la^$third-party
 ||sdrive.skoda-auto.com^
 ||sdtagging.azureedge.net^
@@ -30679,6 +30742,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ad.daum.net^
 ||admin.blog.fc2.com/dctanalyzer.php
 ||affiliate.rakuten.co.jp^$script,third-party
+||amazonaws.com/default/tracking?url=
 ||analytics-beacon.p.uliza.jp^
 ||analytics.contents.by-fw.jp^
 ||analytics.liveact.cri-mw.jp^
@@ -31304,6 +31368,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||analytics.tomato.gg^
 ||analytics.tradedoubler.com^
 ||analytics.vedantu.com^
+||analytics.viture.dev^
 ||analytics.vortexscans.com^
 ||analytics.wavebox.io^
 ||analytics.yugen.to^
@@ -31317,6 +31382,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||api-hotmart-tracking-manager.hotmart.com^
 ||api-js.mixpanel.com^
 ||api-router.kaspersky-labs.com/logger2/metrics/
+||api-visitor-analytics.intercom.com^
 ||api.audio.com/analytics/event
 ||api.channel.io/*/events
 ||api.doodle.com/data-layer/track
@@ -31848,7 +31914,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||google.com/async/ddllog
 ||google.com/dssw.js
 ||google.com/images/phd/px.gif
-||google.com/log?
+||google.com/log^$domain=~meet.google.com
 ||google.com/pagead/1p-conversion/
 ||grabify.link/api/js
 ||grgnsht.nzxt.com^
@@ -32274,7 +32340,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||plausible.omgapi.org^
 ||plausible.safing.io^
 ||plausible.tubemagic.com^
-||play.google.com/log
 ||player-cdn.com/cdn-cgi/trace
 ||player-telemetry.vimeo.com^
 ||playvideohd.com/cdn-cgi/trace
@@ -69842,6 +69907,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||nikkei.com/.resources/tracking/
 ||nvapi.nicovideo.jp/v1/bandit-machine/
 ||odsyms15.com/impression?
+||oita-press.co.jp/js2020/analytics.js
 ||portal.kotodaman.jp/api/otel/v1/logs
 ||pvtag.yahoo.co.jp^
 ||pw.gigazine.net^
@@ -70591,6 +70657,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 @@||simpleanalyticsexternal.com^$script,domain=inleo.io
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||snap.licdn.com/li.lms-analytics/insight.min.js$domain=msci.com
+@@||snowplow.swm.digital^$domain=7plus.com.au
 @@||sohotheatre.com^*/PageView.js$~third-party
 @@||solr.sas.com/query/$xmlhttprequest,domain=jmp.com
 @@||sophos.com^*/tracking/gainjectmin.js$script,domain=community.sophos.com
@@ -70931,6 +70998,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 @@||f-gear.ec-optimizer.com/img/spacer.gif$image,domain=ec.f-gear.co.jp
 @@||f-gear.ec-optimizer.com/search4.do$script,domain=ec.f-gear.co.jp
 @@||f-gear.ec-optimizer.com/speights/searchresult2fgear.js$script,domain=ec.f-gear.co.jp
+@@||f-tra.com^$script,domain=pokemoncenter-online.com
 @@||gamerch.com/s3-assets/library/js/fingerprint2.min.js?$script,~third-party
 @@||geolocation-db.com/json/$domain=admanager.line.biz
 @@||get.s-onetag.com/*/tag.min.js$domain=zakzak.co.jp
