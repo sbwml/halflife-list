@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: TO4vag56n4sSnMDetfu2DA
+! Checksum: 54vG50bkftstVe06CmdG9g
 ! Title: edentwCustom
 ! Expires: 12 hours
-! Version: 202510130804
-! Last Modified: 2025年10月13日 08:04
+! Version: 202510200804
+! Last Modified: 2025年10月20日 08:04
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自Adblock Warning Removal List、ABP filters、anti-adblock-killer-filters，感谢各位大大的分享！
 ! 仅合并规则，未做其余任何处理
@@ -291,6 +291,7 @@ novinky.cz#$#json-prune 'responsive width height'; abort-current-inline-script c
 seznamzpravy.cz,sport.cz#$#hide-if-matches-xpath '//div[@class]/div[@*="mol-advert"]'
 novinky.cz#$#hide-if-matches-xpath '//iframe[@sandbox][contains(@style, "width: 100%")]/ancestor::div[@*[starts-with(name(), "data-") and contains(name(), "advert")]]/parent::div[1]'
 novinky.cz#$#abort-on-iframe-property-write postMessage; abort-on-property-write $sf; abort-on-iframe-property-read addEventListener;
+novinky.cz,seznam.cz#$#cookie-remover /^adb$|adb\.key|^[a-z]{5,11}$/; cookie-remover qusnyQusny;
 ! #CV-780
 .cz/*,,*,|$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
 =autapay/*,|$xmlhttprequest,domain=ahaonline.cz|info.cz|onetv.cz
@@ -555,23 +556,29 @@ threenow.co.nz#$#override-property-read Object.prototype.adConfigId undefined; j
 marketwatch.com,wsj.com#$#abort-on-property-write window.__buildAd;
 marketwatch.com#$#hide-if-contains-visible-text /Advertisement/ 'div[class^="container"]' 'div>span'
 ! CV-1364
-||html-load.com^$script,xmlhttprequest,domain=convertcase.net|manta.com|wfmz.com|golf-live.at|eurointegration.com.ua|sourceforge.net|bab.la|pons.com|loawa.com|gazetaprawna.pl|malaymail.com|tz.de|winfuture.de|dictionary.cambridge.org|collinsdictionary.com|sankei.com|timesofindia.indiatimes.com
+||html-load.com^$script,xmlhttprequest,domain=convertcase.net|manta.com|wfmz.com|golf-live.at|eurointegration.com.ua|sourceforge.net|bab.la|pons.com|loawa.com|gazetaprawna.pl|malaymail.com|tz.de|winfuture.de|dictionary.cambridge.org|collinsdictionary.com|sankei.com|timesofindia.indiatimes.com|gutefrage.net
 ||error-report.com^$domain=sourceforge.net|bab.la|pons.com|loawa.com|gazetaprawna.pl|malaymail.com|tz.de|winfuture.de|gutefrage.net|dictionary.cambridge.org|huffpost.com|collinsdictionary.com|sankei.com|timesofindia.indiatimes.com
 sourceforge.net,dictionary.cambridge.org,bab.la,loawa.com,gazetaprawna.pl,tz.de,winfuture.de,gutefrage.net,collinsdictionary.com#$#event-override message trusted /unfilled/; event-override visibilitychange disable;
 convertcase.net,manta.com,wfmz.com,golf-live.at,eurointegration.com.ua#$#abort-current-inline-script Symbol error-report.com
 malaymail.com,dictionary.cambridge.org#$#abort-current-inline-script setTimeout /error-report.com/
 sankei.com,timesofindia.indiatimes.com,dictionary.cambridge.org,sourceforge.net,bab.la,pons.com,loawa.com,gazetaprawna.pl,malaymail.com,tz.de,winfuture.de,gutefrage.net,huffpost.com,collinsdictionary.com#$#blob-override '/.*/' ''
-dictionary.cambridge.org,sourceforge.net,bab.la,pons.com,loawa.com,gazetaprawna.pl,malaymail.com,tz.de,winfuture.de,gutefrage.net,collinsdictionary.com#$#override-property-read window.confirm noopFunc
+dictionary.cambridge.org,sourceforge.net,bab.la,pons.com,loawa.com,gazetaprawna.pl,malaymail.com,tz.de,collinsdictionary.com#$#override-property-read window.confirm noopFunc
 loawa.com,malaymail.com,dictionary.cambridge.org#$#abort-current-inline-script setTimeout /EventTarget.*prototype.*addEventListener.*Map/
 huffpost.com#$#json-prune 'RT-1562-AdShield-script-on-Huffpost RT-1720-ads_bullwhip-hp'
 timesofindia.indiatimes.com,sankei.com,sourceforge.net,dictionary.cambridge.org,bab.la,loawa.com,gazetaprawna.pl,tz.de,winfuture.de,gutefrage.net,collinsdictionary.com#$#override-property-read googletag emptyObj; event-override message disable /^r_/; prevent-listener message /postMessage|error-report|adb/;
 timesofindia.indiatimes.com,sankei.com,sourceforge.net,dictionary.cambridge.org,bab.la,loawa.com,gazetaprawna.pl,tz.de,winfuture.de,gutefrage.net,collinsdictionary.com#$#override-property-read performance.getEntriesByType noopFunc; override-property-read window.requestIdleCallback undefined; override-property-read ResizeObserver undefined;
-timesofindia.indiatimes.com#$#abort-on-iframe-property-read localStorage;  override-property-read window.confirm noopFunc; override-property-read pbjs emptyObj; abort-on-iframe-property-read sessionStorage; override-property-read dataLayer emptyArray; abort-on-iframe-property-read caches;
+timesofindia.indiatimes.com#$#abort-on-iframe-property-read localStorage; override-property-read pbjs emptyObj; abort-on-iframe-property-read sessionStorage; override-property-read dataLayer emptyArray; abort-on-iframe-property-read caches;
 pons.com#$#override-property-read performance.getEntriesByType noopFunc; override-property-read window.requestIdleCallback undefined;
 ||0.loader.gutefrage.net/article^$script,domain=gutefrage.net
 ||0.as.sourceforge.net/article^$script,domain=sourceforge.net
 ||0.content-loader.com/article^$script,third-party,domain=timesofindia.indiatimes.com|sankei.com|dictionary.cambridge.org|bab.la|pons.com|loawa.com|gazetaprawna.pl|winfuture.de|collinsdictionary.com|malaymail.com|tz.de
 ||dbloader.leboncoin.info^$script,third-party,domain=leboncoin.fr
+gutefrage.net,timesofindia.indiatimes.com,wetter.com,winfuture.de#$#override-property-read Date.now noopFunc
+gutefrage.net,timesofindia.indiatimes.com,wetter.com,winfuture.de#$#abort-on-property-write window.confirm
+gutefrage.net,timesofindia.indiatimes.com,wetter.com,winfuture.de#$#abort-on-property-write window.alert
+||fb.html-load.com^$script,domain=gutefrage.net|timesofindia.indiatimes.com|wetter.com|winfuture.de
+||content-loader.com^$script,domain=gutefrage.net|timesofindia.indiatimes.com|wetter.com|winfuture.de
+gutefrage.net,timesofindia.indiatimes.com,wetter.com,winfuture.de#$#override-property-read Element.prototype.remove noopFunc
 ! #CV-1935
 ##.jag8CityBio212023
 reddit.com##.jag8CityBio212023
@@ -895,7 +902,7 @@ freshsexvideos.com,sexvideos.rodeo,xxxvideo.link,ixxx.onl,xvideosx.one,xxxpor.or
 porntrex.com#$#abort-on-property-write preventDefault
 lscomic.com#$#abort-on-property-read window.advanced_ads_ready;abort-on-property-write window.advanced_ads_ready_queue;
 aniwatchtv.*,kunmanga.com#$#abort-current-inline-script document.createElement /break|case/
-andyday-tv.lol,andydayz.*,andyday.*,soaper.tv,kickassanime.*,putlocker.vip,vidco.pro#$#abort-current-inline-script document.documentElement break;case $.
+andyday-tv.lol,andydayz.*,andyday.*,soaper.tv,kickassanime.*,theflixertv.*,putlocker.vip,vidco.pro#$#abort-current-inline-script document.documentElement break;case $.
 kickassanime.*,vidco.pro#$#override-property-read ifmax true
 mixdrop.*#$#override-property-read MDCore.adblock 0; abort-current-inline-script String.fromCharCode; abort-on-property-read window.open;
 skidrowreloaded.*,vidsrc.*#$#abort-on-property-read runPop; abort-current-inline-script open; abort-on-property-read Math.floor
@@ -913,7 +920,7 @@ anitube.*,alphatron.*,edgedeliverynetwork.com#$#abort-current-inline-script Even
 eztvx.to#$#json-prune 'adserverDomain'
 onworks.net#$#override-property-read rewarded 0;
 readcomiconline.li#$#abort-on-iframe-property-read localStorage
-boosterx.stream,vidsrc.*#$#abort-current-inline-script EventTarget.prototype.addEventListener delete; abort-current-inline-script JSON.parse break;case $.;
+boosterx.stream,dinisglows.com,flaswish.com,jkanime.*,mdfx9dc8n.net,vidsrc.*#$#abort-current-inline-script EventTarget.prototype.addEventListener delete; abort-current-inline-script JSON.parse break;case $.;
 coflix.*,dhtpre.com,fmovies.*,swatchseries.is,vidhidepro.com,vidply.com,watchseriestv.*#$#abort-current-inline-script String.fromCharCode 2147483647
 hianime.*,magasavor.net,moviesjoy.*,pkembed.*,rmaxfinishseveral.com,uqload.*,ups2up.*,bigwarp.*,savefiles.com,vide0.net,watchug.*#$#abort-on-property-write window.open; abort-current-inline-script EventTarget.prototype.addEventListener delete window;
 pornproxy.*#$#abort-current-inline-script document.createElement /script/; abort-on-property-write PopCookieTimeout; abort-on-property-read PopURL
@@ -921,6 +928,8 @@ sexvid.*#$#abort-on-property-read atob; abort-current-inline-script document.wri
 gogoanimes.*,bigclatterhomesguideservice.com,dramacool.sr,hltv.org,japscan.me,maxfinishseveral.com,movies-watch.com.pk,movies2watch.tv,nosteam.ro,readcomiconline.li,reputationsheriffkennethsand.com,root-nation.com,soap2day.*,solarmovie.*,toongod.com,watchseriestv.*,yomovies.cloud#$#abort-on-property-read window.open
 bigwarp.*,mangakakalot.gg,savefiles.com,vide0.net,jilliandescribecompany.com#$#abort-current-inline-script WebAssembly atob;
 torkitty.*#$#prevent-listener click handlePopunder
+/api/users/*&ev=*$script,domain=supjav.com
+streamm4u.com.co#$#prevent-listener beforeunload (); abort-on-property-write _g_sb_click
 ! MISC
 airsoftmilsimnews.com#$#abort-on-property-read td_ad_background_click_target
 baytorrent.eu.org,europixhd.com,europixhd.net,file-up.org,force-download.com,force-download.es,force-download.net,gledajonline.net,hdeuropix.io,loadsubs.net,novom.ru,pirateproxy.earth,pirateproxy.live,thehiddenbay.com,thepiratebay.org,thepiratebay.vip,thepiratebay10.org,topeuropix.net,tpb.party,uploadproper.com,uploadproper.net#$#abort-on-property-read atob
@@ -929,7 +938,7 @@ gogoanimes.*,rarbg.to,rarbg2019.org,rarbgaccess.org,rarbgdata.org,rarbgget.org,r
 toon69.com#$#abort-on-property-read adConfig
 onlystream.tv#$#abort-on-property-read BetterJsPop
 hdvid.tv#$#abort-on-property-read atob; abort-on-property-read encodeURIComponent; abort-on-property-write _pop
-embed.media,fembed.com,fmovies.*,flashx.tv,gaobook.review,hxfile.co,mavplay.xyz,myyouporn.com,solarmovie.*,vaplayer.xyz,vizcloud.*,xstreamcdn.com#$#abort-on-property-read AaDetector
+embed.media,fembed.com,fmovies.*,flashx.tv,gaobook.review,hxfile.co,mavplay.xyz,myyouporn.com,streamm4u.com.co,solarmovie.*,vaplayer.xyz,vizcloud.*,xstreamcdn.com#$#abort-on-property-read AaDetector
 babesxworld.com,lesbian8.com,older-women-porn.com,pifansubs.com,pimpandhost.com,silkengirl.net#$#abort-on-property-read adProvider
 hitomi.la#$#abort-on-property-read AdProvider
 9xupload.me#$#abort-on-property-read eval
@@ -948,7 +957,7 @@ upload.ee,ianimes.co,ianimes.top#$#abort-on-property-read adcashMacros
 gamefront.com#$#abort-current-inline-script $ AdBlock
 kickassanime.io##.ka-ax-wrp.mb-3
 imagefap.com#$#abort-on-property-read popCookie
-igg-games.*,pcgamestorrents.*#$#race start; hide-if-matches-xpath './/img[@alt][starts-with(@src,"/wp-content/uploads/")]/ancestor-or-self::a[starts-with(@href,"/offernf?")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"affernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"ffernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"eefernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"uffer") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ernf?") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"fcrnf?") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffeci=") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffecd") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffec=") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffecc=") or contains(@href,"/gameadult/")]/parent::p[1]'; race stop;
+igg-games.*,pcgamestorrents.*#$#race start; hide-if-matches-xpath './/img[@alt][starts-with(@src,"/wp-content/uploads/")]/ancestor-or-self::a[starts-with(@href,"/offernf?")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"affernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"ffernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"eefernf?") or contains(@href,"/gameadult/")]/parent::div[1]'; hide-if-matches-xpath './/a[contains(@href,"uffer") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ernf?") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"fcrnf?") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffeci=") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffecd") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffec=") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath './/a[contains(@href,"ffecc=") or contains(@href,"/gameadult/")]/parent::p[1]'; hide-if-matches-xpath '//article//*[self::*/a[@href][.//*[@width="669" and @height="85"]]]'; race stop;
 igg-games.*,pcgamestorrents.*#$#abort-on-property-write advanced_ads_ready; prevent-listener iframe; abort-current-inline-script addEventListener document.createElement; abort-on-property-write window.open; abort-current-inline-script document.documentElement break;case $.
 /\/uploads\/2025\/\d{2}\/[0-9a-z]{6,12}\.jpg$/$image,match-case,domain=igg-games.*|pcgamestorrents.*
 searchenginereports.net#$#abort-on-property-read adsbygoogle
@@ -958,17 +967,17 @@ clicknupload.co,clicknupload.link,clicknupload.org,clicknupload.to#$#abort-curre
 tubesafari.com,youdbox.com#$#abort-on-property-read encodeURIComponent
 vidshare.tv,vidshar.tv,series.movie,gowatchseries.movie,gowatchseries.tv#$#abort-current-inline-script Object.defineProperty XMLHttpRequest
 fmovies.*,hurawatch.cc,theflixer.tv#$#abort-on-property-read window.zfgstorage
-dopebox.to,fmovies.*#$#abort-current-inline-script document.createElement delete window
+dopebox.to,fmovies.*,theflixertv.*#$#abort-current-inline-script document.createElement delete window
 omegascans.org#$#abort-on-property-read window.__adFormats
 liveru.sx#$#abort-on-property-read window.b5bb198737
 manganelo.tv#$#abort-on-property-read document.createElement
 manga18fx.com#$#abort-on-property-read Math.floor
 bangtubevideos.com#$#override-property-read setTimeout noopFunc; abort-on-property-write location.replace
-1afav.net,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,7us7m00f.fun,andyday-tv.lol,andydayz.*,animeheaven.pro,bf0skv.org,boosterx.stream,desi-porn.tube,emturbovid.com,fmovies.*,hqq.*,jilliandescribecompany.com,mixdrop.*,movearnpre.*,oneupload.*,putlocker.vip,spankbang.com,supjav.com,toflix.*,videasy.net,vidply.com,web.netmovies.*,xprime.tv,zgdpo8nr.fun#$#abort-on-property-write window.open
-1337x.buzz,komikav.com,limetorrents.lol,himovies.*,manhuascan.com,moviesda1.com,moviesjoy.*,realgfporn.com,soap2day.*,sxyprn.*,strikeout.cc,thepiratebay10.xyz#$#abort-current-inline-script document.createElement script
+1afav.net,1film.to,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,7us7m00f.fun,andyday-tv.lol,andydayz.*,animeheaven.pro,bf0skv.org,boosterx.stream,desi-porn.tube,dinisglows.com,dsvplay.com,emturbovid.com,fc2stream.tv,flaswish.com,flemmix.*,fmovies.*,hqq.*,jilliandescribecompany.com,jkanime.*,mdfx9dc8n.net,mixdrop.*,movearnpre.*,oneupload.*,putlocker.vip,spankbang.com,supjav.com,supremejav.com,tipfly.xyz,toflix.*,turbovidhls.com,ups2up.*,videasy.net,vidply.com,web.netmovies.*,xprime.tv,zgdpo8nr.fun#$#abort-on-property-write window.open
+1337x.buzz,komikav.com,limetorrents.lol,himovies.*,manhuascan.com,moviesda1.com,moviesjoy.*,realgfporn.com,soap2day.*,sxyprn.*,strikeout.cc,thepiratebay10.xyz,theflixertv.*#$#abort-current-inline-script document.createElement script
 mathwarehouse.com#$#override-property-read MwAserver noopFunc
 bato.to#$#abort-current-inline-script document.createElement _vwmso
-animepahe.*,fuxporn.com,gogoplay1.com,komikcast.com,lookmovie.la,manhuascan.io,prmovies.bz,speedostream.com,yomovies.cam,watchseri.net,wiflix.*,wiflix-max.site,yomovies.ws#$#abort-current-inline-script JSON.parse
+1film.to,animepahe.*,dsvplay.com,flemmix.*,fuxporn.com,gogoplay1.com,komikcast.com,lookmovie.la,manhuascan.io,mdfx9dc8n.net,oneupload.*,prmovies.bz,speedostream.com,tipfly.xyz,ups2up.*,watchseri.net,wiflix.*,wiflix-max.site,yomovies.cam,yomovies.ws#$#abort-current-inline-script JSON.parse
 supjav.com##.asg-overlay
 /js.mangapro.top/*.js^$script,domain=comick.top
 /rass7.*.js^$script,domain=upornia.com|vjav.com
@@ -988,7 +997,7 @@ freeuseporn.com#$#override-property-read p18 undefined
 pornhits.com,porntop.com#$#abort-current-inline-script ACtMan
 letsjerk.tv#?#div[class*="widget_text"]:-abp-has(>div:-abp-contains(Advertisement))
 boyjackpot.com,letsjerk.tv#$#abort-current-inline-script asgPopScript
-123movies-official.net,animefrenzy.net,apkmody.io,atomohd.app,atomtt.com,d123movies.to,f2movies.to,filmlinks4u.online,gogoanime.*,goyabu.com,hentai20.com,kimcartoon.*,kisstvshow.to,lalamanga.com,mangadna.com,mangahere.onl,manganato.com,manhwax.com,movies123.sbs,movies123.studio,moviesjoy.*,prmovies.re,readmanganato.com,soap2day.*,socialmediagirls.com,tinyzonetv.to,udvl.com,wiflix.*,wiflix-max.site,yomovies1.online#$#abort-on-property-read localStorage;
+123movies-official.net,1film.to,animefrenzy.net,apkmody.io,atomohd.app,atomtt.com,d123movies.to,dsvplay.com,f2movies.to,fc2stream.tv,filmlinks4u.online,flemmix.*,gogoanime.*,goyabu.com,hentai20.com,kimcartoon.*,kisstvshow.to,lalamanga.com,mangadna.com,mangahere.onl,manganato.com,manhwax.com,mdfx9dc8n.net,movies123.sbs,movies123.studio,moviesjoy.*,oneupload.*,prmovies.re,readmanganato.com,soap2day.*,socialmediagirls.com,supremejav.com,tipfly.xyz,tinyzonetv.to,turbovidhls.com,udvl.com,ups2up.*,wiflix.*,wiflix-max.site,yomovies1.online#$#abort-on-property-read localStorage;
 fastconverter.net#$#abort-on-property-read afScript
 tpbay.*#$#abort-on-property-read _wm_settings
 footfetishvid.com,manga21plus.com,povaddict.com#$#abort-on-property-read a3klsam
@@ -1084,7 +1093,8 @@ poki.com#$#hide-if-matches-xpath './/div[contains(@style,"height")]/following-si
 bettycrocker.com,pillsbury.com#$#simulate-mouse-event 'xpath(.//div[@class="adAboveSiteHeader"]//span[@class="closeAdButton"][@aria-label])'
 solarmovie.*#$#abort-current-inline-script Math zfgloaded
 kickassanime.*,streamwish.*#$#hide-if-matches-xpath './/div[contains(@class, "jw-wrapper")]/div[contains(@style,"position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;")]'
-hianime.*#$#hide-if-matches-xpath './/a[contains(@href,"1flix.to")]/img[@alt="1flix"][@style]/ancestor::div[@style]'
+hianime.*#$#hide-if-matches-xpath './/a[contains(@href,"flix")]/img[@alt="flix"][@style]/ancestor::div[@style]'
+hianime.*#$#prevent-listener pointerdown; abort-on-iframe-property-read localStorage; abort-on-iframe-property-read Math.random
 hdtodayz.*,moviesjoy.*#$#hide-if-matches-xpath './/img[contains(@style,"width: 100%")]/parent::a[@href][@target]/ancestor::div[@id][contains(@style,"20px")]'
 2kmoviehd.to,hdtodayz.*##div[style*="position: fixed; inset: 0px; pointer-events: auto;"]
 awafim.tv,movies2watch.tv,sflix2.*,sflix.*,uqload.*#$#prevent-listener break;case $.
@@ -1176,7 +1186,7 @@ www.facebook.com,web.facebook.com#$#race start; hide-if-contains /Anzeige|Sponso
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelledby and @aria-describedby]//*[name()="use" and substring(@*,2)=//*[name()="svg"]/*[name()="text"][text()[.="Anzeige" or .="Sponsored" or .="Sponsorlu" or .="Gesponsert" or .="Patrocinado" or .="Sponsorisé" or .="Commandité" or .="Gesponsord" or .="Sponsorowane" or .="Publicidad" or .="Sponsrad" or .="Sponsoreret" or .="Sponsoroitu" or .="Sponsa" or .="Sponset" or .="Sponsorizat" or .="Bersponsor" or .="Ditaja" or .="Sponsorizzato" or .="May Sponsor" or .="Hirdetés" or .="Sponsitud" or .="Sponzorováno" or .="Реклама" or .="贊助" or .="赞助内容" or .="ได้รับการสนับสนุน" or .="Được tài trợ" or .="प्रायोजित" or .="دارای پشتیبانی مالی" or .="تمويل شوي" or .="সৌজন্যে" or .="مُموَّل" or .="سپانسرڈ" or .="ממומן"]]/@id]/ancestor::div[@aria-labelledby and @aria-describedby]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@role="feed"]//div[@role="article"]//a[@aria-label[.="Patrocinado" or .="Sponsa" or .="Bersponsor" or .="Commandité" or .="Ditaja" or .="Gesponsert" or .="Gesponsord" or .="Sponsrad" or .="Publicidad" or .="Sponsoreret" or .="Sponset" or .="Sponsored" or .="Sponsorisé" or .="Sponsorizat" or .="Sponsorizzato" or .="Anzeige" or .="Sponsorlu" or .="Sponsorowane" or .="Реклама" or .="ממומן" or .="تمويل شوي" or .="دارای پشتیبانی مالی" or .="سپانسرڈ" or .="مُموَّل" or .="प्रायोजित" or .="সৌজন্যে" or .="ได้รับการสนับสนุน" or .="内容" or .="贊助" or .="Sponsoroitu" or .="May Sponsor" or .="Được tài trợ" or .="ಪ್ರಾಯೋಜಿತ" or .="स्पॉन्सर्ड" or .="広告" or .="赞助内容" or .="Рэклама" or .="Sponzorované" or .="La maalgeliyey" or .="Geborg" or .="Reklam" or .="Plaćeni oglas" or .="광고" or .="Χορηγούμενη" or .="স্পনসর্ড" or .="സ്പോൺസർ ചെയ്തത്" or .="ਸਰਪ੍ਰਸਤੀ ਪ੍ਰਾਪਤ" or .="මුදල් ගෙවා ප්‍රචාරය කරන ලදි" or .="விளம்பரம்" or .="ప్రాయోజితం చేయబడింది" or .="Спонсорирано" or .="Спонзорисано" or .="ܒܘܕܩܐ ܡܡܘܘܢܐ" or .="Reklamo" or .="Hirdetés" or .="Sponsitud" or .="Sponzorováno"]]/ancestor::div[@role="article"]'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[@aria-labelledby and @aria-describedby]//span//div[@class][@role][contains(., "Anzeige") or contains(., "Sponsored") or contains(., "Sponsorlu") or contains(., "Gesponsert") or contains(., "Patrocinado") or contains(., "Sponsorisé") or contains(., "Commandité") or contains(., "Gesponsord") or contains(., "Sponsorowane") or contains(., "Publicidad") or contains(., "Sponsrad") or contains(., "Sponsoreret") or contains(., "Sponsoroitu") or contains(., "Sponsa") or contains(., "Sponset") or contains(., "Sponsorizat") or contains(., "Bersponsor") or contains(., "Ditaja") or contains(., "Sponsorizzato") or contains(., "May Sponsor") or contains(., "Реклама") or contains(., "贊助") or contains(., "赞助内容") or contains(., "ได้รับการสนับสนุน") or contains(., "Được tài trợ") or contains(., "प्रायोजित") or contains(., "دارای پشتیبانی مالی") or contains(., "تمويل شوي") or contains(., "সৌজন্যে") or contains(., "مُموَّل") or contains(., "سپانسرڈ") or contains(., "ממומן") or contains(., "Hirdetés") or contains(., "ಪ್ರಾಯೋಜಿತ")]/ancestor::div[@aria-labelledby and @aria-describedby]'
-www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"(conte_brs_of_for_lael|labe_the_conte_brs_flag|brs_new_of_lb_contetnt|labe_br_co|label_cont_br_la|la_conte_br|labe_conten_br|lab_conte_br_flag|br_conte_la|cote_lbl_brs_for_lbe|conte_lab_flag_for_brs|brs_conte_labell|flag_laba_brs_content|br_s_content_label|conten_brs_labe|lab_the_flag_conten_brs|lbl_brs_cnte_label|conten_labl_brs|labkel_brs_cont_of|countent_la_brs_label|br_labe_fo_cont_labe|brs_label_la_content_the|brs_lbe_counte_the_flag|cnte_lbel_brm_flag|for_contn_brs_labell_label|new_brs_conten_lab|brs_conte_alabe|labe_brs_flag_cont|new_cnten_br_labvel|brs_of_lb_for_conqten|conten_brs_lab|brs_conent_lab|for_contenzt_brs_lb|br_label_con_lab|for_of_br_labe|lab_brs_of_cone|of_brs_label|distace_of_brs_new_autio_label|labe_cont_brs|sponsore_brs_the|conent_lbl_brqs_lbe|br_lael_content_new|cont_brws_laobe|contenrt_brs_lbe_flag|the_cone_brs_lbl_lbe|cntent_labbe_brs|contxe_brms_labl_lbl|conte_brf_la|lael_flag_cntent_label_bras|the_conten_brs_lbe|labe_label_brs_conent|contn_of_brs_for_la|flag_cnte_label_brs|the_brs_content_labe|lael_the_conteun_brs_label|new_conen_for_brs_la|lbel_brs_contnt|brs_contena_of_labe|the_contenh_lab_for_brs|brs_flag_lael_of_connte|contet_lbl_brs_the_lbel|brg_larb_coten|conte_of_lab_for_br|lbe_label_of_conte_brs|label_of_lbel_conten_brr|lb_conte_brl_la|lbl_conteb_brls_lab|conteynt_brrs_label|label_brs_cont_the_labl|brs_cont_lbe|flag_labe_content_brs|lbe_conen_brd_lbl|new_conent_brs_la|cote_new_labj_brs|brs_lbel_conten|of_lbl_brs_contet_labl|brs_for_labecl_conen|label_brfs_contte_lab_lbl|conteln_for_brs_labe|la_conten_brs|the_conte_lab_br|labiel_brs_cont|cote_the_lael_brs_of|new_coenten_lbe_br|br_lae_content|flag_for_conent_brs_labe|lagbel_coten_bre|lagbel_coten_br|content_label_flag_new_br|labl_for_coniten_of_brs|brs_content_of_labe|for_br_cont_lab|la_con_br|brs_conte_labe_flag|of_conite_flag_brs_labe|lbl_brs_lae_cntent|conte_brs_lb_for|lab_co_br_for|new_brs_content_label|new_brs_content_labe|brs_lab_lbl_conteint_of|brs_lb_conten|flag_br_lfbel_contte|conttent_labe_new_rz|the_brand_cont_sft_flag|brand_cont_sft_flag|flag_cntentk_lbel_b|con_safety_brs|cont_sfty_brs|content_sfty_brs|conte_br_labe_flag|brs_lbl_content|brs_cnt_lbl_the|the_brs_lab_content_new|the_br_s_cnt_label|the_br_s_cont_label|br_lb_label|br_lb_label_co|lbl_content_brs|labe_br_con_the|br_safety_content_label|br_con_label_for_safety|content_lbl_brs|content_label_brs|cont_label_brs|con_label_brs|new_con_label_brs|lbl_la_br_cont|new_lbl_la_br_cont|br_safety_con_label|new_br_safety_con_label|brs_con_label|brs_content_label|bran_lbl_cont|brand_lbl_cont)[^\n]+?("sponsored_data"|"data_spon"|"spon_dat"|"ads_data"|"the_spons_data"|"daspo_sto")[^\n]+?("SponsoredData"|"lbl_adv_iden"|"ad_id")[^\n]+"cursor":"[^"]+"\}/' '{}' '/(sponsored_auction_distance|sp_auct_dis|flag_distan_spon_auc|of_distanc_auctio_spons|auction_distance_sp|auct_distance_sponsored|auc_distance_sponsored|auction_sponsored_dist|new_auction_sponsored_dist|auct_dis_of_sponsored|the_auct_dis_of_sponsored|auc_dis_sponsored|the_auc_dis_sponsored|spon_auct_dis|spons_dista_auc|dist_spons_auctio|sponsor_for_dis_au|distanc_auct_the_sponsor|spon_lbl_aucti_dista|label_auctio_spons_distanc|auct_dis_sponso|auc_dist_sponso|auc_dis_sponso|new_auc_dis_sponso|spon_lbl_dist_auct|spon_lbl_dis_auct|spons_lbel_dis_auct|lbl_flag_spon_auc_dist|sps_auction_distance|sps_auction_flag_distance|sps_auct_distance|sponso_auc_dist|new_of_sponsxored_diwsta_uctiopn|spon_auct_of_dist|dist_to_spons_auction|aucti_sponsor_the_new_distnc|distance_auti_sonsore|sponsore_auctio_dis|for_aucti_dista_spon|dist_auct_spons_lbl|auctio_spnsor_distace|for_auci_new_sponsor_distanyc|dist_sponsor_auc|au_spon_flag_dist|di_auc_fl_spo|fl_au_flag_di_sp|auc_lb_dis_spon_the|auc_sponsor_dist|lbl_sponsor_dist_au|auc_for_dis_sponso|au_dista_spon|distanc_sponsore_aucti|au_sponsor_dist|auct_spon_dist|auction_distanc_sponsored|auctio_dist_sponsore|sponsocr_distanc_of_auctido|sponsred_auct_dista_of|sponsorexd_aucto_for_lbl_distance|dist_sponso_auctio|aution_disan_new_sonsored|auc_sponsore_distan|sponsor_au_dis|aucton_sponso_ditance|label_sposor_disntance_auctin|lbl_auti_flag_dstanc_sponsord|label_au_lb_spon_fla_dstan|spons_aut_dsta_lb_fla|label_aut_dstan_fl_spons_lb|sponsor_aut_dst_lb_fl|sponsorce_aucio_distanc|auti_the_sponsore_distnc|ditanc_flag_sponsore_aujction|distanc_new_sonsored_auctilo|distan_lbl_au_sponsore|dstan_of_conen_aucti_label|label_acti_sponsory_dstance|sponsore_contet_lbl_disjtan_actio|disance_auctiko_sponso|dstance_auctfio_spdonsore|distance_sponsore_auction_new|aucti_sponsxor_distran|sonsore_for_distance_of_auxcti|the_sponsoyr_distance_auctin_lbl|auctzion_ditan_sponsored|distnc_auct_sponsore|for_sonsor_disjtance_auct|of_sponsor_distanc_auc|auctio_sponso_distan|distanc_auct_spon|sponsor_auct_dis|dstanc_sponsorefd_of_aution_the|spon_auc_dis|aucto_disance_sponso|distnce_actio_lbl_sponso|auct_the_distanc_sponsor|au_distan_label_spons)/'
+www.facebook.com,web.facebook.com#$#replace-xhr-response '/\{"(brs_la_conten|for_labe_br_con|conte_brs_of_for_lael|labe_the_conte_brs_flag|brs_new_of_lb_contetnt|labe_br_co|label_cont_br_la|la_conte_br|labe_conten_br|lab_conte_br_flag|br_conte_la|cote_lbl_brs_for_lbe|conte_lab_flag_for_brs|brs_conte_labell|flag_laba_brs_content|br_s_content_label|conten_brs_labe|lab_the_flag_conten_brs|lbl_brs_cnte_label|conten_labl_brs|labkel_brs_cont_of|countent_la_brs_label|br_labe_fo_cont_labe|brs_label_la_content_the|brs_lbe_counte_the_flag|cnte_lbel_brm_flag|for_contn_brs_labell_label|new_brs_conten_lab|brs_conte_alabe|labe_brs_flag_cont|new_cnten_br_labvel|brs_of_lb_for_conqten|conten_brs_lab|brs_conent_lab|for_contenzt_brs_lb|br_label_con_lab|for_of_br_labe|lab_brs_of_cone|of_brs_label|distace_of_brs_new_autio_label|labe_cont_brs|sponsore_brs_the|conent_lbl_brqs_lbe|br_lael_content_new|cont_brws_laobe|contenrt_brs_lbe_flag|the_cone_brs_lbl_lbe|cntent_labbe_brs|contxe_brms_labl_lbl|conte_brf_la|lael_flag_cntent_label_bras|the_conten_brs_lbe|labe_label_brs_conent|contn_of_brs_for_la|flag_cnte_label_brs|the_brs_content_labe|lael_the_conteun_brs_label|new_conen_for_brs_la|lbel_brs_contnt|brs_contena_of_labe|the_contenh_lab_for_brs|brs_flag_lael_of_connte|contet_lbl_brs_the_lbel|brg_larb_coten|conte_of_lab_for_br|lbe_label_of_conte_brs|label_of_lbel_conten_brr|lb_conte_brl_la|lbl_conteb_brls_lab|conteynt_brrs_label|label_brs_cont_the_labl|brs_cont_lbe|flag_labe_content_brs|lbe_conen_brd_lbl|new_conent_brs_la|cote_new_labj_brs|brs_lbel_conten|of_lbl_brs_contet_labl|brs_for_labecl_conen|label_brfs_contte_lab_lbl|conteln_for_brs_labe|la_conten_brs|the_conte_lab_br|labiel_brs_cont|cote_the_lael_brs_of|new_coenten_lbe_br|br_lae_content|flag_for_conent_brs_labe|lagbel_coten_bre|lagbel_coten_br|content_label_flag_new_br|labl_for_coniten_of_brs|brs_content_of_labe|for_br_cont_lab|la_con_br|brs_conte_labe_flag|of_conite_flag_brs_labe|lbl_brs_lae_cntent|conte_brs_lb_for|lab_co_br_for|new_brs_content_label|new_brs_content_labe|brs_lab_lbl_conteint_of|brs_lb_conten|flag_br_lfbel_contte|conttent_labe_new_rz|the_brand_cont_sft_flag|brand_cont_sft_flag|flag_cntentk_lbel_b|con_safety_brs|cont_sfty_brs|content_sfty_brs|conte_br_labe_flag|brs_lbl_content|brs_cnt_lbl_the|the_brs_lab_content_new|the_br_s_cnt_label|the_br_s_cont_label|br_lb_label|br_lb_label_co|lbl_content_brs|labe_br_con_the|br_safety_content_label|br_con_label_for_safety|content_lbl_brs|content_label_brs|cont_label_brs|con_label_brs|new_con_label_brs|lbl_la_br_cont|new_lbl_la_br_cont|br_safety_con_label|new_br_safety_con_label|brs_con_label|brs_content_label|bran_lbl_cont|brand_lbl_cont)[^\n]+?("sponsored_data"|"data_spon"|"spon_dat"|"ads_data"|"the_spons_data"|"daspo_sto")[^\n]+?("SponsoredData"|"lbl_adv_iden"|"ad_id")[^\n]+"cursor":"[^"]+"\}/' '{}' '/(sponsored_auction_distance|sp_auct_dis|flag_distan_spon_auc|of_distanc_auctio_spons|auction_distance_sp|auct_distance_sponsored|auc_distance_sponsored|auction_sponsored_dist|new_auction_sponsored_dist|auct_dis_of_sponsored|the_auct_dis_of_sponsored|auc_dis_sponsored|the_auc_dis_sponsored|spon_auct_dis|spons_dista_auc|dist_spons_auctio|sponsor_for_dis_au|distanc_auct_the_sponsor|spon_lbl_aucti_dista|label_auctio_spons_distanc|auct_dis_sponso|auc_dist_sponso|auc_dis_sponso|new_auc_dis_sponso|spon_lbl_dist_auct|spon_lbl_dis_auct|spons_lbel_dis_auct|lbl_flag_spon_auc_dist|sps_auction_distance|sps_auction_flag_distance|sps_auct_distance|sponso_auc_dist|new_of_sponsxored_diwsta_uctiopn|spon_auct_of_dist|dist_to_spons_auction|aucti_sponsor_the_new_distnc|distance_auti_sonsore|sponsore_auctio_dis|for_aucti_dista_spon|dist_auct_spons_lbl|auctio_spnsor_distace|for_auci_new_sponsor_distanyc|dist_sponsor_auc|au_spon_flag_dist|di_auc_fl_spo|fl_au_flag_di_sp|auc_lb_dis_spon_the|auc_sponsor_dist|lbl_sponsor_dist_au|auc_for_dis_sponso|au_dista_spon|distanc_sponsore_aucti|au_sponsor_dist|auct_spon_dist|auction_distanc_sponsored|auctio_dist_sponsore|sponsocr_distanc_of_auctido|sponsred_auct_dista_of|sponsorexd_aucto_for_lbl_distance|dist_sponso_auctio|aution_disan_new_sonsored|auc_sponsore_distan|sponsor_au_dis|aucton_sponso_ditance|label_sposor_disntance_auctin|lbl_auti_flag_dstanc_sponsord|label_au_lb_spon_fla_dstan|spons_aut_dsta_lb_fla|label_aut_dstan_fl_spons_lb|sponsor_aut_dst_lb_fl|sponsorce_aucio_distanc|auti_the_sponsore_distnc|ditanc_flag_sponsore_aujction|distanc_new_sonsored_auctilo|distan_lbl_au_sponsore|dstan_of_conen_aucti_label|label_acti_sponsory_dstance|sponsore_contet_lbl_disjtan_actio|disance_auctiko_sponso|dstance_auctfio_spdonsore|distance_sponsore_auction_new|aucti_sponsxor_distran|sonsore_for_distance_of_auxcti|the_sponsoyr_distance_auctin_lbl|auctzion_ditan_sponsored|distnc_auct_sponsore|for_sonsor_disjtance_auct|of_sponsor_distanc_auc|auctio_sponso_distan|distanc_auct_spon|sponsor_auct_dis|dstanc_sponsorefd_of_aution_the|spon_auc_dis|aucto_disance_sponso|distnce_actio_lbl_sponso|auct_the_distanc_sponsor|au_distan_label_spons|au_dist_of_spon|spons_distanc_auctio_label|flag_auction_sonsore_distance|lbl_diwstan_new_sponsore_auctiob)/'
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//span[@class][count(span[text() and not(contains(@style, "position: absolute"))]) = 9]/parent::span/ancestor::a[@attributionsrc]/ancestor::div[@aria-posinset][@aria-describedby][@aria-labelledby]/parent::div'
 ! mp
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//div[contains(@aria-label,"Marketplace")][@role]/following::a[@aria-labelledby][@attributionsrc][@rel="nofollow noreferrer"]/ancestor-or-self::div[contains(@style,"max-width") and contains(@style,"min-width")][1]'
@@ -1184,7 +1194,7 @@ www.facebook.com,web.facebook.com#$#hide-if-matches-xpath '//div[contains(@aria-
 www.facebook.com,web.facebook.com#$#hide-if-matches-xpath './/div[contains(@aria-label,"Marketplace")][@role]//following::a[@aria-label][@aria-labelledby]//preceding::a[contains(@href,"/ads/about/?entry_product=ad_preferences")]/ancestor-or-self::span[3]'
 ! sb
 www.facebook.com,web.facebook.com#$#json-prune 'require.0.3.0.__bbox.require.[].3.1.__bbox.result.data.viewer.sideFeedUnitItem.nodes.0.{}.nodes.0.rhc_ad'
-www.facebook.com,web.facebook.com#$#race start; hide-if-matches-xpath '//div[@role="complementary"]//following::a[@aria-labelledby][@attributionsrc="blank"][@target="_blank"]/ancestor-or-self::div[contains(@class,"x1n2onr6")][2]/parent::div[@class][1]'; hide-if-matches-xpath '//div[@role="complementary"]//following::a[@aria-labelledby][contains(@attributionsrc,"/privacy_sandbox/comet/register/source/?eid")]/ancestor-or-self::div[contains(@class,"x1n2onr6")][2]/parent::div[@class][1]'; race stop;
+www.facebook.com,web.facebook.com#$#race start; hide-if-matches-xpath '//div[@role="complementary"]//following::a[@aria-labelledby][@attributionsrc="blank"][@target="_blank"]/ancestor-or-self::div[contains(@class,"x1n2onr6")][2]/parent::div[@class][1]'; hide-if-matches-xpath '//div[@role="complementary"]//following::a[@aria-labelledby][contains(@attributionsrc,"/privacy_sandbox/comet/register/source/?eid")]/ancestor-or-self::div[contains(@class,"x1n2onr6")][2]/parent::div[@class][1]'; hide-if-matches-xpath '//div[@role="complementary"]//following::a[@aria-labelledby][@attributionsrc="unknown"][@target="_blank"]/ancestor-or-self::div[contains(@class,"x1n2onr6")][2]/parent::div[@class][1]'; race stop;
 ! sp
 www.facebook.com,web.facebook.com#$#race start; hide-if-contains-visible-text /[Sponsred]{9}|[Gesponrtd]{10}|[Sponrisé]{10}|[Comandité]{9}|[Publicda]{10}|[Sponsrwae]{12}|[Patrocind]{11}|[Sponsrizat]{13}|[Anzeig]{6}/ 'div[role=feed] div[role=article]' a[href^="?__cft__"]; race stop;
 ! wp
@@ -1676,7 +1686,7 @@ ophim16.com#$#json-prune ads;abort-current-inline-script setTimeout click_time
 aoe.vn#$#abort-on-property-read parseInt
 gametv.vn#$#abort-current-inline-script $ homeModal
 tusachmanga99.com#$#abort-current-inline-script $ window.open
-motchillk.so#$#abort-on-property-read sessionStorage
+motchillk.now#$#abort-on-property-read sessionStorage
 rk.plcdn.xyz#$#abort-on-property-read adsTvc; abort-on-property-read adsPlayer; abort-on-property-read ads; abort-on-property-read keyPlayer; abort-on-property-read adsPopupPlayer;
 hh3dhay.life,hh3dhay.xyz#$#abort-current-inline-script document.createElement /break|case/
 cafef.vn,gamek.vn,genk.vn,kenh14.vn,soha.vn,tuoitre.vn,afamily.vn,thanhnien.vn#$#override-property-read ADMStorageFileCDN noopFunc
@@ -1684,41 +1694,42 @@ cafef.vn,gamek.vn,genk.vn,kenh14.vn,soha.vn,tuoitre.vn,afamily.vn,thanhnien.vn#$
 bongda365f.com#$#override-property-read isSkipAds true
 znews.vn#$#abort-on-property-read adtimaConfig
 baomoi.com#$#abort-on-property-write AdtimaRender
-achristmascarollive.com#$#override-property-read adsPlayer '';override-property-read adsTvcs ''
+rileygainescenter.org#$#override-property-read adsPlayer '';override-property-read adsTvcs ''
 kenh14.vn#$#override-property-read Constants.allowAds false
 vndoc.com#$#override-property-read seconds 0
 phimvuihd.org#$#override-property-read urlAds ''
 n.thapcam53.pro#$#simulate-mouse-event '#modalasd$continue,delay=300'
-hayhaytv.site,animet.org,subnhanh1.org#$#override-property-read maxAds 0
+hayhaytv.site,animet.org,motchillzz.site#$#override-property-read maxAds 0
 clipsex.cam,ww12.sexkhongchemoi.com#$#override-property-read video.adVast ''
 www.iosviet.com#$#override-property-read timer 0
 saigon24.net#$#abort-current-inline-script document.getElementById myModal
 cliphot69.pics#$#override-property-read a_vid 0
-achristmascarollive.com#$#hide-if-matches-xpath './/div[@id or @class]/p/a[@title]/ancestor-or-self::div[1]'
+rileygainescenter.org#$#hide-if-matches-xpath './/div[@id or @class]/p/a[@title]/ancestor-or-self::div[1]'
 www.diendancauduong.com#$#abort-on-property-read antiAdBlockerHandler
 xem16.net,xem17.net#$#json-prune props.children.[].props.tvc
 hh2d.tv#$#abort-current-inline-script $ adblock
 tram3d.xyz#$#abort-current-inline-script setTimeout appendChild
+cliphubs.com#$#abort-current-inline-script document.addEventListener pop
 ! Popup/Popunder/Clickunder
-survey-smiles.com,vinaurl.net,anime12.site,anh.moe,maclife.io,xemphimjav.us,hoctot.hocmai.vn,keysmatterinc.com,samtruyentranh.com,player.phimapi.com,noitu.site,sachmoi.net#$#abort-on-property-read open
+vinaurl.net,anime12.site,anh.moe,maclife.io,xemphimjav.us,hoctot.hocmai.vn,keysmatterinc.com,samtruyentranh.com,player.phimapi.com,noitu.site,sachmoi.net,xfast.sbs#$#abort-on-property-read open
 tvhay.top#$#abort-current-inline-script JSON.parse atob
 truyen247.pro#$#abort-current-inline-script eval
 www.gvnvh.net#$#abort-current-inline-script Math
 xnxx-sex-videos.com#$#abort-current-inline-script setTimeout /window.location/
 xnxx-sex-videos.com#$#override-property-read user_out false
-truyensieuhay.com,quangcaoyenbai.com,phimmoi.ing,phimchill.life,thuvienhd.biz,tv.tvhayhd.org,thefaplive.com,mv.dailyphimz.com,mv.phimbathu.one,sexhihiz.mx,anime47.best,teamlanhlung8.shop,forum.timfshare.com,ungtycomicshot.com,honghotduongpho.vn,chich69.blog#$#abort-on-property-read document.cookie
+truyensieuhay.com,quangcaoyenbai.com,phimmoi.ing,phimchill.life,thuvienhd.biz,tv.tvhayhd.org,thefaplive.com,mv.dailyphimz.com,mv.phimbathu.one,sexhihiz.mx,anime47.best,teamlanhlung8.shop,forum.timfshare.com,ungtycomicsha.com,honghotduongpho.vn,chich69.blog#$#abort-on-property-read document.cookie
 metruyenchu.com#$#abort-on-property-write window.onclick
 ##[href^="//mage98rquewz.com/"]
 theicec.com#$#abort-on-property-read adsRedirectPopups
 linkneverdie.net,linkneverdie.top,linkneverdie2.com#$#abort-current-inline-script document.createElement optad;abort-on-property-read pushOnPageGala
-javnong.cc#$#abort-on-property-read Math.round
-viet69.nu,dualeotruyenzx.com,yurineko.my,haysexvl.net,cliphot69.shop,doctruyen3qui14.com,ihentai.cloud,animehay.life,hentaivc.com,streamvl.top,buomtv.media,truyenvn.shop,javtiful.com,quatvn.love,vn82phimsexhay.com,phim18hdxx.com,vn5.sexviet88.xyz,demo.14412882.com,phim.sexnungvl.pro,cliphot69.pics,hhtq5.vip,sexdiary.club,vn2.xvideos69.xxx,umetruyenz.net,damconuong.skin,truyenqqgo.com,clipsexsub3x.net,sayhentaii.art,motphim.pokemonviet.com,lxmanga.my#$#abort-current-inline-script WebAssembly instantiate
-www.motchill27.com,xnhau.sh,teamlanhlung8.shop,xemphimjav.us#$#abort-on-property-read localStorage
+sex.javnong.cc#$#abort-on-property-read Math.round
+viet69.nu,dualeotruyenev.com,yurineko.my,haysexvl.net,cliphot69.shop,doctruyen3qui15.com,ihentai.cloud,animehay.life,hentaivc.com,streamvl.top,buomtv.media,truyenvn.shop,javtiful.com,quatvn.love,phimsexhayvn35.com,phim18hdxx.com,vn5.sexviet88.xyz,demo.14412882.com,xem.sexnung3x.com,cliphot69.pics,hhtq5.vip,sexdiary.club,vn2.xvideos69.xxx,umetruyenz.net,damconuong.co,truyenqqgo.com,clipsexsub3x.net,sayhentaii.art,motphim.pokemonviet.com,lxmanga.my#$#abort-current-inline-script WebAssembly instantiate
+www.motchill28.com,xnhau.sh,teamlanhlung8.shop,xemphimjav.us#$#abort-on-property-read localStorage
 phimgichill.net#$#abort-current-inline-script jQuery popurl
 phimgichill.net,hh3dhay.life,tram3d.net,animevietsub.show#$#abort-current-inline-script eval $._Eu
 p.thoctv.com#$#abort-current-inline-script document.createElement script
 motchill.ad#$#abort-current-inline-script document.addEventListener linksToOpen
-dualeotruyenzx.com#$#abort-current-inline-script document.addEventListener popunder
+dualeotruyenev.com#$#abort-current-inline-script document.addEventListener popunder
 lxmanga.my#$#abort-current-inline-script $ PopUnder
 www.truyen35zz.com#$#abort-current-inline-script jQuery click_ads
 www.toptruyentv11.com#$#abort-current-inline-script Promise instance
@@ -1744,9 +1755,9 @@ animehay.life#$#abort-current-inline-script Number ;break;case
 gocmod.com#$#abort-current-inline-script jQuery popup
 10gb.vn#$#abort-current-inline-script Promise detectedAdblock
 animevietsub9.com#$#abort-on-property-read _0x3f9b
-thichxemphim1.site#$#abort-on-property-read affUrls
-www.motchill27.com,trumtruyen.live#$#abort-current-inline-script setTimeout Aff
-phim.sexnungvl.pro#$#abort-on-property-read Cookies
+thichxemphim.live#$#abort-on-property-read affUrls
+www.motchill28.com,trumtruyen.live#$#abort-current-inline-script setTimeout Aff
+xem.sexnung3x.com#$#abort-on-property-read Cookies
 childish2x1.fun,childish2x2.fun#$#abort-current-inline-script $ aff
 javhd.shop#$#abort-current-inline-script document.addEventListener Click
 ios.codevn.net#$#abort-current-inline-script jQuery Popup
@@ -1759,6 +1770,9 @@ www.sieutamphim.pro#$#abort-on-property-read _$_75bd
 quatvn.love#$#abort-current-inline-script window.addEventListene localStorage
 checkscam.vn#$#abort-current-inline-script document.addEventListener open
 haysexvl.life#$#abort-current-inline-script document.addEventListener adx
+clipphot.net#$#abort-current-inline-script document.addEventListener POP
+audiotruyenfull.com#$#abort-current-inline-script document.addEventListener ai_run
+audiotruyenfull.com#$#abort-current-inline-script setTimeout Aff
 ! *** abp-filters-anti-cv:RM.txt ***
 ! #RM-1
 tripadvisor.com#$#hide-if-matches-xpath './/a[contains(text(),"Sponsored")][@target="_blank"]/parent::div/ancestor::div[@class][2]'
@@ -1775,7 +1789,6 @@ tripadvisor.com#$#hide-if-matches-xpath './/h2[@class][contains(text(),"Sponsore
 tripadvisor.com##[data-sponsored]
 ! RL
 tripadvisor.com,tripadvisor.com.br,tripadvisor.ca,tripadvisor.com.mx,tripadvisor.com.ar,tripadvisor.cl,tripadvisor.co,tripadvisor.com.ve,tripadvisor.co.uk,tripadvisor.it,tripadvisor.es,tripadvisor.de,tripadvisor.fr,tripadvisor.se,tripadvisor.nl,tripadvisor.com.tr,tripadvisor.dk,tripadvisor.at,tripadvisor.com.gr,no.tripadvisor.com,tripadvisor.pt,tripadvisor.ru,tripadvisor.ch,tripadvisor.be,tripadvisor.jp,cn.tripadvisor.com,tripadvisor.in,tripadvisor.com.my,tripadvisor.com.ph,tripadvisor.com.sg,tripadvisor.co.id,tripadvisor.co.kr,th.tripadvisor.com,tripadvisor.com.tw,tripadvisor.com.hk,tripadvisor.co.za,ar.tripadvisor.com,tripadvisor.com.eg,tripadvisor.co.il#$#hide-if-matches-xpath '././/span[contains(.,"Patrocinado") or contains(.,"Annonce") or contains(.,"Sponsored") or contains (.,"Sponsorizzato") or contains(., "Gesponsert") or contains(.,"Sponsrad") or contains(.,"Gesponsord") or contains(.,"Sponsorlu") or contains(.,"Sponsoreret") or contains(.,"Χορηγία") or contains(.,"Sponset") or contains(.,"Реклама") or contains(.,"スポンサー提供") or contains(.,"赞助商") or contains(.,"Bersponsor") or contains(.,"스폰서") or contains(.,"สปอนเซอร์") or contains(.,"贊助商") or contains(.,"贊助") or contains(.,"مدعوم") or contains(.,"מודעה")]/ancestor::header/ancestor-or-self::div[2]'
-tripadvisor.com#$#hide-if-matches-xpath './/ul[li/picture]/parent::div/following::span[text()="Sponsored"]/ancestor::div[.//picture and .//a[contains(@href, "Restaurant_Review")]/following::ul/li][1]/parent::div/ancestor-or-self::span[1]'
 tripadvisor.com#$#hide-if-matches-xpath '//span[text()="Sponsored"]/parent::div/parent::div/parent::div[.//a[contains(@href, "Restaurant_Review")]]/parent::div/parent::div[.//button[contains(@data-automation, "trips-save-button")]]'
 tripadvisor.com#$#hide-if-matches-xpath './/div[count(.//div) >= 5]//div[not(*[not(self::span)] or count(span) > 1)]/span[text()="Sponsored"]/ancestor::div[count(.//a[@target]) >= 1 and count(.//a[@href]) >= 2 and string-length(@class) > 10 and not(.//div[text()="View hotel"])][1]'
 ! HL
@@ -1828,15 +1841,15 @@ samsclub.com#$#hide-if-matches-xpath './/span[@class="sc-specials-label"]/follow
 samsclub.com##div[class="analytics"][data-strategy="Sponsored products"]
 ! #RM-9
 ! sl, sc
-instacart.*#$#hide-if-matches-xpath './/span[text()]/ancestor-or-self::*[@data-fp-eligible]/ancestor::div[@aria-label="Product"]/ancestor::li[1]/ancestor-or-self::*[self::div[child::li] or self::li[not(parent::div)]][1]';
+instacart.*##li:has(fp-ads-tag):not(:has(h2))
 ! ta
-instacart.*#$#hide-if-matches-xpath './/div[contains(@style,"display:")]/following::span[text()]/preceding::div[@aria-hidden="true"]/preceding::img[contains(@alt,"Sponsored")]/ancestor-or-self::div[@id][@class][1]';
+instacart.*##div[id][class]:has(> div:first-child > a img[alt*="Sponsored"], > div[aria-hidden="true"]:last-child)
 ! tc
-instacart.*#$#hide-if-matches-xpath './/div[contains(@style,"display:")]/following::span[text()]/ancestor::div[@id][@class="e-1hv1sre"][1]'
+instacart.*##div[id][class]:has(> a > img):has(ul li:first-of-type a div[style*="display:"] span)
 ! mc
-instacart.*#$#race start; hide-if-matches-xpath './/div[contains(@style,"display:")]/following::span[text()]/ancestor-or-self::div[@id][contains(@class,"e-1qzz7bi")][1]'; hide-if-matches-xpath '//span[text()]/preceding::div[contains(@style,"display:")]/ancestor-or-self::div[@id][contains(@class,"e-y7s1ry")][1]'; race stop;
+instacart.*##div[id][class]:has(> a > div:first-child img):has(> a div[style*="display:"] span)
 ! tp
-instacart.*#$#hide-if-matches-xpath './/div[contains(@style,"display:")]/following::span[text()]/preceding::div[text()="Top picks from other aisles"]/ancestor-or-self::h2/ancestor-or-self::div[@class="e-1yrpusx"]'
+instacart.*##div:has(> div > div > h2 + span):has(div[role="region"] ul[role="presentation"])
 instacart.*#$#abort-on-property-write window.ADBLOCK_DETECTED; abort-current-inline-script setTimeout ic-detect-ad-block; override-property-read adblockDetected false;
 ! #RM-11
 ! hp
@@ -1846,17 +1859,20 @@ ebay.com##div[class$="vl-leaderboard-ad"]
 ebay.*#$#hide-if-matches-xpath '//div[contains(@class,"carousel--slides carousel--peek")]/preceding::h2[contains(.,"Sponsored")]/ancestor-or-self::div[@data-viewport][1]'
 ! ba
 ebay.com#$#hide-if-contains-visible-text /Sponsored/ 'div[data-testid="x-pda-placements"]>div>div>div' 'div[data-viewport]>span>div>div ^^sh^^ *'
+ebay.*#$#hide-if-contains-visible-text /(Sponsored|Anzeige|Sponsorisé|Commandité|Patrocinado|Sponsorizzato)/ 'div[class^="YJDr"]>div' 'div[style*="color: #707070"]'
 ! ta
 ebay.*#$#hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]'; hide-if-contains /.+/ 'div[id^="placement"][style]' 'div[id^="placement"][style] div ^^sh^^ div ^^sh^^ div ^^sh^^ div > div[style]';
 ! cp
-ebay.*#$#hide-if-contains-visible-text /(S*p*o*n*s*o*r*e*d|A*n*z*e*i*g*e|S*p*o*n*s*o*r*i*s*é|P*a*t*r*o*c*i*n*a*d*o|S*p*o*n*s*o*r*i*z*z*a*t*o)/ 'li[class*="brwrvr__item-card"]' 'div[class="su-component su-sponsored-label"] > span[class="su-sponsored-label__sep"] > span[aria-labelledby][role="text"]'
+ebay.*#$#hide-if-contains-visible-text /(S*p*o*n*s*o*r*e*d|A*n*z*e*i*g*e|S*p*o*n*s*o*r*i*s*é|P*a*t*r*o*c*i*n*a*d*o|S*p*o*n*s*o*r*i*z*z*a*t*o)/ 'div[class="brwrvr__item-card__body"]' 'span[class="su-sponsored-label__sep"] > span[aria-labelledby][role="text"]'
 ! pp
 ebay.*#$#hide-if-contains-visible-text /(\s*sponsored\s*|\s*anzeigen\s*|\s*sponsorisés\s*|\s*commandités\s*|\s*sponsorowane\s*|\s*gesponsord\s*|\s*patrocinados\s*|\s*sponsorizzati\s*)/ 'div[data-viewport]' 'div[data-viewport] h2'
-ebay.*#$#hide-if-contains-visible-text /(S*p*o*n*s*o*r*e*d|A*n*z*e*i*g*e|S*p*o*n*s*o*r*i*s*é|C*o*m*m*a*n*d*i*t*é|P*a*t*r*o*c*i*n*a*d*o|S*p*o*n*s*o*r*i*z*z*a*t*o)/ 'div[data-viewport]' 'div[class^="Hvol"]'
+ebay.*#$#hide-if-contains-visible-text /(S*p*o*n*s*o*r*e*d|A*n*z*e*i*g*e|S*p*o*n*s*o*r*i*s*é|C*o*m*m*a*n*d*i*t*é|P*a*t*r*o*c*i*n*a*d*o|S*p*o*n*s*o*r*i*z*z*a*t*o)/ 'div[data-viewport]' 'div[class^="djaH"]'
 ebay.*#$#hide-if-contains-visible-text /(Sponsored|Anzeige|Sponsorisé|Commandité|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato)/ 'div[data-viewport]' 'div[data-viewport] div[role="text"]'
 ebay.*#$#hide-if-contains-visible-text /(Sponsored|Anzeige|Sponsorisé|Commandité|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助)/ 'div[class][data-testid] div[id^="placement"]' 'div ^^sh^^ *[role^="text"]'; hide-if-contains-visible-text /(Sponsored|Anzeige|Sponsorisé|Commandité|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助)/ 'div[class][data-testid] div[id^="placement"] ^^sh^^ > div' 'div ^^sh^^ *[role^="text"]'; hide-if-contains-visible-text /(Sponsored|Anzeige|Sponsorisé|Commandité|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助)/ 'div[class][data-testid] div[id^="placement"][style] ^^sh^^ *' 'div ^^sh^^ *';
-ebay.*#$#hide-if-contains-visible-text /(S*p*o*n*s*o*r*e*d|A*n*z*e*i*g*e|S*p*o*n*s*o*r*i*s*é|C*o*m*m*a*n*d*i*t*é|P*a*t*r*o*c*i*n*a*d*o|S*p*o*n*s*o*r*i*z*z*a*t*o)/ 'div[id][data-slot][data-from], section, div:not(.lightbox-dialog__main):not([class*="lightbox"]):not([id*="vas-"])' 'div[id][data-slot][data-from]>div[id], section, div:not(.lightbox-dialog__main):not([class*="lightbox"]):not([id*="vas-"]):not([class*="brw-multimedia"]) ^^sh^^ *'
 ebay.*#$#hide-if-contains-visible-text /(S.{0,30}p.{0,30}o.{0,30}n.{0,30}s.{0,30}o.{0,30}r|A.{0,30}n.{0,30}z.{0,30}e.{0,30}i.{0,30}g|C.{0,30}o.{0,30}m.{0,30}m.{0,30}a.{0,30}n.{0,30}d|P.{0,30}a.{0,30}t.{0,30}r.{0,30}o.{0,30}c.{0,30}i.{0,30}n|S.{0,30}p.{0,30}o.{0,30}n.{0,30}s.{0,30}o.{0,30}r.{0,30}i.{0,30}z.{0,30}z)/ 'div[data-slot*="PLACEMENT_"]' 'div[data-slot*="PLACEMENT_"] > div[id*="placement"] > div > div > div > div > div > div > div > div > div > div > div > div'; hide-if-contains-visible-text /(S.{0,30}p.{0,30}o.{0,30}n.{0,30}s.{0,30}o.{0,30}r|A.{0,30}n.{0,30}z.{0,30}e.{0,30}i.{0,30}g|C.{0,30}o.{0,30}m.{0,30}m.{0,30}a.{0,30}n.{0,30}d|P.{0,30}a.{0,30}t.{0,30}r.{0,30}o.{0,30}c.{0,30}i.{0,30}n|S.{0,30}p.{0,30}o.{0,30}n.{0,30}s.{0,30}o.{0,30}r.{0,30}i.{0,30}z.{0,30}z)/ 'div[data-slot*="PLACEMENT_"]' 'div[data-slot*="PLACEMENT_"] div.BbQd';
+ebay.*##div.PR5L:has(div.-cKW.O4Nv > div > div.j2R0 > span.oTB_) > div.yMab
+ebay.*##div.Q2g2:has(div.-cKW.O4Nv > div > div.j2R0 > span.oTB_) ~ div.CSf-
+ebay.*##div.-cKW.O4Nv:has(> div > div.j2R0 > span.oTB_)
 ! sp
 ebay.*#$#race start; hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li[data-viewport][id] div > div[aria-labelledby]' 'div > div[aria-labelledby] > div[aria-hidden="true"]' '/; filter: none/' '/color: rgb\\(0, 0, 0.*; filter: none/'; hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li[data-viewport][id] div > div[aria-labelledby]' 'div > div[aria-labelledby] > div[aria-hidden="true"]' '/; filter: invert/' '/color: rgb\\(0, 0, 0.*; filter: invert/'; hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li[data-viewport][id] div > div[aria-labelledby]' 'div > div[aria-labelledby] > div[aria-hidden="true"]' '/; filter: none/' '/color: rgb\\(255, 255, 255.*; filter: invert/'; hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li[data-viewport][id] div > div[aria-labelledby]' 'div > div[aria-labelledby] > div[aria-hidden="true"]' '/; filter: invert/' '/color: rgb\\(255, 255, 255.*; filter: none/'; race stop;
 ebay.*#$#race start;hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li div.s-item__detail div[aria-labelledby]' 'li div.s-item__detail div[aria-labelledby] > div' '/; filter: none/' '/color: rgb\\(0, 0, 0.*; filter: none/';hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li div.s-item__detail div[aria-labelledby]' 'li div.s-item__detail div[aria-labelledby] > div' '/; filter: invert/' '/color: rgb\\(0, 0, 0.*; filter: invert/';hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li div.s-item__detail div[aria-labelledby]' 'li div.s-item__detail div[aria-labelledby] > div' '/; filter: none/' '/color: rgb\\(255, 255, 255.*; filter: invert/';hide-if-contains-and-matches-style /Sponsored|Anzeige|Sponsorisé|Sponsorowane|Gesponsord|Patrocinado|Sponsorizzato|贊助/ 'li div.s-item__detail div[aria-labelledby]' 'li div.s-item__detail div[aria-labelledby] > div' '/; filter: invert/' '/color: rgb\\(255, 255, 255.*; filter: none/';race stop; hide-if-matches-xpath './/li//div[contains(@class,"s-item__detail")]//div[@aria-labelledby][@style]/div[text()]/ancestor::li'
@@ -2024,6 +2040,7 @@ mundi.com.br#$#hide-if-contains-visible-text /Anúncio/ 'div[role][tabindex^="0"
 sameday.costco.*#$#hide-if-matches-xpath './/div[@style]/following::span[text()]/preceding::div[@aria-hidden="true"]/preceding::img[contains(@alt,"Sponsored") or contains(@alt,"Advertisement")]/ancestor-or-self::div[@id][@class][1]'
 ! mc
 sameday.costco.*#$#race start; hide-if-matches-xpath '//div[@id]/a//div[descendant::span[contains(text(), "Spons")] and descendant::span[contains(@style, "inline-")]]/ancestor::div[3]'; hide-if-matches-xpath '//div[@id]/a//div[descendant::span[contains(text(), "Spons")] and descendant::span[contains(text(), "ored")]]/ancestor::div[3]'; race stop;
+sameday.costco.*#$#hide-if-matches-xpath './/div[@id]/div[@id][descendant::span[contains(text(), "Spons")] and descendant::span[contains(text(),"ored")]]/parent::div[@id][1]'
 sameday.costco.*#$#override-property-read ADBLOCK_DETECTED false
 ! #RM-207
 ||app.golfgalaxy.com^$domain=golfgalaxy.com|dickssportinggoods.com
@@ -2206,6 +2223,7 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||chivwtusseh.com^
 ||chooragobioid.com^
 ||closishcool.com^
+||coateebyth.com^
 ||coeliabumpee.com^
 ||coesitecubbing.com^
 ||corylussunroof.com^
@@ -2266,6 +2284,7 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||ganglyjoannes.shop^
 ||garotemuruxi.com^
 ||garrafaspotted.com^
+||gearmanswings.com^
 ||geishastending.com^
 ||gemaricspieled.com^
 ||gestatejiggly.com^
@@ -2308,6 +2327,7 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||iodolruddock.com^
 ||iridialachkan.com^
 ||isoptichabiru.com^
+||issuedkuvasz.com^
 ||ivdjs.com^
 ||januaryverby.com^
 ||jaspersfamilia.cyou^
@@ -2358,6 +2378,7 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||nairydeices.com^
 ||nasrolrt.com^
 ||ndrimmers.com^
+||nhanweigh.com^
 ||ningposkidi.com^
 ||noritesfarrago.com^
 ||nosydorymen.com^
@@ -2408,6 +2429,8 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||randeriridium.com^
 ||ratitesbogging.com^
 ||reatushaithal.com^
+||rebopsmurly.com^
+||recrampwiped.com^
 ||redcapsunlime.com^
 ||reekiercoupler.com^
 ||regodipylon.com^
@@ -2447,6 +2470,7 @@ m.youtube.com#$#simulate-mouse-event 'yt-formatted-string.line-text.style-scope.
 ||tacksnocks.top^
 ||taffykhirka.com^
 ||taituranite.click^
+||taiverturena.com^
 ||talliedpurring.com^
 ||tammycooly.com^
 ||tampurunrig.com^
