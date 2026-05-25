@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ECr1VFNcc6/pUiw70mYeSA
+! Checksum: slDvpjneCIuv4/kY/+Ddcg
 ! Title: My AdFilters
 ! Expires: 12 hours
-! Version: 202605180822
-! Last Modified: 2026年05月18日 08:22
+! Version: 202605250823
+! Last Modified: 2026年05月25日 08:23
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -605,6 +605,7 @@ stgowan.com
 !-----------------------General advert blocking filters-----------------------!
 -*-*-*-*.alpha^$script,third-party
 /7755com-*00x*.gif
+:866/o.js$script,third-party
 /phoenix-share/js/code.123.bg.
 .com/co/$domain=1anime.me
 /CC6F9ACB52D1582671AFEA808AFE10FE.gif
@@ -709,11 +710,6 @@ stgowan.com
 .com/tonglan2.js
 .com/topjs/
 .com/uploads/*-860x250.gif
-.com/vh1/$script,third-party
-.com/vh2/$script,third-party
-.com/vh5/$script,third-party
-.com/vj1/$script,third-party
-.com/vj2/$script,third-party
 .com/vodad.js
 .com/zz/*2.txt$xmlhttprequest
 .com/zz/tcc2.js
@@ -1373,11 +1369,8 @@ stgowan.com
 :8888/mb1/wap_
 :8888/zhu/pc_
 :8888/zhu/wap_
-:8891/v*/$script,third-party
 :8898/ads_
 :9001/code/
-:9875/vh2/
-:9875/vj2/
 :99/js/ads/
 =ad_top_slider&
 =AdCode_$script,third-party
@@ -2251,7 +2244,7 @@ newduba.cn###jq_youxi
 ##div[onclick*=".open"][onclick*="leyu"]
 ##div[onclick*="/ky"][onclick*="open"]
 ##div[onclick*="?i_code="]
-##body > div[style=" max-width:990px; margin:0 auto;"]:first-child > a[target="_blank"]
+##body > div[style=" max-width:990px; margin:0 auto;"] > a[target="_blank"]
 ##div[style="margin:10px auto;width: 930px;height: 250px;"]
 ##div[style="position: fixed;top: 60px;right:0;z-index:999;width:250px"]
 ##div[style^="position"][onclick^="window.open"]
@@ -2347,14 +2340,13 @@ newduba.cn###jq_youxi
 ##div[role="listitem"] .bannerliststyle
 ##.socialmedia > #middletextbanner
 ##a[href^="java"][onclick^="gogogoto"]
+###float-ad
+###index-ad-banner
+##.newsAD
 !----------------------------------Ads-Union----------------------------------!
 ##a[href*="/122.51.121.126:"]
 ##a[href*="/137.220.194.105:"]
 ##a[href*="/137.220.194.123:"]
-/://666(7|8)[0-9]{2}.xyz\//$image,third-party
-/\.(cc|com|top|xyz)\/i\/v$/$third-party,xmlhttprequest
-/\.(com|cn|top|xyz)\/(j|K)\/[0-9]{6}$/$script,third-party
-/\.(cyou|ink)\/[a-z]{4}_[0-9]{5}_[a-z]{5}js\?/$script,third-party
 ||107.167.16.*.gif
 ||107.167.22.*.gif
 ||121.204.246.*.gif
@@ -2370,9 +2362,61 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||iap2e750o.com^
+||og2ebeuxa.com^
+||dmyzf4op0.com^
+||wdp5rczwlp.com^
+||w4nw434j7n.com^
+||opendsp.vip^
+||rhododendron15.top^
+||48r3l2u5l2.com^
+||bmg8t99nhf.com^
+||y2vorexg2u.com^
+||ptzpaxq7bu.com^
+||bio39rx7p0.com^
+||tjfskxz0t6.com^
+||kb894lngt.com^
+||vysr4o0eg.com^
+||gardenia25.com^
+||3s7m2ss7g.com^
+||w3fov7zal.com^
+||25t9uxgnx.com^
+||97vk351gi.com^
+||w2q5p09n8.com^
+||oj95rctd5.com^
+||apricot48.com^
+##a[href*=".6666ai.top"]
+||6iejd9pk0.com^
+||2fhn1qmca.com^
+||phr3qfcmb.com^
+||mdlidofju.com^
+||f7qhnenfbo.com^
+||t9x2gu6it3.com^
+||frp8r3le9c.com^
+||quince22.top^
+||a4j126meg3.com^
+||9613gwqee.com^
+||pl7ncaj0b.com^
+||invalidation93.com^
+||d9zx24n0d.com^
+||3xeedcdci.com^
+||wrdo8dl9bb.com^
+||xlekg58lub.com^
+||cancellation10.top^
+||i5rd6bukys.com^
+||lmd6dc1aq7.com^
+||4z48fqo12n.com^
+||ssyegkbu0g.com^
 ||3is34bpqs4.com^
 ||ecg21n9t8d.com^
 ||oa83fs5udz.com^
+||xtg5gdugqi.com^
+||josqdb7jn4.com^
+||immunity95.com^
+||zrkeirapi.com^
+||zmhpphp.forum^
+||ytpfbbg6hl.com^
+||i5le8m3qxs.com^
 ||disability29.top^
 ||vle6r0hma.com^
 ||js154azzn.com^
@@ -9181,7 +9225,6 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||fdc.com.cn^*adv
 ||fdc.my0511.com^$script
 ||feesoon.com/js/cnzz_
-||feijisu*.com/js/huimi-
 ||feizl.com/images/smdd/
 ||fenxiangdashi.com/img/banner/
 ||fenxiangdashi.com/Res/js/detail_
@@ -11601,8 +11644,6 @@ meijutt.*/js/pcjs/
 ||zhulong.com/detail/floorOneAd?
 ||zhushou.360.cn/script/plugin_tiper.js
 ||zhuwang.cc/api.php?op=ad_
-||zhuys.com/js/ysmm.
-||zhuys.com^*.php
 ||zhzyw.com/js/InsertJS.js
 ||ziyuanm.com/js/g11.js
 ||zjg.js.cn/Public/config/Couplet/Index4
@@ -11720,8 +11761,11 @@ meijutt.*/js/pcjs/
 ||riskbird.com/riskbird-api/guest/unionGoods
 ||kuazhi.com/kuazhi_click.
 ||pc-util.gamersky.com^
+||kssms.com/click/play.
+||exmoo.com/js/ad-position/
 !------------------------Specific element hiding rules------------------------!
 huaren.live##.pause-love
+staticfile.link###player_pause
 jin10.com##.desktop-tip
 mobile01.com##.dable-bottom_theme
 udn.com##.fixed-ad
@@ -17386,6 +17430,8 @@ android-doc.com,apk.tw,chaojizhibo.net,chtoen.com,dizhishengcheng.com,doitwell.t
 @@||holmesmind.com/js/drawV2.$domain=bingfong.com
 @@||hkcards.com^$generichide
 @@||huavod.com^$generichide
+@@||mytvsuper.com^$generichide
+@@||tvb.com^$generichide
 @@||linovelib.com^$generichide
 @@/prebid.$script,domain=mingpao.com
 @@||txws.yyzb456.top^$domain=857zb7.tv
